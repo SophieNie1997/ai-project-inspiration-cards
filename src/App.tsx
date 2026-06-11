@@ -49,7 +49,6 @@ function App() {
     () => new Map(cards.map((card, index) => [card.id, index + 1])),
     [cards],
   )
-  const isMapDense = filteredCards.length >= 8
 
   const openCard = openCardId
     ? cards.find((card) => card.id === openCardId) ?? null
@@ -159,7 +158,6 @@ function App() {
         cards={filteredCards}
         cardOrder={cardOrder}
         activeId={activeId}
-        isDense={isMapDense}
         onSelect={openCardDetail}
       />
 
@@ -222,113 +220,160 @@ type ProjectMapProps = {
   cards: MissionCard[]
   cardOrder: Map<string, number>
   activeId: string | null
-  isDense: boolean
   onSelect: (card: MissionCard) => void
 }
 
-function ProjectMap({ cards, cardOrder, activeId, isDense, onSelect }: ProjectMapProps) {
-  const positionedCards = getPositionedCards(cards)
+const techSegments = [
+  { key: 'starter', label: '轻量上手', hint: '先做可用原型' },
+  { key: 'builder', label: '整合应用', hint: '需要组合工具和流程' },
+  { key: 'advanced', label: '技术挑战', hint: '适合深挖模型/硬件/数据' },
+] as const
+
+const impactSegments = [
+  { key: 'wide', label: '更大范围影响', hint: '能服务一群人或公共议题' },
+  { key: 'local', label: '校园/家庭影响', hint: '从身边真实场景开始' },
+  { key: 'prototype', label: '小范围试验', hint: '适合快速做 demo' },
+] as const
+
+const zoneTitles: Record<string, string> = {
+  'wide-starter': '低门槛，高共鸣',
+  'wide-builder': '做成可传播的服务',
+  'wide-advanced': '挑战真实世界问题',
+  'local-starter': '从身边问题切入',
+  'local-builder': '做出能被反复使用的工具',
+  'local-advanced': '让技术进入真实场景',
+  'prototype-starter': '先把想法跑起来',
+  'prototype-builder': '做一个完整小产品',
+  'prototype-advanced': '探索硬核原型',
+}
+
+type TechSegmentKey = (typeof techSegments)[number]['key']
+type ImpactSegmentKey = (typeof impactSegments)[number]['key']
+
+function ProjectMap({ cards, cardOrder, activeId, onSelect }: ProjectMapProps) {
+  const zones = getMapZones(cards)
+  const [expandedZoneId, setExpandedZoneId] = useState<string | null>(null)
 
   return (
     <section className="map-panel" aria-labelledby="map-title">
       <div className="panel-heading">
         <div>
           <span>项目地图</span>
-          <h2 id="map-title">用地图找到你的项目方向</h2>
+          <h2 id="map-title">按方向找到你的项目入口</h2>
         </div>
         <p>
-          越往右，技术挑战越高；越往上，影响的人越多。先找一个靠近你兴趣的位置，再点开项目看看。
+          横向看技术挑战，纵向看影响范围。先找一个像你想做的方向，再点开里面的项目看看。
         </p>
       </div>
-      <div className="map-canvas">
-        <span className="axis-line axis-line-x" aria-hidden="true" />
-        <span className="axis-line axis-line-y" aria-hidden="true" />
-        <span className="axis-label axis-tech">技术挑战</span>
-        <span className="axis-label axis-impact">影响范围</span>
-        {positionedCards.map(({ card, x, y }, index) => (
-          <button
-            key={card.id}
-            type="button"
-            className={[
-              'map-point',
-              isDense ? 'is-compact' : '',
-              y < 18 ? 'show-tooltip-below' : '',
-              card.id === activeId ? 'is-active' : '',
-            ]
-              .filter(Boolean)
-              .join(' ')}
-            style={
-              {
-                '--x': `${x}%`,
-                '--y': `${y}%`,
-                '--card-accent': card.accent,
-              } as React.CSSProperties
-            }
-            onClick={() => onSelect(card)}
-            aria-label={`选择 ${card.title}`}
-            title={card.title}
-          >
-            <span>
-              {isDense
-                ? String(cardOrder.get(card.id) ?? index + 1).padStart(2, '0')
-                : card.themeLabel}
+
+      <div className="zone-map" aria-label="按技术挑战和影响范围分区的项目地图">
+        <div className="zone-axis-impact">影响范围</div>
+        <div className="zone-grid">
+          {zones.map((zone) => {
+            const isExpanded = expandedZoneId === zone.id
+            const visibleCards = isExpanded ? zone.cards : zone.cards.slice(0, 4)
+            const hiddenCount = zone.cards.length - visibleCards.length
+
+            return (
+              <section
+                key={zone.id}
+                className={`map-zone ${zone.cards.length === 0 ? 'is-empty' : ''}`}
+                aria-label={`${zone.impact.label}，${zone.tech.label}`}
+              >
+                <div className="zone-heading">
+                  <div>
+                    <span>{zone.impact.label}</span>
+                    <strong>{zone.title}</strong>
+                  </div>
+                  <em>{zone.cards.length} 个</em>
+                </div>
+                <p>{zone.tech.hint}</p>
+                <div className="zone-projects">
+                  {visibleCards.map((card) => (
+                    <button
+                      key={card.id}
+                      type="button"
+                      className={`zone-project ${card.id === activeId ? 'is-active' : ''}`}
+                      style={{ '--card-accent': card.accent } as React.CSSProperties}
+                      onClick={() => onSelect(card)}
+                      title={card.title}
+                    >
+                      <span>{String(cardOrder.get(card.id) ?? 0).padStart(2, '0')}</span>
+                      {card.title}
+                    </button>
+                  ))}
+                  {zone.cards.length > 4 && (
+                    <button
+                      type="button"
+                      className="zone-more"
+                      onClick={() => setExpandedZoneId(isExpanded ? null : zone.id)}
+                    >
+                      {isExpanded ? '收起' : `+${hiddenCount} 个项目`}
+                    </button>
+                  )}
+                  {zone.cards.length === 0 && <span className="zone-empty">待补充案例</span>}
+                </div>
+              </section>
+            )
+          })}
+        </div>
+        <div className="zone-axis-tech">
+          {techSegments.map((segment) => (
+            <span key={segment.key}>
+              <strong>{segment.label}</strong>
+              {segment.hint}
             </span>
-            {isDense && <strong>{card.title}</strong>}
-          </button>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )
 }
 
-function getPositionedCards(cards: MissionCard[]) {
-  const basePositions = cards.map((card) => ({
-    card,
-    x: scaleMapCoordinate(card.mapX),
-    y: 100 - scaleMapCoordinate(card.mapY),
-  }))
-  const groups = new Map<string, typeof basePositions>()
+function getMapZones(cards: MissionCard[]) {
+  return impactSegments.flatMap((impact) =>
+    techSegments.map((tech) => {
+      const zoneCards = cards.filter(
+        (card) =>
+          getTechSegmentKey(card.mapX) === tech.key &&
+          getImpactSegmentKey(card.mapY) === impact.key,
+      )
 
-  for (const position of basePositions) {
-    const key = `${Math.round(position.x)}:${Math.round(position.y)}`
-    groups.set(key, [...(groups.get(key) ?? []), position])
-  }
-
-  return basePositions.map((position) => {
-    const key = `${Math.round(position.x)}:${Math.round(position.y)}`
-    const group = groups.get(key) ?? [position]
-    const groupIndex = group.findIndex(({ card }) => card.id === position.card.id)
-    const offset = getClusterOffset(groupIndex, group.length)
-
-    return {
-      ...position,
-      x: clamp(position.x + offset.x, 9, 91),
-      y: clamp(position.y + offset.y, 9, 91),
-    }
-  })
+      return {
+        id: `${impact.key}-${tech.key}`,
+        title: zoneTitles[`${impact.key}-${tech.key}`],
+        tech,
+        impact,
+        cards: zoneCards,
+      }
+    }),
+  )
 }
 
-function scaleMapCoordinate(value: number) {
-  if (!Number.isFinite(value)) return 50
+function normalizeMapScore(value: number) {
+  if (!Number.isFinite(value)) return 3
 
   if (value <= 10) {
-    const score = clamp(value, 1, 5)
-    return 16 + ((score - 1) / 4) * 70
+    return clamp(value, 1, 5)
   }
 
-  return clamp(value, 12, 88)
+  return 1 + (clamp(value, 0, 100) / 100) * 4
 }
 
-function getClusterOffset(index: number, total: number) {
-  if (total <= 1) return { x: 0, y: 0 }
+function getTechSegmentKey(value: number): TechSegmentKey {
+  const score = normalizeMapScore(value)
 
-  const angle = (index / total) * Math.PI * 2 - Math.PI / 2
-  const radius = total === 2 ? 7 : 9
+  if (score <= 3) return 'starter'
+  if (score < 5) return 'builder'
+  return 'advanced'
+}
 
-  return {
-    x: Math.cos(angle) * radius,
-    y: Math.sin(angle) * radius,
-  }
+function getImpactSegmentKey(value: number): ImpactSegmentKey {
+  const score = normalizeMapScore(value)
+
+  if (score <= 3) return 'prototype'
+  if (score < 5) return 'local'
+  return 'wide'
 }
 
 function clamp(value: number, min: number, max: number) {
