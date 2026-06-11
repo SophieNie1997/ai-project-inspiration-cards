@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   ArrowRight,
   Brain,
@@ -15,7 +15,8 @@ import {
   ShieldCheck,
 } from 'lucide-react'
 import './App.css'
-import { missionCards, themes, type MissionCard } from './data/cards'
+import { missionCards, type MissionCard } from './data/cards'
+import { loadMissionCards, type CardsResponse } from './lib/cardSource'
 
 const themeIcons: Record<string, typeof Globe2> = {
   教育公平: GraduationCap,
@@ -23,26 +24,49 @@ const themeIcons: Record<string, typeof Globe2> = {
   无障碍科技: ShieldCheck,
   健康管理: HeartPulse,
   科研健康: FlaskConical,
+  健康科研: FlaskConical,
 }
 
 function App() {
+  const [cardsResponse, setCardsResponse] = useState<CardsResponse>({
+    cards: missionCards,
+    source: 'local',
+  })
   const [selectedTheme, setSelectedTheme] = useState('全部')
   const [activeId, setActiveId] = useState(missionCards[0].id)
+  const cards = cardsResponse.cards
+  const activeThemes = useMemo(
+    () => ['全部', ...new Set(cards.map((card) => card.themeLabel))],
+    [cards],
+  )
+  const effectiveSelectedTheme = activeThemes.includes(selectedTheme) ? selectedTheme : '全部'
 
   const filteredCards = useMemo(() => {
-    if (selectedTheme === '全部') return missionCards
-    return missionCards.filter((card) => card.themeLabel === selectedTheme)
-  }, [selectedTheme])
+    if (effectiveSelectedTheme === '全部') return cards
+    return cards.filter((card) => card.themeLabel === effectiveSelectedTheme)
+  }, [cards, effectiveSelectedTheme])
 
-  const activeCard =
-    missionCards.find((card) => card.id === activeId) ?? missionCards[0]
+  const activeCard = cards.find((card) => card.id === activeId) ?? cards[0] ?? missionCards[0]
+
+  useEffect(() => {
+    let isMounted = true
+    loadMissionCards(missionCards).then((response) => {
+      if (!isMounted) return
+      setCardsResponse(response)
+      setActiveId(response.cards[0]?.id ?? missionCards[0].id)
+    })
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   function selectTheme(theme: string) {
     setSelectedTheme(theme)
     const nextCard =
       theme === '全部'
-        ? missionCards[0]
-        : missionCards.find((card) => card.themeLabel === theme)
+        ? cards[0]
+        : cards.find((card) => card.themeLabel === theme)
 
     if (nextCard) setActiveId(nextCard.id)
   }
@@ -62,6 +86,9 @@ function App() {
           <p>
             课堂上先看5张 Mission Cards，再把学生自己的校园、家庭、社区和文化经验转成项目选题。
           </p>
+          <div className="data-source">
+            {cardsResponse.source === 'feishu' ? 'Feishu synced' : 'Local demo data'}
+          </div>
         </div>
 
         <div className="hero-system" aria-label="Data sync model">
@@ -88,11 +115,11 @@ function App() {
           <h2>选择项目入口</h2>
         </div>
         <div className="theme-tabs" role="tablist" aria-label="Project themes">
-          {themes.map((theme) => (
+          {activeThemes.map((theme) => (
             <button
               key={theme}
               type="button"
-              className={theme === selectedTheme ? 'is-selected' : ''}
+              className={theme === effectiveSelectedTheme ? 'is-selected' : ''}
               onClick={() => selectTheme(theme)}
             >
               {theme}
@@ -115,7 +142,7 @@ function App() {
         </div>
 
         <aside className="insight-panel" aria-label="Project insight panel">
-          <ProjectMap activeCard={activeCard} onSelect={setActiveId} />
+          <ProjectMap cards={cards} activeCard={activeCard} onSelect={setActiveId} />
           <CardDetail card={activeCard} />
         </aside>
       </section>
@@ -168,11 +195,12 @@ function MissionCardTile({
 }
 
 type ProjectMapProps = {
+  cards: MissionCard[]
   activeCard: MissionCard
   onSelect: (id: string) => void
 }
 
-function ProjectMap({ activeCard, onSelect }: ProjectMapProps) {
+function ProjectMap({ cards, activeCard, onSelect }: ProjectMapProps) {
   return (
     <section className="map-panel" aria-labelledby="map-title">
       <div className="panel-heading">
@@ -182,7 +210,7 @@ function ProjectMap({ activeCard, onSelect }: ProjectMapProps) {
       <div className="map-canvas">
         <span className="axis-label axis-tech">技术难度</span>
         <span className="axis-label axis-impact">社会影响</span>
-        {missionCards.map((card) => (
+        {cards.map((card) => (
           <button
             key={card.id}
             type="button"
