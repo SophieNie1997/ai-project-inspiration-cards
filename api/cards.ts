@@ -1,4 +1,4 @@
-import { fetchFeishuMissionCards } from '../src/lib/feishuClient'
+import { fetchFeishuMissionCards } from '../src/lib/feishuClient.js'
 
 type ApiRequest = {
   method?: string

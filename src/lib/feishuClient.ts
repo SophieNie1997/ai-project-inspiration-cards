@@ -1,4 +1,4 @@
-import { mapFeishuRecordsToMissionCards, type FeishuRecord } from './feishuMapper'
+import { mapFeishuRecordsToMissionCards, type FeishuRecord } from './feishuMapper.js'
 
 type FeishuEnv = Partial<{
   FEISHU_APP_ID: string
