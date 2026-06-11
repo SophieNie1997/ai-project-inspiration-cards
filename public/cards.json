@@ -339,6 +339,43 @@
       "mapX": 5,
       "mapY": 5,
       "accent": "#2ee6a6"
+    },
+    {
+      "id": "好运日历机-open-calendar",
+      "title": "把 AI 陪伴打印成每日好运签",
+      "sourceProject": "好运日历机 Open Calendar",
+      "sourceUrl": "https://mp.weixin.qq.com/s/EZJPjdW6NRHOISONYbk4ZA；https://github.com/noonwake-ai/open-calendar；https://www.sohu.com/a/1008579935_114760",
+      "year": "2026",
+      "award": "2026 小红书黑客松巅峰赛硬件赛道二等奖",
+      "theme": "education",
+      "themeLabel": "AI硬件",
+      "audience": "需要每日提醒、情绪陪伴或仪式感反馈的年轻用户、桌面设备用户",
+      "hook": "如果 AI 不只在手机里聊天，而是每天打印一张能带走的行动签，会不会更容易让人照做？",
+      "problem": "手机里的 AI 建议容易看完就忘，用户缺少一个能把提醒、运势、待办和行动建议变成现实物件的桌面入口。",
+      "aiMove": "AI 结合用户信息、每日角色、运势/特殊日/待办上下文，生成个性化祈福事项、签文解释和行动建议，再通过桌面屏幕与热敏打印输出。",
+      "studentProject": "学习好运签打印机、考试复习每日任务签、班级情绪补给站、校园活动提醒小票机。",
+      "demoGoal": "做出一个能输入用户状态/今日任务，生成一句鼓励、一个行动建议，并展示或打印成小票的 AI 桌面原型。",
+      "aiPowers": [
+        "LLM 文案生成",
+        "个性化推荐",
+        "用户记忆/上下文管理",
+        "软硬件交互",
+        "打印输出"
+      ],
+      "outputs": [
+        "桌面硬件或纸板原型",
+        "AI 生成签文页面",
+        "打印小票样张",
+        "用户流程演示视频"
+      ],
+      "question": "你每天最需要被提醒的一件小事是什么？如果它变成一张能贴在桌上的 AI 小票，内容应该怎么写？",
+      "insight": "先别做复杂玄学系统，可以从“今日目标 + 情绪状态 + 一句行动建议 + 小票版式”开始，重点跑通输入、生成、展示/打印的闭环。",
+      "difficulty": "中高",
+      "impactScore": 4,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 4,
+      "accent": "#2ee6a6"
     }
   ]
 }
