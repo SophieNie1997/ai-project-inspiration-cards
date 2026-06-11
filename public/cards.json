@@ -927,6 +927,46 @@
       "mapX": 3,
       "mapY": 3,
       "accent": "#2ee6a6"
+    },
+    {
+      "id": "鸟你一下-boopbirds",
+      "title": "住在桌面和小窝里的数字小鸟",
+      "sourceProject": "鸟你一下 BoopBirds",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6a22ac350000000035025836?app_platform=ios&app_version=9.33.4&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBBzzobHFokPUCI8H488RGqsXQWVt-LVM193O8QU49uug=&author_share=1&xhsshare=CopyLink&shareRedId=N0gzQ0g9OT83OEdHOjg2SD45PDg6S0lN&apptime=1780973707&share_id=087e071ccb354a69964c674b57031720",
+      "sourceUrls": [
+        "https://www.xiaohongshu.com/explore/6a22ac350000000035025836?app_platform=ios&app_version=9.33.4&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBBzzobHFokPUCI8H488RGqsXQWVt-LVM193O8QU49uug=&author_share=1&xhsshare=CopyLink&shareRedId=N0gzQ0g9OT83OEdHOjg2SD45PDg6S0lN&apptime=1780973707&share_id=087e071ccb354a69964c674b57031720"
+      ],
+      "year": "2026",
+      "award": "同济大学设计创意学院设计师团队作品；小红书 AI Builder / Vibe Coding 展示，奖项未公开",
+      "theme": "education",
+      "themeLabel": "数字生命",
+      "audience": "电脑文件杂乱的学生、喜欢虚拟宠物和桌面陪伴的用户、想做软硬件互动的创作者",
+      "hook": "如果电脑桌面里住着一只会吃垃圾文件的小鸟，它能不能让整理文件变得像养宠物一样好玩？",
+      "problem": "桌面文件整理、数字陪伴和硬件互动通常很枯燥或割裂，用户缺少一个轻量、有趣、有生命感的日常互动入口。",
+      "aiMove": "原作重点是数字生命和软硬件交互；学生改造时可让 AI 根据桌面文件类型、用户互动和小鸟状态生成性格反馈、清理建议、成长剧情和伙伴互动事件。",
+      "studentProject": "桌面文件清理宠物、班级学习陪伴小精灵、可穿戴数字宠物、两台设备贴贴交换心情的小硬件。",
+      "demoGoal": "做出一个桌面虚拟宠物原型：能被投喂文件/任务，状态会变化，并用 AI 生成小鸟反馈和成长记录。",
+      "aiPowers": [
+        "LLM角色反馈",
+        "状态机设计",
+        "文件分类",
+        "个性化陪伴",
+        "软硬件交互原型"
+      ],
+      "outputs": [
+        "桌面宠物原型",
+        "便携小窝模型",
+        "互动流程视频",
+        "小鸟成长日志"
+      ],
+      "question": "如果你的电脑桌面有一只数字宠物，它吃什么会长大？它应该怎样提醒你整理文件或完成任务？",
+      "insight": "先做软件版：给宠物三个状态、三种投喂物和三句 AI 反馈。硬件小窝可以用纸板、Micro:bit 或手机界面模拟，先把互动逻辑跑通。",
+      "difficulty": "中高",
+      "impactScore": 3,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 3,
+      "accent": "#2ee6a6"
     }
   ]
 }
