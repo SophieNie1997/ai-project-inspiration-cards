@@ -2,6 +2,7 @@ export type MissionCard = {
   id: string
   title: string
   sourceProject: string
+  sourceUrl?: string
   year: string
   award: string
   theme: string
@@ -29,6 +30,8 @@ export const missionCards: MissionCard[] = [
     id: 'sfusd-thai-family-liaison',
     title: '让新生家庭看懂学校',
     sourceProject: 'SFUSD Thai Family Liaison',
+    sourceUrl:
+      'https://patch.com/california/san-francisco/sf-student-wins-international-award-ai-language-model-project',
     year: '2025',
     award: 'High School AI Large Language Model Gold Award',
     theme: 'education',
@@ -58,6 +61,7 @@ export const missionCards: MissionCard[] = [
     id: 'devanagari-scribe',
     title: '把文化做成可交互工具',
     sourceProject: 'Devanagari Scribe',
+    sourceUrl: 'https://www.waicy.org/waicy-2025/',
     year: '2025',
     award: 'High School AI Showcase 5th Place / AI Excellence',
     theme: 'culture',
@@ -87,6 +91,7 @@ export const missionCards: MissionCard[] = [
     id: 'computerpreter',
     title: '让沟通不再卡住',
     sourceProject: 'Computerpreter',
+    sourceUrl: 'https://www.waicy.org/waicy-2025/',
     year: '2025',
     award: 'High School AI Showcase 5th Place',
     theme: 'accessibility',
@@ -116,6 +121,7 @@ export const missionCards: MissionCard[] = [
     id: 'project-cassie',
     title: '把健康管理变成长期陪伴',
     sourceProject: 'Project CASSIE',
+    sourceUrl: 'https://www.waicy.org/waicy-2025/',
     year: '2025',
     award: 'High School AI Large Language Model 4th Place Recognition',
     theme: 'health',
@@ -145,6 +151,7 @@ export const missionCards: MissionCard[] = [
     id: 'pain-calculator',
     title: '让科研测量更客观',
     sourceProject: 'Pain Calculator',
+    sourceUrl: 'https://www.youtube.com/watch?v=ahsW0zvVBDE',
     year: '2024',
     award: 'High School AI Showcase Gold Award',
     theme: 'research',

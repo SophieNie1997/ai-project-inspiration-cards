@@ -79,6 +79,10 @@ export function cardsToJson(cards) {
 function rowToCard(row, displayOrder) {
   const title = textValue(row.卡片标题, textValue(row.项目名, '未命名项目'))
   const sourceProject = textValue(row.项目名, title)
+  const sourceUrl = textValue(
+    firstExistingValue(row, ['来源链接', '项目链接', 'sourceUrl', 'Source URL']),
+    '',
+  )
   const themeLabel = normalizeThemeLabel(firstValue(row.主题标签, '教育公平'))
   const meta = themeMeta[themeLabel] ?? themeMeta.教育公平
   const impactScore = numberValue(row.社会影响分, 50)
@@ -88,6 +92,7 @@ function rowToCard(row, displayOrder) {
     id: textValue(row.卡片ID, slugify(sourceProject || title || `card-${displayOrder}`)),
     title,
     sourceProject,
+    ...(sourceUrl ? { sourceUrl } : {}),
     year: textValue(row.年份, ''),
     award: textValue(row.赛道与奖项, ''),
     theme: meta.theme,
@@ -119,6 +124,14 @@ function textValue(value, fallback) {
 
 function firstValue(value, fallback) {
   return listValue(value)[0] ?? fallback
+}
+
+function firstExistingValue(row, keys) {
+  for (const key of keys) {
+    const value = row[key]
+    if (textValue(value, '')) return value
+  }
+  return ''
 }
 
 function listValue(value) {

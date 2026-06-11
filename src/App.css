@@ -4,6 +4,10 @@
   padding: 22px 0 72px;
 }
 
+body.has-open-modal {
+  overflow: hidden;
+}
+
 .hero-panel {
   display: grid;
   align-items: end;
@@ -145,6 +149,22 @@
   color: var(--text);
   font-size: 25px;
   line-height: 1.16;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+}
+
+.panel-heading p {
+  max-width: 480px;
+  margin: 0;
+  color: var(--soft);
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: right;
 }
 
 .theme-tabs {
@@ -423,6 +443,39 @@
   z-index: 2;
 }
 
+.map-point strong {
+  display: none;
+}
+
+.map-point.is-compact {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.map-point.is-compact strong {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+}
+
+.map-point.is-compact:hover strong,
+.map-point.is-compact.is-active strong {
+  display: block;
+}
+
 .map-point.is-active {
   color: var(--ink);
   background: var(--accent);
@@ -532,6 +585,27 @@
   background: color-mix(in srgb, var(--card-accent) 13%, white 87%);
   font-size: 13px;
   font-weight: 760;
+}
+
+.source-link {
+  width: fit-content;
+  min-height: 38px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--accent);
+  box-shadow: 0 12px 28px rgba(0, 113, 227, 0.22);
+  font-size: 14px;
+  font-weight: 780;
+  text-decoration: none;
+}
+
+.source-link:hover {
+  transform: translateY(-1px);
 }
 
 .detail-panel {
@@ -655,7 +729,7 @@
   }
 
   .hero-copy h1 {
-    font-size: 46px;
+    font-size: 42px;
   }
 
   .hero-copy p {
@@ -718,6 +792,17 @@
   .detail-panel,
   .map-panel {
     padding: 20px;
+  }
+
+  .panel-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .panel-heading p {
+    max-width: none;
+    text-align: left;
   }
 
   .detail-panel {

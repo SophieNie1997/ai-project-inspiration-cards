@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import {
   Brain,
   ChartNoAxesColumnIncreasing,
+  ExternalLink,
   FlaskConical,
   Globe2,
   GraduationCap,
@@ -44,6 +45,7 @@ function App() {
     if (effectiveSelectedTheme === '全部') return cards
     return cards.filter((card) => card.themeLabel === effectiveSelectedTheme)
   }, [cards, effectiveSelectedTheme])
+  const isMapDense = filteredCards.length > 10
 
   const activeCard = cards.find((card) => card.id === activeId) ?? cards[0] ?? missionCards[0]
   const openCard = openCardId
@@ -103,18 +105,18 @@ function App() {
             WAICY Project Inspiration Cards
           </div>
           <h1 id="page-title">
-            <span>用真实问题</span>
-            <span>启动 AI 项目</span>
+            <span>找到你想解决的问题</span>
+            <span>做成 AI 项目</span>
           </h1>
           <p>
-            课堂上先看5张灵感卡，再把学生自己的校园、家庭、社区和文化经验转成项目选题。
+            先挑一个你有感觉的真实案例，再把自己的校园、家庭、社区经历，改造成能展示、能参赛的 AI 项目。
           </p>
           <div className="hero-actions">
             <div className="data-source">
               {cardsResponse.source === 'github-json' ? '灵感库已连接' : '本地演示数据'}
             </div>
             <div className="hero-stat">
-              <strong>{cards.length}</strong>
+              <strong>{filteredCards.length}</strong>
               <span>张项目卡</span>
             </div>
             <div className="hero-stat">
@@ -156,7 +158,12 @@ function App() {
         ))}
       </section>
 
-      <ProjectMap cards={cards} activeCard={activeCard} onSelect={openCardDetail} />
+      <ProjectMap
+        cards={filteredCards}
+        activeCard={activeCard}
+        isDense={isMapDense}
+        onSelect={openCardDetail}
+      />
 
       {openCard && (
         <CardDetailModal card={openCard} onClose={() => setOpenCardId(null)} />
@@ -212,26 +219,38 @@ function MissionCardTile({
 type ProjectMapProps = {
   cards: MissionCard[]
   activeCard: MissionCard
+  isDense: boolean
   onSelect: (card: MissionCard) => void
 }
 
-function ProjectMap({ cards, activeCard, onSelect }: ProjectMapProps) {
+function ProjectMap({ cards, activeCard, isDense, onSelect }: ProjectMapProps) {
   return (
     <section className="map-panel" aria-labelledby="map-title">
       <div className="panel-heading">
-        <span>项目地图</span>
-        <h2 id="map-title">技术难度 × 社会影响</h2>
+        <div>
+          <span>项目地图</span>
+          <h2 id="map-title">按技术难度和社会影响找方向</h2>
+        </div>
+        <p>
+          当前显示 {cards.length} 个项目。项目变多时，先用上方主题筛选缩小范围，地图点会自动切换成紧凑模式。
+        </p>
       </div>
       <div className="map-canvas">
         <span className="axis-line axis-line-x" aria-hidden="true" />
         <span className="axis-line axis-line-y" aria-hidden="true" />
         <span className="axis-label axis-tech">技术难度</span>
         <span className="axis-label axis-impact">社会影响</span>
-        {cards.map((card) => (
+        {cards.map((card, index) => (
           <button
             key={card.id}
             type="button"
-            className={`map-point ${card.id === activeCard.id ? 'is-active' : ''}`}
+            className={[
+              'map-point',
+              isDense ? 'is-compact' : '',
+              card.id === activeCard.id ? 'is-active' : '',
+            ]
+              .filter(Boolean)
+              .join(' ')}
             style={
               {
                 '--x': `${card.mapX}%`,
@@ -241,8 +260,10 @@ function ProjectMap({ cards, activeCard, onSelect }: ProjectMapProps) {
             }
             onClick={() => onSelect(card)}
             aria-label={`选择 ${card.title}`}
+            title={card.title}
           >
-            <span>{card.themeLabel}</span>
+            <span>{isDense ? String(index + 1).padStart(2, '0') : card.themeLabel}</span>
+            {isDense && <strong>{card.themeLabel}</strong>}
           </button>
         ))}
       </div>
@@ -296,6 +317,17 @@ function CardDetailModal({ card, onClose }: CardDetailModalProps) {
                 <span key={power}>{power}</span>
               ))}
             </div>
+            {card.sourceUrl && (
+              <a
+                className="source-link"
+                href={card.sourceUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ExternalLink size={16} strokeWidth={1.8} aria-hidden="true" />
+                查看项目来源
+              </a>
+            )}
           </div>
         </div>
 
