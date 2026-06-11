@@ -1,0 +1,175 @@
+export type MissionCard = {
+  id: string
+  title: string
+  sourceProject: string
+  year: string
+  award: string
+  theme: string
+  themeLabel: string
+  audience: string
+  hook: string
+  problem: string
+  aiMove: string
+  studentProject: string
+  demoGoal: string
+  aiPowers: string[]
+  outputs: string[]
+  question: string
+  insight: string
+  difficulty: '中' | '中高' | '高'
+  impactScore: number
+  techScore: number
+  mapX: number
+  mapY: number
+  accent: string
+}
+
+export const missionCards: MissionCard[] = [
+  {
+    id: 'sfusd-thai-family-liaison',
+    title: '让新生家庭看懂学校',
+    sourceProject: 'SFUSD Thai Family Liaison',
+    year: '2025',
+    award: 'High School AI Large Language Model Gold Award',
+    theme: 'education',
+    themeLabel: '教育公平',
+    audience: '新生家庭、转学学生、少数语言家长',
+    hook: '把复杂的学校制度翻译成家长能行动的下一步。',
+    problem:
+      '泰语移民家庭在理解学区信息时会遇到语言和制度双重障碍，即使有网页，也不一定真的能被理解和使用。',
+    aiMove:
+      '用LLM做多语言问答、政策解释、官方链接整理和双语邮件模板生成。',
+    studentProject: '国际学校新生家庭AI助手',
+    demoGoal:
+      '做出一个可对话的中英双语校园助手，能解释校历、选课、社团、请假和学校邮件。',
+    aiPowers: ['LLM问答', '多语言翻译', '信息检索', '邮件生成'],
+    outputs: ['AI问答Demo', 'FAQ知识库', '中英双语示例对话', '用户测试反馈'],
+    question: '学校里有没有一类信息，对新生或家长来说特别难懂？',
+    insight:
+      'LLM项目的价值不在于模型有多大，而在于是否真正理解用户场景。',
+    difficulty: '中',
+    impactScore: 92,
+    techScore: 58,
+    mapX: 46,
+    mapY: 84,
+    accent: '#2ee6a6',
+  },
+  {
+    id: 'devanagari-scribe',
+    title: '把文化做成可交互工具',
+    sourceProject: 'Devanagari Scribe',
+    year: '2025',
+    award: 'High School AI Showcase 5th Place / AI Excellence',
+    theme: 'culture',
+    themeLabel: '文化保护',
+    audience: '语言学习者、文化传承者、国际学校学生',
+    hook: '让文字、方言、家乡记忆不只是被介绍，而是被使用。',
+    problem:
+      '一些文字、语言或文化知识在现代数字环境中不容易被学习、输入、识别和传播。',
+    aiMove:
+      '用字符识别、LLM解释、文化知识库和互动练习，把文化内容变成AI学习助手。',
+    studentProject: '我的家乡文化AI学习卡',
+    demoGoal:
+      '整理20个文化条目，做一个能问答、生成学习卡或小测验的AI文化助手。',
+    aiPowers: ['字符识别', '文化知识库', 'LLM解释', '互动测验'],
+    outputs: ['AI文化学习助手', '20条知识库', '互动学习卡', '个人故事页'],
+    question: '如果让你用AI保护或介绍一种你熟悉的文化，你会选择什么？',
+    insight:
+      '这是连接“我是谁”“我关心什么”“我如何用技术表达它”的好题型。',
+    difficulty: '中高',
+    impactScore: 76,
+    techScore: 64,
+    mapX: 54,
+    mapY: 68,
+    accent: '#ffb45c',
+  },
+  {
+    id: 'computerpreter',
+    title: '让沟通不再卡住',
+    sourceProject: 'Computerpreter',
+    year: '2025',
+    award: 'High School AI Showcase 5th Place',
+    theme: 'accessibility',
+    themeLabel: '无障碍科技',
+    audience: '听障人士、课堂参与者、公共服务用户',
+    hook: '把手势变成文字，让更多人能被及时理解。',
+    problem:
+      '听障人士在日常交流、课堂和公共服务场景中，经常缺少随时可用的手语翻译支持。',
+    aiMove:
+      '用计算机视觉识别手势，再把识别结果转成文字或语音输出。',
+    studentProject: '校园无障碍沟通助手',
+    demoGoal:
+      '先识别8-10个校园常用手势或需求，做成图片上传/摄像头演示原型。',
+    aiPowers: ['计算机视觉', '手势识别', '实时翻译', '文本输出'],
+    outputs: ['手势识别Demo', '场景词典', '用户旅程图', '错误案例分析'],
+    question: '校园里还有哪些人会因为信息表达方式不同而被排除在外？',
+    insight:
+      '技术公益不是写得感人，而是真的降低某类人的生活门槛。',
+    difficulty: '高',
+    impactScore: 90,
+    techScore: 86,
+    mapX: 82,
+    mapY: 82,
+    accent: '#7cc7ff',
+  },
+  {
+    id: 'project-cassie',
+    title: '把健康管理变成长期陪伴',
+    sourceProject: 'Project CASSIE',
+    year: '2025',
+    award: 'High School AI Large Language Model 4th Place Recognition',
+    theme: 'health',
+    themeLabel: '健康管理',
+    audience: '慢病患者、青少年、需要习惯管理的人',
+    hook: 'AI不替代医生，但可以帮助用户看懂自己的日常数据。',
+    problem:
+      '慢病管理需要长期记录、理解数据和做出日常选择，用户很容易感到负担重。',
+    aiMove:
+      '用LLM问答、个人数据解释、提醒记录和个性化建议支持日常管理。',
+    studentProject: '青少年睡眠与精力管理AI助手',
+    demoGoal:
+      '做一个7天自我记录表和AI周报，生成低风险的生活习惯反思建议。',
+    aiPowers: ['LLM问答', '数据解释', '个性化建议', '风险边界'],
+    outputs: ['AI建议生成器', '健康数据样例', '趋势周报', '免责声明'],
+    question: 'AI不能替代医生时，它还能承担什么安全而有价值的角色？',
+    insight:
+      '越接近健康、心理、医疗，越要讲清楚边界、隐私和伦理。',
+    difficulty: '高',
+    impactScore: 86,
+    techScore: 72,
+    mapX: 68,
+    mapY: 76,
+    accent: '#ff6f91',
+  },
+  {
+    id: 'pain-calculator',
+    title: '让科研测量更客观',
+    sourceProject: 'Pain Calculator',
+    year: '2024',
+    award: 'High School AI Showcase Gold Award',
+    theme: 'research',
+    themeLabel: '科研健康',
+    audience: '科研人员、健康数据研究者、STEM学生',
+    hook: '从一个很窄的测量问题切入，做出很深的科研价值。',
+    problem:
+      '疼痛研究中，动物疼痛状态往往依赖人工观察和经验判断，容易出现主观偏差。',
+    aiMove:
+      '用图像标注、计算机视觉和模型比较，分析刺激前后状态差异。',
+    studentProject: '校园运动恢复观察助手',
+    demoGoal:
+      '围绕疲劳姿态、久坐状态或运动恢复，采集小样本并做分类演示。',
+    aiPowers: ['图像识别', '图像标注', '模型比较', '科研数据分析'],
+    outputs: ['项目Demo', '研究海报', '数据采集说明', '模型判断示例'],
+    question: '你想用AI帮助学校或家庭更早发现什么健康信号？',
+    insight:
+      '好项目不一定很大。一个明确、可测量的小问题，也能产生深价值。',
+    difficulty: '高',
+    impactScore: 80,
+    techScore: 92,
+    mapX: 90,
+    mapY: 70,
+    accent: '#d8f05f',
+  },
+]
+
+export const themes = ['全部', ...new Set(missionCards.map((card) => card.themeLabel))]
