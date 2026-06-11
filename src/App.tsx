@@ -171,7 +171,11 @@ function App() {
       />
 
       {openCard && (
-        <CardDetailModal card={openCard} onClose={() => setOpenCardId(null)} />
+        <CardDetailModal
+          card={openCard}
+          index={cardOrder.get(openCard.id) ?? 1}
+          onClose={() => setOpenCardId(null)}
+        />
       )}
     </main>
   )
@@ -340,12 +344,14 @@ function clamp(value: number, min: number, max: number) {
 
 type CardDetailModalProps = {
   card: MissionCard
+  index: number
   onClose: () => void
 }
 
-function CardDetailModal({ card, onClose }: CardDetailModalProps) {
+function CardDetailModal({ card, index, onClose }: CardDetailModalProps) {
   const Icon = themeIcons[card.themeLabel] ?? Brain
   const sourceUrls = getSourceUrls(card)
+  const displayIndex = String(index).padStart(2, '0')
 
   return (
     <div className="detail-backdrop" onMouseDown={onClose}>
@@ -367,8 +373,13 @@ function CardDetailModal({ card, onClose }: CardDetailModalProps) {
         </button>
 
         <div className="modal-hero">
-          <div className="modal-icon">
-            <Icon size={34} strokeWidth={1.45} aria-hidden="true" />
+          <div className="modal-identity">
+            <div className="modal-index" aria-label={`第 ${displayIndex} 张项目卡`}>
+              {displayIndex}
+            </div>
+            <div className="modal-icon">
+              <Icon size={34} strokeWidth={1.45} aria-hidden="true" />
+            </div>
           </div>
           <div className="modal-heading">
             <div className="detail-topline">

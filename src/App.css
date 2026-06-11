@@ -565,6 +565,25 @@ body.has-open-modal {
   padding: 34px 34px 22px;
 }
 
+.modal-identity {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+
+.modal-index {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  color: color-mix(in srgb, var(--card-accent) 72%, #1d1d1f 28%);
+  background: color-mix(in srgb, var(--card-accent) 14%, white 86%);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-accent) 12%, transparent);
+  font-size: 16px;
+  font-weight: 820;
+}
+
 .modal-icon {
   display: grid;
   place-items: center;
@@ -797,6 +816,18 @@ body.has-open-modal {
     grid-template-columns: 1fr;
     gap: 16px;
     padding: 28px 20px 18px;
+  }
+
+  .modal-identity {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+  .modal-index {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
   }
 
   .modal-icon {
