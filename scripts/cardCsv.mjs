@@ -105,11 +105,8 @@ function rowToCard(row, displayOrder) {
     demoGoal: textValue(row['6节课Demo目标'], ''),
     aiPowers: listValue(row.使用的AI能力),
     outputs: listValue(row.最终展示材料),
-    question: textValue(firstExistingValue(row, ['课堂提问', '想一想', 'question']), ''),
-    insight: textValue(
-      firstExistingValue(row, ['Teacher Note', '项目小贴士', 'insight']),
-      '',
-    ),
+    question: firstContentValue(row, ['想一想', '课堂提问', 'question']),
+    insight: firstContentValue(row, ['项目小贴士', 'insight']),
     difficulty: difficultyValue(row.难度),
     impactScore,
     techScore,
@@ -135,6 +132,18 @@ function firstExistingValue(row, keys) {
     if (textValue(value, '')) return value
   }
   return ''
+}
+
+function firstContentValue(row, keys) {
+  for (const key of keys) {
+    const value = textValue(row[key], '')
+    if (value && !isPlaceholderUrl(value)) return value
+  }
+  return ''
+}
+
+function isPlaceholderUrl(value) {
+  return /^https?:\/\/?$/i.test(value) || /^https?:\/\/\S+/i.test(value)
 }
 
 function listValue(value) {
