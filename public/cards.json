@@ -610,6 +610,203 @@
       "mapX": 3,
       "mapY": 4,
       "accent": "#2ee6a6"
+    },
+    {
+      "id": "fallguard",
+      "title": "给独居长辈的 AI 跌倒守护器",
+      "sourceProject": "FallGuard",
+      "sourceUrl": "https://www.businessinsider.com/13-year-old-won-25000-for-ai-fall-detection-device-2025-12",
+      "sourceUrls": [
+        "https://www.businessinsider.com/13-year-old-won-25000-for-ai-fall-detection-device-2025-12",
+        "https://fallguard.net/"
+      ],
+      "year": "2025",
+      "award": "2025 3M Young Scientist Challenge 第一名 / America's Top Young Scientist",
+      "theme": "education",
+      "themeLabel": "老人照护",
+      "audience": "独居老人、照护者、养老社区",
+      "hook": "如果家里老人跌倒没人发现，AI 能不能在一分钟内通知家人？",
+      "problem": "独居老人跌倒后可能长时间无人发现，传统穿戴设备又容易忘记佩戴或充电。",
+      "aiMove": "姿态识别 AI 分析摄像头画面中的人体关键点和动作变化，判断跌倒或长时间躺倒，并向家人手机发送提醒。",
+      "studentProject": "校园安全跌倒提醒、体育课摔倒检测演示、独居亲友关怀小助手。",
+      "demoGoal": "做出能识别站立/躺倒/疑似跌倒样例，并触发模拟通知的安全提醒原型。",
+      "aiPowers": [
+        "计算机视觉",
+        "姿态识别",
+        "边缘/本地处理",
+        "提醒流程设计"
+      ],
+      "outputs": [
+        "视频识别 demo",
+        "提醒流程页",
+        "隐私边界说明卡"
+      ],
+      "question": "如果摄像头能保护人，也可能让人紧张，产品怎样只保存必要信息？",
+      "insight": "先用公开姿态样例或自录模拟动作测试，不要真实监控他人。重点展示识别逻辑、误报处理和隐私承诺。",
+      "difficulty": "高",
+      "impactScore": 5,
+      "techScore": 5,
+      "mapX": 5,
+      "mapY": 5,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "robert-hook-crop-price-forecast",
+      "title": "帮农民预判价格波动的 AI 农价仪表盘",
+      "sourceProject": "Robert Hook Crop Price Forecast",
+      "sourceUrl": "https://timesofindia.indiatimes.com/city/hubballi/agasagi-school-team-excels-in-ai-hackathon-2026/articleshow/129722979.cms",
+      "sourceUrls": [
+        "https://timesofindia.indiatimes.com/city/hubballi/agasagi-school-team-excels-in-ai-hackathon-2026/articleshow/129722979.cms"
+      ],
+      "year": "2026",
+      "award": "National AI Future Skills Hackathon 2026 Top 10，全国展展示",
+      "theme": "education",
+      "themeLabel": "农业科技",
+      "audience": "农民、农业合作社、学生农业项目团队",
+      "hook": "如果农产品价格突然暴跌，AI 能不能提前提醒农民别被动亏损？",
+      "problem": "农民很难同时追踪市场价格、作物供应和环境数据，价格暴跌时容易被迫低价销售。",
+      "aiMove": "AI 与 IoT 数据进入网页仪表盘，分析复杂农业数据并给出农作物价格趋势和风险提醒。",
+      "studentProject": "校园市集定价助手、食堂食材价格预测、地方特产销售仪表盘。",
+      "demoGoal": "用样例价格和天气/供应数据做出趋势图、风险提示和销售建议页面。",
+      "aiPowers": [
+        "表格预测",
+        "IoT 数据",
+        "数据仪表盘",
+        "异常提醒"
+      ],
+      "outputs": [
+        "农价仪表盘",
+        "价格趋势图",
+        "风险提醒卡",
+        "建议说明"
+      ],
+      "question": "你所在城市有没有一种东西价格经常波动？AI 要看哪些数据，才能提醒卖家或买家？",
+      "insight": "先用公开历史价格或模拟数据，不要承诺一定涨跌。把结果写成风险提醒和复盘建议，而不是替用户做交易决定。",
+      "difficulty": "高",
+      "impactScore": 5,
+      "techScore": 5,
+      "mapX": 5,
+      "mapY": 5,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "snap-snack",
+      "title": "帮过敏人群读懂食品成分的 AI 安心扫描器",
+      "sourceProject": "Snap & Snack",
+      "sourceUrl": "https://www.congressionalappchallenge.us/25-ct05/",
+      "sourceUrls": [
+        "https://www.congressionalappchallenge.us/25-ct05/",
+        "https://www.ctinsider.com/news/article/avon-teen-snap-snack-app-ct-22259058.php"
+      ],
+      "year": "2025",
+      "award": "2025 Congressional App Challenge Connecticut 5th District Winner",
+      "theme": "education",
+      "themeLabel": "健康安全",
+      "audience": "食物过敏学生、家长、旅行者、学校餐厅",
+      "hook": "看不懂配料表时，AI 能不能先帮你发现可能过敏的风险？",
+      "problem": "食物过敏者需要反复检查配料、识别别名和外文标签，外出就餐时压力很大。",
+      "aiMove": "扫描条码或配料表，匹配个人过敏源；翻译外文成分，并用 AI 聊天框给出过敏友好食谱或餐厅建议。",
+      "studentProject": "校园午餐过敏提醒、旅行菜单翻译助手、零食安全扫描器。",
+      "demoGoal": "做出过敏源档案、配料输入/扫描、风险标记和替代食谱建议的原型。",
+      "aiPowers": [
+        "OCR/条码识别",
+        "规则匹配",
+        "机器翻译",
+        "LLM 问答"
+      ],
+      "outputs": [
+        "扫描流程图",
+        "风险提示卡",
+        "AI 食谱回复",
+        "安全免责声明"
+      ],
+      "question": "如果一个配料有很多别名，AI 怎样解释“为什么这可能有风险”，而不是只说能不能吃？",
+      "insight": "先从文本配料表和过敏词典开始。每个风险提示都要显示命中的词和不确定性，不要让 AI 做医疗保证。",
+      "difficulty": "中高",
+      "impactScore": 5,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 5,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "sustainability-heroes",
+      "title": "把可持续发展嵌进课堂的 AI 学科助手",
+      "sourceProject": "Sustainability Heroes",
+      "sourceUrl": "https://www.theearthprize.org/regional-winners-2025",
+      "sourceUrls": [
+        "https://www.theearthprize.org/regional-winners-2025",
+        "https://en.wikipedia.org/wiki/The_Earth_Prize"
+      ],
+      "year": "2025",
+      "award": "The Earth Prize 2025 Middle East Regional Winner",
+      "theme": "education",
+      "themeLabel": "可持续发展",
+      "audience": "中小学老师、学生环保社团、课程设计者",
+      "hook": "如果每一门课都能连到环保行动，AI 能不能帮老师把知识变成校园任务？",
+      "problem": "可持续发展教育常停留在口号或单独活动里，老师很难把它自然嵌入不同学科课堂。",
+      "aiMove": "公开资料显示该项目是把可持续发展整合进学校学科的 AI 平台；学生版可用 LLM 把课题映射到 SDG、行动任务和评价量规。",
+      "studentProject": "校园低碳课程助手、SDG 课堂任务生成器、环保社团项目库。",
+      "demoGoal": "输入一个学科知识点，生成 SDG 关联、课堂小任务、学生提交格式和评价标准。",
+      "aiPowers": [
+        "LLM 生成",
+        "课程映射",
+        "推荐系统",
+        "评价量规生成"
+      ],
+      "outputs": [
+        "课程任务卡",
+        "教师备课页",
+        "学生行动提交样例"
+      ],
+      "question": "你正在学的一节课，能和哪个真实环境问题连起来？AI 应该给你资料、问题还是行动任务？",
+      "insight": "先选一个学科和一个环保主题，要求 AI 引用真实资料并生成可执行的小任务，不要一次覆盖所有课程。",
+      "difficulty": "中",
+      "impactScore": 4,
+      "techScore": 3,
+      "mapX": 3,
+      "mapY": 4,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "ecoaction",
+      "title": "用卫星和 AI 给城市找清凉绿地",
+      "sourceProject": "EcoAction",
+      "sourceUrl": "https://www.theearthprize.org/regional-winners-2025",
+      "sourceUrls": [
+        "https://www.theearthprize.org/regional-winners-2025",
+        "https://en.wikipedia.org/wiki/The_Earth_Prize"
+      ],
+      "year": "2025",
+      "award": "The Earth Prize 2025 Central & South America Regional Winner",
+      "theme": "education",
+      "themeLabel": "城市热岛",
+      "audience": "城市规划者、学校环保社团、社区居民",
+      "hook": "城市哪里最热、最缺树，AI 能不能帮社区先找到该种树的地方？",
+      "problem": "过热城市需要更多绿地，但热区、人口、树荫和土地条件分散在不同数据里，社区难以判断优先顺序。",
+      "aiMove": "公开资料显示项目用 AI、卫星和数据分析规划战略绿化，帮助城市降温。",
+      "studentProject": "校园热力地图、上学路线遮阴推荐、社区种树优先级仪表盘。",
+      "demoGoal": "用校园地图、温度记录和绿化点位做出热区地图与种树优先级列表。",
+      "aiPowers": [
+        "地理空间分析",
+        "卫星图像理解",
+        "热力图",
+        "数据可视化"
+      ],
+      "outputs": [
+        "地图仪表盘",
+        "优先级清单",
+        "绿化前后对比图",
+        "社区提案"
+      ],
+      "question": "你每天经过的路上哪里最晒？如果要用数据证明这里需要树，你会收集什么证据？",
+      "insight": "不用一开始就接真实卫星 API。先用校园地图和温度调查做小模型，并把实测数据和 AI 推断分开标注。",
+      "difficulty": "高",
+      "impactScore": 5,
+      "techScore": 5,
+      "mapX": 5,
+      "mapY": 5,
+      "accent": "#2ee6a6"
     }
   ]
 }
