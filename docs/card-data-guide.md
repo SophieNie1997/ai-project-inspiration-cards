@@ -42,8 +42,8 @@ Keep these columns in the Feishu export. The first group is the core classroom d
 | `6节课Demo目标` | Yes | What students can build in a short course. |
 | `使用的AI能力` | Yes | AI capabilities, separated by `、`, comma, or new lines. |
 | `最终展示材料` | Yes | Final materials, separated by `、`, comma, or new lines. |
-| `课堂提问` | Yes | Discussion prompt for class. |
-| `Teacher Note` | Yes | Teacher note shown in the detail panel. |
+| `课堂提问` or `想一想` | Yes | Student-facing reflection prompt shown as `想一想`. |
+| `Teacher Note` or `项目小贴士` | Yes | Student-friendly action tip shown as `项目小贴士`. |
 | `难度` | Yes | Use `中`, `中高`, or `高`. |
 | `社会影响分` | Yes | 0-100 social impact score. |
 | `技术难度分` | Yes | 0-100 technical difficulty score. |

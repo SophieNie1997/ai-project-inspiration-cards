@@ -105,8 +105,11 @@ function rowToCard(row, displayOrder) {
     demoGoal: textValue(row['6节课Demo目标'], ''),
     aiPowers: listValue(row.使用的AI能力),
     outputs: listValue(row.最终展示材料),
-    question: textValue(row.课堂提问, ''),
-    insight: textValue(row['Teacher Note'], ''),
+    question: textValue(firstExistingValue(row, ['课堂提问', '想一想', 'question']), ''),
+    insight: textValue(
+      firstExistingValue(row, ['Teacher Note', '项目小贴士', 'insight']),
+      '',
+    ),
     difficulty: difficultyValue(row.难度),
     impactScore,
     techScore,

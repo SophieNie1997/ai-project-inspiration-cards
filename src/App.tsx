@@ -378,12 +378,12 @@ function CardDetail({ card }: CardDetailProps) {
       </div>
 
       <div className="question-strip">
-        <span>课堂提问</span>
+        <span>想一想</span>
         <p>{card.question}</p>
       </div>
 
       <div className="insight-strip">
-        <span>教师提示</span>
+        <span>项目小贴士</span>
         <p>{card.insight}</p>
       </div>
     </div>

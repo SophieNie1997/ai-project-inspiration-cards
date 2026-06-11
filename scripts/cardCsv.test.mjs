@@ -46,4 +46,12 @@ describe('convertCsvToCards', () => {
       mapY: 80,
     })
   })
+
+  it('accepts student-facing prompt column aliases', () => {
+    const cards = convertCsvToCards(`展示排序,是否课堂展示,项目名,卡片标题,年份,赛道与奖项,想一想,项目小贴士,主题标签,一句话钩子,用户是谁,解决的问题,AI怎么介入,学生可改造项目,6节课Demo目标,使用的AI能力,最终展示材料,难度,社会影响分,技术难度分
+1,是,Campus Helper,校园助手,2026,Award,你想帮谁解决哪件小事？,先从一个真实场景开始。,教育公平,hook,audience,problem,ai,student,demo,LLM,Demo,中,50,40`)
+
+    expect(cards[0].question).toBe('你想帮谁解决哪件小事？')
+    expect(cards[0].insight).toBe('先从一个真实场景开始。')
+  })
 })
