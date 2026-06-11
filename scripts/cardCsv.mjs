@@ -79,9 +79,8 @@ export function cardsToJson(cards) {
 function rowToCard(row, displayOrder) {
   const title = textValue(row.卡片标题, textValue(row.项目名, '未命名项目'))
   const sourceProject = textValue(row.项目名, title)
-  const sourceUrl = textValue(
+  const sourceUrls = sourceUrlList(
     firstExistingValue(row, ['来源链接', '项目链接', 'sourceUrl', 'Source URL']),
-    '',
   )
   const themeLabel = normalizeThemeLabel(firstValue(row.主题标签, '教育公平'))
   const meta = themeMeta[themeLabel] ?? themeMeta.教育公平
@@ -92,7 +91,7 @@ function rowToCard(row, displayOrder) {
     id: textValue(row.卡片ID, slugify(sourceProject || title || `card-${displayOrder}`)),
     title,
     sourceProject,
-    ...(sourceUrl ? { sourceUrl } : {}),
+    ...(sourceUrls.length ? { sourceUrl: sourceUrls[0], sourceUrls } : {}),
     year: textValue(row.年份, ''),
     award: textValue(row.赛道与奖项, ''),
     theme: meta.theme,
@@ -151,6 +150,13 @@ function listValue(value) {
     .split(/[,，、;；\n]/)
     .map((item) => item.trim())
     .filter(Boolean)
+}
+
+function sourceUrlList(value) {
+  return textValue(value, '')
+    .split(/[;；\n\r]+/)
+    .map((item) => item.trim())
+    .filter((item) => /^https?:\/\//i.test(item))
 }
 
 function numberValue(value, fallback) {

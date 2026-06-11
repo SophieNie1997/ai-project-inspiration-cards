@@ -3,6 +3,7 @@ export type MissionCard = {
   title: string
   sourceProject: string
   sourceUrl?: string
+  sourceUrls?: string[]
   year: string
   award: string
   theme: string

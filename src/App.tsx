@@ -344,6 +344,7 @@ type CardDetailModalProps = {
 
 function CardDetailModal({ card, onClose }: CardDetailModalProps) {
   const Icon = themeIcons[card.themeLabel] ?? Brain
+  const sourceUrls = getSourceUrls(card)
 
   return (
     <div className="detail-backdrop" onMouseDown={onClose}>
@@ -383,16 +384,21 @@ function CardDetailModal({ card, onClose }: CardDetailModalProps) {
                 <span key={power}>{power}</span>
               ))}
             </div>
-            {card.sourceUrl && (
-              <a
-                className="source-link"
-                href={card.sourceUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ExternalLink size={16} strokeWidth={1.8} aria-hidden="true" />
-                查看项目来源
-              </a>
+            {sourceUrls.length > 0 && (
+              <div className="source-links" aria-label="项目来源链接">
+                {sourceUrls.map((sourceUrl, index) => (
+                  <a
+                    key={sourceUrl}
+                    className="source-link"
+                    href={sourceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <ExternalLink size={16} strokeWidth={1.8} aria-hidden="true" />
+                    {sourceUrls.length === 1 ? '查看项目来源' : `项目来源 ${index + 1}`}
+                  </a>
+                ))}
+              </div>
             )}
           </div>
         </div>
@@ -401,6 +407,11 @@ function CardDetailModal({ card, onClose }: CardDetailModalProps) {
       </section>
     </div>
   )
+}
+
+function getSourceUrls(card: MissionCard) {
+  const urls = card.sourceUrls?.length ? card.sourceUrls : card.sourceUrl ? [card.sourceUrl] : []
+  return [...new Set(urls.filter((url) => /^https?:\/\//i.test(url)))]
 }
 
 type CardDetailProps = {

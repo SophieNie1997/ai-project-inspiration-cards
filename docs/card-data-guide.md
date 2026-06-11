@@ -32,7 +32,7 @@ Keep these columns in the Feishu export. The first group is the core classroom d
 | `卡片标题` | Yes | Short classroom-facing card title. |
 | `年份` | Yes | Award year. |
 | `赛道与奖项` | Yes | Track and award. |
-| `来源链接` | Yes | Original project, winner page, article, or video URL. Shown as `查看项目来源` in the detail modal. |
+| `来源链接` | Yes | Original project, winner page, article, or video URL. Use `；`, `;`, or line breaks for multiple URLs; the detail modal shows one source button per URL. |
 | `主题标签` | Yes | Chinese theme label shown in the UI. |
 | `一句话钩子` | Yes | One-sentence card hook. |
 | `用户是谁` | Yes | User group affected by the problem. |

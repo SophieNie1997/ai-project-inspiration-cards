@@ -27,6 +27,7 @@ describe('convertCsvToCards', () => {
       title: '让沟通不再卡住',
       sourceProject: 'Computerpreter',
       sourceUrl: 'https://example.com/computerpreter',
+      sourceUrls: ['https://example.com/computerpreter'],
       theme: 'accessibility',
       themeLabel: '无障碍科技',
       difficulty: '高',
@@ -53,5 +54,17 @@ describe('convertCsvToCards', () => {
 
     expect(cards[0].question).toBe('你想帮谁解决哪件小事？')
     expect(cards[0].insight).toBe('先从一个真实场景开始。')
+  })
+
+  it('splits multiple source URLs from one CSV cell', () => {
+    const cards = convertCsvToCards(`展示排序,是否课堂展示,项目名,卡片标题,年份,赛道与奖项,来源链接,主题标签,一句话钩子,用户是谁,解决的问题,AI怎么介入,学生可改造项目,6节课Demo目标,使用的AI能力,最终展示材料,想一想,项目小贴士,难度,社会影响分,技术难度分
+1,是,Open Calendar,好运日历,2026,Award,https://example.com/a；https://github.com/demo/project;https://example.com/c,教育公平,hook,audience,problem,ai,student,demo,LLM,Demo,question,tip,中,50,40`)
+
+    expect(cards[0].sourceUrl).toBe('https://example.com/a')
+    expect(cards[0].sourceUrls).toEqual([
+      'https://example.com/a',
+      'https://github.com/demo/project',
+      'https://example.com/c',
+    ])
   })
 })

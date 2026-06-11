@@ -587,13 +587,19 @@ body.has-open-modal {
   font-weight: 760;
 }
 
+.source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
 .source-link {
   width: fit-content;
   min-height: 38px;
   display: inline-flex;
   gap: 8px;
   align-items: center;
-  margin-top: 18px;
   padding: 0 14px;
   border-radius: 999px;
   color: var(--ink);
