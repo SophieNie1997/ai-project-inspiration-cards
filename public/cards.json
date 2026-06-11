@@ -5,6 +5,9 @@
       "title": "给泰语家庭的 AI 入学政策助手",
       "sourceProject": "SFUSD Thai Family Liaison GPT",
       "sourceUrl": "https://patch.com/california/san-francisco/sf-student-wins-international-award-ai-language-model-project",
+      "sourceUrls": [
+        "https://patch.com/california/san-francisco/sf-student-wins-international-award-ai-language-model-project"
+      ],
       "year": "2025",
       "award": "WAICY 2025 High School AI Large Language Model Track，Global Gold Award",
       "theme": "education",
@@ -40,6 +43,9 @@
       "title": "把冲突对话翻译成理解的 AI 桥梁",
       "sourceProject": "BridgeBot",
       "sourceUrl": "https://www.shsd.org/about-us/district-news/stories/~board/bernards-high-school-news/post/bhs-student-earns-global-recognition-in-international-ai-competition",
+      "sourceUrls": [
+        "https://www.shsd.org/about-us/district-news/stories/~board/bernards-high-school-news/post/bhs-student-earns-global-recognition-in-international-ai-competition"
+      ],
       "year": "2025",
       "award": "WAICY 2025 High School AI Large Language Model Track，Global Silver Award",
       "theme": "education",
@@ -74,6 +80,9 @@
       "title": "帮领养者找到合适宠物的 AI 匹配助手",
       "sourceProject": "FetchAFriend",
       "sourceUrl": "https://innovation.svvsd.org/focus-areas/ai/",
+      "sourceUrls": [
+        "https://innovation.svvsd.org/focus-areas/ai/"
+      ],
       "year": "2025",
       "award": "WAICY 2025 High School AI Showcase Track，Design Excellence Award",
       "theme": "education",
@@ -108,6 +117,9 @@
       "title": "让农场少浪费水的 AI 灌溉助手",
       "sourceProject": "AIdrate",
       "sourceUrl": "https://www.linkedin.com/posts/yolanda-ramirez-lagos_waicy2025-sdaia-neom-activity-7406771369083867136-_xP4",
+      "sourceUrls": [
+        "https://www.linkedin.com/posts/yolanda-ramirez-lagos_waicy2025-sdaia-neom-activity-7406771369083867136-_xP4"
+      ],
       "year": "2025",
       "award": "WAICY 2025 High School AI Showcase Track，4th Place Recognition；KSA 1st Place Country Award",
       "theme": "environment",
@@ -142,6 +154,9 @@
       "title": "用情绪识别推荐印度古典音乐",
       "sourceProject": "Sangeet & I",
       "sourceUrl": "https://www.sangeetandi.com/",
+      "sourceUrls": [
+        "https://www.sangeetandi.com/"
+      ],
       "year": "2024",
       "award": "WAICY 2024 High School AI Showcase Track，Global Silver Award",
       "theme": "culture",
@@ -176,6 +191,9 @@
       "title": "帮科研人员更客观观察动物疼痛",
       "sourceProject": "Pain Calculator",
       "sourceUrl": "https://community.edenpr.org/inspire-magazine-2025",
+      "sourceUrls": [
+        "https://community.edenpr.org/inspire-magazine-2025"
+      ],
       "year": "2024",
       "award": "WAICY 2024 High School AI Showcase Track，Global Gold Award",
       "theme": "education",
@@ -210,6 +228,9 @@
       "title": "陪青少年做情绪觉察的 AI 日记",
       "sourceProject": "MindPaw",
       "sourceUrl": "https://richardfeng.me/",
+      "sourceUrls": [
+        "https://richardfeng.me/"
+      ],
       "year": "2024",
       "award": "WAICY 2024 High School AI Showcase Track，Design Excellence Award",
       "theme": "education",
@@ -244,6 +265,9 @@
       "title": "用 AI 保护和学习天城文文字",
       "sourceProject": "Devanagari Scribe",
       "sourceUrl": "https://www.waicy.org/",
+      "sourceUrls": [
+        "https://www.waicy.org/"
+      ],
       "year": "2025",
       "award": "WAICY 2025 High School AI Showcase Track，5th Place Recognition + AI Excellence",
       "theme": "education",
@@ -277,6 +301,9 @@
       "title": "给 1 型糖尿病管理做 AI 辅助记录",
       "sourceProject": "Project CASSIE",
       "sourceUrl": "https://www.waicy.org/waicy-2025/",
+      "sourceUrls": [
+        "https://www.waicy.org/waicy-2025/"
+      ],
       "year": "2025",
       "award": "WAICY 2025 High School AI Large Language Model Track，4th Place Recognition",
       "theme": "health",
@@ -311,6 +338,9 @@
       "title": "把实时手语转成文字的无障碍助手",
       "sourceProject": "SignTrack",
       "sourceUrl": "https://www.waicy.org/waicy-star/",
+      "sourceUrls": [
+        "https://www.waicy.org/waicy-star/"
+      ],
       "year": "2022",
       "award": "WAICY 2022 High School Bronze Award",
       "theme": "education",
@@ -344,7 +374,12 @@
       "id": "好运日历机-open-calendar",
       "title": "把 AI 陪伴打印成每日好运签",
       "sourceProject": "好运日历机 Open Calendar",
-      "sourceUrl": "https://mp.weixin.qq.com/s/EZJPjdW6NRHOISONYbk4ZA；https://github.com/noonwake-ai/open-calendar；https://www.sohu.com/a/1008579935_114760",
+      "sourceUrl": "https://mp.weixin.qq.com/s/EZJPjdW6NRHOISONYbk4ZA",
+      "sourceUrls": [
+        "https://mp.weixin.qq.com/s/EZJPjdW6NRHOISONYbk4ZA",
+        "https://github.com/noonwake-ai/open-calendar",
+        "https://www.sohu.com/a/1008579935_114760"
+      ],
       "year": "2026",
       "award": "2026 小红书黑客松巅峰赛硬件赛道二等奖",
       "theme": "education",
