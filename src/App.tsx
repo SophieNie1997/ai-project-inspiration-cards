@@ -255,6 +255,7 @@ function ProjectMap({ cards, cardOrder, activeCard, isDense, onSelect }: Project
             className={[
               'map-point',
               isDense ? 'is-compact' : '',
+              y < 18 ? 'show-tooltip-below' : '',
               card.id === activeCard.id ? 'is-active' : '',
             ]
               .filter(Boolean)
@@ -275,7 +276,7 @@ function ProjectMap({ cards, cardOrder, activeCard, isDense, onSelect }: Project
                 ? String(cardOrder.get(card.id) ?? index + 1).padStart(2, '0')
                 : card.themeLabel}
             </span>
-            {isDense && <strong>{card.themeLabel}</strong>}
+            {isDense && <strong>{card.title}</strong>}
           </button>
         ))}
       </div>

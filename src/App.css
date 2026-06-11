@@ -456,6 +456,11 @@ body.has-open-modal {
   z-index: 2;
 }
 
+.map-point:hover,
+.map-point:focus-visible {
+  z-index: 5;
+}
+
 .map-point strong {
   display: none;
 }
@@ -476,12 +481,23 @@ body.has-open-modal {
   left: 50%;
   bottom: calc(100% + 8px);
   transform: translateX(-50%);
+  max-width: 260px;
   padding: 7px 10px;
   border-radius: 999px;
   color: var(--text);
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-  white-space: nowrap;
+  line-height: 1.35;
+  white-space: normal;
+  inline-size: max-content;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+  z-index: 6;
+}
+
+.map-point.is-compact.show-tooltip-below strong {
+  top: calc(100% + 8px);
+  bottom: auto;
 }
 
 .map-point.is-compact:hover strong,
