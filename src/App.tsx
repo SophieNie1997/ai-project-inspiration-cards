@@ -45,7 +45,11 @@ function App() {
     if (effectiveSelectedTheme === '全部') return cards
     return cards.filter((card) => card.themeLabel === effectiveSelectedTheme)
   }, [cards, effectiveSelectedTheme])
-  const isMapDense = filteredCards.length > 10
+  const cardOrder = useMemo(
+    () => new Map(cards.map((card, index) => [card.id, index + 1])),
+    [cards],
+  )
+  const isMapDense = filteredCards.length >= 8
 
   const activeCard = cards.find((card) => card.id === activeId) ?? cards[0] ?? missionCards[0]
   const openCard = openCardId
@@ -151,7 +155,7 @@ function App() {
           <MissionCardTile
             key={card.id}
             card={card}
-            index={index + 1}
+            index={cardOrder.get(card.id) ?? index + 1}
             isActive={card.id === activeCard.id}
             onSelect={() => openCardDetail(card)}
           />
@@ -160,6 +164,7 @@ function App() {
 
       <ProjectMap
         cards={filteredCards}
+        cardOrder={cardOrder}
         activeCard={activeCard}
         isDense={isMapDense}
         onSelect={openCardDetail}
@@ -218,29 +223,32 @@ function MissionCardTile({
 
 type ProjectMapProps = {
   cards: MissionCard[]
+  cardOrder: Map<string, number>
   activeCard: MissionCard
   isDense: boolean
   onSelect: (card: MissionCard) => void
 }
 
-function ProjectMap({ cards, activeCard, isDense, onSelect }: ProjectMapProps) {
+function ProjectMap({ cards, cardOrder, activeCard, isDense, onSelect }: ProjectMapProps) {
+  const positionedCards = getPositionedCards(cards)
+
   return (
     <section className="map-panel" aria-labelledby="map-title">
       <div className="panel-heading">
         <div>
           <span>项目地图</span>
-          <h2 id="map-title">按技术难度和社会影响找方向</h2>
+          <h2 id="map-title">用地图找到你的项目方向</h2>
         </div>
         <p>
-          当前显示 {cards.length} 个项目。项目变多时，先用上方主题筛选缩小范围，地图点会自动切换成紧凑模式。
+          越往右，技术挑战越高；越往上，影响的人越多。先找一个靠近你兴趣的位置，再点开项目看看。
         </p>
       </div>
       <div className="map-canvas">
         <span className="axis-line axis-line-x" aria-hidden="true" />
         <span className="axis-line axis-line-y" aria-hidden="true" />
-        <span className="axis-label axis-tech">技术难度</span>
-        <span className="axis-label axis-impact">社会影响</span>
-        {cards.map((card, index) => (
+        <span className="axis-label axis-tech">技术挑战</span>
+        <span className="axis-label axis-impact">影响范围</span>
+        {positionedCards.map(({ card, x, y }, index) => (
           <button
             key={card.id}
             type="button"
@@ -253,8 +261,8 @@ function ProjectMap({ cards, activeCard, isDense, onSelect }: ProjectMapProps) {
               .join(' ')}
             style={
               {
-                '--x': `${card.mapX}%`,
-                '--y': `${100 - card.mapY}%`,
+                '--x': `${x}%`,
+                '--y': `${y}%`,
                 '--card-accent': card.accent,
               } as React.CSSProperties
             }
@@ -262,13 +270,71 @@ function ProjectMap({ cards, activeCard, isDense, onSelect }: ProjectMapProps) {
             aria-label={`选择 ${card.title}`}
             title={card.title}
           >
-            <span>{isDense ? String(index + 1).padStart(2, '0') : card.themeLabel}</span>
+            <span>
+              {isDense
+                ? String(cardOrder.get(card.id) ?? index + 1).padStart(2, '0')
+                : card.themeLabel}
+            </span>
             {isDense && <strong>{card.themeLabel}</strong>}
           </button>
         ))}
       </div>
     </section>
   )
+}
+
+function getPositionedCards(cards: MissionCard[]) {
+  const basePositions = cards.map((card) => ({
+    card,
+    x: scaleMapCoordinate(card.mapX),
+    y: 100 - scaleMapCoordinate(card.mapY),
+  }))
+  const groups = new Map<string, typeof basePositions>()
+
+  for (const position of basePositions) {
+    const key = `${Math.round(position.x)}:${Math.round(position.y)}`
+    groups.set(key, [...(groups.get(key) ?? []), position])
+  }
+
+  return basePositions.map((position) => {
+    const key = `${Math.round(position.x)}:${Math.round(position.y)}`
+    const group = groups.get(key) ?? [position]
+    const groupIndex = group.findIndex(({ card }) => card.id === position.card.id)
+    const offset = getClusterOffset(groupIndex, group.length)
+
+    return {
+      ...position,
+      x: clamp(position.x + offset.x, 9, 91),
+      y: clamp(position.y + offset.y, 9, 91),
+    }
+  })
+}
+
+function scaleMapCoordinate(value: number) {
+  if (!Number.isFinite(value)) return 50
+
+  if (value <= 10) {
+    const score = clamp(value, 1, 5)
+    return 16 + ((score - 1) / 4) * 70
+  }
+
+  return clamp(value, 12, 88)
+}
+
+function getClusterOffset(index: number, total: number) {
+  if (total <= 1) return { x: 0, y: 0 }
+
+  const angle = (index / total) * Math.PI * 2 - Math.PI / 2
+  const radius = total === 2 ? 7 : 9
+
+  return {
+    x: Math.cos(angle) * radius,
+    y: Math.sin(angle) * radius,
+  }
+}
+
+function clamp(value: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, value))
 }
 
 type CardDetailModalProps = {
