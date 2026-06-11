@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "sync:cards": "node scripts/sync-cards.mjs",
+    "publish:cards": "node scripts/publish-cards.mjs",
     "test": "vitest run",
     "preview": "vite preview"
   },

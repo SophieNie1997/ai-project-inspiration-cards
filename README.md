@@ -5,7 +5,7 @@ A classroom presentation web app for turning AI project case studies into visual
 Production data flow:
 
 ```text
-Teacher draft sheet -> public/cards.json -> GitHub -> Vercel -> classroom web app
+Feishu teacher sheet -> imports/cards.csv -> public/cards.json -> GitHub -> Vercel -> classroom web app
 ```
 
 ## What This Builds
@@ -13,7 +13,7 @@ Teacher draft sheet -> public/cards.json -> GitHub -> Vercel -> classroom web ap
 - A premium classroom-facing Mission Cards view.
 - A project map that compares technical difficulty and social impact.
 - A detail panel with Before / AI Move / Student Version framing.
-- A GitHub-hosted JSON data source with local demo-data fallback.
+- A Feishu-exported CSV publishing flow with GitHub-hosted JSON output.
 
 ## Local Development
 
@@ -32,13 +32,19 @@ npm run build
 
 ## Data Source
 
-The frontend loads classroom cards from:
+The frontend loads classroom cards from the generated JSON file:
 
 ```text
 public/cards.json
 ```
 
-Because this file is committed to GitHub, Vercel can deploy it as a static asset. This avoids Feishu API permissions, app review, API secrets, and classroom-time third-party access issues.
+The teacher-editable import file is:
+
+```text
+imports/cards.csv
+```
+
+Because both files are committed to GitHub, Vercel can deploy the data as static assets. This avoids Feishu API permissions, app review, API secrets, and classroom-time third-party access issues.
 
 Local fallback data lives in:
 
@@ -50,18 +56,25 @@ Use the fallback only as a safety copy. The classroom-facing source of truth is 
 
 ## Updating Cards
 
-1. Edit `public/cards.json`.
-2. Run the verification commands.
-3. Commit and push to `main`.
-4. Vercel redeploys the website automatically.
+1. Teachers edit and review cards in Feishu.
+2. Export the Feishu table as CSV.
+3. Replace `imports/cards.csv` with the exported CSV.
+4. Run:
 
 ```bash
-npm test
-npm run lint
-npm run build
+npm run sync:cards
 ```
 
-You can still use Feishu, Excel, or Google Sheets as the teacher editing workspace. Export or copy finalized rows into `public/cards.json` before class.
+5. Preview locally or run verification.
+6. Commit and push to `main`.
+
+For one-command publishing from CSV to the live website:
+
+```bash
+npm run publish:cards
+```
+
+This command regenerates `public/cards.json`, runs tests/lint/build, commits `imports/cards.csv` and `public/cards.json`, then pushes to GitHub. Vercel redeploys after the push.
 
 ## Card Schema
 
