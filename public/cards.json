@@ -807,6 +807,46 @@
       "mapX": 5,
       "mapY": 5,
       "accent": "#2ee6a6"
+    },
+    {
+      "id": "营养小精灵互动餐厅",
+      "title": "把挑食晚餐变成 AI 食育冒险",
+      "sourceProject": "营养小精灵互动餐厅",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Sv5ITxvmuyggTFaa1JtewQ?from=industrynews&version=5.0.8.70666&platform=mac#rd",
+      "sourceUrls": [
+        "https://mp.weixin.qq.com/s/Sv5ITxvmuyggTFaa1JtewQ?from=industrynews&version=5.0.8.70666&platform=mac#rd"
+      ],
+      "year": "2026",
+      "award": "同济大学设计创意学院 2026 毕业展儿童节专题作品，奖项未公开",
+      "theme": "education",
+      "themeLabel": "营养食育",
+      "audience": "挑食儿童、希望改善亲子用餐体验的家长、儿童餐厅或食育课程老师",
+      "hook": "如果孩子不愿意尝试新食物，AI 能不能把一顿饭变成有营养小精灵陪伴的冒险？",
+      "problem": "儿童日常用餐常被家长管教和挑食冲突占据，孩子缺少主动探索健康饮食、尝试新食物的动机。",
+      "aiMove": "AI 根据孩子的食物选择、用餐进度和营养目标，生成营养小精灵角色反馈、任务剧情、鼓励话术和下一步尝试建议，配合实时交互把用餐变成游戏化冒险。",
+      "studentProject": "校园食堂营养任务卡、家庭早餐 AI 冒险助手、挑食儿童食物探索游戏、亲子健康饮食打卡器。",
+      "demoGoal": "做出一个输入食物/偏好后，AI 生成角色鼓励、营养小知识和下一步任务的互动食育原型。",
+      "aiPowers": [
+        "LLM剧情生成",
+        "个性化反馈",
+        "营养知识问答",
+        "实时交互",
+        "游戏化任务设计"
+      ],
+      "outputs": [
+        "互动餐桌/网页原型",
+        "营养小精灵角色卡",
+        "任务流程图",
+        "儿童用餐前后对比故事板"
+      ],
+      "question": "如果你要让一个孩子愿意尝试一种不喜欢的食物，你会让 AI 设计什么角色、任务和奖励？",
+      "insight": "先选一个具体场景，比如早餐、蔬菜或喝水。不要直接做“大而全餐厅”，先跑通“食物输入-营养解释-角色鼓励-小任务反馈”的闭环。",
+      "difficulty": "中高",
+      "impactScore": 4,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 4,
+      "accent": "#2ee6a6"
     }
   ]
 }
