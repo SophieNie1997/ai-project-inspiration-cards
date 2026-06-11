@@ -847,6 +847,46 @@
       "mapX": 4,
       "mapY": 4,
       "accent": "#2ee6a6"
+    },
+    {
+      "id": "coniro-yookie-情绪正念软糖",
+      "title": "把情绪性进食变成 AI 正念陪伴",
+      "sourceProject": "Coniro / Yookie 情绪正念软糖",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6a0727ea000000000803177e?app_platform=ios&app_version=9.33.4&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBFq8Sa0FrVQwEuRT97gPeMQYq85t1sOjfTQ7Co3R-Hrc=&author_share=1&xhsshare=CopyLink&shareRedId=N0gzQ0g9OT83OEdHOjg2SD45PDg6S0lN&apptime=1780973747&share_id=f80be50fe6014dd3aa9476bba5675d75",
+      "sourceUrls": [
+        "https://www.xiaohongshu.com/explore/6a0727ea000000000803177e?app_platform=ios&app_version=9.33.4&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBFq8Sa0FrVQwEuRT97gPeMQYq85t1sOjfTQ7Co3R-Hrc=&author_share=1&xhsshare=CopyLink&shareRedId=N0gzQ0g9OT83OEdHOjg2SD45PDg6S0lN&apptime=1780973747&share_id=f80be50fe6014dd3aa9476bba5675d75"
+      ],
+      "year": "2026",
+      "award": "同济大学设计创意学院毕业设计展；小红书线上毕业展，奖项未公开",
+      "theme": "education",
+      "themeLabel": "心理健康",
+      "audience": "有情绪性进食困扰的青少年、压力大的学生、希望用低门槛方式做情绪觉察的人",
+      "hook": "当人想靠零食安慰情绪时，AI 能不能先陪你识别情绪，再给一个更温柔的替代动作？",
+      "problem": "情绪低落、焦虑或空虚时，人们容易用进食来快速安慰自己，却很少有低门槛、非说教的方式帮助他们觉察情绪并替代行为。",
+      "aiMove": "原作主要是IP与产品设计；学生改造时可让 AI 根据用户选择的情绪软糖、当下心情和触发场景，生成正念引导、替代行为建议、情绪记录和温柔陪伴话术。",
+      "studentProject": "情绪零食替代助手、校园压力正念打卡器、AI 情绪糖果盒、考试周情绪陪伴小程序。",
+      "demoGoal": "做出一个选择情绪后生成正念引导、替代动作和情绪记录卡的 AI 陪伴原型。",
+      "aiPowers": [
+        "LLM情绪对话",
+        "正念引导生成",
+        "个性化建议",
+        "情绪分类",
+        "行为替代方案设计"
+      ],
+      "outputs": [
+        "AI聊天原型",
+        "六种情绪软糖角色卡",
+        "情绪记录页面",
+        "用户旅程海报"
+      ],
+      "question": "如果你要设计一颗“焦虑软糖”，它不应该鼓励用户多吃，而应该引导用户做哪一个小动作？",
+      "insight": "先选 3 种常见情绪，比如焦虑、孤独、愤怒。每种情绪都设计“识别一句话、正念一分钟、替代小动作、求助提醒”四步，不要让 AI 诊断心理疾病。",
+      "difficulty": "中",
+      "impactScore": 4,
+      "techScore": 3,
+      "mapX": 3,
+      "mapY": 4,
+      "accent": "#2ee6a6"
     }
   ]
 }
