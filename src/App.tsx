@@ -1,18 +1,15 @@
 import { useEffect, useMemo, useState } from 'react'
 import {
-  ArrowRight,
   Brain,
   ChartNoAxesColumnIncreasing,
-  FileJson,
   FlaskConical,
   Globe2,
   GraduationCap,
   HeartPulse,
   Languages,
-  LayoutGrid,
-  MessageSquareText,
   ScanSearch,
   ShieldCheck,
+  Sparkles,
 } from 'lucide-react'
 import './App.css'
 import { missionCards, type MissionCard } from './data/cards'
@@ -47,6 +44,7 @@ function App() {
   }, [cards, effectiveSelectedTheme])
 
   const activeCard = cards.find((card) => card.id === activeId) ?? cards[0] ?? missionCards[0]
+  const featuredCards = cards.slice(0, 3)
 
   useEffect(() => {
     let isMounted = true
@@ -77,41 +75,51 @@ function App() {
         <div className="hero-copy">
           <div className="eyebrow">
             <span className="signal-dot" />
-            WAICY High School Project Lab
+            WAICY Project Inspiration Cards
           </div>
           <h1 id="page-title">
             <span>用真实问题</span>
             <span>启动 AI 项目</span>
           </h1>
           <p>
-            课堂上先看5张 Mission Cards，再把学生自己的校园、家庭、社区和文化经验转成项目选题。
+            课堂上先看5张灵感卡，再把学生自己的校园、家庭、社区和文化经验转成项目选题。
           </p>
           <div className="data-source">
-            {cardsResponse.source === 'github-json' ? 'GitHub data' : 'Local demo data'}
+            {cardsResponse.source === 'github-json' ? '灵感库已连接' : '本地演示数据'}
           </div>
         </div>
 
-        <div className="hero-system" aria-label="Data sync model">
-          <div className="system-node">
-            <FileJson size={20} aria-hidden="true" />
-            <span>GitHub JSON</span>
+        <div className="hero-showcase" aria-label="Featured inspiration cards">
+          <div className="showcase-window">
+            <div className="showcase-header">
+              <span>今日卡组</span>
+              <span>{cards.length} 张卡</span>
+            </div>
+            <div className="showcase-list">
+              {featuredCards.map((card) => (
+                <button
+                  key={card.id}
+                  type="button"
+                  className="showcase-item"
+                  style={{ '--card-accent': card.accent } as React.CSSProperties}
+                  onClick={() => setActiveId(card.id)}
+                >
+                  <span>{card.themeLabel}</span>
+                  <strong>{card.title}</strong>
+                </button>
+              ))}
+            </div>
           </div>
-          <ArrowRight size={18} aria-hidden="true" />
-          <div className="system-node is-active">
-            <LayoutGrid size={20} aria-hidden="true" />
-            <span>Mission Cards</span>
-          </div>
-          <ArrowRight size={18} aria-hidden="true" />
-          <div className="system-node">
-            <MessageSquareText size={20} aria-hidden="true" />
-            <span>Classroom Pitch</span>
+          <div className="showcase-note">
+            <Sparkles size={18} aria-hidden="true" />
+            <span>从真实获奖案例出发，快速找到学生自己的项目切口。</span>
           </div>
         </div>
       </section>
 
       <section className="toolbar" aria-label="Card filters">
         <div>
-          <span className="toolbar-kicker">Theme Filter</span>
+          <span className="toolbar-kicker">主题筛选</span>
           <h2>选择项目入口</h2>
         </div>
         <div className="theme-tabs" role="tablist" aria-label="Project themes">
@@ -204,7 +212,7 @@ function ProjectMap({ cards, activeCard, onSelect }: ProjectMapProps) {
   return (
     <section className="map-panel" aria-labelledby="map-title">
       <div className="panel-heading">
-        <span>Project Map</span>
+        <span>项目地图</span>
         <h2 id="map-title">技术难度 × 社会影响</h2>
       </div>
       <div className="map-canvas">
@@ -252,15 +260,15 @@ function CardDetail({ card }: CardDetailProps) {
 
       <div className="before-after">
         <div>
-          <span>Before</span>
+          <span>痛点</span>
           <p>{card.problem}</p>
         </div>
         <div>
-          <span>AI Move</span>
+          <span>AI动作</span>
           <p>{card.aiMove}</p>
         </div>
         <div>
-          <span>Student Version</span>
+          <span>学生改造</span>
           <p>{card.demoGoal}</p>
         </div>
       </div>
@@ -289,7 +297,7 @@ function CardDetail({ card }: CardDetailProps) {
       </div>
 
       <div className="insight-strip">
-        <span>Teacher Note</span>
+        <span>教师提示</span>
         <p>{card.insight}</p>
       </div>
     </section>
