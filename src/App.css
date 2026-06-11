@@ -501,7 +501,7 @@ body.has-open-modal {
 }
 
 .map-point.is-compact:hover strong,
-.map-point.is-compact.is-active strong {
+.map-point.is-compact:focus-visible strong {
   display: block;
 }
 

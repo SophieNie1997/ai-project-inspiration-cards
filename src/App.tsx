@@ -32,7 +32,7 @@ function App() {
     source: 'local',
   })
   const [selectedTheme, setSelectedTheme] = useState('全部')
-  const [activeId, setActiveId] = useState(missionCards[0].id)
+  const [activeId, setActiveId] = useState<string | null>(null)
   const [openCardId, setOpenCardId] = useState<string | null>(null)
   const cards = cardsResponse.cards
   const activeThemes = useMemo(
@@ -51,7 +51,6 @@ function App() {
   )
   const isMapDense = filteredCards.length >= 8
 
-  const activeCard = cards.find((card) => card.id === activeId) ?? cards[0] ?? missionCards[0]
   const openCard = openCardId
     ? cards.find((card) => card.id === openCardId) ?? null
     : null
@@ -61,7 +60,6 @@ function App() {
     loadMissionCards(missionCards).then((response) => {
       if (!isMounted) return
       setCardsResponse(response)
-      setActiveId(response.cards[0]?.id ?? missionCards[0].id)
     })
 
     return () => {
@@ -87,12 +85,7 @@ function App() {
 
   function selectTheme(theme: string) {
     setSelectedTheme(theme)
-    const nextCard =
-      theme === '全部'
-        ? cards[0]
-        : cards.find((card) => card.themeLabel === theme)
-
-    if (nextCard) setActiveId(nextCard.id)
+    setActiveId(null)
   }
 
   function openCardDetail(card: MissionCard) {
@@ -156,7 +149,7 @@ function App() {
             key={card.id}
             card={card}
             index={cardOrder.get(card.id) ?? index + 1}
-            isActive={card.id === activeCard.id}
+            isActive={card.id === activeId}
             onSelect={() => openCardDetail(card)}
           />
         ))}
@@ -165,7 +158,7 @@ function App() {
       <ProjectMap
         cards={filteredCards}
         cardOrder={cardOrder}
-        activeCard={activeCard}
+        activeId={activeId}
         isDense={isMapDense}
         onSelect={openCardDetail}
       />
@@ -228,12 +221,12 @@ function MissionCardTile({
 type ProjectMapProps = {
   cards: MissionCard[]
   cardOrder: Map<string, number>
-  activeCard: MissionCard
+  activeId: string | null
   isDense: boolean
   onSelect: (card: MissionCard) => void
 }
 
-function ProjectMap({ cards, cardOrder, activeCard, isDense, onSelect }: ProjectMapProps) {
+function ProjectMap({ cards, cardOrder, activeId, isDense, onSelect }: ProjectMapProps) {
   const positionedCards = getPositionedCards(cards)
 
   return (
@@ -260,7 +253,7 @@ function ProjectMap({ cards, cardOrder, activeCard, isDense, onSelect }: Project
               'map-point',
               isDense ? 'is-compact' : '',
               y < 18 ? 'show-tooltip-below' : '',
-              card.id === activeCard.id ? 'is-active' : '',
+              card.id === activeId ? 'is-active' : '',
             ]
               .filter(Boolean)
               .join(' ')}
