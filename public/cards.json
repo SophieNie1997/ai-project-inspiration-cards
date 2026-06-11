@@ -411,6 +411,205 @@
       "mapX": 4,
       "mapY": 4,
       "accent": "#2ee6a6"
+    },
+    {
+      "id": "publora",
+      "title": "让社团账号有节奏发布内容的 AI 运营助手",
+      "sourceProject": "Publora",
+      "sourceUrl": "https://www.producthunt.com/products/publora",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/publora",
+        "https://publora.com"
+      ],
+      "year": "2026",
+      "award": "Product Hunt 2026 近期热门，公开页面显示 launched this week / 近期论坛预热",
+      "theme": "education",
+      "themeLabel": "社团运营",
+      "audience": "学生社团宣传组、校园公众号/视频号运营者、活动组织者",
+      "hook": "如果社团每周都要发通知，AI 能不能帮你排版、发布并复盘效果？",
+      "problem": "学生团队常常没人持续整理活动素材、跨平台发帖、查看互动数据，导致好项目没有被看见。",
+      "aiMove": "AI 代理通过 MCP/API 连接多个社交平台，辅助生成内容、排期发布、读取互动反馈并给出优化建议。",
+      "studentProject": "校园活动发布助手、班级新闻自动排期器、社团内容复盘机器人。",
+      "demoGoal": "做出一个输入活动信息后生成三版平台文案、发布时间表和互动复盘表的原型。",
+      "aiPowers": [
+        "LLM",
+        "AI代理",
+        "内容生成",
+        "API/MCP",
+        "数据分析"
+      ],
+      "outputs": [
+        "发布日历原型",
+        "多平台文案包",
+        "互动数据复盘页"
+      ],
+      "question": "如果你的社团下周有活动，AI 应该先问哪些信息，才能写出不夸张、不误导的宣传？",
+      "insight": "先限定一个安全场景，比如班级公告或社团活动。让 AI 生成草稿和排期，但保留人工审核按钮，避免自动乱发。",
+      "difficulty": "中高",
+      "impactScore": 4,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 4,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "sellerclaw",
+      "title": "让校园义卖小店跑起来的 AI 店长团队",
+      "sourceProject": "SellerClaw",
+      "sourceUrl": "https://www.producthunt.com/products/sellerclaw",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/sellerclaw",
+        "https://sellerai.com/sellerclaw/"
+      ],
+      "year": "2026",
+      "award": "Product Hunt 2026 近期热门，公开页面显示 launched this week / Day Rank",
+      "theme": "education",
+      "themeLabel": "创业实践",
+      "audience": "学生创业小组、校园义卖团队、公益筹款项目负责人",
+      "hook": "一个校园义卖摊位，也能不能拥有采购、定价、客服和广告四个 AI 小助手？",
+      "problem": "小型网店或义卖项目需要同时处理选品、定价、商品描述、宣传和客服，学生团队容易顾此失彼。",
+      "aiMove": "多个 AI 代理分别负责选品建议、商品文案、价格和库存提醒、客户问题回复，并由监督代理汇总待确认动作。",
+      "studentProject": "校园义卖 AI 店长、二手书交换小店助手、公益周边售卖运营台。",
+      "demoGoal": "做出一个商品表输入后自动生成定价建议、商品页文案、客服回复和待审核任务清单的 demo。",
+      "aiPowers": [
+        "多代理协作",
+        "LLM",
+        "表格分析",
+        "推荐规则",
+        "人工审核流程"
+      ],
+      "outputs": [
+        "小店运营仪表盘",
+        "商品卡片",
+        "AI 任务清单",
+        "客服对话样例"
+      ],
+      "question": "如果你要卖一批校园公益周边，AI 应该根据哪些数据判断定价和补货，而不是只追求卖得快？",
+      "insight": "把真实交易替换成模拟数据。重点展示“AI 建议 + 人类批准”的流程，不要让学生项目直接处理付款或隐私信息。",
+      "difficulty": "高",
+      "impactScore": 4,
+      "techScore": 5,
+      "mapX": 5,
+      "mapY": 4,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "gemini-3-5-live-translate",
+      "title": "给跨语言家校沟通加字幕的实时翻译助手",
+      "sourceProject": "Gemini 3.5 Live Translate",
+      "sourceUrl": "https://www.producthunt.com/products/gemini-3-5-live-translate",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/gemini-3-5-live-translate",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/"
+      ],
+      "year": "2026",
+      "award": "Product Hunt 2026 近期热门，June 10 Day Rank #5",
+      "theme": "education",
+      "themeLabel": "语言公平",
+      "audience": "跨语言家庭、国际学校老师、社区活动组织者",
+      "hook": "家长和老师说不同语言时，AI 能不能让会议不用第三个人也能听懂？",
+      "problem": "家长会、社区会议或小组合作中，语言障碍会让重要信息传不到真正需要的人。",
+      "aiMove": "实时语音识别、翻译和语音/字幕输出，让不同语言使用者可以接近同步理解对方内容。",
+      "studentProject": "家校会议实时字幕助手、社区活动双语字幕屏、校内国际生欢迎导览。",
+      "demoGoal": "做出一个录音/文本输入后输出双语字幕、关键词摘要和误译标记的原型。",
+      "aiPowers": [
+        "语音识别",
+        "机器翻译",
+        "实时字幕",
+        "摘要生成"
+      ],
+      "outputs": [
+        "双语字幕演示页",
+        "会议摘要卡",
+        "误译风险说明"
+      ],
+      "question": "如果 AI 把老师的一句话翻译错了，谁会受到影响？产品应该怎样提醒用户“这可能不准确”？",
+      "insight": "用短音频或课堂对话脚本做 demo。展示延迟、准确率和人工确认，不要把机器翻译包装成完全可靠。",
+      "difficulty": "中高",
+      "impactScore": 5,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 5,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "tamadoggo",
+      "title": "把宠物日常变成温暖档案的 AI 陪伴日记",
+      "sourceProject": "Tamadoggo",
+      "sourceUrl": "https://www.producthunt.com/products/tamadoggo",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/tamadoggo",
+        "https://tamadoggo.com/"
+      ],
+      "year": "2026",
+      "award": "Product Hunt 2026 近期热门，June 8 Day Rank #6",
+      "theme": "education",
+      "themeLabel": "动物关怀",
+      "audience": "养宠家庭、学生志愿者、动物救助社团、宠物照护者",
+      "hook": "每天遛狗、喂食、看医生的碎片记录，AI 能不能变成一份有温度的成长档案？",
+      "problem": "宠物照护信息常散落在照片、聊天记录、纸质兽医单和记忆里，久了很难看出规律或回顾重要时刻。",
+      "aiMove": "AI 从时间线记录中发现饮食、活动、体重或就诊模式，识别兽医文件信息，并生成温暖的月度回顾。",
+      "studentProject": "校园动植物观察日记、班级宠物照护日志、收容所动物成长档案。",
+      "demoGoal": "做出一个日记输入、照片/文档信息提取、规律提示和月度回顾信的原型。",
+      "aiPowers": [
+        "多模态信息提取",
+        "NLP",
+        "时间线整理",
+        "模式识别",
+        "摘要生成"
+      ],
+      "outputs": [
+        "宠物时间线页面",
+        "照护规律卡",
+        "月度回顾信",
+        "隐私与非诊断说明"
+      ],
+      "question": "如果你连续记录一只宠物或校园植物 30 天，AI 能帮你发现哪些人眼容易忽略的变化？",
+      "insight": "不要让 AI 给医疗诊断。学生版可以改成观察记录和温和提醒，把真正的健康判断留给兽医或老师。",
+      "difficulty": "中",
+      "impactScore": 4,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 4,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "wave",
+      "title": "把随口说出的灵感变成文字的本地优先语音助手",
+      "sourceProject": "Wave",
+      "sourceUrl": "https://www.producthunt.com/products/wave-16",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/wave-16"
+      ],
+      "year": "2026",
+      "award": "Product Hunt 2026 近期热门，June 7 Day Rank #2",
+      "theme": "education",
+      "themeLabel": "无障碍学习",
+      "audience": "写作困难学生、需要快速记录想法的学生、老师和项目小组",
+      "hook": "打字慢、想法快的时候，AI 能不能把你的口述直接放进正在写的地方？",
+      "problem": "很多学生脑子里有想法，但打字慢、表达乱或多语言混说，导致笔记和作业草稿很难成形。",
+      "aiMove": "AI 通过热键语音输入完成转写、改写和上下文处理，可选择本地或云端模型，结果直接插入当前应用。",
+      "studentProject": "课堂口述笔记助手、项目灵感语音收集器、隐私优先的本地转写工具。",
+      "demoGoal": "做出一个口述输入后自动生成课堂笔记、待办清单和正式邮件三种输出的 demo，并标注本地/云端模式。",
+      "aiPowers": [
+        "语音识别",
+        "文本清理",
+        "上下文改写",
+        "本地/云端模型选择"
+      ],
+      "outputs": [
+        "语音输入界面",
+        "整理前后对比",
+        "本地与云端隐私说明卡"
+      ],
+      "question": "如果你对 AI 说“我刚才讲错了”，它应该怎么知道要改前一句，而不是把这句话也写进去？",
+      "insight": "可以先不用真实录音，改用学生口述文本模拟。重点是让 AI 学会“整理”而不是替学生凭空写作，并说明隐私选择。",
+      "difficulty": "中",
+      "impactScore": 4,
+      "techScore": 3,
+      "mapX": 3,
+      "mapY": 4,
+      "accent": "#2ee6a6"
     }
   ]
 }
