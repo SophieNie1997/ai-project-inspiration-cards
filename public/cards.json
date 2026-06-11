@@ -887,6 +887,46 @@
       "mapX": 3,
       "mapY": 4,
       "accent": "#2ee6a6"
+    },
+    {
+      "id": "口述需求小飞机游戏",
+      "title": "让不会写字的孩子也能当游戏策划",
+      "sourceProject": "口述需求小飞机游戏",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6a261cfd0000000022020f32?xsec_token=ABDrMJJlg_OzSTlaKXTCMdvL8ehe1oFriVlW_hcuhkFGg=&xsec_source=pc_feed",
+      "sourceUrls": [
+        "https://www.xiaohongshu.com/explore/6a261cfd0000000022020f32?xsec_token=ABDrMJJlg_OzSTlaKXTCMdvL8ehe1oFriVlW_hcuhkFGg=&xsec_source=pc_feed"
+      ],
+      "year": "2026",
+      "award": "小红书 AI 亲子 / Codex 编程案例，奖项未公开",
+      "theme": "education",
+      "themeLabel": "AI编程",
+      "audience": "想做第一个小游戏的孩子、亲子编程家庭、刚接触 AI 编程的学生",
+      "hook": "如果孩子还不会写代码，AI 能不能把他说出来的想法变成一个能玩的小游戏？",
+      "problem": "低龄孩子或编程新手有游戏想法，但不会写代码、不会完整表达产品需求，容易停留在“想玩”而不是“做出来”。",
+      "aiMove": "成人或学生把口述想法整理成需求，让 Codex 生成游戏原型，再根据试玩反馈逐轮加入头像目标、飞机升级、激光、保护罩等功能。",
+      "studentProject": "班级头像射击游戏、英语单词飞机大战、垃圾分类打靶游戏、数学题闯关飞行游戏。",
+      "demoGoal": "做出一个可操作的浏览器小游戏，并完成三轮“试玩-提需求-让 AI 修改-再试玩”的迭代记录。",
+      "aiPowers": [
+        "代码生成",
+        "需求整理",
+        "游戏原型开发",
+        "功能迭代",
+        "调试修复"
+      ],
+      "outputs": [
+        "可玩的小游戏链接",
+        "三版功能迭代截图",
+        "需求清单",
+        "试玩反馈记录"
+      ],
+      "question": "如果你只能用嘴描述一个小游戏，你会先说出哪三个最核心的功能？哪些功能可以等试玩后再加？",
+      "insight": "先做最小可玩版本：角色能动、能得分、能失败。不要一开始就加很多装备，先让同学试玩，再把真实反馈变成下一轮 AI 修改需求。",
+      "difficulty": "中",
+      "impactScore": 3,
+      "techScore": 3,
+      "mapX": 3,
+      "mapY": 3,
+      "accent": "#2ee6a6"
     }
   ]
 }
