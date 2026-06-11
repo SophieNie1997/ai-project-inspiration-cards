@@ -2,12 +2,11 @@ import type { MissionCard } from '../data/cards'
 
 export type CardsResponse = {
   cards: MissionCard[]
-  source: 'feishu' | 'local'
+  source: 'github-json' | 'local'
 }
 
 type ApiCardsResponse = {
   cards?: MissionCard[]
-  source?: string
 }
 
 export async function loadMissionCards(
@@ -15,9 +14,9 @@ export async function loadMissionCards(
   fetchImpl: typeof fetch = fetch,
 ): Promise<CardsResponse> {
   try {
-    const response = await fetchImpl('/api/cards')
+    const response = await fetchImpl('/cards.json')
     if (!response.ok) {
-      throw new Error(`Cards API returned ${response.status}`)
+      throw new Error(`Cards JSON returned ${response.status}`)
     }
 
     const payload = (await response.json()) as ApiCardsResponse
@@ -25,7 +24,7 @@ export async function loadMissionCards(
       throw new Error('Cards API returned no cards')
     }
 
-    return { cards: payload.cards, source: 'feishu' }
+    return { cards: payload.cards, source: 'github-json' }
   } catch {
     return { cards: fallbackCards, source: 'local' }
   }

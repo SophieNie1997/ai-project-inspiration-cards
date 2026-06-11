@@ -148,7 +148,7 @@ export const missionCards: MissionCard[] = [
     year: '2024',
     award: 'High School AI Showcase Gold Award',
     theme: 'research',
-    themeLabel: '科研健康',
+    themeLabel: '健康科研',
     audience: '科研人员、健康数据研究者、STEM学生',
     hook: '从一个很窄的测量问题切入，做出很深的科研价值。',
     problem:

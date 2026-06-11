@@ -3,7 +3,7 @@ import {
   ArrowRight,
   Brain,
   ChartNoAxesColumnIncreasing,
-  Database,
+  FileJson,
   FlaskConical,
   Globe2,
   GraduationCap,
@@ -87,14 +87,14 @@ function App() {
             课堂上先看5张 Mission Cards，再把学生自己的校园、家庭、社区和文化经验转成项目选题。
           </p>
           <div className="data-source">
-            {cardsResponse.source === 'feishu' ? 'Feishu synced' : 'Local demo data'}
+            {cardsResponse.source === 'github-json' ? 'GitHub data' : 'Local demo data'}
           </div>
         </div>
 
         <div className="hero-system" aria-label="Data sync model">
           <div className="system-node">
-            <Database size={20} aria-hidden="true" />
-            <span>Feishu Base</span>
+            <FileJson size={20} aria-hidden="true" />
+            <span>GitHub JSON</span>
           </div>
           <ArrowRight size={18} aria-hidden="true" />
           <div className="system-node is-active">

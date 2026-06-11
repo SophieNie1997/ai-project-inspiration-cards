@@ -5,7 +5,7 @@ A classroom presentation web app for turning AI project case studies into visual
 Production data flow:
 
 ```text
-Feishu Base -> secure API layer -> classroom web app
+Teacher draft sheet -> public/cards.json -> GitHub -> Vercel -> classroom web app
 ```
 
 ## What This Builds
@@ -13,7 +13,7 @@ Feishu Base -> secure API layer -> classroom web app
 - A premium classroom-facing Mission Cards view.
 - A project map that compares technical difficulty and social impact.
 - A detail panel with Before / AI Move / Student Version framing.
-- A Feishu Base sync layer with local demo-data fallback.
+- A GitHub-hosted JSON data source with local demo-data fallback.
 
 ## Local Development
 
@@ -32,7 +32,13 @@ npm run build
 
 ## Data Source
 
-The frontend calls `/api/cards`. The serverless API fetches Feishu records, maps them into the `MissionCard` shape, and returns only classroom-ready card data.
+The frontend loads classroom cards from:
+
+```text
+public/cards.json
+```
+
+Because this file is committed to GitHub, Vercel can deploy it as a static asset. This avoids Feishu API permissions, app review, API secrets, and classroom-time third-party access issues.
 
 Local fallback data lives in:
 
@@ -40,35 +46,27 @@ Local fallback data lives in:
 src/data/cards.ts
 ```
 
-The browser never receives `FEISHU_APP_SECRET`. Feishu credentials are read only by the backend/serverless function.
+Use the fallback only as a safety copy. The classroom-facing source of truth is `public/cards.json`.
 
-## Environment Variables
+## Updating Cards
 
-Create a Feishu custom app, grant it read access to Base/Bitable data, and add it as a collaborator to the Base document. Then set these variables in Vercel or your serverless host.
+1. Edit `public/cards.json`.
+2. Run the verification commands.
+3. Commit and push to `main`.
+4. Vercel redeploys the website automatically.
 
 ```bash
-FEISHU_APP_ID=
-FEISHU_APP_SECRET=
-FEISHU_WIKI_NODE_TOKEN=SseOw4p1Oic3pMklLmWcvPsCncc
-FEISHU_BASE_TABLE_ID=tblSPAUJLXOYlwYm
-FEISHU_BASE_VIEW_ID=vewSPLHyWz
-CARDS_CACHE_TTL_SECONDS=300
+npm test
+npm run lint
+npm run build
 ```
 
-`FEISHU_WIKI_NODE_TOKEN` is the token after `/wiki/` in the current Feishu URL. If the Base later moves to a normal `/base/` URL, use `FEISHU_BASE_APP_TOKEN` instead.
+You can still use Feishu, Excel, or Google Sheets as the teacher editing workspace. Export or copy finalized rows into `public/cards.json` before class.
 
-`FEISHU_BASE_VIEW_ID` is optional but recommended. Use the `课堂展示` view ID so the website only reads the records meant for class.
-
-Full Feishu setup notes:
-
-```text
-docs/feishu-api-setup.md
-```
-
-## Recommended Feishu Fields
+## Card Schema
 
 See:
 
 ```text
-docs/feishu-base-schema.md
+docs/card-data-guide.md
 ```
