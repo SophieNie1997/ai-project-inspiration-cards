@@ -46,6 +46,10 @@ body {
     var(--bg);
 }
 
+body.has-open-modal {
+  overflow: hidden;
+}
+
 button,
 input,
 textarea,

@@ -9,7 +9,8 @@ import {
   Languages,
   ScanSearch,
   ShieldCheck,
-  Sparkles,
+  Trophy,
+  X,
 } from 'lucide-react'
 import './App.css'
 import { missionCards, type MissionCard } from './data/cards'
@@ -31,6 +32,7 @@ function App() {
   })
   const [selectedTheme, setSelectedTheme] = useState('全部')
   const [activeId, setActiveId] = useState(missionCards[0].id)
+  const [openCardId, setOpenCardId] = useState<string | null>(null)
   const cards = cardsResponse.cards
   const activeThemes = useMemo(
     () => ['全部', ...new Set(cards.map((card) => card.themeLabel))],
@@ -44,7 +46,9 @@ function App() {
   }, [cards, effectiveSelectedTheme])
 
   const activeCard = cards.find((card) => card.id === activeId) ?? cards[0] ?? missionCards[0]
-  const featuredCards = cards.slice(0, 3)
+  const openCard = openCardId
+    ? cards.find((card) => card.id === openCardId) ?? null
+    : null
 
   useEffect(() => {
     let isMounted = true
@@ -59,6 +63,22 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    if (!openCard) return undefined
+
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === 'Escape') setOpenCardId(null)
+    }
+
+    document.body.classList.add('has-open-modal')
+    window.addEventListener('keydown', closeOnEscape)
+
+    return () => {
+      document.body.classList.remove('has-open-modal')
+      window.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [openCard])
+
   function selectTheme(theme: string) {
     setSelectedTheme(theme)
     const nextCard =
@@ -67,6 +87,11 @@ function App() {
         : cards.find((card) => card.themeLabel === theme)
 
     if (nextCard) setActiveId(nextCard.id)
+  }
+
+  function openCardDetail(card: MissionCard) {
+    setActiveId(card.id)
+    setOpenCardId(card.id)
   }
 
   return (
@@ -84,43 +109,26 @@ function App() {
           <p>
             课堂上先看5张灵感卡，再把学生自己的校园、家庭、社区和文化经验转成项目选题。
           </p>
-          <div className="data-source">
-            {cardsResponse.source === 'github-json' ? '灵感库已连接' : '本地演示数据'}
-          </div>
-        </div>
-
-        <div className="hero-showcase" aria-label="Featured inspiration cards">
-          <div className="showcase-window">
-            <div className="showcase-header">
-              <span>今日卡组</span>
-              <span>{cards.length} 张卡</span>
+          <div className="hero-actions">
+            <div className="data-source">
+              {cardsResponse.source === 'github-json' ? '灵感库已连接' : '本地演示数据'}
             </div>
-            <div className="showcase-list">
-              {featuredCards.map((card) => (
-                <button
-                  key={card.id}
-                  type="button"
-                  className="showcase-item"
-                  style={{ '--card-accent': card.accent } as React.CSSProperties}
-                  onClick={() => setActiveId(card.id)}
-                >
-                  <span>{card.themeLabel}</span>
-                  <strong>{card.title}</strong>
-                </button>
-              ))}
+            <div className="hero-stat">
+              <strong>{cards.length}</strong>
+              <span>张项目卡</span>
             </div>
-          </div>
-          <div className="showcase-note">
-            <Sparkles size={18} aria-hidden="true" />
-            <span>从真实获奖案例出发，快速找到学生自己的项目切口。</span>
+            <div className="hero-stat">
+              <strong>{activeThemes.length - 1}</strong>
+              <span>个主题入口</span>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="toolbar" aria-label="Card filters">
         <div>
-          <span className="toolbar-kicker">主题筛选</span>
-          <h2>选择项目入口</h2>
+          <span className="toolbar-kicker">项目卡片墙</span>
+          <h2>先浏览全局，再点开一张深看</h2>
         </div>
         <div className="theme-tabs" role="tablist" aria-label="Project themes">
           {activeThemes.map((theme) => (
@@ -136,24 +144,23 @@ function App() {
         </div>
       </section>
 
-      <section className="workspace-grid">
-        <div className="card-stack" aria-label="Mission cards">
-          {filteredCards.map((card, index) => (
-            <MissionCardTile
-              key={card.id}
-              card={card}
-              index={index + 1}
-              isActive={card.id === activeCard.id}
-              onSelect={() => setActiveId(card.id)}
-            />
-          ))}
-        </div>
-
-        <aside className="insight-panel" aria-label="Project insight panel">
-          <ProjectMap cards={cards} activeCard={activeCard} onSelect={setActiveId} />
-          <CardDetail card={activeCard} />
-        </aside>
+      <section className="gallery-grid" aria-label="Mission cards">
+        {filteredCards.map((card, index) => (
+          <MissionCardTile
+            key={card.id}
+            card={card}
+            index={index + 1}
+            isActive={card.id === activeCard.id}
+            onSelect={() => openCardDetail(card)}
+          />
+        ))}
       </section>
+
+      <ProjectMap cards={cards} activeCard={activeCard} onSelect={openCardDetail} />
+
+      {openCard && (
+        <CardDetailModal card={openCard} onClose={() => setOpenCardId(null)} />
+      )}
     </main>
   )
 }
@@ -189,7 +196,7 @@ function MissionCardTile({
           <h3>{card.title}</h3>
           <p>{card.hook}</p>
           <div className="power-row">
-            {card.aiPowers.slice(0, 3).map((power) => (
+            {card.aiPowers.slice(0, 2).map((power) => (
               <span key={power}>{power}</span>
             ))}
           </div>
@@ -205,7 +212,7 @@ function MissionCardTile({
 type ProjectMapProps = {
   cards: MissionCard[]
   activeCard: MissionCard
-  onSelect: (id: string) => void
+  onSelect: (card: MissionCard) => void
 }
 
 function ProjectMap({ cards, activeCard, onSelect }: ProjectMapProps) {
@@ -216,6 +223,8 @@ function ProjectMap({ cards, activeCard, onSelect }: ProjectMapProps) {
         <h2 id="map-title">技术难度 × 社会影响</h2>
       </div>
       <div className="map-canvas">
+        <span className="axis-line axis-line-x" aria-hidden="true" />
+        <span className="axis-line axis-line-y" aria-hidden="true" />
         <span className="axis-label axis-tech">技术难度</span>
         <span className="axis-label axis-impact">社会影响</span>
         {cards.map((card) => (
@@ -230,7 +239,7 @@ function ProjectMap({ cards, activeCard, onSelect }: ProjectMapProps) {
                 '--card-accent': card.accent,
               } as React.CSSProperties
             }
-            onClick={() => onSelect(card.id)}
+            onClick={() => onSelect(card)}
             aria-label={`选择 ${card.title}`}
           >
             <span>{card.themeLabel}</span>
@@ -241,23 +250,68 @@ function ProjectMap({ cards, activeCard, onSelect }: ProjectMapProps) {
   )
 }
 
+type CardDetailModalProps = {
+  card: MissionCard
+  onClose: () => void
+}
+
+function CardDetailModal({ card, onClose }: CardDetailModalProps) {
+  const Icon = themeIcons[card.themeLabel] ?? Brain
+
+  return (
+    <div className="detail-backdrop" onMouseDown={onClose}>
+      <section
+        className="detail-modal"
+        style={{ '--card-accent': card.accent } as React.CSSProperties}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        onMouseDown={(event) => event.stopPropagation()}
+      >
+        <button
+          type="button"
+          className="modal-close"
+          aria-label="关闭项目详情"
+          onClick={onClose}
+        >
+          <X size={21} strokeWidth={1.8} aria-hidden="true" />
+        </button>
+
+        <div className="modal-hero">
+          <div className="modal-icon">
+            <Icon size={34} strokeWidth={1.45} aria-hidden="true" />
+          </div>
+          <div className="modal-heading">
+            <div className="detail-topline">
+              <span>{card.sourceProject}</span>
+              <span>
+                <Trophy size={15} strokeWidth={1.7} aria-hidden="true" />
+                {card.award}
+              </span>
+            </div>
+            <h2 id="modal-title">{card.title}</h2>
+            <p>{card.hook}</p>
+            <div className="modal-powers">
+              {card.aiPowers.map((power) => (
+                <span key={power}>{power}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <CardDetail card={card} />
+      </section>
+    </div>
+  )
+}
+
 type CardDetailProps = {
   card: MissionCard
 }
 
 function CardDetail({ card }: CardDetailProps) {
   return (
-    <section
-      className="detail-panel"
-      style={{ '--card-accent': card.accent } as React.CSSProperties}
-      aria-labelledby="detail-title"
-    >
-      <div className="detail-topline">
-        <span>{card.sourceProject}</span>
-        <span>{card.award}</span>
-      </div>
-      <h2 id="detail-title">{card.title}</h2>
-
+    <div className="detail-panel">
       <div className="before-after">
         <div>
           <span>痛点</span>
@@ -300,7 +354,7 @@ function CardDetail({ card }: CardDetailProps) {
         <span>教师提示</span>
         <p>{card.insight}</p>
       </div>
-    </section>
+    </div>
   )
 }
 
