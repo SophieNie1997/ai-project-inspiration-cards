@@ -1,26 +1,27 @@
 :root {
-  --bg: #f2eef7;
-  --surface: #fbf9ff;
-  --surface-soft: #f7f3fb;
-  --surface-tint: #ece5f4;
-  --text: #25212c;
-  --soft: #5f596b;
-  --muted: #8b8398;
-  --line: rgba(79, 62, 103, 0.12);
-  --line-strong: rgba(79, 62, 103, 0.2);
-  --accent: #8170ad;
-  --accent-soft: #ede8f7;
-  --accent-deep: #4f3d6f;
-  --accent-ink: #312545;
+  --bg: #0d1017;
+  --paper: #11151d;
+  --surface: #151923;
+  --surface-soft: #202631;
+  --surface-ink: #05070d;
+  --text: #f4f6fb;
+  --soft: #c3c8d4;
+  --muted: #8d95a6;
+  --line: rgba(244, 246, 251, 0.14);
+  --line-strong: rgba(244, 246, 251, 0.28);
+  --accent: #4b7dff;
+  --accent-soft: #14234d;
+  --accent-deep: #1d4fe0;
+  --accent-ink: #ffffff;
   --ink: #ffffff;
-  --image-wash: rgba(229, 220, 239, 0.68);
-  --image-wash-deep: rgba(87, 67, 112, 0.36);
-  --shadow-soft: 0 18px 48px rgba(80, 63, 104, 0.12);
-  --shadow-card: 0 10px 30px rgba(80, 63, 104, 0.1);
+  --image-wash: rgba(13, 16, 23, 0.62);
+  --image-wash-deep: rgba(5, 7, 13, 0.68);
+  --shadow-soft: none;
+  --shadow-card: none;
   --mono: 'SFMono-Regular', 'Cascadia Code', 'Liberation Mono', monospace;
   --sans:
-    -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
-    'Helvetica Neue', Arial, sans-serif;
+    'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
   font-family: var(--sans);
   color: var(--text);
   background: var(--bg);
@@ -37,6 +38,7 @@
 html {
   min-width: 320px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   background: var(--bg);
 }
 
@@ -45,11 +47,11 @@ body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at 18% 0%, rgba(224, 214, 239, 0.82), transparent 34%),
-    radial-gradient(circle at 86% 12%, rgba(236, 230, 244, 0.9), transparent 32%),
-    linear-gradient(180deg, #fbf9ff 0%, #f2eef7 380px),
-    var(--bg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(244, 246, 251, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 246, 251, 0.055) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
 
 body.has-open-modal {
@@ -65,7 +67,7 @@ select {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid rgba(129, 112, 173, 0.42);
+  outline: 3px solid rgba(75, 125, 255, 0.42);
   outline-offset: 3px;
 }
 
@@ -74,6 +76,6 @@ a:focus-visible {
 }
 
 ::selection {
-  color: var(--ink);
+  color: var(--accent-ink);
   background: var(--accent);
 }

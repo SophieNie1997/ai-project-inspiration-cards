@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import {
+  ArrowUpRight,
   Brain,
   ChartNoAxesColumnIncreasing,
   ExternalLink,
@@ -16,6 +17,7 @@ import {
 import './App.css'
 import { missionCards, type MissionCard } from './data/cards'
 import { loadMissionCards, type CardsResponse } from './lib/cardSource'
+import { buildPublishCardPlan } from './lib/socialCardPlan'
 
 const themeIcons: Record<string, typeof Globe2> = {
   教育公平: GraduationCap,
@@ -98,7 +100,7 @@ function App() {
         <div className="hero-copy">
           <div className="eyebrow">
             <span className="signal-dot" />
-            WAICY Project Inspiration Cards
+            AI Project Inspiration Cards
           </div>
           <h1 id="page-title">
             <span>找到你想解决的问题</span>
@@ -195,6 +197,10 @@ function MissionCardTile({
       <button type="button" onClick={onSelect} aria-label={`查看 ${card.title}`}>
         <CardBackdrop card={card} />
         <div className="card-index">{String(index).padStart(2, '0')}</div>
+        <div className="card-poster-tag">
+          <span>MISSION CARD</span>
+          <span>{card.year}</span>
+        </div>
         <div className="card-main">
           <div className="card-meta">
             <span>{card.year}</span>
@@ -203,6 +209,10 @@ function MissionCardTile({
           </div>
           <h3>{card.title}</h3>
           <p>{card.hook}</p>
+          <div className="tile-question">
+            <span>课堂问题</span>
+            <strong>{card.question}</strong>
+          </div>
           <div className="power-row">
             {card.aiPowers.slice(0, 2).map((power) => (
               <span key={power}>{power}</span>
@@ -516,6 +526,8 @@ function CardDetailModal({ card, index, onClose }: CardDetailModalProps) {
 
         <CardVisual card={card} variant="modal" />
 
+        <PublishCardPreview card={card} index={index} />
+
         <CardDetail card={card} />
       </section>
     </div>
@@ -529,6 +541,68 @@ function getSourceUrls(card: MissionCard) {
 
 type CardDetailProps = {
   card: MissionCard
+}
+
+type PublishCardPreviewProps = {
+  card: MissionCard
+  index: number
+}
+
+function PublishCardPreview({ card, index }: PublishCardPreviewProps) {
+  const plan = buildPublishCardPlan(card, index)
+  const Icon = themeIcons[card.themeLabel] ?? Brain
+  const sourceUrl = getSourceUrls(card)[0]
+
+  return (
+    <section className="publish-preview" aria-label="课堂投影卡与发布卡预览">
+      <div className="publish-card">
+        <div className="publish-chrome">
+          <span>{plan.issue}</span>
+          <span>WAICY / AI PROJECT</span>
+        </div>
+        <div className="publish-layout">
+          <div className="publish-copy">
+            <p className="publish-kicker">{card.themeLabel}</p>
+            <h3>{plan.title}</h3>
+            <p>{plan.promise}</p>
+          </div>
+          <div className="publish-proof">
+            <div className="publish-proof-icon">
+              <Icon size={30} strokeWidth={1.45} aria-hidden="true" />
+            </div>
+            <span>{plan.evidenceLabel}</span>
+            <strong>{plan.evidence}</strong>
+          </div>
+        </div>
+        <div className="publish-ledger">
+          {plan.publishAngles.map((angle, angleIndex) => (
+            <div key={angle}>
+              <span>{String(angleIndex + 1).padStart(2, '0')}</span>
+              <strong>{angle}</strong>
+            </div>
+          ))}
+        </div>
+        <div className="publish-question">
+          <span>课堂转化</span>
+          <p>{plan.transferPrompt}</p>
+        </div>
+      </div>
+
+      <div className="projection-card">
+        <div>
+          <span>CLASSROOM PROMPT</span>
+          <h3>一屏讲清楚：为什么这个项目值得改造？</h3>
+        </div>
+        <p>{plan.classroomQuestion}</p>
+        {sourceUrl && (
+          <a href={sourceUrl} target="_blank" rel="noreferrer">
+            查看证据层
+            <ArrowUpRight size={17} strokeWidth={1.8} aria-hidden="true" />
+          </a>
+        )}
+      </div>
+    </section>
+  )
 }
 
 function CardDetail({ card }: CardDetailProps) {
