@@ -518,7 +518,6 @@ body.has-open-modal {
   backdrop-filter: blur(20px) saturate(145%);
 }
 
-.map-panel,
 .detail-panel {
   border: 1px solid rgba(0, 0, 0, 0.055);
   border-radius: 28px;
@@ -527,7 +526,48 @@ body.has-open-modal {
 }
 
 .map-panel {
+  position: relative;
+  overflow: hidden;
   padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 28px;
+  color: #f8f5ff;
+  background:
+    linear-gradient(145deg, rgba(79, 61, 111, 0.96), rgba(45, 35, 68, 0.98)),
+    #35264f;
+  box-shadow:
+    0 28px 74px rgba(70, 51, 101, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.map-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.2;
+  mask-image: linear-gradient(180deg, black, rgba(0, 0, 0, 0.2));
+}
+
+.map-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.map-panel .panel-heading span {
+  color: rgba(248, 245, 255, 0.66);
+}
+
+.map-panel .panel-heading h2 {
+  color: #fff;
+}
+
+.map-panel .panel-heading p {
+  color: rgba(248, 245, 255, 0.72);
 }
 
 .zone-map {
@@ -541,9 +581,10 @@ body.has-open-modal {
   min-height: 100%;
   display: grid;
   place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
-  color: var(--muted);
-  background: rgba(0, 0, 0, 0.035);
+  color: rgba(248, 245, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
   font-size: 12px;
   font-weight: 780;
   letter-spacing: 0;
@@ -562,17 +603,20 @@ body.has-open-modal {
   flex-direction: column;
   gap: 10px;
   padding: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 22px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(250, 250, 252, 0.74)),
-    var(--surface-soft);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    linear-gradient(145deg, rgba(255, 255, 255, 0.17), rgba(255, 255, 255, 0.07)),
+    rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 14px 30px rgba(31, 22, 49, 0.1);
+  backdrop-filter: blur(18px) saturate(125%);
 }
 
 .map-zone.is-empty {
-  background: rgba(255, 255, 255, 0.44);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.025);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
 .zone-heading {
@@ -585,14 +629,14 @@ body.has-open-modal {
 .zone-heading span {
   display: block;
   margin-bottom: 3px;
-  color: var(--muted);
+  color: rgba(248, 245, 255, 0.62);
   font-size: 11px;
   font-weight: 760;
 }
 
 .zone-heading strong {
   display: block;
-  color: var(--text);
+  color: #fff;
   font-size: 15px;
   line-height: 1.2;
 }
@@ -605,8 +649,8 @@ body.has-open-modal {
   place-items: center;
   padding: 0 8px;
   border-radius: 999px;
-  color: var(--soft);
-  background: rgba(0, 0, 0, 0.045);
+  color: rgba(248, 245, 255, 0.82);
+  background: rgba(255, 255, 255, 0.12);
   font-size: 11px;
   font-style: normal;
   font-weight: 780;
@@ -614,7 +658,7 @@ body.has-open-modal {
 
 .map-zone p {
   margin: -2px 0 0;
-  color: var(--soft);
+  color: rgba(248, 245, 255, 0.67);
   font-size: 12px;
   line-height: 1.35;
 }
@@ -642,9 +686,9 @@ body.has-open-modal {
 .zone-project {
   gap: 6px;
   padding: 0 10px 0 7px;
-  border: 1px solid color-mix(in srgb, var(--card-accent) 26%, transparent);
-  color: color-mix(in srgb, var(--card-accent) 70%, #1d1d1f 30%);
-  background: color-mix(in srgb, var(--card-accent) 11%, white 89%);
+  border: 1px solid rgba(228, 217, 244, 0.42);
+  color: #f7f1ff;
+  background: rgba(237, 232, 247, 0.13);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -662,8 +706,8 @@ body.has-open-modal {
   display: inline-grid;
   place-items: center;
   border-radius: 999px;
-  color: var(--ink);
-  background: color-mix(in srgb, var(--card-accent) 42%, var(--accent) 58%);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.17);
   font-size: 10px;
 }
 
@@ -671,15 +715,15 @@ body.has-open-modal {
 .zone-project:focus-visible,
 .zone-project.is-active {
   transform: translateY(-1px);
-  background: color-mix(in srgb, var(--card-accent) 18%, white 82%);
-  box-shadow: 0 10px 22px color-mix(in srgb, var(--card-accent) 18%, transparent);
+  background: rgba(246, 242, 255, 0.22);
+  box-shadow: 0 10px 24px rgba(24, 18, 39, 0.2);
 }
 
 .zone-more,
 .zone-empty {
   padding: 0 10px;
-  color: var(--muted);
-  background: rgba(0, 0, 0, 0.04);
+  color: rgba(248, 245, 255, 0.72);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .zone-more {
@@ -689,12 +733,12 @@ body.has-open-modal {
 
 .zone-more:hover,
 .zone-more:focus-visible {
-  color: var(--text);
-  background: rgba(0, 0, 0, 0.07);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
 }
 
 .zone-empty {
-  color: color-mix(in srgb, var(--muted) 82%, transparent);
+  color: rgba(248, 245, 255, 0.5);
 }
 
 .zone-axis-tech {
@@ -709,9 +753,10 @@ body.has-open-modal {
   display: grid;
   place-items: center;
   padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  color: var(--muted);
-  background: rgba(0, 0, 0, 0.035);
+  color: rgba(248, 245, 255, 0.62);
+  background: rgba(255, 255, 255, 0.08);
   font-size: 11px;
   line-height: 1.25;
   text-align: center;
@@ -719,7 +764,7 @@ body.has-open-modal {
 
 .zone-axis-tech strong {
   display: block;
-  color: var(--soft);
+  color: rgba(255, 255, 255, 0.86);
   font-size: 12px;
 }
 
