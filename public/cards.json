@@ -8,7 +8,11 @@
       "sourceUrls": [
         "https://patch.com/california/san-francisco/sf-student-wins-international-award-ai-language-model-project"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/sfusd-thai-family-liaison.webp",
+      "coverImageAlt": "SFUSD Thai Family Liaison GPT 官方报道配图，展示项目获奖者 Arjun Raj",
+      "coverImageSource": "Patch 官方报道配图：https://patch.com/california/san-francisco/sf-student-wins-international-award-ai-language-model-project",
+      "coverImageCredit": "公开新闻配图，课堂引用；商用传播需二次确认",
+      "coverImageStatus": "待确认",
       "coverImageHint": "学校服务台、泰语家长在手机上读到清晰入学步骤、多语言文件卡片",
       "year": "2025",
       "award": "WAICY 2025 High School AI Large Language Model Track，Global Gold Award",
@@ -48,7 +52,11 @@
       "sourceUrls": [
         "https://www.shsd.org/about-us/district-news/stories/~board/bernards-high-school-news/post/bhs-student-earns-global-recognition-in-international-ai-competition"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/bridgebot.webp",
+      "coverImageAlt": "BridgeBot 校区官方报道配图，展示项目获奖者 Ria Lewis",
+      "coverImageSource": "Somerset Hills School District 官方报道配图：https://www.shsd.org/about-us/district-news/stories/~board/bernards-high-school-news/post/bhs-student-earns-global-recognition-in-international-ai-competition",
+      "coverImageCredit": "公开学校报道配图，课堂引用；商用传播需二次确认",
+      "coverImageStatus": "待确认",
       "coverImageHint": "两个学生隔着桥对话，气泡从尖锐变柔和，AI 在中间调解",
       "year": "2025",
       "award": "WAICY 2025 High School AI Large Language Model Track，Global Silver Award",
@@ -87,7 +95,11 @@
       "sourceUrls": [
         "https://innovation.svvsd.org/focus-areas/ai/"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/fetchafriend.webp",
+      "coverImageAlt": "FetchAFriend 官方展示视频画面，展示宠物匹配助手演示界面",
+      "coverImageSource": "ReadyAI 官方 YouTube 展示视频截图：https://www.youtube.com/watch?v=-jsg3jBH0cs",
+      "coverImageCredit": "官方展示视频截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "收容所狗狗资料卡与领养者偏好问卷自动匹配",
       "year": "2025",
       "award": "WAICY 2025 High School AI Showcase Track，Design Excellence Award",
@@ -126,7 +138,11 @@
       "sourceUrls": [
         "https://www.linkedin.com/posts/yolanda-ramirez-lagos_waicy2025-sdaia-neom-activity-7406771369083867136-_xP4"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/aidrate.webp",
+      "coverImageAlt": "AIdrate 官方展示视频画面，展示农场灌溉 AI 项目说明页",
+      "coverImageSource": "ReadyAI 官方 YouTube 展示视频截图：https://www.youtube.com/watch?v=Fepy-tqT6kI",
+      "coverImageCredit": "官方展示视频截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "干旱农田、土壤湿度数据和节水灌溉仪表盘",
       "year": "2025",
       "award": "WAICY 2025 High School AI Showcase Track，4th Place Recognition；KSA 1st Place Country Award",
@@ -165,7 +181,11 @@
       "sourceUrls": [
         "https://www.sangeetandi.com/"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/sangeet-and-i.webp",
+      "coverImageAlt": "Sangeet & I 官网视觉图，展示印度古典音乐情绪推荐项目",
+      "coverImageSource": "项目官网图片：https://www.sangeetandi.com/",
+      "coverImageCredit": "项目官网公开图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "舞台海报二维码、学生表情识别、印度古典音乐声波",
       "year": "2024",
       "award": "WAICY 2024 High School AI Showcase Track，Global Silver Award",
@@ -204,6 +224,9 @@
       "sourceUrls": [
         "https://community.edenpr.org/inspire-magazine-2025"
       ],
+      "coverImageAlt": "暂缺 Pain Calculator 真实项目截图",
+      "coverImageSource": "已查到官方文字来源但无可用封面图：https://community.edenpr.org/inspire-magazine-2025",
+      "coverImageCredit": "未使用图片；等待官方截图或授权素材",
       "coverImageStatus": "待补图",
       "coverImageHint": "实验室图片标注界面，AI 与人工评分对比",
       "year": "2024",
@@ -243,7 +266,11 @@
       "sourceUrls": [
         "https://richardfeng.me/"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/mindpaw.webp",
+      "coverImageAlt": "MindPaw 官网手机界面图，展示 AI 情绪日记与反思功能",
+      "coverImageSource": "项目官网截图/预览图：https://mindpaw.app/",
+      "coverImageCredit": "项目官网公开截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "手机情绪日记，温柔的情绪标签和反思提示",
       "year": "2024",
       "award": "WAICY 2024 High School AI Showcase Track，Design Excellence Award",
@@ -282,7 +309,11 @@
       "sourceUrls": [
         "https://www.waicy.org/"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/devanagari-scribe.webp",
+      "coverImageAlt": "Devanagari Scribe 官方展示视频画面，展示天城文识别与学习原型",
+      "coverImageSource": "ReadyAI 官方 YouTube 展示视频截图：https://www.youtube.com/watch?v=VHcCDZzhhWk",
+      "coverImageCredit": "官方展示视频截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "Devanagari 字母书写练习、文化纹样、数字档案",
       "year": "2025",
       "award": "WAICY 2025 High School AI Showcase Track，5th Place Recognition + AI Excellence",
@@ -320,6 +351,9 @@
       "sourceUrls": [
         "https://www.waicy.org/waicy-2025/"
       ],
+      "coverImageAlt": "暂缺 Project CASSIE 真实项目截图",
+      "coverImageSource": "已查到 WAICY 获奖文字来源但无可用封面图：https://www.waicy.org/waicy-2025/",
+      "coverImageCredit": "未使用图片；等待官方截图或授权素材",
       "coverImageStatus": "待补图",
       "coverImageHint": "血糖记录曲线、聊天助手和安全边界提示",
       "year": "2025",
@@ -359,7 +393,11 @@
       "sourceUrls": [
         "https://www.waicy.org/waicy-star/"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/signtrack.webp",
+      "coverImageAlt": "SignTrack 官方访谈视频画面，展示手语转文字项目介绍",
+      "coverImageSource": "WAICY/ReadyAI 官方 YouTube 访谈视频截图：https://www.youtube.com/watch?v=YTBxeJT-5yo",
+      "coverImageCredit": "官方展示视频截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "摄像头识别手势并实时显示字幕的无障碍课堂",
       "year": "2022",
       "award": "WAICY 2022 High School Bronze Award",
@@ -400,7 +438,11 @@
         "https://github.com/noonwake-ai/open-calendar",
         "https://www.sohu.com/a/1008579935_114760"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/open-calendar.webp",
+      "coverImageAlt": "Open Calendar 好运日历机官网图，展示桌面硬件原型与打印入口",
+      "coverImageSource": "Noonwake 官方网站图片：https://noonwake.com/；GitHub 项目：https://github.com/noonwake-ai/open-calendar",
+      "coverImageCredit": "项目官网公开图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "桌面双屏小设备吐出一张好运签，屏幕上有日历、今日角色和行动建议",
       "year": "2026",
       "award": "2026 小红书黑客松巅峰赛硬件赛道二等奖",
@@ -443,7 +485,11 @@
         "https://www.producthunt.com/products/publora",
         "https://publora.com"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/publora.webp",
+      "coverImageAlt": "Publora 官网预览图，展示社交内容排程后台",
+      "coverImageSource": "项目官网预览图：https://publora.com",
+      "coverImageCredit": "项目官网公开截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "校园社团运营看板、AI 生成多平台帖子、发布时间轴和互动数据图表",
       "year": "2026",
       "award": "Product Hunt 2026 近期热门，公开页面显示 launched this week / 近期论坛预热",
@@ -485,7 +531,11 @@
         "https://www.producthunt.com/products/sellerclaw",
         "https://sellerai.com/sellerclaw/"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/sellerclaw.webp",
+      "coverImageAlt": "SellerClaw 官网首屏截图，展示 AI 电商代理产品定位",
+      "coverImageSource": "项目官网截图：https://sellerai.com/sellerclaw/",
+      "coverImageCredit": "项目官网公开截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "校园义卖小店后台，四个 AI 代理分别处理选品、定价、宣传和客服",
       "year": "2026",
       "award": "Product Hunt 2026 近期热门，公开页面显示 launched this week / Day Rank",
@@ -528,7 +578,11 @@
         "https://www.producthunt.com/products/gemini-3-5-live-translate",
         "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/gemini-live-translate.webp",
+      "coverImageAlt": "Gemini 3.5 Live Translate 官方博客封面图，展示实时翻译功能",
+      "coverImageSource": "Google 官方博客图片：https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/",
+      "coverImageCredit": "官方博客公开图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "家长会场景，老师讲话实时变成双语字幕，旁边显示关键词和误译提醒",
       "year": "2026",
       "award": "Product Hunt 2026 近期热门，June 10 Day Rank #5",
@@ -569,7 +623,11 @@
         "https://www.producthunt.com/products/tamadoggo",
         "https://tamadoggo.com/"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/tamadoggo.webp",
+      "coverImageAlt": "Tamadoggo 官网手机界面图，展示宠物生活时间线",
+      "coverImageSource": "项目官网截图：https://tamadoggo.com/",
+      "coverImageCredit": "项目官网公开截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "宠物生活时间线、兽医单据识别、AI 写出的温暖月度信",
       "year": "2026",
       "award": "Product Hunt 2026 近期热门，June 8 Day Rank #6",
@@ -611,7 +669,11 @@
       "sourceUrls": [
         "https://www.producthunt.com/products/wave-16"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/wave.webp",
+      "coverImageAlt": "Wave GitHub README 横幅图，展示 macOS 语音转文字应用",
+      "coverImageSource": "GitHub README 图片：https://github.com/mxvsh/wave",
+      "coverImageCredit": "公开 GitHub README 图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "学生按住热键口述灵感，AI 在当前文档中生成笔记和清单",
       "year": "2026",
       "award": "Product Hunt 2026 近期热门，June 7 Day Rank #2",
@@ -652,7 +714,11 @@
         "https://www.businessinsider.com/13-year-old-won-25000-for-ai-fall-detection-device-2025-12",
         "https://fallguard.net/"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/fallguard.webp",
+      "coverImageAlt": "FallGuard 官网原型图，展示跌倒检测与通知场景",
+      "coverImageSource": "项目官网图片：https://fallguard.net/",
+      "coverImageCredit": "项目官网公开图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "客厅墙上的小摄像头识别老人跌倒，手机弹出紧急提醒，旁边有隐私保护图标",
       "year": "2025",
       "award": "2025 3M Young Scientist Challenge 第一名 / America's Top Young Scientist",
@@ -692,7 +758,11 @@
       "sourceUrls": [
         "https://timesofindia.indiatimes.com/city/hubballi/agasagi-school-team-excels-in-ai-hackathon-2026/articleshow/129722979.cms"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/robert-hook-crop-price.webp",
+      "coverImageAlt": "Robert Hook 农价预测项目新闻配图，展示获奖学生团队",
+      "coverImageSource": "Times of India 新闻配图：https://timesofindia.indiatimes.com/city/hubballi/agasagi-school-team-excels-in-ai-hackathon-2026/articleshow/129722979.cms",
+      "coverImageCredit": "公开新闻配图，课堂引用；商用传播需二次确认",
+      "coverImageStatus": "待确认",
       "coverImageHint": "乡村学生团队看着农价预测仪表盘，图表旁边连接土壤和天气传感器",
       "year": "2026",
       "award": "National AI Future Skills Hackathon 2026 Top 10，全国展展示",
@@ -734,7 +804,11 @@
         "https://www.congressionalappchallenge.us/25-ct05/",
         "https://www.ctinsider.com/news/article/avon-teen-snap-snack-app-ct-22259058.php"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/snap-and-snack.webp",
+      "coverImageAlt": "Snap & Snack 新闻配图，展示 App Challenge 获奖学生与项目板",
+      "coverImageSource": "CT Insider 新闻配图：https://www.ctinsider.com/news/article/avon-teen-snap-snack-app-ct-22259058.php；Congressional App Challenge 页面：https://www.congressionalappchallenge.us/25-ct05/",
+      "coverImageCredit": "公开新闻配图，课堂引用；商用传播需二次确认",
+      "coverImageStatus": "待确认",
       "coverImageHint": "手机扫描零食配料表，红色标出过敏源，旁边生成安全替代食谱",
       "year": "2025",
       "award": "2025 Congressional App Challenge Connecticut 5th District Winner",
@@ -776,7 +850,11 @@
         "https://www.theearthprize.org/regional-winners-2025",
         "https://en.wikipedia.org/wiki/The_Earth_Prize"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/sustainability-heroes.webp",
+      "coverImageAlt": "Sustainability Heroes 官方团队图，展示 Earth Prize 区域获奖项目",
+      "coverImageSource": "The Earth Prize 官方区域获奖页图片：https://www.theearthprize.org/regional-winners-2025",
+      "coverImageCredit": "官方公开项目图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "老师在课堂屏幕上选择学科主题，AI 生成 SDG 任务卡和校园行动清单",
       "year": "2025",
       "award": "The Earth Prize 2025 Middle East Regional Winner",
@@ -817,7 +895,11 @@
         "https://www.theearthprize.org/regional-winners-2025",
         "https://en.wikipedia.org/wiki/The_Earth_Prize"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/ecoaction.webp",
+      "coverImageAlt": "EcoAction 官方团队图，展示 Earth Prize 区域获奖项目",
+      "coverImageSource": "The Earth Prize 官方区域获奖页图片：https://www.theearthprize.org/regional-winners-2025",
+      "coverImageCredit": "官方公开项目图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
       "coverImageHint": "城市热力地图上出现红色高温街区，AI 标出优先种树和遮阴路线",
       "year": "2025",
       "award": "The Earth Prize 2025 Central & South America Regional Winner",
@@ -858,6 +940,9 @@
       "sourceUrls": [
         "https://mp.weixin.qq.com/s/Sv5ITxvmuyggTFaa1JtewQ?from=industrynews&version=5.0.8.70666&platform=mac#rd"
       ],
+      "coverImageAlt": "暂缺营养小精灵互动餐厅真实项目截图",
+      "coverImageSource": "现有微信公众号来源未解析出对应作品封面图：https://mp.weixin.qq.com/s/Sv5ITxvmuyggTFaa1JtewQ",
+      "coverImageCredit": "未使用图片；等待官方截图或授权素材",
       "coverImageStatus": "待补图",
       "coverImageHint": "儿童餐桌上出现营养小精灵，餐盘变成冒险地图，AI 给出今日食物任务",
       "year": "2026",
@@ -900,7 +985,11 @@
       "sourceUrls": [
         "https://www.xiaohongshu.com/explore/6a0727ea000000000803177e?app_platform=ios&app_version=9.33.4&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBFq8Sa0FrVQwEuRT97gPeMQYq85t1sOjfTQ7Co3R-Hrc=&author_share=1&xhsshare=CopyLink&shareRedId=N0gzQ0g9OT83OEdHOjg2SD45PDg6S0lN&apptime=1780973747&share_id=f80be50fe6014dd3aa9476bba5675d75"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/coniro-yookie.webp",
+      "coverImageAlt": "Coniro / Yookie 小红书公开笔记图，展示情绪正念软糖与角色场景",
+      "coverImageSource": "小红书公开笔记图片：https://www.xiaohongshu.com/explore/6a0727ea000000000803177e",
+      "coverImageCredit": "公开社媒图片，课堂引用；来源授权需二次确认",
+      "coverImageStatus": "待确认",
       "coverImageHint": "黄色兔子 Yookie、六盒彩色情绪软糖、手机里弹出温柔的正念引导卡片",
       "year": "2026",
       "award": "同济大学设计创意学院毕业设计展；小红书线上毕业展，奖项未公开",
@@ -942,7 +1031,11 @@
       "sourceUrls": [
         "https://www.xiaohongshu.com/explore/6a261cfd0000000022020f32?xsec_token=ABDrMJJlg_OzSTlaKXTCMdvL8ehe1oFriVlW_hcuhkFGg=&xsec_source=pc_feed"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/plane-game-voice-prompt.webp",
+      "coverImageAlt": "口述需求小飞机游戏小红书公开笔记图，展示孩子与 AI 生成游戏页面",
+      "coverImageSource": "小红书公开笔记图片：https://www.xiaohongshu.com/explore/6a261cfd0000000022020f32",
+      "coverImageCredit": "公开社媒图片，课堂引用；来源授权需二次确认",
+      "coverImageStatus": "待确认",
       "coverImageHint": "孩子口述飞机和激光需求，屏幕上出现逐步升级的小飞机网页游戏",
       "year": "2026",
       "award": "小红书 AI 亲子 / Codex 编程案例，奖项未公开",
@@ -984,7 +1077,11 @@
       "sourceUrls": [
         "https://www.xiaohongshu.com/explore/6a22ac350000000035025836?app_platform=ios&app_version=9.33.4&share_from_user_hidden=true&xsec_source=app_share&type=normal&xsec_token=CBBzzobHFokPUCI8H488RGqsXQWVt-LVM193O8QU49uug=&author_share=1&xhsshare=CopyLink&shareRedId=N0gzQ0g9OT83OEdHOjg2SD45PDg6S0lN&apptime=1780973707&share_id=087e071ccb354a69964c674b57031720"
       ],
-      "coverImageStatus": "待补图",
+      "coverImage": "/images/cards/boopbirds.webp",
+      "coverImageAlt": "BoopBirds 小红书公开笔记图，展示桌面数字小鸟与硬件小窝",
+      "coverImageSource": "小红书公开笔记图片：https://www.xiaohongshu.com/explore/6a22ac350000000035025836",
+      "coverImageCredit": "公开社媒图片，课堂引用；来源授权需二次确认",
+      "coverImageStatus": "待确认",
       "coverImageHint": "一只蓝色数字小鸟在电脑桌面吃掉垃圾文件，旁边有可随身携带的小窝硬件",
       "year": "2026",
       "award": "同济大学设计创意学院设计师团队作品；小红书 AI Builder / Vibe Coding 展示，奖项未公开",
