@@ -245,11 +245,12 @@ body.has-open-modal {
 
 .mission-card button {
   width: 100%;
-  min-height: 252px;
+  min-height: 382px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 54px;
   grid-template-areas:
     "index symbol"
+    "media media"
     "main main";
   gap: 14px 12px;
   align-items: start;
@@ -275,6 +276,86 @@ body.has-open-modal {
   background: color-mix(in srgb, var(--card-accent) 14%, white 86%);
   font-size: 15px;
   font-weight: 820;
+}
+
+.card-visual {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 18%, transparent);
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 14%, white 86%), rgba(255, 255, 255, 0.84)),
+    var(--surface-soft);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.card-visual.is-tile {
+  grid-area: media;
+  height: 124px;
+}
+
+.card-visual.is-modal {
+  height: 260px;
+  margin: 0 34px 22px 140px;
+  border-radius: 26px;
+}
+
+.card-visual img,
+.visual-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.card-visual img {
+  display: block;
+  object-fit: cover;
+}
+
+.visual-placeholder {
+  display: grid;
+  place-items: center;
+  color: color-mix(in srgb, var(--card-accent) 76%, #1d1d1f 24%);
+  background:
+    radial-gradient(circle at 20% 18%, color-mix(in srgb, var(--card-accent) 20%, transparent), transparent 34%),
+    radial-gradient(circle at 80% 82%, rgba(255, 255, 255, 0.82), transparent 30%);
+}
+
+.card-visual figcaption {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 9px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-width: 0;
+  padding: 7px 9px;
+  border-radius: 999px;
+  color: var(--soft);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.045);
+  backdrop-filter: blur(14px);
+}
+
+.card-visual figcaption span {
+  flex: 0 0 auto;
+  color: color-mix(in srgb, var(--card-accent) 64%, #1d1d1f 36%);
+  font-size: 11px;
+  font-weight: 820;
+}
+
+.card-visual figcaption strong {
+  min-width: 0;
+  display: block;
+  overflow: hidden;
+  color: var(--soft);
+  font-size: 11px;
+  font-weight: 720;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .card-main {
@@ -885,6 +966,12 @@ body.has-open-modal {
 
   .modal-heading p {
     font-size: 17px;
+  }
+
+  .card-visual.is-modal {
+    height: 180px;
+    margin: 0 20px 18px;
+    border-radius: 22px;
   }
 
   .modal-powers {

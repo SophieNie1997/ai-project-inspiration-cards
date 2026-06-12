@@ -57,8 +57,50 @@ These columns are optional but useful:
 | `地图X` | Custom 0-100 project-map X position. Defaults to `技术难度分`. |
 | `地图Y` | Custom 0-100 project-map Y position. Defaults to `社会影响分`. |
 | `强调色` | Hex color used by the card. Defaults by theme. |
+| `封面图路径` | Public image path used by the website, for example `/images/cards/open-calendar.webp`. Prefer local project files over hotlinked images. |
+| `封面图描述` | Alt text for accessibility, for example `Open Calendar 项目原型截图`. |
+| `封面图来源` | Where the image came from, for example `GitHub README`, `项目官网`, `官方演示视频截图`, or a source URL. |
+| `封面图授权` | Usage note, for example `项目公开截图，课堂引用` or `需二次确认`. |
+| `封面图状态` | Use `待补图`, `待确认`, `已确认`, or `需替换`. |
+| `封面图/视觉提示` | Backup visual note for teachers. The website shows it only when no real image is available. |
 
 `科研健康` is accepted, but the converter normalizes it to `健康科研`.
+
+## Card Images
+
+Use real project visuals first. The preferred sources are:
+
+1. Project website screenshots.
+2. GitHub README screenshots or demo GIF stills.
+3. Official article screenshots, official video frames, or official demo images.
+
+Avoid using AI-generated images as the first version. The goal is to make the inspiration library feel evidence-based and grounded in real projects.
+
+Store downloaded classroom images in:
+
+```text
+public/images/cards/
+```
+
+Recommended file names:
+
+```text
+public/images/cards/<card-id>.webp
+public/images/cards/open-calendar.webp
+public/images/cards/bridgebot.webp
+```
+
+Then fill Feishu/CSV like this:
+
+| CSV Column | Example |
+|---|---|
+| `封面图路径` | `/images/cards/open-calendar.webp` |
+| `封面图描述` | `Open Calendar 桌面打印机原型截图` |
+| `封面图来源` | `GitHub README` |
+| `封面图授权` | `项目公开截图，课堂引用` |
+| `封面图状态` | `已确认` |
+
+If no real image has been found yet, leave `封面图路径` blank and set `封面图状态` to `待补图`. The website will show a clean placeholder using `封面图/视觉提示`.
 
 ## Update Workflow
 

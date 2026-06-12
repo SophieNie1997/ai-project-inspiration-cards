@@ -67,4 +67,23 @@ describe('convertCsvToCards', () => {
       'https://example.com/c',
     ])
   })
+
+  it('maps real project image fields without treating visual hints as image paths', () => {
+    const cards = convertCsvToCards(`展示排序,是否课堂展示,项目名,卡片标题,年份,赛道与奖项,来源链接,主题标签,一句话钩子,用户是谁,解决的问题,AI怎么介入,学生可改造项目,6节课Demo目标,使用的AI能力,最终展示材料,想一想,项目小贴士,难度,社会影响分,技术难度分,封面图路径,封面图描述,封面图来源,封面图授权,封面图状态,封面图/视觉提示
+1,是,Open Calendar,好运日历,2026,Award,https://example.com/open-calendar,AI硬件,hook,audience,problem,ai,student,demo,LLM,Demo,question,tip,中,50,40,/images/cards/open-calendar.webp,Open Calendar 项目原型截图,GitHub README,项目公开截图，课堂引用,已确认,桌面打印机吐出每日好运签
+2,是,No Image,无图案例,2026,Award,https://example.com/no-image,教育公平,hook,audience,problem,ai,student,demo,LLM,Demo,question,tip,中,50,40,,无图描述,,,待补图,学校服务台、多语言文件卡片`)
+
+    expect(cards[0]).toMatchObject({
+      coverImage: '/images/cards/open-calendar.webp',
+      coverImageAlt: 'Open Calendar 项目原型截图',
+      coverImageSource: 'GitHub README',
+      coverImageCredit: '项目公开截图，课堂引用',
+      coverImageStatus: '已确认',
+      coverImageHint: '桌面打印机吐出每日好运签',
+    })
+    expect(cards[1]).not.toHaveProperty('coverImage')
+    expect(cards[1].coverImageAlt).toBe('无图描述')
+    expect(cards[1].coverImageStatus).toBe('待补图')
+    expect(cards[1].coverImageHint).toBe('学校服务台、多语言文件卡片')
+  })
 })

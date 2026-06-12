@@ -194,6 +194,7 @@ function MissionCardTile({
     >
       <button type="button" onClick={onSelect} aria-label={`查看 ${card.title}`}>
         <div className="card-index">{String(index).padStart(2, '0')}</div>
+        <CardVisual card={card} variant="tile" />
         <div className="card-main">
           <div className="card-meta">
             <span>{card.year}</span>
@@ -213,6 +214,44 @@ function MissionCardTile({
         </div>
       </button>
     </article>
+  )
+}
+
+type CardVisualProps = {
+  card: MissionCard
+  variant: 'tile' | 'modal'
+}
+
+function CardVisual({ card, variant }: CardVisualProps) {
+  const [imageFailed, setImageFailed] = useState(false)
+  const Icon = themeIcons[card.themeLabel] ?? Brain
+  const hasImage = Boolean(card.coverImage && !imageFailed)
+  const status = card.coverImageStatus || (card.coverImage ? '已确认' : '待补图')
+  const label = hasImage ? status : '待补真实截图'
+
+  return (
+    <figure className={`card-visual is-${variant} ${hasImage ? 'has-image' : 'needs-image'}`}>
+      {hasImage ? (
+        <img
+          src={card.coverImage}
+          alt={card.coverImageAlt || `${card.sourceProject} 项目截图`}
+          loading="lazy"
+          onError={() => setImageFailed(true)}
+        />
+      ) : (
+        <div className="visual-placeholder" aria-hidden="true">
+          <Icon size={variant === 'modal' ? 42 : 30} strokeWidth={1.45} />
+        </div>
+      )}
+      <figcaption>
+        <span>{label}</span>
+        <strong>
+          {hasImage
+            ? card.coverImageSource || '真实项目图'
+            : card.coverImageHint || '优先补官网 / GitHub README / 项目截图'}
+        </strong>
+      </figcaption>
+    </figure>
   )
 }
 
@@ -452,6 +491,8 @@ function CardDetailModal({ card, index, onClose }: CardDetailModalProps) {
             )}
           </div>
         </div>
+
+        <CardVisual card={card} variant="modal" />
 
         <CardDetail card={card} />
       </section>

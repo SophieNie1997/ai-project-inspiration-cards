@@ -82,6 +82,19 @@ function rowToCard(row, displayOrder) {
   const sourceUrls = sourceUrlList(
     firstExistingValue(row, ['来源链接', '项目链接', 'sourceUrl', 'Source URL']),
   )
+  const coverImage = imagePathValue(
+    firstExistingValue(row, ['封面图路径', '封面图链接', '封面图URL', '图片路径', '图片链接', 'coverImage']),
+  )
+  const coverImageAlt = firstContentValue(row, ['封面图描述', '图片描述', 'coverImageAlt'])
+  const coverImageSource = textValue(
+    firstExistingValue(row, ['封面图来源', '图片来源', 'coverImageSource']),
+    '',
+  )
+  const coverImageCredit = textValue(
+    firstExistingValue(row, ['封面图授权', '图片授权', '图片署名', 'coverImageCredit']),
+    '',
+  )
+  const coverImageHint = firstContentValue(row, ['封面图/视觉提示', '视觉提示', '图片提示', 'coverImageHint'])
   const themeLabel = normalizeThemeLabel(firstValue(row.主题标签, '教育公平'))
   const meta = themeMeta[themeLabel] ?? themeMeta.教育公平
   const impactScore = numberValue(row.社会影响分, 50)
@@ -92,6 +105,15 @@ function rowToCard(row, displayOrder) {
     title,
     sourceProject,
     ...(sourceUrls.length ? { sourceUrl: sourceUrls[0], sourceUrls } : {}),
+    ...(coverImage ? { coverImage } : {}),
+    ...(coverImageAlt ? { coverImageAlt } : {}),
+    ...(coverImageSource ? { coverImageSource } : {}),
+    ...(coverImageCredit ? { coverImageCredit } : {}),
+    coverImageStatus: textValue(
+      firstExistingValue(row, ['封面图状态', '图片状态', 'coverImageStatus']),
+      coverImage ? '已确认' : '待补图',
+    ),
+    ...(coverImageHint ? { coverImageHint } : {}),
     year: textValue(row.年份, ''),
     award: textValue(row.赛道与奖项, ''),
     theme: meta.theme,
@@ -157,6 +179,16 @@ function sourceUrlList(value) {
     .split(/[;；\n\r]+/)
     .map((item) => item.trim())
     .filter((item) => /^https?:\/\//i.test(item))
+}
+
+function imagePathValue(value) {
+  const normalized = textValue(value, '')
+  if (!normalized) return ''
+  if (/^https?:\/\//i.test(normalized)) return normalized
+  if (normalized.startsWith('/')) return normalized
+  if (/^images\//i.test(normalized)) return `/${normalized}`
+  if (/\.(avif|webp|png|jpe?g|gif|svg)$/i.test(normalized)) return normalized
+  return ''
 }
 
 function numberValue(value, fallback) {

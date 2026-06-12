@@ -4,6 +4,12 @@ export type MissionCard = {
   sourceProject: string
   sourceUrl?: string
   sourceUrls?: string[]
+  coverImage?: string
+  coverImageAlt?: string
+  coverImageSource?: string
+  coverImageCredit?: string
+  coverImageStatus?: string
+  coverImageHint?: string
   year: string
   award: string
   theme: string
