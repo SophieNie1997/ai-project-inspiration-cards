@@ -343,10 +343,10 @@ body.has-open-modal {
   min-width: 0;
   margin: 0;
   overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--card-accent) 18%, transparent);
+  border: 1px solid rgba(129, 112, 173, 0.2);
   border-radius: 20px;
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 14%, white 86%), rgba(255, 255, 255, 0.84)),
+    linear-gradient(135deg, rgba(237, 232, 247, 0.94), rgba(255, 255, 255, 0.84)),
     var(--surface-soft);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
@@ -381,16 +381,16 @@ body.has-open-modal {
   z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(242, 238, 247, 0.38), rgba(86, 67, 112, 0.16)),
-    rgba(229, 220, 239, 0.34);
+    linear-gradient(180deg, rgba(242, 238, 247, 0.5), rgba(86, 67, 112, 0.2)),
+    rgba(229, 220, 239, 0.4);
 }
 
 .visual-placeholder {
   display: grid;
   place-items: center;
-  color: color-mix(in srgb, var(--card-accent) 76%, #1d1d1f 24%);
+  color: var(--accent);
   background:
-    radial-gradient(circle at 20% 18%, color-mix(in srgb, var(--card-accent) 20%, transparent), transparent 34%),
+    radial-gradient(circle at 20% 18%, rgba(129, 112, 173, 0.2), transparent 34%),
     radial-gradient(circle at 80% 82%, rgba(255, 255, 255, 0.82), transparent 30%);
 }
 
@@ -414,7 +414,7 @@ body.has-open-modal {
 
 .card-visual figcaption span {
   flex: 0 0 auto;
-  color: #6b5c91;
+  color: var(--accent);
   font-size: 11px;
   font-weight: 820;
 }
@@ -423,7 +423,7 @@ body.has-open-modal {
   min-width: 0;
   display: block;
   overflow: hidden;
-  color: var(--soft);
+  color: #655b78;
   font-size: 11px;
   font-weight: 720;
   line-height: 1.2;
@@ -774,8 +774,10 @@ body.has-open-modal {
   display: grid;
   place-items: center;
   padding: 28px;
-  background: rgba(245, 245, 247, 0.62);
-  backdrop-filter: blur(22px) saturate(1.12);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(129, 112, 173, 0.18), transparent 34%),
+    rgba(48, 39, 65, 0.32);
+  backdrop-filter: blur(24px) saturate(1.1);
   z-index: 20;
 }
 
@@ -784,13 +786,15 @@ body.has-open-modal {
   max-height: min(88dvh, 920px);
   position: relative;
   overflow: auto;
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.78);
   border-radius: 34px;
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--card-accent) 12%, white 88%), rgba(255, 255, 255, 0.94) 260px),
-    rgba(255, 255, 255, 0.9);
+    radial-gradient(circle at 8% 4%, rgba(237, 232, 247, 0.96), transparent 40%),
+    radial-gradient(circle at 92% 6%, rgba(220, 211, 235, 0.82), transparent 34%),
+    linear-gradient(180deg, rgba(251, 249, 255, 0.98) 0%, rgba(255, 255, 255, 0.94) 330px, rgba(251, 249, 255, 0.92) 100%),
+    rgba(251, 249, 255, 0.94);
   box-shadow:
-    0 28px 90px rgba(0, 0, 0, 0.18),
+    0 30px 94px rgba(48, 39, 65, 0.26),
     inset 0 1px 0 rgba(255, 255, 255, 0.88);
 }
 
@@ -806,11 +810,11 @@ body.has-open-modal {
   margin: 0;
   border: 0;
   border-radius: 999px;
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.82);
+  color: var(--accent-ink);
+  background: rgba(251, 249, 255, 0.88);
   box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.08),
-    inset 0 0 0 1px rgba(0, 0, 0, 0.065);
+    0 10px 26px rgba(80, 63, 104, 0.14),
+    inset 0 0 0 1px rgba(129, 112, 173, 0.12);
   cursor: pointer;
 }
 
@@ -833,9 +837,11 @@ body.has-open-modal {
   width: 42px;
   height: 42px;
   border-radius: 999px;
-  color: color-mix(in srgb, var(--card-accent) 72%, #1d1d1f 28%);
-  background: color-mix(in srgb, var(--card-accent) 14%, white 86%);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-accent) 12%, transparent);
+  color: var(--accent);
+  background: rgba(237, 232, 247, 0.86);
+  box-shadow:
+    0 10px 24px rgba(80, 63, 104, 0.1),
+    inset 0 0 0 1px rgba(129, 112, 173, 0.16);
   font-size: 16px;
   font-weight: 820;
 }
@@ -846,9 +852,12 @@ body.has-open-modal {
   width: 72px;
   height: 72px;
   border-radius: 22px;
-  color: color-mix(in srgb, var(--card-accent) 76%, #1d1d1f 24%);
-  background: color-mix(in srgb, var(--card-accent) 16%, white 84%);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--card-accent) 22%, transparent);
+  color: var(--accent);
+  background:
+    linear-gradient(145deg, rgba(237, 232, 247, 0.92), rgba(251, 249, 255, 0.78));
+  box-shadow:
+    0 16px 34px rgba(80, 63, 104, 0.14),
+    inset 0 0 0 1px rgba(129, 112, 173, 0.18);
 }
 
 .modal-heading {
@@ -859,7 +868,7 @@ body.has-open-modal {
 .modal-heading h2 {
   max-width: 800px;
   margin: 18px 0 14px;
-  color: var(--text);
+  color: #211b2d;
   font-size: clamp(44px, 5.2vw, 74px);
   line-height: 1;
 }
@@ -885,8 +894,9 @@ body.has-open-modal {
   align-items: center;
   padding: 0 11px;
   border-radius: 999px;
-  color: color-mix(in srgb, var(--card-accent) 62%, #1d1d1f 38%);
-  background: color-mix(in srgb, var(--card-accent) 13%, white 87%);
+  color: #6b5c91;
+  background: rgba(237, 232, 247, 0.88);
+  box-shadow: inset 0 0 0 1px rgba(129, 112, 173, 0.08);
   font-size: 13px;
   font-weight: 760;
 }
@@ -907,8 +917,9 @@ body.has-open-modal {
   padding: 0 14px;
   border-radius: 999px;
   color: var(--ink);
-  background: var(--accent);
-  box-shadow: 0 12px 28px rgba(129, 112, 173, 0.24);
+  background:
+    linear-gradient(145deg, #8a78b7, var(--accent-deep));
+  box-shadow: 0 14px 30px rgba(80, 63, 104, 0.24);
   font-size: 14px;
   font-weight: 780;
   text-decoration: none;
@@ -923,8 +934,10 @@ body.has-open-modal {
   padding: 12px;
   border: 0;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.48);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+  background: rgba(251, 249, 255, 0.64);
+  box-shadow:
+    inset 0 0 0 1px rgba(129, 112, 173, 0.08),
+    0 12px 32px rgba(80, 63, 104, 0.06);
 }
 
 .detail-topline {
@@ -956,8 +969,8 @@ body.has-open-modal {
 .question-strip,
 .insight-strip {
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.045);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: inset 0 0 0 1px rgba(129, 112, 173, 0.08);
 }
 
 .before-after div {
@@ -967,7 +980,7 @@ body.has-open-modal {
 
 .before-after span,
 .info-label {
-  color: color-mix(in srgb, var(--card-accent) 64%, #1d1d1f 36%);
+  color: #75639d;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0;
@@ -1008,11 +1021,11 @@ body.has-open-modal {
 }
 
 .question-strip {
-  background: color-mix(in srgb, var(--card-accent) 9%, white 91%);
+  background: rgba(237, 232, 247, 0.72);
 }
 
 .insight-strip {
-  background: #f7f7fa;
+  background: rgba(247, 243, 251, 0.74);
 }
 
 @media (max-width: 1120px) {
