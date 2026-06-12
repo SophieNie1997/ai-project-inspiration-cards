@@ -74,7 +74,7 @@ For one-command publishing from CSV to the live website:
 npm run publish:cards
 ```
 
-This command regenerates `public/cards.json`, runs tests/lint/build, commits `imports/cards.csv` and `public/cards.json`, then pushes to GitHub. Vercel redeploys after the push.
+This command regenerates `public/cards.json`, runs tests/lint/build, commits `imports/cards.csv`, `public/cards.json`, and any files under `public/images/cards`, then pushes to GitHub. Vercel redeploys after the push.
 
 ## Card Schema
 
