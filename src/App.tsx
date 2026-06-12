@@ -193,8 +193,8 @@ function MissionCardTile({
       style={{ '--card-accent': card.accent } as React.CSSProperties}
     >
       <button type="button" onClick={onSelect} aria-label={`查看 ${card.title}`}>
+        <CardBackdrop card={card} />
         <div className="card-index">{String(index).padStart(2, '0')}</div>
-        <CardVisual card={card} variant="tile" />
         <div className="card-main">
           <div className="card-meta">
             <span>{card.year}</span>
@@ -214,6 +214,28 @@ function MissionCardTile({
         </div>
       </button>
     </article>
+  )
+}
+
+type CardBackdropProps = {
+  card: MissionCard
+}
+
+function CardBackdrop({ card }: CardBackdropProps) {
+  const [imageFailed, setImageFailed] = useState(false)
+  const Icon = themeIcons[card.themeLabel] ?? Brain
+  const hasImage = Boolean(card.coverImage && !imageFailed)
+
+  return (
+    <figure className={`card-backdrop ${hasImage ? 'has-image' : 'needs-image'}`} aria-hidden="true">
+      {hasImage ? (
+        <img src={card.coverImage} alt="" loading="lazy" onError={() => setImageFailed(true)} />
+      ) : (
+        <div className="card-backdrop-placeholder">
+          <Icon size={82} strokeWidth={1.2} />
+        </div>
+      )}
+    </figure>
   )
 }
 
