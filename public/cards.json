@@ -1114,6 +1114,52 @@
       "mapX": 4,
       "mapY": 3,
       "accent": "#2ee6a6"
+    },
+    {
+      "id": "你好-辣-切辣椒互动网页",
+      "title": "把食物知识做成能切开的辣椒小游戏",
+      "sourceProject": "你好！辣 切辣椒互动网页",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/69b174fe000000001b014c97?xsec_token=AB3LAxNupdgxAj9BncpQjjNh5VCZSI4y79eSUbcvnS2ow=&xsec_source=pc_search&source=web_note_detail_r10",
+      "sourceUrls": [
+        "https://www.xiaohongshu.com/explore/69b174fe000000001b014c97?xsec_token=AB3LAxNupdgxAj9BncpQjjNh5VCZSI4y79eSUbcvnS2ow=&xsec_source=pc_search&source=web_note_detail_r10"
+      ],
+      "coverImage": "/images/cards/chili-vibe-coding-game.webp",
+      "coverImageAlt": "切辣椒互动网页截图，画面展示 Pepper X 档案、菜刀切开辣椒和辣椒列表",
+      "coverImageSource": "小红书笔记配图：https://www.xiaohongshu.com/explore/69b174fe000000001b014c97",
+      "coverImageCredit": "小红书笔记公开配图，课堂引用；需避免商用传播",
+      "coverImageStatus": "待确认",
+      "coverImageHint": "黄色背景的切辣椒互动网页，左侧是辣椒档案卡，右侧用刀切开辣椒并显示辣度喷火效果",
+      "year": "2026（来源页面时间推断）",
+      "award": "小红书 InAward 设计大赛 / 黑客松巅峰赛相关标签，奖项未公开",
+      "theme": "education",
+      "themeLabel": "Vibe Coding",
+      "audience": "想了解食物文化的学生、食品设计/科普活动参与者、没有代码背景但想做互动网页的创作者",
+      "hook": "如果辣椒不只是食材，而是一个能被切开、会喷火、会讲档案的网页小游戏呢？",
+      "problem": "食物知识和风味研究容易停留在文字介绍里，用户很难通过互动感受到不同辣椒的来源、用途和辣度差异。",
+      "aiMove": "作者提到在无代码背景下 vibe coding 出互动网页；学生改造时可让 AI 生成页面代码、辣椒资料卡、互动逻辑、视觉样式和调试建议。",
+      "studentProject": "水果甜度切开游戏、咖啡豆风味地图、家乡食材互动档案、校园食堂营养探索网页。",
+      "demoGoal": "做出一个选择食材、点击/切开后显示档案和指标变化的互动网页，并记录从想法到可玩原型的迭代过程。",
+      "aiPowers": [
+        "代码生成",
+        "交互网页开发",
+        "资料整理",
+        "视觉样式生成",
+        "调试修复"
+      ],
+      "outputs": [
+        "可玩的互动网页",
+        "食材资料卡",
+        "交互流程截图",
+        "vibe coding 迭代记录"
+      ],
+      "question": "如果你要把一种家乡食物做成互动网页，用户点击、拖动或切开它时，应该看到哪些有趣信息？",
+      "insight": "先选 5 个对象和 3 个指标，比如来源、风味、强度。第一版只需要能点击显示档案，第二版再加入动画、音效或小游戏分数。",
+      "difficulty": "中",
+      "impactScore": 3,
+      "techScore": 3,
+      "mapX": 3,
+      "mapY": 3,
+      "accent": "#2ee6a6"
     }
   ]
 }
