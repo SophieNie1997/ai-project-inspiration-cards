@@ -1670,6 +1670,231 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show students building an interactive history and culture exhibition with timelines, evidence cards, relationship maps, and an AI guide Q&A.',
   },
+  mockpilot: {
+    title: 'AI Design Helper That Turns Webpages Into Editable Prototypes',
+    sourceProject: 'MockPilot',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; open-source desktop prototyping tool',
+    themeLabel: 'Design and Prototyping',
+    audience:
+      'Students building websites, club pages, project showcases, or product prototypes',
+    hook:
+      'When you find a strong webpage, can AI extract its layout, colors, and components before you remix it into your own prototype?',
+    problem:
+      'Students may have clear product ideas but struggle to describe visual changes well enough for a tool or teammate to implement.',
+    aiMove:
+      'MockPilot captures webpages or components, extracts fonts, colors, icons, and UI parts, then lets users edit the result in natural language and export HTML.',
+    studentProject:
+      'Campus website redesign prototype, club event page editor, competitor-page study tool, or AI prototype review assistant',
+    demoGoal:
+      'Input a public webpage or screenshot, extract design elements, generate redesign suggestions, and update components through natural-language edits.',
+    aiPowers: [
+      'Webpage Parsing',
+      'Visual Style Extraction',
+      'Component Recognition',
+      'Natural-Language Editing',
+      'HTML Generation',
+    ],
+    outputs: [
+      'Before and after prototype',
+      'Design element board',
+      'Natural-language edit log',
+      'HTML export page',
+      'Design rationale card',
+    ],
+    question:
+      'If AI can copy the look of a website, how do you avoid plagiarism and learn the design method instead?',
+    insight:
+      'Analyze only public pages and require students to explain their own changes. The goal is to learn layout patterns, not to clone a commercial site.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Product Hunt media image showing MockPilot capturing a webpage into an editable desktop project with component cards.',
+    coverImageSource:
+      'Product Hunt official media image: https://ph-files.imgix.net/b1ef623e-6c96-47ab-8a31-017f4858cacf.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a desktop app with captured webpages, component cards, a natural-language edit box, and an HTML export preview.',
+  },
+  synopsule: {
+    title: 'Private AI Meeting Notes Without Uploading Recordings',
+    sourceProject: 'Synopsule',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; privacy-first transcription app',
+    themeLabel: 'Private Transcription',
+    audience:
+      'Student project teams, interviewers, club reporters, teachers, and families who need private recordings',
+    hook:
+      'Can AI listen to a group discussion on-device, label speakers, and summarize only when the user asks?',
+    problem:
+      'Team meetings and interviews are easy to forget, but uploading raw voice recordings can expose names, voices, and private context.',
+    aiMove:
+      'Synopsule uses Whisper on Mac and iPhone for local transcription, speaker labels, full-text search, and optional summaries while keeping recordings off cloud servers.',
+    studentProject:
+      'Club meeting minutes assistant, interview transcript organizer, science discussion recorder, or local oral-history archive',
+    demoGoal:
+      'Upload or record a short audio clip, create a transcript with speaker labels, summarize key points, and show privacy controls.',
+    aiPowers: [
+      'Speech-to-Text',
+      'Speaker Diarization',
+      'Summary Generation',
+      'Full-Text Search',
+      'Privacy Prompting',
+    ],
+    outputs: [
+      'Transcript text',
+      'Speaker timeline',
+      'Summary card',
+      'Privacy note',
+      'Markdown export',
+    ],
+    question:
+      'Who needs to consent before a recording assistant starts, and which situations should never be recorded automatically?',
+    insight:
+      'Use volunteered short recordings or public demo clips in class. Make consent, deletion, and export boundaries part of the product.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Product Hunt media image showing Synopsule generating local transcripts with speaker labels.',
+    coverImageSource:
+      'Product Hunt official media image: https://ph-files.imgix.net/bcbfff18-5270-49d7-b68a-25bb54ef1117.jpeg',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a local transcription interface, speaker labels, an audio privacy note, optional AI summary, and a Markdown export button.',
+  },
+  verol: {
+    title: 'A Fact-Checking Light for AI Answers',
+    sourceProject: 'Verol',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; Chrome Web Store AI hallucination detector',
+    themeLabel: 'AI Fact Checking',
+    audience:
+      'Students and teachers using large language models for writing, research, homework, or presentations',
+    hook:
+      'When AI sounds confident but may be wrong, can another system mark the evidence and risk right away?',
+    problem:
+      'Hallucinated content can enter assignments, reports, and speeches before students notice that sources or claims are unreliable.',
+    aiMove:
+      'Verol parses LLM output, searches the web in real time, verifies sources, and gives confidence labels with clickable evidence.',
+    studentProject:
+      'AI homework fact checker, science report evidence checker, history citation alert, or campus news verification helper',
+    demoGoal:
+      'Paste an AI answer, split it into claims, search public sources, label each claim as supported or uncertain, and export citations.',
+    aiPowers: [
+      'Claim Extraction',
+      'Web Search',
+      'Evidence Matching',
+      'Confidence Scoring',
+      'Source Citation',
+    ],
+    outputs: [
+      'Fact-check panel',
+      'Risk labels',
+      'Citation list',
+      'Verification log',
+      'Human review note',
+    ],
+    question:
+      'If a verification tool cannot find evidence for a claim, should it mark the claim false or ask for more human research?',
+    insight:
+      'Limit the first version to three to five checkable claims. Show evidence and uncertainty instead of presenting AI as the final judge.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Product Hunt media image showing Verol checking an AI answer and displaying evidence sources.',
+    coverImageSource:
+      'Product Hunt official media image: https://ph-files.imgix.net/fc1d3ad1-9375-42c3-80bd-0303e37f96d6.jpeg',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show an LLM answer beside a fact-check panel with confidence, source links, and red or green risk markers.',
+  },
+  capecho: {
+    title: 'Turn Screen Vocabulary Into AI Memory Cards',
+    sourceProject: 'Capecho',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; language learning and spaced repetition tool',
+    themeLabel: 'Language Learning',
+    audience:
+      'Students reading foreign-language webpages, papers, fiction, news, or competition materials',
+    hook:
+      'When you meet a new English word, can AI preserve the real sentence where you found it and bring it back before you forget?',
+    problem:
+      'Many vocabulary tools store isolated definitions. Students often lose the sentence context that made the word meaningful.',
+    aiMove:
+      'Capecho captures words and sentences from the screen with OCR, explains them with AI, and schedules review through FSRS spaced repetition.',
+    studentProject:
+      'Reading vocabulary radar, bilingual sentence card builder, science-article term reviewer, or campus reading challenge word bank',
+    demoGoal:
+      'Input a sentence or screenshot, detect target words, explain them in context, generate review cards, and schedule reminders.',
+    aiPowers: [
+      'OCR',
+      'Contextual Word Explanation',
+      'Difficulty Estimation',
+      'Spaced Repetition',
+      'Example Generation',
+    ],
+    outputs: [
+      'Vocabulary card set',
+      'Original sentence evidence',
+      'Review plan',
+      'Progress statistics',
+      'Exported word list',
+    ],
+    question:
+      'Which helps more: memorizing a word alone, or remembering how it worked in one real sentence?',
+    insight:
+      'Start with teacher-provided sentences or screenshots. Make the original sentence, explanation, and next review time visible.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Product Hunt media image showing Capecho capturing vocabulary from screen context and turning it into review cards.',
+    coverImageSource:
+      'Product Hunt official media image: https://ph-files.imgix.net/f72ea229-289f-4431-aa7f-c3c13fdb5381.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show screen OCR, a selected word, sentence context, a vocabulary review card, and a spaced repetition progress bar.',
+  },
+  'notra-image-generation': {
+    title: 'Turn Code Updates Into Project Launch Posters',
+    sourceProject: 'Notra Image Generation',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; Notra third launch',
+    themeLabel: 'Project Storytelling',
+    audience:
+      'Student startup teams, coding clubs, competition teams, and teachers who need to share progress clearly',
+    hook:
+      'After a team ships an update, can AI turn the changelog into a visual story people understand?',
+    problem:
+      'Student teams may build useful features but fail to record progress, explain value, or present updates in a way outsiders can follow.',
+    aiMove:
+      'Notra connects to workflows such as GitHub, Linear, and Slack, then turns pull requests, issues, and conversations into changelogs, posts, blogs, and branded visuals.',
+    studentProject:
+      'Club project weekly report generator, competition progress poster assistant, GitHub changelog storyteller, or school innovation launch board',
+    demoGoal:
+      'Read simulated commits and task notes, then generate an update summary, social copy, poster text, and image prompts.',
+    aiPowers: [
+      'Workflow Summarization',
+      'Changelog Generation',
+      'Brand Voice Adaptation',
+      'Visual Prompting',
+      'Release Copywriting',
+    ],
+    outputs: [
+      'Project weekly report',
+      'Changelog',
+      'Social post copy',
+      'Poster prompt',
+      'Release reflection sheet',
+    ],
+    question:
+      'For others to understand a student project, should the update show features, user value, process, or evidence?',
+    insight:
+      'Do not let AI polish achievements that did not happen. Trace every update back to a real commit, experiment note, or user comment.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Product Hunt media image showing Notra turning workflow updates into branded visual release content.',
+    coverImageSource:
+      'Product Hunt official media image: https://ph-files.imgix.net/e492532d-e4b1-42dd-bda1-ba5f6d1a9111.jpeg',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a project workflow timeline, generated release copy, brand visual preview, and social poster draft.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
