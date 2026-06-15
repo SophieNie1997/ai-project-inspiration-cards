@@ -5,7 +5,13 @@ run('npm', ['test'])
 run('npm', ['run', 'lint'])
 run('npm', ['run', 'build'])
 
-const publishPaths = ['imports/cards.csv', 'public/cards.json', 'public/images/cards']
+const publishPaths = [
+  'imports/cards.csv',
+  'public/cards.json',
+  'public/images/cards',
+  'src/lib/language.ts',
+  'src/lib/language.test.ts',
+]
 
 const changedData = git(['status', '--short', '--', ...publishPaths]).trim()
 if (!changedData) {
