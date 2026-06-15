@@ -1621,6 +1621,55 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageStatus: 'Needs confirmation',
     coverImageHint: 'Show the Neuharmony project board, a music practice plan, and an AI-personalized family guidance interface.',
   },
+  'hi-world-全球青少年创意年展': {
+    title: 'Turn History and Culture Research into an AI Interactive Exhibition',
+    sourceProject: 'Hi World! Global Youth Creative Exhibition',
+    year: '2026',
+    award:
+      'Webloom / SKT Education Hi World! 2026 Global Youth Creative Exhibition; NHD-authorized activity, not a single student award project',
+    themeLabel: 'History and Culture',
+    audience:
+      'Middle and high school students joining Hi World or NHD-style history and culture research activities, history clubs, and exhibition teams',
+    hook:
+      'A history or culture project does not have to stay as a paper. Can AI help turn evidence into an exhibition visitors can question?',
+    problem:
+      'Students may collect many sources but struggle to judge credibility, organize evidence from multiple perspectives, and present research as a paper, board, documentary, drama, or website.',
+    aiMove:
+      'AI can help draft research questions, source tables, timelines, relationship maps, exhibition scripts, bilingual guides, and website Q&A. It must not invent sources, replace citation checks, or make historical judgments for students.',
+    studentProject:
+      'Campus history and culture AI exhibition, family-story archive, city memory timeline, cultural-heritage bilingual guide, or multi-perspective historical Q&A site',
+    demoGoal:
+      'Build an AI history and culture exhibition demo: enter one topic and 5 to 8 credible sources, then generate a timeline, evidence cards, exhibition text, guide Q&A, and a clickable web gallery.',
+    aiPowers: [
+      'Source Summarization',
+      'Source Classification',
+      'Timeline Generation',
+      'Q&A Assistant',
+      'Bilingual Rewriting',
+      'Web Interaction',
+      'Citation Practice',
+    ],
+    outputs: [
+      'Interactive exhibition page',
+      'Evidence cards',
+      'Timeline',
+      'Exhibition board or documentary script',
+      'AI-use boundary note',
+      'Citation list',
+    ],
+    question:
+      'When AI helps tell a historical story, how can you prove it did not make up evidence that sounds real?',
+    insight:
+      'Start with a small topic, such as one old photo, one object, or one family migration story. Check every AI-generated sentence against the original sources and show citations inside the exhibition.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official Hi World activity cover image for the Global Youth Creative Exhibition.',
+    coverImageSource:
+      'Webloom official activity cover image: https://img.webloom.cn/img/8117428cbbe39d67187774a6baaa8cf6.png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show students building an interactive history and culture exhibition with timelines, evidence cards, relationship maps, and an AI guide Q&A.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {

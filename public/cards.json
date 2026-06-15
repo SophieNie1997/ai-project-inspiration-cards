@@ -2837,6 +2837,57 @@
       "mapX": 4,
       "mapY": 5,
       "accent": "#ff6f91"
+    },
+    {
+      "id": "hi-world-全球青少年创意年展",
+      "title": "把历史文化研究做成 AI 互动展览",
+      "sourceProject": "Hi World! 全球青少年创意年展",
+      "sourceUrl": "https://www.webloom.cn/bloom_web/#/GameData/Hi%20World!?contestId=1165469564478259200&seasonId=1810101069783609344",
+      "sourceUrls": [
+        "https://www.webloom.cn/bloom_web/#/GameData/Hi%20World!?contestId=1165469564478259200&seasonId=1810101069783609344",
+        "https://img.webloom.cn/bloom-product/static/html/Hi%20World%E4%B8%96%E7%95%8C%E6%96%87%E5%8C%96%E6%97%A5.html"
+      ],
+      "coverImage": "/images/cards/hi-world-creative-exhibition.png",
+      "coverImageAlt": "Hi World! 官方活动封面图，展示全球青少年创意年展视觉主图",
+      "coverImageSource": "Webloom 官方活动接口封面图：https://img.webloom.cn/img/8117428cbbe39d67187774a6baaa8cf6.png",
+      "coverImageCredit": "官方公开活动封面，课堂引用；需避免商用传播",
+      "coverImageStatus": "待确认",
+      "coverImageHint": "学生围绕历史文化主题搭建互动展厅，时间线、证据卡、人物关系图和 AI 导览问答并列展示",
+      "year": "2026",
+      "award": "Webloom / SKT 思珂特教育，Hi World! 2026 全球青少年创意年展；NHD 授权认证活动，非单个学生获奖项目",
+      "theme": "education",
+      "themeLabel": "历史文化",
+      "audience": "参加 Hi World / NHD 类历史文化研究活动的中学生、历史社团、文化展览小组",
+      "hook": "研究一个历史文化主题，不一定只能写论文；AI 能不能帮你把史料变成可追问的互动展览？",
+      "problem": "学生常常能找到很多资料，却难以判断来源可信度、整理多角度证据，并把研究成果做成论文、展板、纪录片、戏剧或网站等更有表现力的作品。",
+      "aiMove": "AI 可以辅助生成研究问题、史料整理表、时间线、人物关系图、展览讲解词、双语导览和网站交互问答；但不能编造史料、替代引用核验或代替学生完成历史判断。",
+      "studentProject": "校园历史文化 AI 展览、家族故事互动档案、城市记忆时间线、文化遗产双语导览、历史人物多视角问答站。",
+      "demoGoal": "做出一个“AI 历史文化展览”Demo：输入一个主题和 5-8 条可信资料，生成时间线、证据卡、展板文案、导览问答和一个可点击网页展厅。",
+      "aiPowers": [
+        "资料摘要",
+        "来源分类",
+        "时间线生成",
+        "问答助手",
+        "双语改写",
+        "网页交互",
+        "引用规范"
+      ],
+      "outputs": [
+        "互动展览网页",
+        "史料证据卡",
+        "时间线",
+        "展板/纪录片脚本",
+        "AI 使用边界说明",
+        "引用清单"
+      ],
+      "question": "如果要把一个家乡故事、历史人物或文化习俗做成展览，你最想让观众能点击、提问或听见什么？",
+      "insight": "先从一个很小的主题开始，比如一张老照片、一件文物或一个家庭迁徙故事。每一条 AI 生成内容都要回到原始资料检查，并在展览里标出来源。",
+      "difficulty": "中高",
+      "impactScore": 4,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 4,
+      "accent": "#2ee6a6"
     }
   ]
 }
