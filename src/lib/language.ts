@@ -1481,6 +1481,146 @@ const cardTranslations: Record<string, CardTranslation> = {
       'A classroom version can output structured slide JSON or a web preview before exporting PPT. Require students to state sources and presentation logic.',
     difficulty: 'Medium-High',
   },
+  purebite: {
+    title: 'Adding an AI Pesticide-Risk Radar to Food Labels',
+    sourceProject: 'Purebite',
+    year: '2025',
+    award: 'Technovation Girls 2025 Beginner Division Finalist Team',
+    themeLabel: 'Food Safety',
+    audience: 'Families, school cafeteria buyers, and community market volunteers concerned about pesticide-contaminated food',
+    hook:
+      'Before buying fruit or vegetables, can AI warn when the source may carry higher pesticide risk?',
+    problem:
+      'Consumers cannot easily tell from labels whether food may be pesticide-contaminated, and local sample-risk data is hard to understand.',
+    aiMove:
+      'The project scans labels, uses an AI advisor for risky food, and maps markets with contaminated samples.',
+    studentProject: 'Campus cafeteria ingredient checker, community market safety map, or pesticide-risk Q&A helper',
+    demoGoal:
+      'Build a demo that reads a food label, highlights risk terms, gives safety suggestions, and marks sample risks on a map.',
+    aiPowers: ['OCR', 'Risk-Term Classification', 'AI Q&A', 'Map Visualization', 'Suggestion Generation'],
+    outputs: ['Food scan demo', 'Risk-word list', 'Market risk map', 'AI advice card', 'Data-source note'],
+    question:
+      'If food-safety AI makes a wrong call, does it create panic or false confidence?',
+    insight:
+      'Use public sample labels and simulated testing data in class. Do not claim the app can truly detect pesticide residue.',
+    difficulty: 'Medium',
+    coverImageAlt: 'Purebite pitch video thumbnail showing a student presenting a food safety scanning app.',
+    coverImageSource: 'Technovation official pitch video thumbnail: https://youtu.be/RDT9wLCj5sY',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint: 'Show produce labels, a phone risk card, and a market map with risk markers.',
+  },
+  'k-rem': {
+    title: 'AI Navigation Eyes for Blind and Low-Vision Users',
+    sourceProject: 'Korem / Körem',
+    year: '2025',
+    award: 'Technovation Girls 2025 Senior Regional Honoree: Asia',
+    themeLabel: 'Accessibility',
+    audience: 'Blind or low-vision users, accessibility volunteers, and public-space service staff',
+    hook:
+      'When entering an unfamiliar space, can AI read obstacles, text, and directions aloud first?',
+    problem:
+      'Blind users often need to identify obstacles, objects, and text in unfamiliar spaces, while human assistance and traditional aids cannot cover every detail.',
+    aiMove:
+      'The project uses AI and computer vision to help users navigate spaces, recognize objects, and read text.',
+    studentProject: 'Campus accessibility navigator, classroom object reader, bus-stop text reader, or exhibit audio guide',
+    demoGoal:
+      'Build a camera prototype that recognizes objects and text, then speaks directions or obstacle warnings.',
+    aiPowers: ['Computer Vision', 'Object Recognition', 'OCR', 'Voice Output', 'Scene Description'],
+    outputs: ['Camera recognition demo', 'Voice prompt script', 'Campus route map', 'User testing notes'],
+    question:
+      'When AI is uncertain, should it stay silent, guess, or clearly say it is uncertain?',
+    insight:
+      'Limit the first version to a safe scene such as desk objects or door signs, and design clear uncertainty prompts.',
+    difficulty: 'Medium-High',
+    coverImageAlt: 'Korem pitch video thumbnail showing an AI visual navigation app for blind users.',
+    coverImageSource: 'Technovation official pitch video thumbnail: https://www.youtube.com/watch?v=tc0sog0m_o8',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint: 'Show a phone camera identifying obstacles, signs, and directions with spoken guidance.',
+  },
+  'power-track': {
+    title: 'AI Energy Helper That Warns Before Planned Blackouts',
+    sourceProject: 'Power Track',
+    year: '2025',
+    award: 'Technovation Girls 2025 Beginner Regional Honoree: Africa',
+    themeLabel: 'Energy Planning',
+    audience: 'Families, schools, local shops, and students who need to plan around scheduled power outages',
+    hook:
+      'If planned blackouts disrupt studying, can AI help households and schools prepare earlier?',
+    problem:
+      'Load-shedding can interrupt study, home routines, and small businesses, so people need advance warnings and practical preparation plans.',
+    aiMove:
+      'The project uses historical data to predict future load-shedding events and encourage responsible energy use.',
+    studentProject: 'Campus study planner for outages, family power-use predictor, club backup-power planner, or energy-saving reminder',
+    demoGoal:
+      'Read a historical outage schedule, predict risk windows, and generate study, charging, and lighting plans.',
+    aiPowers: ['Time-Series Prediction', 'Historical Data Analysis', 'Reminder Generation', 'Schedule Planning', 'Energy-Saving Suggestions'],
+    outputs: ['Outage prediction dashboard', 'Household checklist', 'Reminder flow', 'Energy tips card', 'Accuracy note'],
+    question:
+      'If prediction works better for some communities than others, who gets left behind?',
+    insight:
+      'Use public or simulated schedules in class. Make clear that predictions help with preparation and do not guarantee accuracy.',
+    difficulty: 'Medium-High',
+    coverImageAlt: 'Power Track pitch video thumbnail showing an AI app for planned power outage prediction.',
+    coverImageSource: 'Technovation official pitch video thumbnail: https://www.youtube.com/watch?v=KcyYUNIyh3o',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint: 'Show a household power timeline, outage alert, phone schedule, and backup checklist.',
+  },
+  'natural-disaster-rescue-assistant': {
+    title: 'AI Emergency Helper That Builds a Family Escape Plan',
+    sourceProject: 'Natural Disaster Rescue Assistant',
+    year: '2025',
+    award: 'Technovation Girls 2025 Beginner Regional Honoree: North America',
+    themeLabel: 'Emergency Planning',
+    audience: 'Families, students, community volunteers, and school safety leaders in disaster-prone areas',
+    hook:
+      'Before an earthquake, flood, or wildfire, can AI turn emergency advice into a family-specific route map?',
+    problem:
+      'Generic emergency guides can be too broad, leaving families unsure how to plan around location, family members, supplies, and special needs.',
+    aiMove:
+      'The AI-powered web app generates personalized emergency escape plans for earthquakes, floods, wildfires, pandemics, and similar disasters.',
+    studentProject: 'Campus emergency route generator, family preparedness checklist, shelter recommendation tool, or field-trip safety planner',
+    demoGoal:
+      'Input household needs and disaster type, then generate an escape route, supply list, and emergency contact card.',
+    aiPowers: ['Form Extraction', 'Personalized Plan Generation', 'Map and Route Prompting', 'Risk Classification', 'Checklist Generation'],
+    outputs: ['Emergency plan webpage', 'Household checklist', 'Route sketch', 'Risk card', 'Human review note'],
+    question:
+      'Who must review an AI-generated disaster route, and what official information can it never replace?',
+    insight:
+      'Do not let AI invent live disaster data. Use user input and public safety rules, and always point users back to official alerts.',
+    difficulty: 'Medium',
+    coverImageAlt: 'Natural Disaster Rescue Assistant pitch video thumbnail showing a personalized disaster escape plan app.',
+    coverImageSource: 'Technovation official pitch video thumbnail: https://www.youtube.com/watch?v=mPtQstGhIJQ',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint: 'Show a family map, evacuation route, supply checklist, and AI-generated preparedness steps.',
+  },
+  neuharmony: {
+    title: 'Personalized Music and AI Growth Plans for Neurodiverse Children',
+    sourceProject: 'Neuharmony',
+    year: '2025',
+    award: 'Technovation Girls 2025 Special Award Winner; Technovation Girls Kazakhstan 2025 regional winner and semifinalist',
+    themeLabel: 'Health and Special Education',
+    audience: 'Children on the autism spectrum, families, social-service centers, music-therapy teachers, and special-education teams',
+    hook:
+      'If music practice could adapt to each child’s next reachable step, could AI support autistic children more gently?',
+    problem:
+      'Many families cannot afford long-term personalized support and lack an online plan that adapts to a child’s current needs.',
+    aiMove:
+      'Technovation describes Neuharmony as an AI-powered platform, and ER10 reports that it uses custom AI algorithms to personalize learning plans with neuroscience and music-therapy methods.',
+    studentProject: 'Music-based emotion regulation planner, special-education activity recommender, home practice tracker, or small-step growth plan generator',
+    demoGoal:
+      'Input a child’s goal, attention state, and music preference, then generate a weekly practice plan, activity notes, and observation sheet.',
+    aiPowers: ['Personalized Recommendation', 'Plan Generation', 'Learning-State Logging', 'Text Explanation', 'Progress Summary'],
+    outputs: ['Personalized music plan', 'Practice tracker', 'Observation dashboard', 'Parent guide', 'Ethics and privacy note'],
+    question:
+      'When AI supports children with special needs, which decisions must stay with teachers, families, or professionals?',
+    insight:
+      'Keep the classroom version educational and non-diagnostic. Health and special-education guidance needs professional review.',
+    difficulty: 'Medium-High',
+    coverImageAlt: 'ER10 interview image showing the Neuharmony student founder and project display board.',
+    coverImageSource: 'ER10 interview image: https://er10.kz/read/analitika/neuharmony-kak-shkolniki-sozdali-startap-chtoby-pomoch-detjam-s-ras/',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint: 'Show the Neuharmony project board, a music practice plan, and an AI-personalized family guidance interface.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
