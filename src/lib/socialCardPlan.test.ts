@@ -19,4 +19,16 @@ describe('buildPublishCardPlan', () => {
       '学生改造',
     ])
   })
+
+  it('uses English preview labels when the site language is English', () => {
+    const plan = buildPublishCardPlan(missionCards[0], 1, 'en')
+
+    expect(plan.issue).toBe('MISSION 01')
+    expect(plan.evidenceLabel).toBe('Real Project')
+    expect(plan.publishAngles).toEqual([
+      'Problem Setting',
+      'AI Move',
+      'Student Build',
+    ])
+  })
 })

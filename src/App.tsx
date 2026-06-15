@@ -16,16 +16,29 @@ import {
 } from 'lucide-react'
 import './App.css'
 import { missionCards, type MissionCard } from './data/cards'
+import {
+  applyCardsLanguage,
+  getInitialLanguage,
+  languageLabels,
+  setStoredLanguage,
+  type Language,
+  type SiteLabels,
+} from './lib/language'
 import { loadMissionCards, type CardsResponse } from './lib/cardSource'
 import { buildPublishCardPlan } from './lib/socialCardPlan'
 
 const themeIcons: Record<string, typeof Globe2> = {
   教育公平: GraduationCap,
   文化保护: Languages,
+  'Cultural Preservation': Languages,
+  'Cultural Heritage': Languages,
   无障碍科技: ShieldCheck,
+  Accessibility: ShieldCheck,
   健康管理: HeartPulse,
+  'Health Management': HeartPulse,
   科研健康: FlaskConical,
   健康科研: FlaskConical,
+  'Research Support': FlaskConical,
 }
 
 function App() {
@@ -36,17 +49,22 @@ function App() {
   const [selectedTheme, setSelectedTheme] = useState('全部')
   const [activeId, setActiveId] = useState<string | null>(null)
   const [openCardId, setOpenCardId] = useState<string | null>(null)
-  const cards = cardsResponse.cards
-  const activeThemes = useMemo(
-    () => ['全部', ...new Set(cards.map((card) => card.themeLabel))],
-    [cards],
+  const [language, setLanguage] = useState<Language>(() => getInitialLanguage())
+  const labels = languageLabels[language]
+  const cards = useMemo(
+    () => applyCardsLanguage(cardsResponse.cards, language),
+    [cardsResponse.cards, language],
   )
-  const effectiveSelectedTheme = activeThemes.includes(selectedTheme) ? selectedTheme : '全部'
+  const activeThemes = useMemo(
+    () => [labels.themeAll, ...new Set(cards.map((card) => card.themeLabel))],
+    [cards, labels.themeAll],
+  )
+  const effectiveSelectedTheme = activeThemes.includes(selectedTheme) ? selectedTheme : labels.themeAll
 
   const filteredCards = useMemo(() => {
-    if (effectiveSelectedTheme === '全部') return cards
+    if (effectiveSelectedTheme === labels.themeAll) return cards
     return cards.filter((card) => card.themeLabel === effectiveSelectedTheme)
-  }, [cards, effectiveSelectedTheme])
+  }, [cards, effectiveSelectedTheme, labels.themeAll])
   const cardOrder = useMemo(
     () => new Map(cards.map((card, index) => [card.id, index + 1])),
     [cards],
@@ -89,6 +107,13 @@ function App() {
     setActiveId(null)
   }
 
+  function selectLanguage(nextLanguage: Language) {
+    setLanguage(nextLanguage)
+    setStoredLanguage(nextLanguage)
+    setSelectedTheme(languageLabels[nextLanguage].themeAll)
+    setActiveId(null)
+  }
+
   function openCardDetail(card: MissionCard) {
     setActiveId(card.id)
     setOpenCardId(card.id)
@@ -97,40 +122,54 @@ function App() {
   return (
     <main className="lab-shell">
       <section className="hero-panel" aria-labelledby="page-title">
-        <div className="hero-copy">
+        <div className="site-topbar">
           <div className="eyebrow">
-            <span className="signal-dot" />
-            AI Project Inspiration Cards
+            <span className="signal-dot" aria-hidden="true" />
+            {labels.appName}
           </div>
+          <div className="language-toggle" aria-label={labels.languageToggleLabel}>
+            {(['zh', 'en'] satisfies Language[]).map((option) => (
+              <button
+                key={option}
+                type="button"
+                className={language === option ? 'is-selected' : ''}
+                onClick={() => selectLanguage(option)}
+                aria-pressed={language === option}
+              >
+                {option === 'zh' ? '中文' : 'EN'}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="hero-copy">
           <h1 id="page-title">
-            <span>找到你想解决的问题</span>
-            <span>做成 AI 项目</span>
+            <span>{labels.heroLineOne}</span>
+            <span>{labels.heroLineTwo}</span>
           </h1>
-          <p>
-            先挑一个你有感觉的真实案例，再把自己的校园、家庭、社区经历，改造成能展示、能参赛的 AI 项目。
-          </p>
+          <p>{labels.heroBody}</p>
           <div className="hero-actions">
             <div className="data-source">
-              {cardsResponse.source === 'github-json' ? '灵感库已连接' : '本地演示数据'}
+              {cardsResponse.source === 'github-json' ? labels.sourceConnected : labels.sourceLocal}
             </div>
             <div className="hero-stat">
               <strong>{filteredCards.length}</strong>
-              <span>张项目卡</span>
+              <span>{labels.cardCount}</span>
             </div>
             <div className="hero-stat">
               <strong>{activeThemes.length - 1}</strong>
-              <span>个主题入口</span>
+              <span>{labels.themeCount}</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="toolbar" aria-label="Card filters">
+      <section className="toolbar" aria-label={labels.themeFiltersLabel}>
         <div>
-          <span className="toolbar-kicker">项目卡片墙</span>
-          <h2>先浏览全局，再点开一张深看</h2>
+          <span className="toolbar-kicker">{labels.galleryKicker}</span>
+          <h2>{labels.galleryTitle}</h2>
         </div>
-        <div className="theme-tabs" role="tablist" aria-label="Project themes">
+        <div className="theme-tabs" role="tablist" aria-label={labels.themeFiltersLabel}>
           {activeThemes.map((theme) => (
             <button
               key={theme}
@@ -144,7 +183,7 @@ function App() {
         </div>
       </section>
 
-      <section className="gallery-grid" aria-label="Mission cards">
+      <section className="gallery-grid" aria-label={labels.missionCardsLabel}>
         {filteredCards.map((card, index) => (
           <MissionCardTile
             key={card.id}
@@ -152,6 +191,7 @@ function App() {
             index={cardOrder.get(card.id) ?? index + 1}
             isActive={card.id === activeId}
             onSelect={() => openCardDetail(card)}
+            labels={labels}
           />
         ))}
       </section>
@@ -161,6 +201,8 @@ function App() {
         cardOrder={cardOrder}
         activeId={activeId}
         onSelect={openCardDetail}
+        language={language}
+        labels={labels}
       />
 
       {openCard && (
@@ -168,6 +210,8 @@ function App() {
           card={openCard}
           index={cardOrder.get(openCard.id) ?? 1}
           onClose={() => setOpenCardId(null)}
+          language={language}
+          labels={labels}
         />
       )}
     </main>
@@ -179,6 +223,7 @@ type MissionCardTileProps = {
   index: number
   isActive: boolean
   onSelect: () => void
+  labels: SiteLabels
 }
 
 function MissionCardTile({
@@ -186,6 +231,7 @@ function MissionCardTile({
   index,
   isActive,
   onSelect,
+  labels,
 }: MissionCardTileProps) {
   const Icon = themeIcons[card.themeLabel] ?? Brain
 
@@ -194,7 +240,7 @@ function MissionCardTile({
       className={`mission-card ${isActive ? 'is-active' : ''}`}
       style={{ '--card-accent': card.accent } as React.CSSProperties}
     >
-      <button type="button" onClick={onSelect} aria-label={`查看 ${card.title}`}>
+      <button type="button" onClick={onSelect} aria-label={labels.viewCardLabel(card.title)}>
         <CardBackdrop card={card} />
         <div className="card-index">{String(index).padStart(2, '0')}</div>
         <div className="card-poster-tag">
@@ -205,12 +251,14 @@ function MissionCardTile({
           <div className="card-meta">
             <span>{card.year}</span>
             <span>{card.themeLabel}</span>
-            <span>难度 {card.difficulty}</span>
+            <span>
+              {labels.difficultyPrefix} {card.difficulty}
+            </span>
           </div>
           <h3>{card.title}</h3>
           <p>{card.hook}</p>
           <div className="tile-question">
-            <span>课堂问题</span>
+            <span>{labels.classroomQuestion}</span>
             <strong>{card.question}</strong>
           </div>
           <div className="power-row">
@@ -252,21 +300,22 @@ function CardBackdrop({ card }: CardBackdropProps) {
 type CardVisualProps = {
   card: MissionCard
   variant: 'tile' | 'modal'
+  labels: SiteLabels
 }
 
-function CardVisual({ card, variant }: CardVisualProps) {
+function CardVisual({ card, variant, labels }: CardVisualProps) {
   const [imageFailed, setImageFailed] = useState(false)
   const Icon = themeIcons[card.themeLabel] ?? Brain
   const hasImage = Boolean(card.coverImage && !imageFailed)
-  const status = card.coverImageStatus || (card.coverImage ? '已确认' : '待补图')
-  const label = hasImage ? status : '待补真实截图'
+  const status = card.coverImageStatus || (card.coverImage ? labels.fallbackImageStatus : labels.fallbackImageLabel)
+  const label = hasImage ? status : labels.fallbackImageLabel
 
   return (
     <figure className={`card-visual is-${variant} ${hasImage ? 'has-image' : 'needs-image'}`}>
       {hasImage ? (
         <img
           src={card.coverImage}
-          alt={card.coverImageAlt || `${card.sourceProject} 项目截图`}
+          alt={card.coverImageAlt || `${card.sourceProject} screenshot`}
           loading="lazy"
           onError={() => setImageFailed(true)}
         />
@@ -279,8 +328,8 @@ function CardVisual({ card, variant }: CardVisualProps) {
         <span>{label}</span>
         <strong>
           {hasImage
-            ? card.coverImageSource || '真实项目图'
-            : card.coverImageHint || '优先补官网 / GitHub README / 项目截图'}
+            ? card.coverImageSource || labels.fallbackImageSource
+            : card.coverImageHint || labels.fallbackImageHint}
         </strong>
       </figcaption>
     </figure>
@@ -292,73 +341,120 @@ type ProjectMapProps = {
   cardOrder: Map<string, number>
   activeId: string | null
   onSelect: (card: MissionCard) => void
+  language: Language
+  labels: SiteLabels
 }
 
 const techSegments = [
-  { key: 'starter', label: '轻量上手', hint: '先做可用原型' },
-  { key: 'builder', label: '整合应用', hint: '需要组合工具和流程' },
-  { key: 'advanced', label: '技术挑战', hint: '适合深挖模型/硬件/数据' },
+  { key: 'starter' },
+  { key: 'builder' },
+  { key: 'advanced' },
 ] as const
 
 const impactSegments = [
-  { key: 'wide', label: '更大范围影响', hint: '能服务一群人或公共议题' },
-  { key: 'local', label: '校园/家庭影响', hint: '从身边真实场景开始' },
-  { key: 'prototype', label: '小范围试验', hint: '适合快速做 demo' },
+  { key: 'wide' },
+  { key: 'local' },
+  { key: 'prototype' },
 ] as const
-
-const zoneTitles: Record<string, string> = {
-  'wide-starter': '低门槛，高共鸣',
-  'wide-builder': '做成可传播的服务',
-  'wide-advanced': '挑战真实世界问题',
-  'local-starter': '从身边问题切入',
-  'local-builder': '做出能被反复使用的工具',
-  'local-advanced': '让技术进入真实场景',
-  'prototype-starter': '先把想法跑起来',
-  'prototype-builder': '做一个完整小产品',
-  'prototype-advanced': '探索硬核原型',
-}
 
 type TechSegmentKey = (typeof techSegments)[number]['key']
 type ImpactSegmentKey = (typeof impactSegments)[number]['key']
 
-function ProjectMap({ cards, cardOrder, activeId, onSelect }: ProjectMapProps) {
+const mapCopy: Record<
+  Language,
+  {
+    tech: Record<TechSegmentKey, { label: string; hint: string }>
+    impact: Record<ImpactSegmentKey, { label: string; hint: string }>
+    zoneTitles: Record<string, string>
+  }
+> = {
+  zh: {
+    tech: {
+      starter: { label: '轻量上手', hint: '先做可用原型' },
+      builder: { label: '整合应用', hint: '需要组合工具和流程' },
+      advanced: { label: '技术挑战', hint: '适合深挖模型/硬件/数据' },
+    },
+    impact: {
+      wide: { label: '更大范围影响', hint: '能服务一群人或公共议题' },
+      local: { label: '校园/家庭影响', hint: '从身边真实场景开始' },
+      prototype: { label: '小范围试验', hint: '适合快速做 demo' },
+    },
+    zoneTitles: {
+      'wide-starter': '低门槛，高共鸣',
+      'wide-builder': '做成可传播的服务',
+      'wide-advanced': '挑战真实世界问题',
+      'local-starter': '从身边问题切入',
+      'local-builder': '做出能被反复使用的工具',
+      'local-advanced': '让技术进入真实场景',
+      'prototype-starter': '先把想法跑起来',
+      'prototype-builder': '做一个完整小产品',
+      'prototype-advanced': '探索硬核原型',
+    },
+  },
+  en: {
+    tech: {
+      starter: { label: 'Light Starter', hint: 'Build a usable first prototype' },
+      builder: { label: 'Integrated App', hint: 'Combine tools, data, and workflow' },
+      advanced: { label: 'Deep Tech', hint: 'Dig into models, hardware, or data' },
+    },
+    impact: {
+      wide: { label: 'Broad Impact', hint: 'Serve a group or public issue' },
+      local: { label: 'School / Family Impact', hint: 'Start from a nearby real scene' },
+      prototype: { label: 'Small Experiment', hint: 'Good for a fast demo' },
+    },
+    zoneTitles: {
+      'wide-starter': 'Low Barrier, High Resonance',
+      'wide-builder': 'Make It a Shareable Service',
+      'wide-advanced': 'Challenge a Real-World Problem',
+      'local-starter': 'Start From a Nearby Problem',
+      'local-builder': 'Build a Tool People Reuse',
+      'local-advanced': 'Bring Technology Into a Real Scene',
+      'prototype-starter': 'Get the Idea Running',
+      'prototype-builder': 'Build a Complete Small Product',
+      'prototype-advanced': 'Explore a Hard Prototype',
+    },
+  },
+}
+
+function ProjectMap({ cards, cardOrder, activeId, onSelect, language, labels }: ProjectMapProps) {
   const zones = getMapZones(cards)
   const [expandedZoneId, setExpandedZoneId] = useState<string | null>(null)
+  const copy = mapCopy[language]
 
   return (
     <section className="map-panel" aria-labelledby="map-title">
       <div className="panel-heading">
         <div>
-          <span>项目地图</span>
-          <h2 id="map-title">按方向找到你的项目入口</h2>
+          <span>{labels.mapKicker}</span>
+          <h2 id="map-title">{labels.mapTitle}</h2>
         </div>
-        <p>
-          横向看技术挑战，纵向看影响范围。先找一个像你想做的方向，再点开里面的项目看看。
-        </p>
+        <p>{labels.mapBody}</p>
       </div>
 
-      <div className="zone-map" aria-label="按技术挑战和影响范围分区的项目地图">
-        <div className="zone-axis-impact">影响范围</div>
+      <div className="zone-map" aria-label={labels.mapLabel}>
+        <div className="zone-axis-impact">{labels.impactAxis}</div>
         <div className="zone-grid">
           {zones.map((zone) => {
             const isExpanded = expandedZoneId === zone.id
             const visibleCards = isExpanded ? zone.cards : zone.cards.slice(0, 4)
             const hiddenCount = zone.cards.length - visibleCards.length
+            const impact = copy.impact[zone.impactKey]
+            const tech = copy.tech[zone.techKey]
 
             return (
               <section
                 key={zone.id}
                 className={`map-zone ${zone.cards.length === 0 ? 'is-empty' : ''}`}
-                aria-label={`${zone.impact.label}，${zone.tech.label}`}
+                aria-label={`${impact.label}, ${tech.label}`}
               >
                 <div className="zone-heading">
                   <div>
-                    <span>{zone.impact.label}</span>
-                    <strong>{zone.title}</strong>
+                    <span>{impact.label}</span>
+                    <strong>{copy.zoneTitles[zone.id]}</strong>
                   </div>
-                  <em>{zone.cards.length} 个</em>
+                  <em>{labels.zoneProjectCount(zone.cards.length)}</em>
                 </div>
-                <p>{zone.tech.hint}</p>
+                <p>{tech.hint}</p>
                 <div className="zone-projects">
                   {visibleCards.map((card) => (
                     <button
@@ -379,10 +475,10 @@ function ProjectMap({ cards, cardOrder, activeId, onSelect }: ProjectMapProps) {
                       className="zone-more"
                       onClick={() => setExpandedZoneId(isExpanded ? null : zone.id)}
                     >
-                      {isExpanded ? '收起' : `+${hiddenCount} 个项目`}
+                      {isExpanded ? labels.collapse : labels.expandMore(hiddenCount)}
                     </button>
                   )}
-                  {zone.cards.length === 0 && <span className="zone-empty">待补充案例</span>}
+                  {zone.cards.length === 0 && <span className="zone-empty">{labels.emptyZone}</span>}
                 </div>
               </section>
             )
@@ -391,8 +487,8 @@ function ProjectMap({ cards, cardOrder, activeId, onSelect }: ProjectMapProps) {
         <div className="zone-axis-tech">
           {techSegments.map((segment) => (
             <span key={segment.key}>
-              <strong>{segment.label}</strong>
-              {segment.hint}
+              <strong>{copy.tech[segment.key].label}</strong>
+              {copy.tech[segment.key].hint}
             </span>
           ))}
         </div>
@@ -412,9 +508,8 @@ function getMapZones(cards: MissionCard[]) {
 
       return {
         id: `${impact.key}-${tech.key}`,
-        title: zoneTitles[`${impact.key}-${tech.key}`],
-        tech,
-        impact,
+        techKey: tech.key,
+        impactKey: impact.key,
         cards: zoneCards,
       }
     }),
@@ -455,9 +550,11 @@ type CardDetailModalProps = {
   card: MissionCard
   index: number
   onClose: () => void
+  language: Language
+  labels: SiteLabels
 }
 
-function CardDetailModal({ card, index, onClose }: CardDetailModalProps) {
+function CardDetailModal({ card, index, onClose, language, labels }: CardDetailModalProps) {
   const Icon = themeIcons[card.themeLabel] ?? Brain
   const sourceUrls = getSourceUrls(card)
   const displayIndex = String(index).padStart(2, '0')
@@ -475,7 +572,7 @@ function CardDetailModal({ card, index, onClose }: CardDetailModalProps) {
         <button
           type="button"
           className="modal-close"
-          aria-label="关闭项目详情"
+          aria-label={labels.modalClose}
           onClick={onClose}
         >
           <X size={21} strokeWidth={1.8} aria-hidden="true" />
@@ -483,7 +580,7 @@ function CardDetailModal({ card, index, onClose }: CardDetailModalProps) {
 
         <div className="modal-hero">
           <div className="modal-identity">
-            <div className="modal-index" aria-label={`第 ${displayIndex} 张项目卡`}>
+            <div className="modal-index" aria-label={labels.modalIndexLabel(displayIndex)}>
               {displayIndex}
             </div>
             <div className="modal-icon">
@@ -506,7 +603,7 @@ function CardDetailModal({ card, index, onClose }: CardDetailModalProps) {
               ))}
             </div>
             {sourceUrls.length > 0 && (
-              <div className="source-links" aria-label="项目来源链接">
+              <div className="source-links" aria-label={labels.sourceLinksLabel}>
                 {sourceUrls.map((sourceUrl, index) => (
                   <a
                     key={sourceUrl}
@@ -516,7 +613,9 @@ function CardDetailModal({ card, index, onClose }: CardDetailModalProps) {
                     rel="noreferrer"
                   >
                     <ExternalLink size={16} strokeWidth={1.8} aria-hidden="true" />
-                    {sourceUrls.length === 1 ? '查看项目来源' : `项目来源 ${index + 1}`}
+                    {sourceUrls.length === 1
+                      ? labels.sourceLinkSingle
+                      : labels.sourceLinkMultiple(index + 1)}
                   </a>
                 ))}
               </div>
@@ -524,11 +623,11 @@ function CardDetailModal({ card, index, onClose }: CardDetailModalProps) {
           </div>
         </div>
 
-        <CardVisual card={card} variant="modal" />
+        <CardVisual card={card} variant="modal" labels={labels} />
 
-        <PublishCardPreview card={card} index={index} />
+        <PublishCardPreview card={card} index={index} language={language} labels={labels} />
 
-        <CardDetail card={card} />
+        <CardDetail card={card} labels={labels} />
       </section>
     </div>
   )
@@ -541,24 +640,27 @@ function getSourceUrls(card: MissionCard) {
 
 type CardDetailProps = {
   card: MissionCard
+  labels: SiteLabels
 }
 
 type PublishCardPreviewProps = {
   card: MissionCard
   index: number
+  language: Language
+  labels: SiteLabels
 }
 
-function PublishCardPreview({ card, index }: PublishCardPreviewProps) {
-  const plan = buildPublishCardPlan(card, index)
+function PublishCardPreview({ card, index, language, labels }: PublishCardPreviewProps) {
+  const plan = buildPublishCardPlan(card, index, language)
   const Icon = themeIcons[card.themeLabel] ?? Brain
   const sourceUrl = getSourceUrls(card)[0]
 
   return (
-    <section className="publish-preview" aria-label="课堂投影卡与发布卡预览">
+    <section className="publish-preview" aria-label={labels.publishPreviewLabel}>
       <div className="publish-card">
         <div className="publish-chrome">
           <span>{plan.issue}</span>
-          <span>WAICY / AI PROJECT</span>
+          <span>{labels.publishProjectLabel}</span>
         </div>
         <div className="publish-layout">
           <div className="publish-copy">
@@ -583,20 +685,20 @@ function PublishCardPreview({ card, index }: PublishCardPreviewProps) {
           ))}
         </div>
         <div className="publish-question">
-          <span>课堂转化</span>
+          <span>{labels.publishTransfer}</span>
           <p>{plan.transferPrompt}</p>
         </div>
       </div>
 
       <div className="projection-card">
         <div>
-          <span>CLASSROOM PROMPT</span>
-          <h3>一屏讲清楚：为什么这个项目值得改造？</h3>
+          <span>{labels.projectionKicker}</span>
+          <h3>{labels.projectionTitle}</h3>
         </div>
         <p>{plan.classroomQuestion}</p>
         {sourceUrl && (
           <a href={sourceUrl} target="_blank" rel="noreferrer">
-            查看证据层
+            {labels.evidenceLayer}
             <ArrowUpRight size={17} strokeWidth={1.8} aria-hidden="true" />
           </a>
         )}
@@ -605,20 +707,20 @@ function PublishCardPreview({ card, index }: PublishCardPreviewProps) {
   )
 }
 
-function CardDetail({ card }: CardDetailProps) {
+function CardDetail({ card, labels }: CardDetailProps) {
   return (
     <div className="detail-panel">
       <div className="before-after">
         <div>
-          <span>痛点</span>
+          <span>{labels.detailProblem}</span>
           <p>{card.problem}</p>
         </div>
         <div>
-          <span>AI动作</span>
+          <span>{labels.detailAiMove}</span>
           <p>{card.aiMove}</p>
         </div>
         <div>
-          <span>学生改造</span>
+          <span>{labels.detailStudentBuild}</span>
           <p>{card.demoGoal}</p>
         </div>
       </div>
@@ -626,28 +728,28 @@ function CardDetail({ card }: CardDetailProps) {
       <div className="detail-grid">
         <InfoBlock
           icon={<ScanSearch size={18} aria-hidden="true" />}
-          label="用户是谁"
+          label={labels.detailAudience}
           value={card.audience}
         />
         <InfoBlock
           icon={<Brain size={18} aria-hidden="true" />}
-          label="学生改造项目"
+          label={labels.detailStudentProject}
           value={card.studentProject}
         />
         <InfoBlock
           icon={<ChartNoAxesColumnIncreasing size={18} aria-hidden="true" />}
-          label="最终展示材料"
+          label={labels.detailOutputs}
           value={card.outputs.join(' / ')}
         />
       </div>
 
       <div className="question-strip">
-        <span>想一想</span>
+        <span>{labels.thinkPrompt}</span>
         <p>{card.question}</p>
       </div>
 
       <div className="insight-strip">
-        <span>项目小贴士</span>
+        <span>{labels.projectTip}</span>
         <p>{card.insight}</p>
       </div>
     </div>

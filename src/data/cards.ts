@@ -24,7 +24,7 @@ export type MissionCard = {
   outputs: string[]
   question: string
   insight: string
-  difficulty: '中' | '中高' | '高'
+  difficulty: '中' | '中高' | '高' | 'Medium' | 'Medium-High' | 'High'
   impactScore: number
   techScore: number
   mapX: number

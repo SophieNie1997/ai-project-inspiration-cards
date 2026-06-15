@@ -10,6 +10,8 @@ body.has-open-modal {
 
 .hero-panel,
 .hero-actions,
+.site-topbar,
+.language-toggle,
 .toolbar,
 .theme-tabs,
 .gallery-grid,
@@ -23,8 +25,16 @@ body.has-open-modal {
 
 .hero-panel {
   display: grid;
+  gap: 22px;
   padding: 28px 0 24px;
   border-bottom: 1px solid var(--line-strong);
+}
+
+.site-topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
 }
 
 .hero-copy {
@@ -62,6 +72,42 @@ body.has-open-modal {
 .signal-dot {
   width: 9px;
   height: 9px;
+  background: var(--accent);
+}
+
+.language-toggle {
+  flex: 0 0 auto;
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(48px, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--line);
+}
+
+.language-toggle button {
+  min-height: 34px;
+  padding: 0 11px;
+  border: 0;
+  color: var(--soft);
+  background: rgba(21, 25, 35, 0.94);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.language-toggle button:hover,
+.language-toggle button:focus-visible {
+  color: var(--text);
+}
+
+.language-toggle button.is-selected {
+  color: var(--accent-ink);
   background: var(--accent);
 }
 
@@ -1220,6 +1266,11 @@ body.has-open-modal {
 
   .hero-panel {
     padding: 26px 0 24px;
+  }
+
+  .site-topbar {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .hero-copy h1 {
