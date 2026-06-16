@@ -3227,6 +3227,54 @@
       "accent": "#2ee6a6"
     },
     {
+      "id": "revi",
+      "title": "把语音输入做成不上云的学习助手",
+      "sourceProject": "Revi",
+      "sourceUrl": "https://www.producthunt.com/products/revi-2",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/revi-2",
+        "https://www.getrevi.app/"
+      ],
+      "coverImage": "/images/cards/revi.png",
+      "coverImageAlt": "Revi 官网公开预览图，展示本地语音听写工具的品牌和产品主张",
+      "coverImageSource": "项目官网 OpenGraph 图片：https://www.getrevi.app/og.png",
+      "coverImageCredit": "项目官网公开图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
+      "coverImageHint": "本机语音听写 HUD、语言识别、离线处理提示、密码字段静默和剪贴板历史并列展示",
+      "year": "2026",
+      "award": "Product Hunt 2026 今日发布；本地端语音听写与剪贴板工具",
+      "theme": "education",
+      "themeLabel": "隐私保护",
+      "audience": "写作业、做访谈、整理课堂笔记、需要保护语音隐私的学生和老师",
+      "hook": "说话比打字快，但课堂笔记能不能不把声音上传到云端？",
+      "problem": "学生做记录时常常打字跟不上，但很多语音输入工具需要账号或上传音频，敏感内容和未成年人声音数据不适合随意离开本机。",
+      "aiMove": "Product Hunt 与官网说明 Revi 在 Mac/Windows/Linux 本机完成语音识别，支持 Whisper、Parakeet、Apple 等本地引擎、25+ 语言自动检测、剪贴板记录，并在密码字段保持静默。",
+      "studentProject": "离线课堂听写助手、采访转文字工具、演讲练习记录器、隐私友好的双语口述日记。",
+      "demoGoal": "做出一个录入或上传短音频后生成文字、语言标签、关键词和隐私提示的本地语音笔记原型，并展示“哪些内容绝不上传”。",
+      "aiPowers": [
+        "语音转文字",
+        "语言识别",
+        "关键词提取",
+        "文本清理",
+        "隐私规则判断"
+      ],
+      "outputs": [
+        "语音听写 demo",
+        "转写文本",
+        "关键词卡",
+        "隐私边界说明",
+        "用户授权流程"
+      ],
+      "question": "如果你要采访同学或家人，哪些片段适合转成文字，哪些片段应该允许对方一键删除？",
+      "insight": "课堂版可以先用公开音频或自愿录制的 20 秒片段，重点展示本地处理、同意、删除和密码字段静默，而不是追求完整系统级输入法。",
+      "difficulty": "中高",
+      "impactScore": 4,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 4,
+      "accent": "#2ee6a6"
+    },
+    {
       "id": "glucochat",
       "title": "陪糖尿病学生记录日常的 AI 支持站",
       "sourceProject": "GlucoChat",
@@ -3275,6 +3323,55 @@
       "accent": "#ff6f91"
     },
     {
+      "id": "annota",
+      "title": "把个人知识库做成离线 AI 学习本",
+      "sourceProject": "Annota",
+      "sourceUrl": "https://www.producthunt.com/products/annota",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/annota",
+        "https://www.annota.online/"
+      ],
+      "coverImage": "/images/cards/annota.webp",
+      "coverImageAlt": "Annota 官网桌面预览图，展示本地优先笔记应用的桌面界面",
+      "coverImageSource": "项目官网截图：https://www.annota.online/assets/desktop/preview_light.webp",
+      "coverImageCredit": "项目官网公开图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
+      "coverImageHint": "离线笔记库、标签侧栏、AI 摘要按钮、复习闪卡和加密同步提示并列展示",
+      "year": "2026",
+      "award": "Product Hunt 2026 今日发布；本地优先 AI 笔记与知识管理工具",
+      "theme": "education",
+      "themeLabel": "学习工具",
+      "audience": "需要长期整理课堂笔记、读书笔记、竞赛资料或个人知识库的学生和老师",
+      "hook": "如果学习笔记都存在本地，AI 还能帮你整理、提问和生成复习卡吗？",
+      "problem": "学生笔记分散在不同设备和应用里，云端笔记又可能涉及隐私和同步成本，复习时很难把材料变成结构化知识。",
+      "aiMove": "Product Hunt 与官网说明 Annota 是跨平台、本地优先、可离线的安全笔记工具，支持端到端加密同步和可选 AI 集成，并展示桌面、移动端、AI、闪卡等功能。",
+      "studentProject": "离线学习资料库、AI 错题知识本、读书笔记问答器、社团资料加密归档工具。",
+      "demoGoal": "做出一个把几篇笔记导入本地库后，自动生成标签、摘要、复习卡和自测问题的学习知识库 Demo。",
+      "aiPowers": [
+        "文本摘要",
+        "标签生成",
+        "知识库检索",
+        "问题生成",
+        "闪卡生成",
+        "端到端隐私提示"
+      ],
+      "outputs": [
+        "笔记库原型",
+        "标签树",
+        "摘要卡",
+        "复习闪卡",
+        "隐私和同步说明"
+      ],
+      "question": "你最不想丢的一类学习资料是什么？它应该离线保存、加密同步，还是公开分享？为什么？",
+      "insight": "先做本地 JSON/浏览器存储版，不必马上实现真实加密同步；把“AI 可读取范围”和“手动删除”做清楚。",
+      "difficulty": "中",
+      "impactScore": 4,
+      "techScore": 3,
+      "mapX": 3,
+      "mapY": 4,
+      "accent": "#2ee6a6"
+    },
+    {
       "id": "junior-connect",
       "title": "帮小朋友认识情绪的 AI 成长教练",
       "sourceProject": "Junior Connect",
@@ -3320,6 +3417,54 @@
       "techScore": 3,
       "mapX": 3,
       "mapY": 5,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "timedsubs",
+      "title": "让字幕跟着旁白精准对齐",
+      "sourceProject": "TimedSubs",
+      "sourceUrl": "https://www.producthunt.com/products/timedsubs",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/timedsubs",
+        "https://timedsubs.com/"
+      ],
+      "coverImage": "/images/cards/timedsubs.jpg",
+      "coverImageAlt": "TimedSubs 官网封面图，展示脚本和旁白自动生成同步字幕的产品视觉",
+      "coverImageSource": "项目官网封面图：https://timedsubs.com/hero/timedsubs-hero-v2-cover.jpg",
+      "coverImageCredit": "项目官网公开图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
+      "coverImageHint": "脚本分句、音频波形、字幕时间轴、SRT/VTT 导出按钮和无障碍发布检查",
+      "year": "2026",
+      "award": "Product Hunt 2026 今日发布；脚本优先的 AI 字幕时间轴工具",
+      "theme": "education",
+      "themeLabel": "无障碍",
+      "audience": "制作课程视频、校园新闻、社团宣传片、公益短片或多语言字幕的学生和老师",
+      "hook": "视频脚本已经写好了，AI 能不能把每一句自动贴到正确的时间点？",
+      "problem": "学生视频常常有脚本和旁白，却要手动拖动字幕时间轴；错位字幕会影响观看、无障碍和跨语言传播。",
+      "aiMove": "Product Hunt 与官网说明 TimedSubs 会把已确认脚本和匹配的旁白音频对齐，检查时间后导出 SRT、VTT、SBV、ASS、TXT、JSON、ZIP 等字幕文件。",
+      "studentProject": "校园新闻字幕助手、双语公益视频字幕器、课堂微课字幕生成器、听障友好视频发布流程。",
+      "demoGoal": "做出一个输入脚本和短音频后，生成分句时间轴、可编辑字幕表和 SRT/VTT 导出的字幕对齐 Demo。",
+      "aiPowers": [
+        "语音对齐",
+        "句子切分",
+        "时间轴生成",
+        "格式转换",
+        "字幕质检"
+      ],
+      "outputs": [
+        "字幕时间轴",
+        "SRT/VTT 文件",
+        "视频预览",
+        "错位检查报告",
+        "无障碍说明"
+      ],
+      "question": "如果你要给一段校园活动视频加字幕，哪些观众最依赖字幕的准确时间？",
+      "insight": "课堂版可从 30 秒视频开始，重点做“脚本是原文、音频是证据、人工可改时间点”的流程。",
+      "difficulty": "中",
+      "impactScore": 4,
+      "techScore": 3,
+      "mapX": 3,
+      "mapY": 4,
       "accent": "#2ee6a6"
     },
     {
@@ -3371,6 +3516,54 @@
       "accent": "#ff6f91"
     },
     {
+      "id": "dinamo-notebook",
+      "title": "把比赛视频变成战术分析笔记",
+      "sourceProject": "Dinamo Notebook",
+      "sourceUrl": "https://www.producthunt.com/products/dinamo-notebook",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/dinamo-notebook",
+        "https://github.com/dinamopancevo/dinamonotebook"
+      ],
+      "coverImage": "/images/cards/dinamo-notebook.png",
+      "coverImageAlt": "GitHub 公开 OpenGraph 图，展示 Dinamo Notebook 开源仓库与项目概览",
+      "coverImageSource": "GitHub OpenGraph 图片：https://opengraph.githubassets.com/66e0f0725cf0946238ddf0d15f7eea798973c1b460f5c71745809ea8f3b7751a/dinamopancevo/dinamonotebook",
+      "coverImageCredit": "GitHub 公开项目预览图，课堂引用；来源授权需二次确认",
+      "coverImageStatus": "待确认",
+      "coverImageHint": "比赛视频关键帧、战术箭头、球员标签、AI 解释卡和导出报告并列展示",
+      "year": "2026",
+      "award": "Product Hunt 2026 今日发布；开源本地优先足球视频分析浏览器扩展",
+      "theme": "education",
+      "themeLabel": "体育科技",
+      "audience": "足球社团、校队教练、体育记者社团、想学习战术分析的学生",
+      "hook": "看完一场球，AI 能不能帮你把关键回合画出来、讲清楚、导出成报告？",
+      "problem": "普通视频只能回看，难以把关键帧、跑位、阵型、解释和报告放在一起；专业分析工具又常常昂贵或封闭。",
+      "aiMove": "Product Hunt 和 GitHub README 说明 Dinamo Notebook 可在浏览器里对 YouTube/Twitch/Dailymotion 或本地视频做时间戳笔记、球员和事件标记、战术绘图、PDF/HTML/GIF 导出；AI 分析为可选，使用自己的 OpenAI API key，并保持本地优先。",
+      "studentProject": "校队比赛战术复盘、篮球/足球训练剪辑助手、体育课动作分析笔记、赛事解说资料包。",
+      "demoGoal": "做出一个上传或引用短视频后，可暂停标记关键帧、画箭头/区域、让 AI 生成战术解释并导出一页复盘报告的体育分析 Demo。",
+      "aiPowers": [
+        "视频关键帧标注",
+        "战术文本解释",
+        "事件标签",
+        "报告生成",
+        "图像/绘图叠加"
+      ],
+      "outputs": [
+        "战术标注视频",
+        "关键帧图",
+        "AI 解说卡",
+        "PDF/HTML 报告",
+        "版权和数据边界说明"
+      ],
+      "question": "如果你只选 3 个瞬间复盘一场比赛，哪些画面最能说明一次成功或失败的配合？",
+      "insight": "使用公开视频或自录训练片段，并保留人工标注；不要下载或再分发有版权的比赛视频。",
+      "difficulty": "中高",
+      "impactScore": 3,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 3,
+      "accent": "#2ee6a6"
+    },
+    {
       "id": "interpret",
       "title": "把难读文章变成关卡的 AI 阅读伙伴",
       "sourceProject": "Interpret",
@@ -3416,6 +3609,55 @@
       "techScore": 3,
       "mapX": 3,
       "mapY": 4,
+      "accent": "#2ee6a6"
+    },
+    {
+      "id": "amaroad",
+      "title": "让 AI 和命令行一起做项目路演稿",
+      "sourceProject": "Amaroad",
+      "sourceUrl": "https://www.producthunt.com/products/amaroad",
+      "sourceUrls": [
+        "https://www.producthunt.com/products/amaroad",
+        "https://amaroad.com/",
+        "https://github.com/pon-chi/amaroad"
+      ],
+      "coverImage": "/images/cards/amaroad.png",
+      "coverImageAlt": "Amaroad 官网 OpenGraph 图，展示 AI-first 幻灯片创作与编辑环境",
+      "coverImageSource": "项目官网 OpenGraph 图片：https://amaroad.com/assets/og-image.png?v=3",
+      "coverImageCredit": "项目官网公开图片，课堂引用；需避免商用传播",
+      "coverImageStatus": "已确认",
+      "coverImageHint": "终端提示词、幻灯片实时预览、多页并行编辑、PDF/PPTX 导出和演讲备注",
+      "year": "2026",
+      "award": "Product Hunt 2026 今日发布；开源 AI-first 幻灯片创作环境",
+      "theme": "education",
+      "themeLabel": "表达展示",
+      "audience": "做科创路演、社团汇报、研究展示、课程结题和作品集演示的学生团队",
+      "hook": "项目快要路演了，AI 能不能从终端里帮你搭出一套可预览、可导出的幻灯片？",
+      "problem": "学生项目常常资料很多但表达混乱，幻灯片从零设计耗时；开发型团队还希望把内容、代码和版本管理放在同一工作流里。",
+      "aiMove": "Product Hunt 和官网说明 Amaroad 是开源 AI-first 幻灯片创作环境，可让 Claude Code、Codex、Gemini CLI、Cursor 从终端创建和细化幻灯片，实时预览，并导出 PDF/PPTX 或分享 URL。",
+      "studentProject": "科创项目路演生成器、研究报告转幻灯片、社团成果展示助手、课程结题陈述排练工具。",
+      "demoGoal": "做出一个输入项目简介、数据和图片后，AI 生成 6-8 页幻灯片大纲、可编辑页面和 PDF/PPTX 导出说明的展示助手 Demo。",
+      "aiPowers": [
+        "大纲生成",
+        "信息结构化",
+        "幻灯片文案改写",
+        "视觉布局建议",
+        "导出与版本记录"
+      ],
+      "outputs": [
+        "路演幻灯片",
+        "生成提示词记录",
+        "修改前后对比",
+        "PDF/PPTX 导出",
+        "演讲备注"
+      ],
+      "question": "如果你的项目只能用 6 页讲清楚，每页应该回答观众的哪一个问题？",
+      "insight": "让 AI 先做结构，不要直接美化空内容。每页都要有事实来源、用户价值或演示截图。",
+      "difficulty": "中",
+      "impactScore": 3,
+      "techScore": 3,
+      "mapX": 3,
+      "mapY": 3,
       "accent": "#2ee6a6"
     }
   ]

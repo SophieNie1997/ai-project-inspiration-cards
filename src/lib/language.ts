@@ -1895,6 +1895,230 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a project workflow timeline, generated release copy, brand visual preview, and social poster draft.',
   },
+  revi: {
+    title: 'Private On-Device Voice Dictation for Study Notes',
+    sourceProject: 'Revi',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; on-device voice dictation and clipboard tool',
+    themeLabel: 'Privacy and Voice Interaction',
+    audience:
+      'Students and teachers who write homework, conduct interviews, keep class notes, or need private voice input',
+    hook:
+      'Speaking is faster than typing, but can classroom notes stay useful without sending voices to the cloud?',
+    problem:
+      'Students often cannot type quickly enough during notes or interviews, while many dictation tools require accounts or upload voice data that may include minors and sensitive context.',
+    aiMove:
+      'Revi runs speech recognition on Mac, Windows, and Linux devices using local engines such as Whisper, Parakeet, and Apple, with automatic language detection, clipboard history, and silence in password fields.',
+    studentProject:
+      'Offline classroom dictation helper, interview transcript tool, speech practice recorder, or privacy-friendly bilingual voice journal',
+    demoGoal:
+      'Record or upload a short audio clip, then generate text, language labels, keywords, and privacy warnings while showing which content never leaves the device.',
+    aiPowers: [
+      'Speech-to-Text',
+      'Language Detection',
+      'Keyword Extraction',
+      'Text Cleanup',
+      'Privacy Rule Checks',
+    ],
+    outputs: [
+      'Voice dictation demo',
+      'Transcript',
+      'Keyword cards',
+      'Privacy boundary note',
+      'Consent flow',
+    ],
+    question:
+      'When AI records a human voice, what must be consented to first, and what should stay local by default?',
+    insight:
+      'Use public audio or a short voluntary recording first. Make consent, deletion, local processing, and password-field silence more important than system-wide input methods.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official Revi website preview image showing the private on-device dictation product identity.',
+    coverImageSource: 'Project website OpenGraph image: https://www.getrevi.app/og.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show an on-device dictation HUD, language detection, offline processing notice, password-field silence, and clipboard history.',
+  },
+  annota: {
+    title: 'Offline AI Study Notebook for Personal Knowledge',
+    sourceProject: 'Annota',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; local-first AI note-taking and knowledge management tool',
+    themeLabel: 'Study Tools and Privacy',
+    audience:
+      'Students and teachers organizing class notes, reading notes, competition research, or personal knowledge bases',
+    hook:
+      'If study notes stay local, can AI still help organize, question, and turn them into review cards?',
+    problem:
+      'Student notes are often scattered across devices and apps, while cloud notebooks may raise privacy concerns and make it hard to turn raw notes into structured knowledge.',
+    aiMove:
+      'Annota is a cross-platform, local-first, offline-capable note and knowledge tool with optional end-to-end encrypted sync and optional AI integration for writing, flashcards, and organization.',
+    studentProject:
+      'Offline learning library, AI mistake notebook, reading-note Q&A tool, or encrypted club archive',
+    demoGoal:
+      'Import several notes into a local library, then generate tags, summaries, review cards, and self-test questions.',
+    aiPowers: [
+      'Text Summarization',
+      'Tag Generation',
+      'Knowledge Base Search',
+      'Question Generation',
+      'Flashcard Generation',
+      'Privacy Scoping',
+    ],
+    outputs: [
+      'Note library prototype',
+      'Tag tree',
+      'Summary cards',
+      'Review flashcards',
+      'Privacy and sync explanation',
+    ],
+    question:
+      'Should AI read every study note by default, or should students decide which notebooks are available to AI?',
+    insight:
+      'Start with local JSON or browser storage. Make the AI-readable scope and manual deletion flow clear before attempting real encrypted sync.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Official Annota desktop preview image showing a local-first note-taking interface.',
+    coverImageSource:
+      'Project website screenshot: https://www.annota.online/assets/desktop/preview_light.webp',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show an offline note library, tag sidebar, AI summary button, review flashcards, and encrypted sync notice.',
+  },
+  timedsubs: {
+    title: 'Make Subtitles Follow the Voiceover Precisely',
+    sourceProject: 'TimedSubs',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; script-first AI subtitle timing tool',
+    themeLabel: 'Accessibility and Video Creation',
+    audience:
+      'Students and teachers creating course videos, school news, club promos, public-service shorts, or multilingual subtitles',
+    hook:
+      'If the video script is already approved, can AI place every subtitle line at the right moment?',
+    problem:
+      'Student videos may have scripts and voiceovers but still require tedious manual subtitle timing; misaligned captions hurt accessibility and multilingual sharing.',
+    aiMove:
+      'TimedSubs aligns an approved script with matching voiceover audio, checks timing before export, and produces subtitle formats such as SRT, VTT, SBV, ASS, TXT, JSON, and ZIP.',
+    studentProject:
+      'School-news caption helper, bilingual public-service video subtitler, micro-lesson subtitle generator, or accessibility-first video publishing flow',
+    demoGoal:
+      'Input a script and a short audio file, then generate sentence-level timings, an editable subtitle table, and SRT/VTT export.',
+    aiPowers: [
+      'Speech Alignment',
+      'Sentence Splitting',
+      'Timeline Generation',
+      'Format Conversion',
+      'Caption Quality Checks',
+    ],
+    outputs: [
+      'Subtitle timeline',
+      'SRT/VTT files',
+      'Video preview',
+      'Alignment check report',
+      'Accessibility note',
+    ],
+    question:
+      'Should a caption tool prioritize the approved script or the actual spoken words when they differ?',
+    insight:
+      'Begin with a 30-second clip. Keep the script as the source text, the audio as evidence, and the timing table editable by humans.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Official TimedSubs website cover image for generating synchronized subtitles from a script and voiceover.',
+    coverImageSource:
+      'Project website cover image: https://timedsubs.com/hero/timedsubs-hero-v2-cover.jpg',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show script segments, an audio waveform, a subtitle timeline, SRT/VTT export buttons, and an accessibility publishing check.',
+  },
+  'dinamo-notebook': {
+    title: 'Turn Match Videos Into Tactical Analysis Notes',
+    sourceProject: 'Dinamo Notebook',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; open-source local-first football video analysis browser extension',
+    themeLabel: 'Sports Tech and Video Analysis',
+    audience:
+      'Football clubs, school teams, sports journalism clubs, coaches, and students learning tactical analysis',
+    hook:
+      'After watching a match, can AI help draw key plays, explain them clearly, and export a report?',
+    problem:
+      'Regular video playback makes it hard to keep key frames, movement, formations, explanations, and reports together, while professional tools can be expensive or closed.',
+    aiMove:
+      'Dinamo Notebook lets users add timestamped notes, player and event tags, tactical drawings, animated sequences, and PDF, HTML, GIF, or data exports in the browser. Optional AI analysis uses the user-owned OpenAI API key and keeps the workflow local-first.',
+    studentProject:
+      'School-team tactical review, basketball or football training clip assistant, PE movement-analysis notebook, or sports commentary evidence pack',
+    demoGoal:
+      'Use a short public or self-recorded video to mark key frames, draw arrows and zones, ask AI for tactical explanations, and export a one-page review report.',
+    aiPowers: [
+      'Video Frame Annotation',
+      'Tactical Explanation',
+      'Event Tagging',
+      'Report Generation',
+      'Drawing Overlay',
+    ],
+    outputs: [
+      'Annotated tactics video',
+      'Key-frame images',
+      'AI explanation cards',
+      'PDF/HTML report',
+      'Copyright and data-boundary note',
+    ],
+    question:
+      'Should AI give a tactical conclusion first, or should students draw the evidence they noticed before asking AI to explain it?',
+    insight:
+      'Use public or self-recorded training footage and keep human annotations visible. Do not download or redistribute copyrighted match video.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'GitHub OpenGraph preview image for the Dinamo Notebook open-source football analysis repository.',
+    coverImageSource:
+      'GitHub OpenGraph image: https://opengraph.githubassets.com/66e0f0725cf0946238ddf0d15f7eea798973c1b460f5c71745809ea8f3b7751a/dinamopancevo/dinamonotebook',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show match video key frames, tactical arrows, player tags, AI explanation cards, and an exported analysis report.',
+  },
+  amaroad: {
+    title: 'Let AI and the Terminal Build a Project Pitch Deck',
+    sourceProject: 'Amaroad',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; open-source AI-first slide authoring environment',
+    themeLabel: 'Presentation and AI Development',
+    audience:
+      'Student teams preparing science fair pitches, club reports, research presentations, capstones, and portfolio demos',
+    hook:
+      'When a project pitch is due, can AI draft, preview, and export a slide deck from the same terminal workflow?',
+    problem:
+      'Student projects often contain many notes and screenshots but lack a clear presentation structure; technical teams may also want content, code, and version history in one workflow.',
+    aiMove:
+      'Amaroad lets Claude Code, Codex, Gemini CLI, or Cursor create and refine decks from the terminal, preview slides live, edit multiple slides in parallel, and export PDF/PPTX or share a live URL.',
+    studentProject:
+      'Science fair pitch generator, research report to slide deck tool, club showcase helper, or capstone presentation rehearsal tool',
+    demoGoal:
+      'Input a project brief, evidence, and images, then generate a 6-8 slide outline, editable slides, and export-ready PDF/PPTX instructions.',
+    aiPowers: [
+      'Outline Generation',
+      'Information Structuring',
+      'Slide Copywriting',
+      'Visual Layout Suggestions',
+      'Export and Version Tracking',
+    ],
+    outputs: [
+      'Pitch deck',
+      'Prompt log',
+      'Before and after revision comparison',
+      'PDF/PPTX export',
+      'Speaker notes',
+    ],
+    question:
+      'In an AI-generated pitch deck, which parts must come from real project evidence, and which parts can AI help phrase or structure?',
+    insight:
+      'Let AI structure the story first, but do not beautify empty claims. Each slide should connect to evidence, user value, or a real demo screenshot.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Official Amaroad website OpenGraph image showing an AI-first slide authoring and refinement environment.',
+    coverImageSource: 'Project website OpenGraph image: https://amaroad.com/assets/og-image.png?v=3',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show terminal prompts, live slide previews, parallel slide editing, PDF/PPTX export, and speaker notes.',
+  },
   torchvision: {
     title: 'Voice Navigation Safety Assistant for Blind Users',
     sourceProject: 'TorchVision',
