@@ -2392,6 +2392,230 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a phone-based Dunhuang mural 3D gallery with clickable hotspots, AI guide Q&A, and source cards.',
   },
+  fluxmail: {
+    title: 'Turn Email Into an AI Follow-Up Workbench',
+    sourceProject: 'Fluxmail',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; Gmail AI email workflow tool',
+    themeLabel: 'Email Productivity',
+    audience:
+      'Student startup teams, club operators, competition groups, and activity leads coordinating with teachers or parents',
+    hook:
+      'When the inbox gets crowded, can AI spot what is urgent and draft a reply in your own voice?',
+    problem:
+      'Project communication often lives across scattered email threads, so invitations, confirmations, sponsor replies, and follow-ups can get buried.',
+    aiMove:
+      'Product Hunt and the official site describe Fluxmail as a Gmail workflow tool that prioritizes urgent threads, summarizes long emails, drafts replies in the user\'s voice, and reminds users about follow-ups.',
+    studentProject:
+      'Club inbox priority assistant, competition registration reminder, mentor-feedback reply drafter, or campus event email board',
+    demoGoal:
+      'Build an AI email workbench demo: import eight to ten sample emails, classify urgent, reply-needed, and follow-up threads, then generate summaries, reply drafts, and reminder times.',
+    aiPowers: [
+      'Email Classification',
+      'Thread Summarization',
+      'Voice Matching',
+      'Reply Generation',
+      'Follow-Up Reminders',
+      'Privacy Prompting',
+    ],
+    outputs: [
+      'Email priority board',
+      'Reply drafts',
+      'Follow-up calendar',
+      'Privacy boundary note',
+      'Human confirmation log',
+    ],
+    question:
+      'When AI drafts an email for you, which parts must still be confirmed by the sender before anything is sent?',
+    insight:
+      'Use teacher-provided sample emails, not real personal inboxes. Make the classification reason, human confirmation, and sensitive-data removal flow visible.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Fluxmail official site screenshot showing an AI email homepage and priority inbox preview.',
+    coverImageSource: 'Official site screenshot: https://www.fluxmail.ai',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show an inbox board with priority emails, AI summaries, reply drafts, and follow-up reminders.',
+  },
+  'athena-desktop': {
+    title: 'Put Multiple AI Coding Agents Into One Command Room',
+    sourceProject: 'Athena Desktop',
+    year: '2026',
+    award:
+      'Product Hunt 2026 launch; open-source local-first control surface for AI coding agents',
+    themeLabel: 'AI Coding Workflow',
+    audience:
+      'Advanced coding clubs, AI project teams, teachers prototyping with students, and teams that need to record AI collaboration',
+    hook:
+      'When Codex, Claude Code, and terminals work on the same project, can students still see who is doing what?',
+    problem:
+      'When students use several AI coding tools, tasks, context, history, and terminal output can scatter across sessions, making review and accountability difficult.',
+    aiMove:
+      'Product Hunt describes Athena Desktop as a local command room with shared project context, embedded terminals for coding agents, session discovery, memory integration, and workspace control.',
+    studentProject:
+      'Student AI collaboration board, project context log, AI task assignment console, or coding-club multi-agent lab',
+    demoGoal:
+      'Build an AI coding command room demo: simulate three assistants handling requirements, code, and tests, while showing shared context, task status, and human approval points.',
+    aiPowers: [
+      'Task Decomposition',
+      'Context Summarization',
+      'Session Retrieval',
+      'Terminal Log Explanation',
+      'Workflow Orchestration',
+    ],
+    outputs: [
+      'Multi-agent command room',
+      'Task cards',
+      'Session log',
+      'Shared memory board',
+      'Safety permission checklist',
+    ],
+    question:
+      'When several AI agents help build one project, who is responsible for proving the final code actually works?',
+    insight:
+      'Start with a simulated control room instead of running real terminal commands. Every AI suggestion should have a human confirmation state and a traceable log.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Athena official site screenshot showing a local-first AI workshop homepage and memory-focused command room branding.',
+    coverImageSource: 'Official site screenshot: https://luckeysystems.com',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a local AI coding command room with multiple agent sessions, shared memory, and human approval points.',
+  },
+  'yoamigo-studio': {
+    title: 'Turn AI Coding Agents Into an App-Building Workshop',
+    sourceProject: 'YoAmigo Studio',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; local-first AI app builder desktop tool',
+    themeLabel: 'AI App Building',
+    audience:
+      'Student startup teams, coding clubs, hackathon groups, and course teams building real web or app prototypes',
+    hook:
+      'Can AI set up the app foundation before students get stuck on databases, login, and payments?',
+    problem:
+      'Students can often make page prototypes but get blocked by the infrastructure needed for real apps, such as databases, login, permissions, payment flows, and deployment.',
+    aiMove:
+      'Product Hunt says YoAmigo wraps command-line coding agents such as Claude Code, Codex, and Antigravity CLI in a local-first desktop app, while handling database, payment, and authentication boilerplate.',
+    studentProject:
+      'Club event registration system, campus marketplace, course booking prototype, or student project feedback platform',
+    demoGoal:
+      'Build an app workshop demo: enter an app idea, then generate data tables, login flow, core page list, AI coding tasks, and a safety checklist.',
+    aiPowers: [
+      'Requirement Breakdown',
+      'Data Model Generation',
+      'Code Generation',
+      'Integration Checklist',
+      'Error Explanation',
+      'Security Review',
+    ],
+    outputs: [
+      'App blueprint',
+      'Data table sketch',
+      'Login flow',
+      'AI task queue',
+      'Runnable page prototype',
+    ],
+    question:
+      'After AI creates the app foundation, which safety settings should never be skipped just because the demo runs?',
+    insight:
+      'Do not connect real payments in class. Use mock orders and fake users, and focus on understanding the app foundation instead of blindly trusting generated backends.',
+    difficulty: 'High',
+    coverImageAlt:
+      'YoAmigo official site screenshot showing a localized homepage and desktop app preview.',
+    coverImageSource:
+      'Official site screenshot: https://www.yoamigo.com; screenshot contains automatic localization and a few untranslated strings.',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show an AI app workshop workspace with project files, authentication, database, payment modules, and deployment preview.',
+  },
+  'html-deployer': {
+    title: 'Publish AI-Generated HTML as a Real Website',
+    sourceProject: 'HTML Deployer',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; AI code to static website deployment tool',
+    themeLabel: 'Web Publishing',
+    audience:
+      'Students, teachers, club publicity teams, and portfolio builders who generate webpages with ChatGPT, Claude, or Gemini',
+    hook:
+      'Once AI writes the HTML, can students publish it as a real URL without touching the terminal?',
+    problem:
+      'Many students can get AI to generate HTML, but they get stuck on GitHub Pages, Netlify, FTP, responsive preview, and public launch links.',
+    aiMove:
+      'Product Hunt and the official site say HTML Deployer detects HTML from AI chat, previews desktop, tablet, and mobile views, and deploys to Netlify, GitHub, FTP, or a self-hosted server.',
+    studentProject:
+      'Student work publisher, club event landing page deployer, classroom HTML gallery, or AI webpage release checker',
+    demoGoal:
+      'Build an AI webpage publisher demo: paste HTML, check title, links, mobile layout, and source risks, then generate a preview, launch checklist, and QR code.',
+    aiPowers: [
+      'Code Block Detection',
+      'HTML Checking',
+      'Responsive Preview',
+      'Deployment Step Generation',
+      'Error Explanation',
+    ],
+    outputs: [
+      'Webpage preview',
+      'Launch checklist',
+      'Mobile screenshot',
+      'QR code',
+      'Publishing reflection sheet',
+    ],
+    question:
+      'Before publishing HTML copied from an AI chat, what risks should students check first?',
+    insight:
+      'The classroom version can export ZIP files or local previews before using real accounts. Before launch, check image sources, external links, and personal information.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'HTML Deployer official site screenshot showing a localized homepage and product cards for publishing AI-generated HTML.',
+    coverImageSource: 'Official site screenshot: https://backrun.co/html-deployer',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show HTML code from an AI chat, desktop and mobile previews, a deploy button, a live link, and a QR code flow.',
+  },
+  handover: {
+    title: 'Organize Project Materials Into One Clear Handover Page',
+    sourceProject: 'Handover',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; project handover and link organization tool',
+    themeLabel: 'Project Delivery',
+    audience:
+      'Student project teams, design clubs, hackathon groups, and student creators handing work to teachers or clients',
+    hook:
+      'After a project is finished, can a pile of docs, videos, files, and links become one page that others understand?',
+    problem:
+      'Project delivery often becomes a scattered list of Figma, Drive, Notion, Loom, code, and next-step links hidden in chat or email.',
+    aiMove:
+      'Product Hunt and the official site describe Handover as a client-ready page for designs, docs, assets, and links. A classroom adaptation can add AI grouping, context summaries, and next-step writing.',
+    studentProject:
+      'Student project handover page, club activity resource pack, competition submission assistant, or graduation project portal',
+    demoGoal:
+      'Build an AI project handover page demo: enter eight to twelve project links, classify them, add context, generate a page structure, and write next steps for the receiver.',
+    aiPowers: [
+      'Link Classification',
+      'Content Summarization',
+      'Handover Copywriting',
+      'Next-Step Recommendation',
+      'Page Structure Generation',
+    ],
+    outputs: [
+      'Handover page prototype',
+      'Resource groups',
+      'Link descriptions',
+      'Receiver checklist',
+      'Project reflection card',
+    ],
+    question:
+      'When handing a project to someone else, what matters most: complete files, clear order, or explicit next steps?',
+    insight:
+      'Practice with public or mock links first, not private cloud folders. Every link should explain why to open it and what to do after reading it.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Handover official site screenshot showing a homepage and example card for putting all project links into one delivery page.',
+    coverImageSource: 'Official site screenshot: https://www.handover.today',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show one project handover page with design files, docs, assets, demo videos, code repositories, and next tasks.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
