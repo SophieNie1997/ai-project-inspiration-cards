@@ -1895,6 +1895,231 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a project workflow timeline, generated release copy, brand visual preview, and social poster draft.',
   },
+  torchvision: {
+    title: 'Voice Navigation Safety Assistant for Blind Users',
+    sourceProject: 'TorchVision',
+    year: '2025',
+    award: 'Technovation Girls 2025 Beginner Division Finalist Team',
+    themeLabel: 'Accessibility',
+    audience:
+      'Blind and low-vision users, students, campus accessibility volunteers, and caregivers supporting safer travel',
+    hook:
+      'When someone cannot see hazards ahead, can AI warn them through voice before they reach danger?',
+    problem:
+      'Blind and low-vision users may not receive timely hazard, location, help, or route cues in unfamiliar spaces, and standard maps are not always hands-free or accessibility-first.',
+    aiMove:
+      'The official description says the app uses voice control to help visually impaired users navigate, with hazard alerts and SOS location sharing. A classroom version can combine speech recognition, object or obstacle cues, location rules, and emergency-contact prompts.',
+    studentProject:
+      'Campus accessible route assistant, museum voice guide, night-walk safety helper, or hallway obstacle alert tool',
+    demoGoal:
+      'Build a prototype that accepts a destination or scenario by voice, detects or simulates a hazard, gives the next safe step, and creates an SOS contact card.',
+    aiPowers: [
+      'Speech Recognition',
+      'Voice Output',
+      'Obstacle Detection',
+      'Location Rules',
+      'Risk Alerts',
+    ],
+    outputs: [
+      'Voice-navigation demo',
+      'Hazard-alert flow',
+      'Accessible route map',
+      'SOS contact card',
+      'Testing feedback log',
+    ],
+    question:
+      'Should an accessibility tool prioritize speed, or confirmation and the ability to ask for help?',
+    insight:
+      'Start with one small route, such as classroom to elevator. Make every alert short, confirmable, and easy to cancel.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official TorchVision pitch video thumbnail showing a voice-navigation safety app for visually impaired users.',
+    coverImageSource:
+      'Technovation official results page embedded pitch video thumbnail: https://www.youtube.com/watch?v=o0IvFEk_5rE',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a phone voice-navigation interface with hazard alerts, SOS location sharing, and safe-route prompts.',
+  },
+  glucochat: {
+    title: 'AI Support Hub for Daily Diabetes Records',
+    sourceProject: 'GlucoChat',
+    year: '2025',
+    award: 'Technovation Girls 2025 Junior Division Finalist Team',
+    themeLabel: 'Health Management',
+    audience:
+      'Teenagers tracking blood sugar, family caregivers, school nurses, and health-education teachers',
+    hook:
+      'When daily blood sugar, insulin, and supply notes pile up, can AI turn them into a caregiver-ready checklist?',
+    problem:
+      'Chronic condition management requires consistent records for blood sugar, insulin, supplies, and emotional support. Students and caregivers can miss entries, miss trends, or forget needed items.',
+    aiMove:
+      'The official description says GlucoChat provides blood sugar and insulin tracking tools, a vital-accessory catalog, and an emotional-support community. A classroom version can summarize trends, explain records, generate review questions, and create supply reminders without diagnosing.',
+    studentProject:
+      'Campus health log, exercise and meal reflection table, supply reminder, or weekly report for a school nurse',
+    demoGoal:
+      'Build a health-record demo that turns daily entries into a trend summary, anomaly reminder, supply checklist, and caregiver question list.',
+    aiPowers: [
+      'Data Summarization',
+      'Trend Explanation',
+      'Chat Q&A',
+      'Reminder Generation',
+      'Safety Boundary Prompts',
+    ],
+    outputs: [
+      'Health record table',
+      'Trend summary card',
+      'Supply checklist',
+      'Caregiver Q&A page',
+      'Medical boundary note',
+    ],
+    question:
+      'When is a health assistant simply organizing information, and when does it cross into medical judgment?',
+    insight:
+      'Keep the classroom version to record organization and reflection prompts. Do not provide diagnosis or medication advice; route concerns to a parent, school nurse, or doctor.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official GlucoChat pitch video thumbnail showing a blood sugar tracking and support app.',
+    coverImageSource:
+      'Technovation official results page embedded pitch video thumbnail: https://www.youtube.com/watch?v=dsVC2Ca-6aw',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a blood sugar trend chart, insulin records, supply checklist, AI reflection prompts, and support cards.',
+  },
+  'junior-connect': {
+    title: 'AI Growth Coach for Naming Feelings',
+    sourceProject: 'Junior Connect',
+    year: '2025',
+    award: 'Technovation Girls 2025 Senior Regional Honoree: Latin America',
+    themeLabel: 'Emotional Learning',
+    audience:
+      'Preschool children, elementary students, parents, early-grade teachers, and social-emotional learning classes',
+    hook:
+      'When a child cannot say what they are feeling, can AI turn emotions into stories, faces, and next steps?',
+    problem:
+      'Young children may feel sadness, anger, or anxiety but struggle to name those feelings and choose a healthy way to express or regulate them.',
+    aiMove:
+      'The official description says Junior Connect uses AI to help preschool and elementary children identify, name, and manage emotions. A classroom version can use picture or text input to generate emotion labels, story explanations, breathing exercises, and help-seeking suggestions.',
+    studentProject:
+      'Classroom emotion check-in station, picture-book emotion Q&A, parent-child communication cards, or campus conflict cooldown game',
+    demoGoal:
+      'Build a prototype where a child selects a face or enters a sentence, then receives an emotion name, possible reason, short exercise, and help card.',
+    aiPowers: [
+      'Emotion Text Understanding',
+      'Image or Face Classification',
+      'Story Generation',
+      'Personalized Suggestions',
+      'Safety Alerts',
+    ],
+    outputs: [
+      'Emotion-recognition demo',
+      'Child-friendly story card',
+      'Regulation exercise page',
+      'Parent or teacher review note',
+      'Privacy boundary card',
+    ],
+    question:
+      'Can AI know a child\'s real emotion, or should it help the child and adult confirm it together?',
+    insight:
+      'Keep the tone gentle. Let AI offer words and exercises, while children, parents, and teachers keep the final judgment.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Official Junior Connect pitch video thumbnail showing an AI app for children to identify and manage emotions.',
+    coverImageSource:
+      'Technovation official results page embedded pitch video thumbnail: https://www.youtube.com/watch?v=QPA_ZgEuPr8',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show children\'s emotion cards, an AI-generated story, a breathing exercise, and confirmation prompts for adults.',
+  },
+  'healthy-way': {
+    title: 'Turn Nutrition and Blood Sugar Into AI Habit Plans',
+    sourceProject: 'Healthy Way',
+    year: '2025',
+    award: 'Technovation Girls 2025 Beginner Regional Honoree: Asia',
+    themeLabel: 'Health Management',
+    audience:
+      'Students building healthy routines, families tracking nutrition and blood sugar, and health-education clubs',
+    hook:
+      'Health advice can be overwhelming. Can AI turn what you eat and how you move into one small next step?',
+    problem:
+      'Many people know they should eat well, move regularly, and watch blood sugar, but struggle to turn scattered records into an actionable routine they can sustain and review.',
+    aiMove:
+      'The official description says Healthy Way uses AI to track daily nutrition and blood sugar, helping people build healthy habits and manage diabetes. A classroom version can summarize food records, flag patterns, create habit plans, and generate reflection questions.',
+    studentProject:
+      'Lunch nutrition tracker, exercise habit log, family health weekly report, or campus water and sleep reminder',
+    demoGoal:
+      'Input one week of sample food, movement, and blood sugar data, then generate habit suggestions, a next-step plan, and reflection charts.',
+    aiPowers: [
+      'Table Analysis',
+      'Nutrition Text Explanation',
+      'Trend Summarization',
+      'Plan Generation',
+      'Reminder Recommendation',
+    ],
+    outputs: [
+      'Healthy habit dashboard',
+      'One-week plan',
+      'Trend chart',
+      'AI suggestion card',
+      'Professional review note',
+    ],
+    question:
+      'Should a health habit tool push people to change, or first help them see their real records clearly?',
+    insight:
+      'Avoid weight-loss scoring or diagnosis. Choose one positive habit such as water, sleep, movement, or balanced lunch, and make each suggestion reviewable by a human.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Official Healthy Way pitch video thumbnail showing a nutrition and blood-sugar habit tracking app.',
+    coverImageSource:
+      'Technovation official results page embedded pitch video thumbnail: https://youtu.be/1mM3stmNOXU',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a weekly food log, blood sugar trend, AI habit plan, and reviewable health goal card.',
+  },
+  interpret: {
+    title: 'Turn Difficult Reading Into AI Learning Levels',
+    sourceProject: 'Interpret',
+    year: '2025',
+    award: 'Technovation Girls 2025 Beginner Regional Honoree: Latin America',
+    themeLabel: 'Education Equity',
+    audience:
+      'Students who struggle with reading comprehension, language learners, early-grade teachers, and library reading programs',
+    hook:
+      'When an article feels hard to enter, can AI split it into stories, questions, and a game?',
+    problem:
+      'Students can lose patience with long texts or unfamiliar vocabulary, while static worksheets cannot adjust quickly to a learner\'s actual understanding.',
+    aiMove:
+      'The official description says Interpret improves reading comprehension and makes learning more accessible through stories, questions, and games. A classroom version can use AI to simplify text by level, generate questions, surface keywords, and provide game-like feedback.',
+    studentProject:
+      'English reading quest, science-article Q&A cards, leveled history reading tool, or library AI reading-guide game',
+    demoGoal:
+      'Paste a short passage, then generate a simpler version, keywords, three comprehension questions, one mini-game, and feedback for missed answers.',
+    aiPowers: [
+      'Leveled Text Rewriting',
+      'Keyword Extraction',
+      'Question Generation',
+      'Instant Feedback',
+      'Gamified Recommendation',
+    ],
+    outputs: [
+      'Reading quest page',
+      'Leveled passage',
+      'Comprehension questions',
+      'Feedback log',
+      'Learner privacy note',
+    ],
+    question:
+      'If AI simplifies an article, could it also change the meaning, and how should students check?',
+    insight:
+      'Start with a passage under 300 words. Keep the original text next to the AI version and evidence sentences so students can verify changes.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Official Interpret pitch video thumbnail showing a reading comprehension and gamified learning app.',
+    coverImageSource:
+      'Technovation official results page embedded pitch video thumbnail: https://www.youtube.com/watch?v=MI5gFBmn92c',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a passage split into keywords, comprehension questions, mini-game levels, and AI feedback prompts.',
+  },
   '壁行-时空': {
     title: 'Turn Dunhuang Murals Into a Walk-In AI Time-Space Gallery',
     sourceProject: 'Bixing Shikong',
