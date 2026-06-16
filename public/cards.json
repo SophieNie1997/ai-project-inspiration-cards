@@ -3128,6 +3128,55 @@
       "mapX": 3,
       "mapY": 3,
       "accent": "#b59cff"
+    },
+    {
+      "id": "壁行-时空",
+      "title": "把敦煌壁画做成可步入的 AI 时空展厅",
+      "sourceProject": "壁行·时空",
+      "sourceUrl": "https://mp.weixin.qq.com/s/J8AUGWy7VO5yZWWTxu3-Iw",
+      "sourceUrls": [
+        "https://mp.weixin.qq.com/s/J8AUGWy7VO5yZWWTxu3-Iw"
+      ],
+      "coverImage": "/images/cards/bixing-shikong-app.png",
+      "coverImageAlt": "壁行·时空 App 界面图，展示用手机进入壁画 3D 空间并浏览文化场景的交互界面",
+      "coverImageSource": "后浪研究所微信文章配图（受访者供图）：https://mmbiz.qpic.cn/sz_mmbiz_png/FysLcXEfWseJyeTqNv4GleFGR92xuchbSouCGeLQ3aicYU9fCPibvlaHGbxjDanmfOrDFs0xHz064C9tmPGq9mQv54ksMAjIBqyCjCRzyOuVs/640?wx_fmt=png",
+      "coverImageCredit": "微信公众号公开文章配图，课堂引用；需避免商用传播",
+      "coverImageStatus": "待确认",
+      "coverImageHint": "手机里的敦煌壁画 3D 展厅、可点击热点、AI 导览问答和史料来源卡并列展示",
+      "year": "2026",
+      "award": "HarmonyOS 创新赛·极客赛道决赛参赛作品，HDC 2026 后浪研究所报道；具体奖项未公开",
+      "theme": "culture",
+      "themeLabel": "文化保护",
+      "audience": "对传统文化、数字展览、文旅导览或 3D 互动感兴趣的学生、博物馆志愿者和文化社团",
+      "hook": "如果不是每个人都能去敦煌，AI 和 3D 能不能先把壁画世界带到手机里？",
+      "problem": "壁画等传统文化常被“远远观看”，学生很难走近细节、理解故事，也难把静态图像变成可探索、可对话、可参与修复的体验。",
+      "aiMove": "文章介绍该团队结合 HarmonyOS 3D 图形能力、Unity 引擎和 AI 辅助开发工具，做出可移动、靠近、调整视角的壁画空间；AI 还可辅助讲解、检索故事线、生成导览问题和修复建议，但史料解释必须有来源与人工复核。",
+      "studentProject": "校园博物馆 AI 导览、非遗 3D 展厅、古建筑互动地图、家乡文化时空漫游、可追问的历史故事空间。",
+      "demoGoal": "做一个“AI 文化时空展厅”Demo：选择一幅壁画或一件文物，搭建 3D/网页场景，加入热点讲解、时间线、问答导览和来源卡。",
+      "aiPowers": [
+        "3D场景搭建",
+        "图像/资料整理",
+        "AI问答导览",
+        "故事线生成",
+        "交互设计",
+        "AI辅助编程"
+      ],
+      "outputs": [
+        "互动展厅网页或App原型",
+        "壁画热点卡",
+        "导览问答",
+        "时间线",
+        "技术实现说明",
+        "史料来源清单"
+      ],
+      "question": "你最想把哪一个“只能远远看”的文化场景搬进手机里？观众应该能走近、点击、听见还是修复什么？",
+      "insight": "先从一个小场景开始，不要一上来复刻整座石窟。每个热点讲解都要标注资料来源，AI 生成的故事必须请老师或资料卡复核。",
+      "difficulty": "高",
+      "impactScore": 4,
+      "techScore": 5,
+      "mapX": 5,
+      "mapY": 4,
+      "accent": "#ffb45c"
     }
   ]
 }

@@ -1895,6 +1895,54 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a project workflow timeline, generated release copy, brand visual preview, and social poster draft.',
   },
+  '壁行-时空': {
+    title: 'Turn Dunhuang Murals Into a Walk-In AI Time-Space Gallery',
+    sourceProject: 'Bixing Shikong',
+    year: '2026',
+    award:
+      'HarmonyOS Innovation Competition Geek Track finalist project, covered by Houlang Research Institute at HDC 2026; specific award not public',
+    themeLabel: 'Cultural Preservation',
+    audience:
+      'Students interested in traditional culture, digital exhibitions, cultural tourism guides, 3D interaction, museum volunteering, and heritage clubs',
+    hook:
+      'If not everyone can travel to Dunhuang, can AI and 3D bring the mural world onto a phone first?',
+    problem:
+      'Murals and traditional culture are often viewed from far away. Students may struggle to approach details, understand stories, and turn static images into experiences that can be explored, questioned, or repaired.',
+    aiMove:
+      'The article describes a student team combining HarmonyOS 3D graphics, Unity, and AI-assisted development to build a mural space where users can move, approach, and adjust perspective. AI can also support guided explanations, story retrieval, visitor questions, and restoration suggestions, but historical claims need sources and human review.',
+    studentProject:
+      'Campus museum AI guide, intangible-heritage 3D gallery, ancient-building interactive map, hometown culture time-space walk, or questionable history story space',
+    demoGoal:
+      'Build an AI cultural time-space gallery demo: choose one mural or cultural object, create a 3D or web scene, and add hotspot explanations, a timeline, guide Q&A, and source cards.',
+    aiPowers: [
+      '3D Scene Building',
+      'Image and Source Organization',
+      'AI Guide Q&A',
+      'Storyline Generation',
+      'Interaction Design',
+      'AI-Assisted Coding',
+    ],
+    outputs: [
+      'Interactive gallery web page or app prototype',
+      'Mural hotspot cards',
+      'Guide Q&A',
+      'Timeline',
+      'Technical explanation',
+      'Source list',
+    ],
+    question:
+      'When AI explains traditional culture, how can it avoid presenting imagination as fact?',
+    insight:
+      'Start with one small scene instead of recreating a whole grotto. Cite sources for every hotspot explanation, and have a teacher or source card review AI-generated stories.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Bixing Shikong app interface showing a phone-based 3D mural space and cultural-scene interaction.',
+    coverImageSource:
+      'Houlang Research Institute WeChat article image, interviewee-provided: https://mmbiz.qpic.cn/sz_mmbiz_png/FysLcXEfWseJyeTqNv4GleFGR92xuchbSouCGeLQ3aicYU9fCPibvlaHGbxjDanmfOrDFs0xHz064C9tmPGq9mQv54ksMAjIBqyCjCRzyOuVs/640?wx_fmt=png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a phone-based Dunhuang mural 3D gallery with clickable hotspots, AI guide Q&A, and source cards.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
