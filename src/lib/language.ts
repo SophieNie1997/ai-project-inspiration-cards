@@ -2690,12 +2690,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Do not use real personal location traces. Use anonymous public incidents or simulated data, and include advice such as contacting campus safety or walking with others.',
     difficulty: 'Medium-High',
     coverImageAlt:
-      'CSTA Cutler-Bell official story image showing Mahita Bontu, the student behind Guardian Angel.',
+      'Classroom visual for Guardian Angel showing a campus map, safer route, incident markers, and a safety shield.',
     coverImageSource:
-      'CSTA official story image: https://csteachers.org/wp-content/uploads/2026/06/Screenshot-2026-05-29-at-11.07.24-AM-edited.png',
-    coverImageStatus: 'Needs confirmation',
+      'Self-made classroom visual based on the CSTA Cutler-Bell official project description, not an official project screenshot: https://csteachers.org/acm-and-csta-announce-202526-cutler-bell-student-winners/',
+    coverImageStatus: 'Needs replacement',
     coverImageHint:
-      'Show a campus map with night routes, incident heat points, safety reminders, and a walk-with-a-friend button.',
+      'Show a campus map, nighttime route, incident heat points, safety shield, and route-risk explanation label.',
   },
   'campus-ideas-diversity-monitor': {
     title: 'Use AI to Read Campus Newspapers and Measure Whether Ideas Are Narrowing',
@@ -2723,12 +2723,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Use only public text or teacher-provided samples. Treat AI classifications as a starting point, keep original evidence visible, and require human review.',
     difficulty: 'High',
     coverImageAlt:
-      'CSTA Cutler-Bell official story image showing Theodore Mui, the student behind the campus opinion analysis project.',
+      'Classroom visual for Campus Ideas Diversity Monitor showing article cards, an embedding space, and colored idea clusters.',
     coverImageSource:
-      'CSTA official story image: https://csteachers.org/wp-content/uploads/2026/06/theodore_mui_headshot-edited.png',
-    coverImageStatus: 'Needs confirmation',
+      'Self-made classroom visual based on the CSTA Cutler-Bell official project description, not an official project screenshot: https://csteachers.org/acm-and-csta-announce-202526-cutler-bell-student-winners/',
+    coverImageStatus: 'Needs replacement',
     coverImageHint:
-      'Show campus newspaper articles embedded into an idea-space chart beside keyword trends and evidence excerpts.',
+      'Show student newspaper articles, an idea-space scatter plot, a trend line, and evidence keyword cards.',
   },
   'pac-lr': {
     title: 'Protect Privacy While Making Predictions From Small Sensitive Datasets',
@@ -2755,12 +2755,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Use only simulated data in class. Focus on the privacy-versus-accuracy tradeoff, and avoid real health, grade, or family information.',
     difficulty: 'High',
     coverImageAlt:
-      'CSTA Cutler-Bell official story image showing Hillary Yang, the student behind the PAC-LR privacy machine-learning project.',
+      'Classroom visual for PAC-LR showing sensitive small data, a privacy lock, error curves, and privacy-accuracy tradeoffs.',
     coverImageSource:
-      'CSTA official story image: https://csteachers.org/wp-content/uploads/2026/06/Hillary-Yang-Headshot-edited.jpg',
-    coverImageStatus: 'Needs confirmation',
+      'Self-made classroom visual based on the CSTA Cutler-Bell official project description, not an official project screenshot: https://csteachers.org/acm-and-csta-announce-202526-cutler-bell-student-winners/',
+    coverImageStatus: 'Needs replacement',
     coverImageHint:
-      'Show a privacy-preserving model lab with sensitive data being noised, an error curve, and a privacy-risk gauge.',
+      'Show an anonymous data table, privacy lock, noise points, prediction-error curve, and privacy-risk gauge.',
   },
   docwise: {
     title: 'Translate Legal Documents Into Plain-Language AI Explanations',
@@ -2788,12 +2788,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Do not upload real contracts or identity documents. Use simulated files, and clearly label the output as reading support, not legal advice.',
     difficulty: 'Medium-High',
     coverImageAlt:
-      'CSTA Cutler-Bell official story image showing Sathini Senthilkumar, the student behind DocWise.',
+      'Classroom visual for DocWise showing a phone scanning a legal document, OCR, plain-language explanation, and audio support.',
     coverImageSource:
-      'CSTA official story image: https://csteachers.org/wp-content/uploads/2026/06/Sathini-Headshot-edited.jpg',
-    coverImageStatus: 'Needs confirmation',
+      'Self-made classroom visual based on the CSTA Cutler-Bell official project description, not an official project screenshot: https://csteachers.org/acm-and-csta-announce-202526-cutler-bell-student-winners/',
+    coverImageStatus: 'Needs replacement',
     coverImageHint:
-      'Show a phone scanning a legal document and generating plain explanations, risk questions, multilingual text, and an audio button.',
+      'Show a phone scanning a document, OCR scan line, plain-language explanation cards, translation, and audio playback controls.',
   },
   '薯医-noterx': {
     title: 'Let Five AI Experts Diagnose a Xiaohongshu Post',
@@ -2822,12 +2822,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Use teacher-provided mock posts in class instead of collecting private real accounts. Ask students to explain which data or judgment supports each suggestion.',
     difficulty: 'High',
     coverImageAlt:
-      'NoteRx GitHub README project screenshot showing the Xiaohongshu post diagnosis interface.',
+      'Classroom visual for NoteRx showing a Xiaohongshu-style post, five AI diagnosis agents, radar scoring, and diagnosis flow lines.',
     coverImageSource:
-      'GitHub README image: https://raw.githubusercontent.com/jiangmuran/noterx/main/_tmp_local_home.png',
-    coverImageStatus: 'Confirmed',
+      'Self-made classroom visual based on the GitHub README feature description, not an official project screenshot: https://github.com/jiangmuran/noterx',
+    coverImageStatus: 'Needs replacement',
     coverImageHint:
-      'Show a Xiaohongshu post screenshot, five AI expert diagnosis bubbles, radar scoring, rewrite options, and a simulated comment section.',
+      'Show a Xiaohongshu-style post card, content, visual, growth, user, and judge AI agents, radar scoring, and diagnosis connections.',
   },
 }
 
