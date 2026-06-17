@@ -2665,6 +2665,170 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a green AI for Good camp poster, real-client interview cards, an AI-generated PRD, and a public-interest MVP prototype.',
   },
+  'guardian-angel': {
+    title: 'Turn a Campus Map Into a Safer AI Route Helper',
+    sourceProject: 'Guardian Angel',
+    year: '2026',
+    award: 'ACM/CSTA 2025-26 Cutler-Bell Prize, Advanced Tier winning project',
+    themeLabel: 'Accessibility Tech',
+    audience:
+      'College freshmen, students walking at night, campus safety offices, and friends coordinating safer trips',
+    hook:
+      'When walking across campus at night, can AI replace the shortest route with a route that feels safer?',
+    problem:
+      'Students need to avoid higher-risk areas while walking on campus, but ordinary maps optimize distance and time instead of using local incident context.',
+    aiMove:
+      'The project uses crime and incident data from multiple college campuses to generate safer walking routes and give users risk-awareness tools. A classroom version can let AI explain route risk, time-of-day differences, and safety reminders.',
+    studentProject:
+      'Campus safety route helper, late-study walking buddy matcher, event dismissal route reminder, or community safety map',
+    demoGoal:
+      'Build a map demo that imports a campus map and simulated incident data, then generates a lower-risk route, route explanation, and help checklist.',
+    aiPowers: ['Data Cleaning', 'Risk Scoring', 'Route Recommendation', 'Map Visualization', 'Text Explanation'],
+    outputs: ['Safer route map', 'Risk heat map', 'Route explanation card', 'Privacy and bias checklist'],
+    question: 'Could a safer-route algorithm permanently label some places as dangerous?',
+    insight:
+      'Do not use real personal location traces. Use anonymous public incidents or simulated data, and include advice such as contacting campus safety or walking with others.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'CSTA Cutler-Bell official story image showing Mahita Bontu, the student behind Guardian Angel.',
+    coverImageSource:
+      'CSTA official story image: https://csteachers.org/wp-content/uploads/2026/06/Screenshot-2026-05-29-at-11.07.24-AM-edited.png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a campus map with night routes, incident heat points, safety reminders, and a walk-with-a-friend button.',
+  },
+  'campus-ideas-diversity-monitor': {
+    title: 'Use AI to Read Campus Newspapers and Measure Whether Ideas Are Narrowing',
+    sourceProject: 'Campus Ideas Diversity Monitor',
+    year: '2026',
+    award: 'ACM/CSTA 2025-26 Cutler-Bell Prize, Advanced Tier winning project',
+    themeLabel: 'Education Equity',
+    audience:
+      'Student media teams, debate clubs, college-access researchers, and people who care about campus public discourse',
+    hook:
+      'If a school says it values diverse viewpoints, can AI use article evidence to check whether the idea space is actually widening?',
+    problem:
+      'Campuses often talk about diversity, but it is hard to observe how student opinion writing changes in topic range, language, and trust toward institutions.',
+    aiMove:
+      'The project collected more than 37,000 student opinion articles from eight US college newspapers from 2010 to 2024, then used language-model embeddings, zero-shot classification, and Moral Foundations Theory to analyze diversity language, idea-space volume, and institutional cynicism.',
+    studentProject:
+      'Campus media idea map, classroom discussion diversity dashboard, debate evidence finder, or club newsletter topic analyzer',
+    demoGoal:
+      'Build a demo that imports 30 to 50 public campus articles, clusters topics, marks stance differences, visualizes the idea space, and generates discussion questions.',
+    aiPowers: ['Web Crawling', 'Text Embeddings', 'Zero-Shot Classification', 'Clustering', 'Visualization Explanation'],
+    outputs: ['Idea map', 'Keyword trend chart', 'Sample evidence cards', 'Bias and misclassification note'],
+    question:
+      'When AI analyzes viewpoint diversity, is it helping people understand discussion, or could it label viewpoints too quickly?',
+    insight:
+      'Use only public text or teacher-provided samples. Treat AI classifications as a starting point, keep original evidence visible, and require human review.',
+    difficulty: 'High',
+    coverImageAlt:
+      'CSTA Cutler-Bell official story image showing Theodore Mui, the student behind the campus opinion analysis project.',
+    coverImageSource:
+      'CSTA official story image: https://csteachers.org/wp-content/uploads/2026/06/theodore_mui_headshot-edited.png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show campus newspaper articles embedded into an idea-space chart beside keyword trends and evidence excerpts.',
+  },
+  'pac-lr': {
+    title: 'Protect Privacy While Making Predictions From Small Sensitive Datasets',
+    sourceProject: 'PAC-LR',
+    year: '2026',
+    award: 'ACM/CSTA 2025-26 Cutler-Bell Prize, Advanced Tier winning project',
+    themeLabel: 'Health Research',
+    audience:
+      'Nursing homes, schools, local clinics, public-service organizations, and researchers working with sensitive small datasets',
+    hook:
+      'If data is small and sensitive, can AI still make useful predictions without exposing people?',
+    problem:
+      'Organizations want to use sensitive data for prediction and decisions, but direct modeling can create privacy risks. Common differential privacy methods may also hurt accuracy in small-data settings.',
+    aiMove:
+      'The project proposes PAC-LR, a private linear regression algorithm based on PAC Privacy, measuring how hard it is for an adversary to reconstruct data and comparing prediction error against differential privacy methods across datasets and privacy levels.',
+    studentProject:
+      'Privacy-preserving survey analyzer, anonymous health trend predictor, campus service demand forecaster, or public-interest small-data dashboard',
+    demoGoal:
+      'Use simulated sensitive data to build a privacy machine-learning experiment comparing a normal model, a noisy model, and a privacy-preserving model on error and leakage risk.',
+    aiPowers: ['Machine Learning Modeling', 'Privacy Risk Assessment', 'Error Comparison', 'Data Visualization', 'Experiment Reporting'],
+    outputs: ['Model comparison chart', 'Privacy-accuracy tradeoff table', 'Simulated data note', 'Ethics boundary card'],
+    question: 'When is it worth making a model less accurate so it knows less about individual people?',
+    insight:
+      'Use only simulated data in class. Focus on the privacy-versus-accuracy tradeoff, and avoid real health, grade, or family information.',
+    difficulty: 'High',
+    coverImageAlt:
+      'CSTA Cutler-Bell official story image showing Hillary Yang, the student behind the PAC-LR privacy machine-learning project.',
+    coverImageSource:
+      'CSTA official story image: https://csteachers.org/wp-content/uploads/2026/06/Hillary-Yang-Headshot-edited.jpg',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a privacy-preserving model lab with sensitive data being noised, an error curve, and a privacy-risk gauge.',
+  },
+  docwise: {
+    title: 'Translate Legal Documents Into Plain-Language AI Explanations',
+    sourceProject: 'DocWise',
+    year: '2026',
+    award: 'ACM/CSTA 2025-26 Cutler-Bell Prize, Intermediate Tier winning project',
+    themeLabel: 'Education Equity',
+    audience:
+      'Non-native English speakers, older adults, renters, community residents, and families without easy access to legal resources',
+    hook:
+      'Before signing a document full of legal terms, can AI explain the risk in everyday language?',
+    problem:
+      'Leases, consent forms, service agreements, and other legal documents use complex language, so many people cannot fully understand the terms, risks, or next steps before signing.',
+    aiMove:
+      'The project lets users scan or upload a document on mobile, extracts text with OCR, uses natural language processing to generate simplified explanations, and adds accessibility features such as translation and text-to-speech.',
+    studentProject:
+      'School form explainer, parent notice translation helper, rental clause risk highlighter, or volunteer-service document reader',
+    demoGoal:
+      'Build a demo that uploads a simulated agreement, extracts key clauses, writes plain-language explanations, flags questions to ask, and outputs a multilingual audio summary.',
+    aiPowers: ['OCR', 'Legal Text Simplification', 'Translation', 'Text-to-Speech', 'Risk Question Generation'],
+    outputs: ['Document explanation page', 'Risk reminder cards', 'Multilingual summary', 'Audio playback demo', 'Human-review note'],
+    question:
+      'AI can explain a legal document, but when can it not replace a lawyer, parent, or trusted adult?',
+    insight:
+      'Do not upload real contracts or identity documents. Use simulated files, and clearly label the output as reading support, not legal advice.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'CSTA Cutler-Bell official story image showing Sathini Senthilkumar, the student behind DocWise.',
+    coverImageSource:
+      'CSTA official story image: https://csteachers.org/wp-content/uploads/2026/06/Sathini-Headshot-edited.jpg',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a phone scanning a legal document and generating plain explanations, risk questions, multilingual text, and an audio button.',
+  },
+  '薯医-noterx': {
+    title: 'Let Five AI Experts Diagnose a Xiaohongshu Post',
+    sourceProject: 'NoteRx',
+    year: '2026',
+    award:
+      'Xiaohongshu first Hackathon Finals, AI Native Special Unit Award; built by the middle-school Page One team',
+    themeLabel: 'Startup Tools',
+    audience:
+      'Xiaohongshu creators, school publication editors, club publicity students, and students learning content operations',
+    hook:
+      'If a post does not perform, can five AI roles diagnose it separately, challenge one another, and agree on a better version?',
+    problem:
+      'Content improvement often depends on subjective advice, and students cannot easily tell how titles, images, timing, comments, and category patterns affect reach.',
+    aiMove:
+      'The project uses 874 real posts and 2,465 comments to build quantitative prediction, a baseline knowledge graph, and comment personas, then lets AI agents such as a content analyst, visual diagnostician, growth strategist, and user simulator debate before producing scores and rewrites.',
+    studentProject:
+      'Club post diagnosis helper, event poster feedback tool, school-news headline optimizer, or short-video script comment predictor',
+    demoGoal:
+      'Build a demo that uploads a mock content screenshot, recognizes title and body text, generates multi-role diagnosis, radar scoring, three rewrites, and a simulated comment area.',
+    aiPowers: ['OCR', 'Multi-Agent Debate', 'Data Regression', 'Comment Personas', 'Copywriting Rewrite', 'Score Visualization'],
+    outputs: ['Diagnosis report page', 'Radar score chart', 'Multi-role debate log', 'Before-and-after rewrites', 'Simulated comment area'],
+    question:
+      'When AI optimizes content, is it helping people express ideas better, or training everyone toward the same viral style?',
+    insight:
+      'Use teacher-provided mock posts in class instead of collecting private real accounts. Ask students to explain which data or judgment supports each suggestion.',
+    difficulty: 'High',
+    coverImageAlt:
+      'NoteRx GitHub README project screenshot showing the Xiaohongshu post diagnosis interface.',
+    coverImageSource:
+      'GitHub README image: https://raw.githubusercontent.com/jiangmuran/noterx/main/_tmp_local_home.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a Xiaohongshu post screenshot, five AI expert diagnosis bubbles, radar scoring, rewrite options, and a simulated comment section.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
