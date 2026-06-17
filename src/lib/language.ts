@@ -2616,6 +2616,55 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show one project handover page with design files, docs, assets, demo videos, code repositories, and next tasks.',
   },
+  'ai-for-good-公益创新营': {
+    title: 'Build an AI for Good MVP for a Real Client',
+    sourceProject: 'AI for Good Public-Interest Innovation Camp',
+    year: '2026',
+    award:
+      '2026 Super AI Real Creation Summer Camp / AI for Good public-interest innovation camp in Dali; not a competition award',
+    themeLabel: 'Accessibility',
+    audience:
+      'Grade 7 to 12 students, AI for Good mentors, real clients, and communities needing accessibility or social support',
+    hook:
+      'In seven days, can students use AI to understand a real difficulty first, then build a small product that genuinely helps someone?',
+    problem:
+      'Many AI learning projects stop at flashy demos, portfolios, or simulated tasks. Real needs, such as blind children finding running volunteers, people with dysarthria being understood, and disabled users reporting inaccessible products, require empathy, interviews, and validation before coding.',
+    aiMove:
+      'The article describes students building public-interest products with real clients, including a volunteer-matching system for blind running, the Gongming speech-to-text mini program for people with dysarthria, and an accessibility complaint platform. AI can support interview notes, requirement breakdown, PRDs, prototypes, transcription, summaries, and feedback analysis, but it cannot replace consent, privacy protection, adult supervision, or professional judgment.',
+    studentProject:
+      'Campus accessibility issue collector, volunteer-matching mini app, special communication helper prototype, elder-support checklist, or public-interest interview assistant',
+    demoGoal:
+      'Build an AI for Good MVP workspace: enter a real or simulated interview, then generate a user persona, problem statement, feature list, prototype screen, and testing feedback sheet.',
+    aiPowers: [
+      'Interview Summarization',
+      'Need Classification',
+      'PRD Generation',
+      'Prototype Generation',
+      'Speech-to-Text',
+      'Accessibility Checking',
+      'Feedback Analysis',
+    ],
+    outputs: [
+      'Public-interest MVP prototype',
+      'User interview card',
+      'PRD',
+      'Testing record',
+      'Privacy and consent note',
+      'Demo Day pitch script',
+    ],
+    question:
+      'For an AI for Good product, should students build a technical feature first, or first confirm that real users truly need it?',
+    insight:
+      'When working with children, disabled people, health needs, or communication challenges, get consent first and avoid uploading sensitive data. Use anonymous or simulated interviews in class, and focus on empathy, validation, and human review.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'AI for Good camp poster emphasizing the seven-day challenge to solve one real problem.',
+    coverImageSource:
+      'Maoguo Camp WeChat article visual: https://mmbiz.qpic.cn/mmbiz_png/N9cempytZ74sgqAb1gxxy1sHmzuLNTkAMqHBDojJfC1HnXuKDJZHH5icapAmruqficGvVMkDIYw8276PLU4mkNPWFmEdCCVaYy4AvlYw0icr6c/640?wx_fmt=png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a green AI for Good camp poster, real-client interview cards, an AI-generated PRD, and a public-interest MVP prototype.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {

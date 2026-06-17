@@ -3901,6 +3901,56 @@
       "mapX": 3,
       "mapY": 3,
       "accent": "#b59cff"
+    },
+    {
+      "id": "ai-for-good-公益创新营",
+      "title": "让孩子用 AI 为真实案主做一个公益 MVP",
+      "sourceProject": "AI for Good 公益创新营",
+      "sourceUrl": "https://mp.weixin.qq.com/s/7K4eP2OQ_rDWyecvHgMMtQ",
+      "sourceUrls": [
+        "https://mp.weixin.qq.com/s/7K4eP2OQ_rDWyecvHgMMtQ"
+      ],
+      "coverImage": "/images/cards/ai-for-good-camp.png",
+      "coverImageAlt": "AI for Good 公益创新营主视觉海报，强调“7天，去解决一个真实问题”的营地主题",
+      "coverImageSource": "猫果营会微信公众号文章主视觉配图：https://mmbiz.qpic.cn/mmbiz_png/N9cempytZ74sgqAb1gxxy1sHmzuLNTkAMqHBDojJfC1HnXuKDJZHH5icapAmruqficGvVMkDIYw8276PLU4mkNPWFmEdCCVaYy4AvlYw0icr6c/640?wx_fmt=png",
+      "coverImageCredit": "微信公众号公开文章配图，课堂引用；需避免商用传播",
+      "coverImageStatus": "待确认",
+      "coverImageHint": "绿色公益创新营海报、真实案主访谈卡、AI生成的PRD和公益MVP原型并列展示",
+      "year": "2026",
+      "award": "2026 超燃 AI 真实创造夏令营 / AI for Good 公益创新营，大理 7 天营；非比赛奖项",
+      "theme": "accessibility",
+      "themeLabel": "无障碍科技",
+      "audience": "7-12 年级学生、公益创新营导师、真实案主、需要无障碍或社会支持的人群",
+      "hook": "7 天时间，学生能不能用 AI 先听懂一个真实困难，再做出一个真的能帮到人的小产品？",
+      "problem": "很多 AI 学习停留在炫技、刷作品集或模拟题，但真实世界里有盲童运动陪伴、构音障碍沟通、残障人士反馈渠道等具体需求，需要孩子先学会共情、访谈和验证。",
+      "aiMove": "文章介绍营地让孩子围绕真实案主做公益产品，例如助盲跑志愿者匹配系统、“共鸣”构音障碍转写小程序、无障碍吐槽平台；AI 可辅助访谈整理、需求拆解、PRD、原型、转写、摘要和测试反馈，但不能替代用户同意、隐私保护、成人监护或专业判断。",
+      "studentProject": "校园无障碍问题收集平台、志愿者匹配小程序、特殊沟通辅助原型、社区老人帮助清单、公益项目需求访谈助手。",
+      "demoGoal": "做出一个“AI 公益 MVP 工作台”Demo：输入一段真实或模拟访谈，生成用户画像、问题陈述、功能清单、原型页面和测试反馈表。",
+      "aiPowers": [
+        "访谈摘要",
+        "需求分类",
+        "PRD生成",
+        "原型生成",
+        "语音转文字",
+        "无障碍检查",
+        "反馈分析"
+      ],
+      "outputs": [
+        "公益MVP原型",
+        "用户访谈卡",
+        "PRD",
+        "测试记录",
+        "隐私与同意说明",
+        "Demo Day路演稿"
+      ],
+      "question": "如果要帮助一个你身边的人，AI 应该先问哪些问题，才能避免“自以为是地帮忙”？",
+      "insight": "涉及儿童、残障、健康或沟通困难人群时，必须先获得同意，避免上传敏感资料；课堂版可用匿名或模拟访谈，重点训练共情、验证和人工复核。",
+      "difficulty": "中高",
+      "impactScore": 5,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 5,
+      "accent": "#7cc7ff"
     }
   ]
 }
