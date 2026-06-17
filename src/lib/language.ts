@@ -2616,6 +2616,230 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show one project handover page with design files, docs, assets, demo videos, code repositories, and next tasks.',
   },
+  audiencecue: {
+    title: 'Turn YouTube Comments Into Evidence-Backed AI Insight Reports',
+    sourceProject: 'AudienceCue',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; YouTube comment download and AI insight report tool',
+    themeLabel: 'Startup Tools',
+    audience:
+      'YouTube creators, campus video-channel teams, club publicity teams, course project groups, and students doing audience research',
+    hook:
+      'Can AI turn the real questions and pushback in a comment section into evidence for the next video idea?',
+    problem:
+      'Creators may have many public comments but struggle to identify repeated questions, emotions, objections, and future topic ideas. Manual reading can also over-select the comments people already agree with.',
+    aiMove:
+      'AudienceCue downloads comments from videos, channels, or playlists and generates AI reports with citations, so each claim can return to a real public comment. In class, AI can cluster comments, attach evidence, suggest topics, and flag risks.',
+    studentProject:
+      'Campus video comment insight assistant, club event feedback analyzer, user interview organizer, or public-interest campaign evidence board',
+    demoGoal:
+      'Build a demo that accepts a public video link or a simulated comment table, clusters the questions, generates three insights with original comment citations, and proposes the next content idea.',
+    aiPowers: [
+      'Comment Collection and Cleaning',
+      'Text Clustering',
+      'Sentiment Analysis',
+      'Evidence Citation',
+      'Report Generation',
+      'Multilingual Summaries',
+    ],
+    outputs: [
+      'Insight report page',
+      'Comment evidence cards',
+      'Content idea list',
+      'Bias and sample note',
+    ],
+    question:
+      'If AI only summarizes the most-liked comments, which quieter users might disappear from the report?',
+    insight:
+      'Use only public comments or teacher-provided samples. Keep original comment links or IDs in the report so AI summaries do not become unsupported claims.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'AudienceCue official site screenshot showing the workflow for pasting a YouTube link, downloading comments, generating an evidence report, and sharing or exporting results.',
+    coverImageSource:
+      'Official site screenshot: https://audiencecue.com; browser displayed the Simplified Chinese interface automatically.',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a YouTube link input, comment download workflow, AI evidence report, and quoted comment cards.',
+  },
+  clipdone: {
+    title: 'Let AI Edit Rough Footage Into Short-Form Video',
+    sourceProject: 'ClipDone',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; AI short-form video editing tool',
+    themeLabel: 'Startup Tools',
+    audience:
+      'Campus media students, club publicity teams, short-form creators, and teachers or students who need to edit event videos quickly',
+    hook:
+      'After recording 20 minutes of footage, can AI cut it into a publishable 60-second short?',
+    problem:
+      'Short-form publishing requires cutting pauses, adding captions, finding b-roll, adjusting rhythm, and handling revisions, which can trap student teams inside editing software.',
+    aiMove:
+      'ClipDone turns uploaded raw footage into edited clips with cuts, captions, b-roll, animations, and text-based revision requests. A classroom version can have AI detect highlights, generate subtitles and storyboards, then leave final approval to students.',
+    studentProject:
+      'Campus event short-video editor, club publicity caption tool, interview highlight extractor, or UGC ad script tester',
+    demoGoal:
+      'Upload a one- to two-minute sample video or transcript, detect pauses and highlights, then generate a 60-second storyboard, captions, vertical preview, and revision notes.',
+    aiPowers: [
+      'Speech-to-Text',
+      'Highlight Detection',
+      'Automatic Captions',
+      'B-Roll Matching',
+      'Text-Based Re-Editing',
+      'Video Rhythm Analysis',
+    ],
+    outputs: [
+      'Short-video draft',
+      'Subtitle file',
+      'Storyboard script',
+      'Revision log',
+      'Publishing note',
+    ],
+    question:
+      'Could automatic editing remove material that is slow but emotionally honest or important?',
+    insight:
+      'Start with transcripts and placeholder visuals for a low-cost classroom demo. Get permission for any real-person footage, and keep a human review step before publishing.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'ClipDone official site screenshot showing the upload area for raw footage and the entry point for automatic short-form video editing.',
+    coverImageSource: 'Official site screenshot: https://clipdone.app/',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a dark short-video editing page, raw footage upload, before-and-after edit preview, captions, and b-roll cues.',
+  },
+  typerino: {
+    title: 'Turn Campus Stories Into Proper Scripts',
+    sourceProject: 'Typerino',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; desktop screenwriting and playwriting software',
+    themeLabel: 'Cultural Preservation',
+    audience:
+      'Drama clubs, film clubs, language arts project teams, and students turning campus or local stories into scripts',
+    hook:
+      'Once a good story is written down, can AI help shape it into a script people can actually rehearse?',
+    problem:
+      'Students may have strong story ideas but not know screenplay or stage-play format, scene management, character tracking, dialogue revision, or version control.',
+    aiMove:
+      'Typerino provides desktop script formatting, scene management, and export. A classroom AI layer can turn interviews or story outlines into scene lists, character cards, dialogue drafts, and consistency checks.',
+    studentProject:
+      'Campus short-play script workbench, local-story adaptation tool, club rehearsal script assistant, or English drama dialogue polisher',
+    demoGoal:
+      'Enter a campus story outline or interview excerpt, then generate a character table, three-act scene list, first formatted script page, and revision suggestions.',
+    aiPowers: [
+      'LLM Writing Support',
+      'Character Consistency Check',
+      'Structured Formatting',
+      'Version Comparison',
+      'Style Rewriting',
+    ],
+    outputs: [
+      'Script first page',
+      'Character cards',
+      'Scene list',
+      'Rehearsal notes',
+      'Before-and-after revision view',
+    ],
+    question:
+      'AI-generated dialogue may sound smooth, but how can students tell whether it still sounds like real teenagers?',
+    insight:
+      'Have students write the real material and relationships first, then use AI to organize format. The author should rewrite the final dialogue so it does not become generic.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Typerino official site screenshot showing a scriptwriting interface with a scene list and a formatted screenplay page.',
+    coverImageSource: 'Official site screenshot: https://typerino.app/',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a script editor, scene list, character dialogue, campus story adaptation, and export formats.',
+  },
+  clawease: {
+    title: 'Build an AI Front Desk That Books for Local Services',
+    sourceProject: 'ClawEase',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; AI business operator and appointment automation tool',
+    themeLabel: 'Startup Tools',
+    audience:
+      'Local shops, training centers, clinics, studios, and campus clubs that receive signup or service inquiries',
+    hook:
+      'When customers ask questions through chat, forms, or phone calls, can AI turn the inquiry into a confirmed appointment?',
+    problem:
+      'Small organizations often miss inquiries across WhatsApp, email, forms, SMS, and phone. Manually confirming services, times, prices, and booking details takes time.',
+    aiMove:
+      'ClawEase turns multichannel customer requests into automated consultation, booking, and business workflows. A classroom version can classify intent, ask for missing details, match a calendar, draft confirmation messages, and hand risky cases to a human.',
+    studentProject:
+      'Club signup front desk, counseling appointment triage, community sale customer service, or campus room booking assistant',
+    demoGoal:
+      'Build an AI booking front desk with a mock calendar and service list: the user sends a request, the system asks follow-up questions, recommends a time, drafts a confirmation text, and creates a human handoff note.',
+    aiPowers: [
+      'Intent Recognition',
+      'Conversational Forms',
+      'Calendar Matching',
+      'Workflow Automation',
+      'Human Handoff',
+      'Channel Integration',
+    ],
+    outputs: [
+      'Booking conversation demo',
+      'Service workflow diagram',
+      'Confirmation message',
+      'Human handoff table',
+      'Risk boundary note',
+    ],
+    question:
+      'When should an AI front desk stop replying automatically and hand the conversation to a person?',
+    insight:
+      'Do not let a classroom demo actually place calls or send SMS messages. Use a mock calendar and fictional customers, and mark which requests require human confirmation.',
+    difficulty: 'High',
+    coverImageAlt:
+      'ClawEase official site screenshot showing AI business operator messaging, customer inquiry handling, and booking conversion entry points.',
+    coverImageSource: 'Official site screenshot: https://clawease.ai/',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show an AI front desk, customer inquiries, appointment calendar, WhatsApp, email, form, and phone channel icons, plus human handoff.',
+  },
+  'wario-synth': {
+    title: 'Turn Any Song Into Retro Game Boy-Style Music',
+    sourceProject: 'Wario Synth',
+    year: '2026',
+    award: 'Product Hunt 2026 launch; open-source browser MIDI and retro synthesis project',
+    themeLabel: 'Cultural Preservation',
+    audience:
+      'Music clubs, game development clubs, and student creators learning MIDI, timbre, and browser audio',
+    hook:
+      'If AI first understands a song structure, can it rebuild the idea as 8-bit game music?',
+    problem:
+      'Students may love retro game music but struggle to see how a song splits into melody, harmony, bass, and percussion. They may also overlook copyright and adaptation boundaries.',
+    aiMove:
+      'Wario Synth searches or uploads MIDI, parses notes locally in the browser, maps tracks to the four-channel Game Boy sound chip, and synthesizes audio with Web Audio. A classroom AI layer can explain musical structure, suggest channel mapping, generate original MIDI riffs, and compare versions.',
+    studentProject:
+      'Campus 8-bit school-song adapter, game-level soundtrack generator, music structure visualizer, or original MIDI style converter',
+    demoGoal:
+      'Upload a public-domain MIDI file or AI-generated melody, parse notes and tracks, map melody, bass, and percussion, preview chiptune audio, and export audio, a MIDI mapping table, and a style note.',
+    aiPowers: [
+      'MIDI Parsing',
+      'Music Structure Analysis',
+      'Style Transfer',
+      'Browser Audio Synthesis',
+      'AI Melody Generation',
+    ],
+    outputs: [
+      '8-bit audio',
+      'MIDI mapping table',
+      'Instrument channel visualization',
+      'Style explanation card',
+      'Copyright note',
+    ],
+    question:
+      'When does turning another song into pixel style count as learning practice, and when might it become infringement?',
+    insight:
+      'Prefer public-domain music, original melodies, or teacher-provided material. Ask students to explain what each sound channel does, instead of only chasing a catchy result.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Wario Synth official site screenshot showing a retro Game Boy-style interface with song search, MIDI upload, and GitHub links.',
+    coverImageSource:
+      'Official site screenshot: https://www.wario.style/; GitHub README: https://github.com/b1rdmania/motif',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a retro pixel music interface, song search, MIDI upload, Game Boy four-channel sound, and note-to-track mapping.',
+  },
   'ai-for-good-公益创新营': {
     title: 'Build an AI for Good MVP for a Real Client',
     sourceProject: 'AI for Good Public-Interest Innovation Camp',
