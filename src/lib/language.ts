@@ -3053,6 +3053,241 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a Xiaohongshu-style post card, content, visual, growth, user, and judge AI agents, radar scoring, and diagnosis connections.',
   },
+  skillup: {
+    title: 'Turn Craft Steps Into an AI Practice Coach',
+    sourceProject: 'SkillUp',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge National Champion, Middle School Track 1; Northstar Middle School sixth-grade team',
+    themeLabel: 'Education Equity',
+    audience:
+      'Middle school makers, technology clubs, makerspaces, hands-on learning classes, and beginners who need step-by-step guidance',
+    hook:
+      'When you are building a model, sewing, or making something by hand, can AI act like a coach that understands the steps and helps you reflect?',
+    problem:
+      'Hands-on making depends heavily on live demonstrations. When students practice after class, they can get stuck on materials, tools, safety steps, and error review, while teachers cannot follow every build one-on-one.',
+    aiMove:
+      'Public reporting describes SkillUp as an AI-powered tool for craftsmanship, handiwork, and hands-on creation. A classroom version can break a project into steps, interpret process photos or notes, flag safety risks, suggest the next action, and generate reflection questions. The exact product interface is not public, so feature details are inferred from the official description.',
+    studentProject:
+      'Maker-club AI coach, craft-step checker, model-building safety reminder, club project reflection assistant, or tool-use Q&A coach',
+    demoGoal:
+      'Build a demo that accepts a project goal, materials list, and process photos, then generates build steps, safety reminders, stuck-point diagnosis, and a reflection sheet.',
+    aiPowers: [
+      'Task Breakdown',
+      'Multimodal Image Understanding',
+      'Safety Checking',
+      'Step Recommendation',
+      'Learning Feedback',
+      'Reflection Prompt Generation',
+    ],
+    outputs: [
+      'Making steps page',
+      'Safety reminder cards',
+      'Process photo diagnosis',
+      'Reflection report',
+      'Project showcase poster',
+    ],
+    question:
+      'When does an AI next-step suggestion help students try bravely, and when might it stop them from judging for themselves?',
+    insight:
+      'If AI only sees a photo, it may miss touch, pressure, smell, heat, or tool risk. Ask students to record their own observations, not only the AI response.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Lake Washington School District official photo showing the SkillUp student team with medals and Presidential AI Challenge certificates.',
+    coverImageSource:
+      'Official school district news photo: https://www.lwsd.org/services/communications/news-and-stories/news-details/~board/middle-schools/post/northstar-middle-school-students-take-home-first-place-nationally-in-presidential-ai-challenge-finals',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show the student team, craft step cards, an AI practice coach interface, safety reminders, and a project reflection sheet.',
+  },
+  mycompass: {
+    title: 'Build a Bounded AI Mental-Health Practice Companion for Students',
+    sourceProject: 'MyCompass',
+    year: '2026',
+    award:
+      'FCPS Seize the Moment Student AI Innovation Challenge Grand Prize; McLean High School ninth-grade student project',
+    themeLabel: 'Health Management',
+    audience:
+      'High school students, school mental-health support teams, homeroom teachers, and teenagers who need safe emotion practice',
+    hook:
+      'When a student feels overwhelmed, can AI guide one safe, clear mental-health exercise without pretending to be a doctor?',
+    problem:
+      'Students facing stress, anxiety, or low mood may not know how to start expressing what happened, and a trusted adult may not be immediately available. Ordinary chatbots can also cross boundaries by giving inappropriate mental-health advice.',
+    aiMove:
+      'The FCPS report says MyCompass is an AI-powered bot that provides CBT and DBT support. A classroom version can guide emotion logs, cognitive reframing, breathing practice, risk keyword detection, and help-seeking suggestions while clearly stating that it is practice support, not diagnosis or treatment.',
+    studentProject:
+      'Campus emotion practice companion, exam-stress reflection tool, anonymous class mood check, help-resource navigator, or peer-support boundary reminder',
+    demoGoal:
+      'Build a demo that takes a current emotion and trigger event, then generates a CBT thought record, DBT skill practice, help-resource card, and crisis handoff prompt.',
+    aiPowers: [
+      'Emotion Classification',
+      'Guided Conversation',
+      'CBT Worksheet Generation',
+      'DBT Skill Recommendation',
+      'Risk Keyword Detection',
+      'Resource Matching',
+    ],
+    outputs: [
+      'Emotion practice page',
+      'Thought record worksheet',
+      'Help-resource card',
+      'Boundary statement',
+      'Crisis handoff flow',
+    ],
+    question:
+      'For a mental-health AI tool, where is the line between guided practice and a responsibility it should not take on?',
+    insight:
+      'Use fictional cases or teacher-approved samples, never real sensitive mental-health records. Label the output as non-medical support and include a path to a trusted adult or professional service.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'FCPS official news photo showing the MyCompass award-winning student at the event with an open laptop.',
+    coverImageSource:
+      'Official school district news photo: https://www.fcps.edu/news/seizing-moment-fcps-students-compete-designing-solutions-real-world-problems-using-ai',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a mental-health practice chat, CBT thought record, DBT skill card, help-resource button, and safety boundary notice.',
+  },
+  'iris-navigation': {
+    title: 'Create a Low-Cost AI Accessibility Navigation Framework for Complex Cities',
+    sourceProject: 'IRIS Navigation',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge National Champion, High School Track 2; North Allegheny High School student project',
+    themeLabel: 'Accessibility Tech',
+    audience:
+      'Blind and low-vision people, low-vision students, city travelers, campus accessibility offices, and community navigation volunteers',
+    hook:
+      'For a blind traveler, navigation is not just walking forward. Can AI understand intersections, obstacles, and time-changing risks?',
+    problem:
+      'Complex urban environments include temporary obstacles, construction, crowded intersections, signals, ramps, and surface changes. Ordinary maps struggle to turn these real-time risks into usable guidance for blind and low-vision users.',
+    aiMove:
+      'The official project title is IRIS: A Low-Cost Spatiotemporal AI Framework for Visually Impaired Navigation in Complex Urban Environments. A classroom version can use phone-camera images or simulated street scenes to detect obstacles, crossings, landmarks, and moving objects, then generate step-by-step voice guidance. Specific hardware and algorithm details are not public.',
+    studentProject:
+      'Campus accessible-route helper, hallway obstacle reminder, museum voice guide, construction detour assistant, or school-route simulator for low-vision students',
+    demoGoal:
+      'Build an accessibility navigation demo with campus photos or simulated street scenes: detect obstacles and landmarks, produce a safer route explanation, voice prompt text, and a human review checklist.',
+    aiPowers: [
+      'Computer Vision',
+      'Spatiotemporal Risk Modeling',
+      'Object Detection',
+      'Route Recommendation',
+      'Voice Prompt Generation',
+      'Accessibility Evaluation',
+    ],
+    outputs: [
+      'Accessible route map',
+      'Obstacle detection screenshot',
+      'Voice prompt script',
+      'Risk boundary card',
+      'User testing record',
+    ],
+    question:
+      'If AI navigation says a path is safe but a temporary obstacle appears, how should responsibility and warning language be designed?',
+    insight:
+      'Use public street views or simulated campus images in class, not real personal route tracking. Accessibility projects need user feedback, but testing must not transfer risk to users.',
+    difficulty: 'High',
+    coverImageAlt:
+      'ORISE official winner photo showing IRIS student Alexander Du at the 2026 Presidential AI Challenge national finals.',
+    coverImageSource:
+      'Official winner photo: https://orise.orau.gov/ai-challenge/winners/2026/national.html',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a phone camera street scene, obstacle detection boxes, voice navigation prompt, low-cost accessible route, and risk markers.',
+  },
+  kisansaathi: {
+    title: 'Help Farmers Scan Leaves and Receive AI Disease Guidance',
+    sourceProject: 'KisanSaathi',
+    year: '2026',
+    award:
+      '2026 Global Appathon Youth Individual Winner; App Inventor Foundation and MIT App Inventor global mobile-app competition',
+    themeLabel: 'Environmental Action',
+    audience:
+      'Small farmers, agriculture clubs, rural communities, school gardens, and families that need local-language farming guidance',
+    hook:
+      'When a leaf starts yellowing, can AI help a farmer identify disease earlier and receive local advice?',
+    problem:
+      'Crop disease can spread when recognition is late, advice is not localized, or internet access is unreliable. Farmers may not reach an expert quickly and may need offline, voice, and regional-language support.',
+    aiMove:
+      'The official description says KisanSaathi is an AI-powered leaf disease detector: users scan crop leaves, classify the health condition, and receive personalized advice based on location, weather, crop type, and more. It also includes offline mode, a personal chatbot, scan history, and voice output in regional languages.',
+    studentProject:
+      'Campus plant doctor, community garden disease checker, balcony gardening assistant, crop-care chatbot, or agriculture science voice guide',
+    demoGoal:
+      'Build a demo that uploads a leaf photo, identifies a possible disease, asks for crop and location context, generates care advice, records scan history, and outputs voice prompt text.',
+    aiPowers: [
+      'Image Classification',
+      'Location and Weather Context',
+      'Agriculture Knowledge Q&A',
+      'Offline-First Design',
+      'Multilingual Voice Output',
+      'History Analysis',
+    ],
+    outputs: [
+      'Leaf diagnosis page',
+      'Disease advice cards',
+      'Scan history table',
+      'Voice prompt script',
+      'Misclassification risk note',
+    ],
+    question:
+      'If AI mistakes a healthy leaf for a diseased one, what cost might the farmer pay?',
+    insight:
+      'Use public plant-disease datasets or teacher-provided samples in class. Do not let students diagnose real farms directly; suggest checking with a local agriculture expert.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official MIT App Inventor YouTube thumbnail for KisanSaathi, the 2026 Global Appathon Youth Individual Winner.',
+    coverImageSource:
+      'Official showcase video thumbnail: https://www.youtube.com/watch?v=jStrRNNKP2U',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a phone scanning a crop leaf, disease result, weather and location advice, offline mode, and a voice-output button.',
+  },
+  hearo: {
+    title: 'Build an AI Speech-Practice Companion for Children With Hearing Loss',
+    sourceProject: 'Hearo',
+    year: '2026',
+    award:
+      '2026 Global Appathon Youth Team Winner; App Inventor Foundation and MIT App Inventor global mobile-app competition',
+    themeLabel: 'Accessibility Tech',
+    audience:
+      'Children with hearing loss, families of children with cochlear implants, speech therapists, special-education teachers, and at-home practice routines',
+    hook:
+      'Between therapy sessions, can AI make speech and listening practice more playful, consistent, and encouraging?',
+    problem:
+      'Children with hearing loss need sustained speech and listening practice, but professional therapy time is limited. At-home practice can become repetitive and may lack immediate feedback or visible progress tracking.',
+    aiMove:
+      'The official description says Hearo is an AI-powered app that helps children with hearing impairments improve speech and listening skills between therapy sessions. A classroom version can generate practice words and sentences, interpret recordings or listening responses, provide gentle feedback, and track progress.',
+    studentProject:
+      'Mandarin or English pronunciation companion, listening-discrimination game, special-education home practice sheet, therapy practice tracker, or child-friendly speech feedback card',
+    demoGoal:
+      'Build a speech-practice demo with tasks, recording submission, AI pronunciation feedback, listening multiple-choice questions, and progress badges.',
+    aiPowers: [
+      'Speech Recognition',
+      'Pronunciation Scoring',
+      'Listening Exercise Generation',
+      'Personalized Practice',
+      'Progress Tracking',
+      'Encouraging Feedback Generation',
+    ],
+    outputs: [
+      'Speech practice interface',
+      'Listening mini-game',
+      'Pronunciation feedback card',
+      'Progress record',
+      'Parent or teacher guide',
+    ],
+    question:
+      'If AI pronunciation scoring rewards only one standard accent, could it make some children less confident?',
+    insight:
+      'Use simulated or voluntary recordings in class, not real child therapy data. Feedback should be gentle, and the tool must state that it does not replace a therapist.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official MIT App Inventor YouTube thumbnail for Hearo, the 2026 Global Appathon Youth Team Winner.',
+    coverImageSource:
+      'Official showcase video thumbnail: https://www.youtube.com/watch?v=mkO77lPnDbw',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show child speech practice, a recording button, AI pronunciation feedback, listening mini-game, and between-session progress.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
