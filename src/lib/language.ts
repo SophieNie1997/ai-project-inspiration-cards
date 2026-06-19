@@ -442,24 +442,49 @@ const cardTranslations: Record<string, CardTranslation> = {
     difficulty: 'Medium-High',
   },
   computerpreter: {
-    title: 'Keeping Communication From Getting Stuck',
-    award: 'High School AI Showcase 5th Place',
-    themeLabel: 'Accessibility',
-    audience: 'Deaf users, classroom participants, and public-service users',
-    hook: 'Turn gestures into text so more people can be understood in time.',
+    title: 'Put Sign Language and Speech Into One AI Chat Window',
+    sourceProject: 'Computerpreter',
+    year: '2025-2026',
+    award:
+      '2025 Congressional App Challenge Utah First District Winner; 2025 CAC Top Apps West Regional Winner; 2026 Presidential AI Challenge West Regional Champion, High School Track 2',
+    themeLabel: 'Accessibility Tech',
+    audience:
+      'Deaf or hard-of-hearing users, hearing friends, service workers, ASL classrooms, and public-service settings that need quick communication',
+    hook:
+      'If one person signs and another person speaks, can AI let them talk naturally in the same chat window?',
     problem:
-      'Deaf people often lack on-demand sign-language support in everyday communication, classrooms, and public services.',
-    aiMove: 'Computer vision recognizes gestures and converts results into text or speech.',
-    studentProject: 'Campus accessibility communication helper',
+      'Everyday conversations do not always have a sign-language interpreter. Paper notes and phone typing are slow, and service workers may not understand ASL, which can create exclusion or discrimination.',
+    aiMove:
+      'The CAC Top Apps page says Computerpreter uses a Random Forest classifier for 26 ASL fingerspelled handshapes, a recurrent neural network with a bidirectional LSTM layer for dynamic signs, an API to translate ASL gloss into English, and speech-to-text for hearing users.',
+    studentProject:
+      'Campus sign-language translation window, accessible service-desk ordering helper, event volunteer communication tool, or ASL learning feedback app',
     demoGoal:
-      'Recognize 8 to 10 common school gestures or needs through image upload or camera input.',
-    aiPowers: ['Computer Vision', 'Gesture Recognition', 'Real-Time Translation', 'Text Output'],
-    outputs: ['Gesture recognition demo', 'Scenario dictionary', 'User journey map', 'Error analysis'],
+      'Build a two-person demo: one side recognizes 10 signs or fingerspelled letters through a camera, the other side uses speech-to-text, and both messages appear in a shared chat log.',
+    aiPowers: [
+      'Gesture Recognition',
+      'Temporal Motion Understanding',
+      'Speech to Text',
+      'Machine Translation',
+      'Accessible Interaction Design',
+    ],
+    outputs: [
+      'Shared chat interface',
+      'Gesture recognition test page',
+      'Failure-case examples',
+      'Accessibility scenario demo video',
+    ],
     question:
-      'Who at school might miss important information because they cannot hear, see, speak the language, or express themselves in the usual way?',
+      'When AI translates sign language, what meaning can be lost from motion, facial expression, and context?',
     insight:
-      'Choose one small communication setting first, such as cafeteria ordering, classroom help, or club signup. A few accurate high-frequency needs are more useful than a vague universal translator.',
+      'Start with a small vocabulary and clear boundaries: recognizing 10-20 common signs is enough for a first demo. Accessibility projects should get feedback from real users or teachers and should not claim to replace professional interpreters.',
     difficulty: 'High',
+    coverImageAlt:
+      'Official CAC Top Apps image showing the Computerpreter student team with a sign-language and technology icon.',
+    coverImageSource:
+      'CAC Top Apps official results image: https://www.congressionalappchallenge.us/meet-the-2025-cac-top-apps-winners-presented-by-thecoderschool/',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show two users in one chat window, one signing in ASL and one speaking, with AI connecting gestures, speech, and English messages.',
   },
   'project-cassie': {
     title: 'AI-Assisted Logs for Type 1 Diabetes Management',
@@ -3287,6 +3312,189 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageStatus: 'Needs confirmation',
     coverImageHint:
       'Show child speech practice, a recording button, AI pronunciation feedback, listening mini-game, and between-session progress.',
+  },
+  verdis: {
+    title: 'Use Drones and AI to Map Crop Health',
+    sourceProject: 'VERDIS',
+    year: '2025-2026',
+    award:
+      '2025 Congressional App Challenge Top Apps South Regional Winner; TX03 District Winner',
+    themeLabel: 'AgriTech',
+    audience:
+      'Farmers, agriculture clubs, school greenhouses, community gardens, and family farms that need low-cost crop monitoring',
+    hook:
+      'Farmers cannot inspect every field every day. Can AI turn aerial images into crop health maps?',
+    problem:
+      'In large fields, disease, water stress, and uneven growth are hard to spot quickly by eye. Commercial agricultural remote-sensing tools can be expensive and may not fit small farms.',
+    aiMove:
+      'The CAC Top Apps page says VERDIS surveys fields with a custom drone and infrared camera, stitches orthomosaic imagery, computes NDVI values, uses a fine-tuned CNN to identify crop disease strains, and uses a pre-designed LLM to help farmers interpret results and respond.',
+    studentProject:
+      'Campus plant health map, balcony garden disease log, community garden inspection report, or environmental club green-space monitor',
+    demoGoal:
+      'Use public plant images or school green-space photos to build a health-map demo that marks possible problem areas, explains NDVI or color heatmaps, and generates care suggestions plus follow-up questions.',
+    aiPowers: [
+      'Image Stitching',
+      'NDVI or Vegetation Indexing',
+      'Convolutional Neural Networks',
+      'Disease Classification',
+      'LLM Explanation and Recommendation Generation',
+    ],
+    outputs: [
+      'Field health map',
+      'Disease detection screenshots',
+      'Farmer advice cards',
+      'Drone inspection workflow',
+      'Misclassification risk note',
+    ],
+    question:
+      'When AI sees an unhealthy crop area, how can it separate water stress, disease, shadows, and camera error?',
+    insight:
+      'A class demo can begin with a few images and manual labels instead of a real drone. Keep AI detection results separate from findings that still need expert confirmation.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Official CAC Top Apps image for VERDIS, an agricultural drone and crop-health analysis project.',
+    coverImageSource:
+      'CAC Top Apps official results image: https://www.congressionalappchallenge.us/meet-the-2025-cac-top-apps-winners-presented-by-thecoderschool/',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a drone over farmland, a green and yellow crop-health heatmap, disease labels, and AI-generated farming advice cards.',
+  },
+  boostt1d: {
+    title: 'Turn Type 1 Diabetes Data Into AI Reminders and Peer Support',
+    sourceProject: 'BoostT1D',
+    year: '2025-2026',
+    award:
+      '2025 Congressional App Challenge Top Apps National Champion; East Regional Winner; MA04 District Winner',
+    themeLabel: 'Health Management',
+    audience:
+      'Teenagers with Type 1 Diabetes, parents, school nurses, peer-support volunteers, and chronic-condition education projects',
+    hook:
+      'Chronic-care data changes every day. Can AI make glucose trends, meals, and peer experience easier to understand?',
+    problem:
+      'Continuous glucose data, meals, insulin, and exercise all affect one another. Teenagers need help understanding patterns and connecting with peers, but a regular app must not become a medical diagnosis tool.',
+    aiMove:
+      'The CAC Top Apps page says BoostT1D uses Google AI for carb and insulin dose estimation from food photos and current blood glucose, analyzes glucose trends, provides dose-adjustment recommendations, and includes a buddy feature plus a volunteer mentorship program.',
+    studentProject:
+      'Health data explanation helper, exercise and meal review log, peer-support matching prototype, school nurse summary, or chronic-condition Q&A resource',
+    demoGoal:
+      'Use simulated glucose and meal data to build a safe demo: upload a sample meal photo or enter example data, then have AI generate a trend explanation, questions to ask a clinician, and a peer-support resource card.',
+    aiPowers: [
+      'Image Understanding',
+      'Time-Series Trend Analysis',
+      'Recommendation Matching',
+      'Health Data Summarization',
+      'AI Safety Boundary Prompts',
+    ],
+    outputs: [
+      'Data trend chart',
+      'Meal estimation example',
+      'Peer matching page',
+      'Medical-boundary note',
+      'User story card',
+    ],
+    question:
+      'When is a health AI explaining data, and when has it crossed into medical advice?',
+    insight:
+      'Use simulated data only and do not provide real dosage advice. Focus on logging, reflection, questions for professionals, and support resources rather than diagnosis or treatment promises.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Official CAC Top Apps image for BoostT1D, a Type 1 Diabetes management app project.',
+    coverImageSource:
+      'CAC Top Apps official results image: https://www.congressionalappchallenge.us/meet-the-2025-cac-top-apps-winners-presented-by-thecoderschool/',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a mobile health dashboard, glucose trend line, meal photo analysis, peer-support avatars, and a clear safety-boundary notice.',
+  },
+  roadwatch: {
+    title: 'Let Vehicle Cameras Detect Road Problems Automatically',
+    sourceProject: 'RoadWatch',
+    year: '2025-2026',
+    award: '2025 Congressional App Challenge Top Creative App Winner; NJ06 District Winner',
+    themeLabel: 'Smart Cities',
+    audience:
+      'Drivers, cyclists, local transportation departments, campus safety teams, and community volunteers',
+    hook:
+      'Potholes, cracks, and broken streetlights appear every day. Can AI help a city notice them as people move around?',
+    problem:
+      'Road issues are often found through manual inspection or resident complaints, which can be slow, imprecise, and hard to aggregate into a real-time map.',
+    aiMove:
+      'The CAC Top Apps page describes RoadWatch as an AI-powered mobile app and hardware ecosystem. Raspberry Pi cameras and Bluetooth dashcams capture road footage, machine learning scans for potholes, cracked pavement, broken streetlights, and other anomalies, and local governments receive location-based map data.',
+    studentProject:
+      'Campus pavement inspection tool, cycling safety map, community facilities repair helper, school-bus route risk map, or public infrastructure visual inspection demo',
+    demoGoal:
+      'Build a photo-upload demo that identifies potholes, cracks, or broken lights, then generates a repair location, severity estimate, and map marker.',
+    aiPowers: [
+      'Object Detection',
+      'Image Classification',
+      'Geolocation Aggregation',
+      'Anomaly Alerts',
+      'Urban Data Visualization',
+    ],
+    outputs: [
+      'Road issue map',
+      'Detection screenshots',
+      'Repair report form',
+      'Severity rules',
+      'Demo video',
+    ],
+    question:
+      'If AI mistakes a shadow for a pothole, what cost does that create for residents and local government?',
+    insight:
+      'Begin with still photos and manual labels. Real traffic data involves privacy and safety risks, so a classroom demo should not capture license plates or pedestrian faces while driving.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official CAC Top Apps image for RoadWatch, a road anomaly detection app project.',
+    coverImageSource:
+      'CAC Top Apps official results image: https://www.congressionalappchallenge.us/meet-the-2025-cac-top-apps-winners-presented-by-thecoderschool/',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a road-camera view, pothole detection boxes, map repair points, a local-government dashboard, and a safety reminder.',
+  },
+  'urban-blight-detector': {
+    title: 'Use Street-View Images for an Early Urban Blight Checkup',
+    sourceProject: 'Urban Blight Detector',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge National Champion, Middle School Track 2; Southeast Regional Champion',
+    themeLabel: 'Urban Governance',
+    audience:
+      'City planning teams, community organizations, school civic-tech clubs, housing maintenance teams, and resident volunteers',
+    hook:
+      'Neighborhood decline does not happen overnight. Can AI spot places that need maintenance and investment earlier from street images?',
+    problem:
+      'Signals of urban blight can be scattered across street-view imagery, complaint records, and manual inspections. If they are found too late, they may affect community safety, environment, and residents quality of life.',
+    aiMove:
+      'The official project title is "How accurately can an AI model detect urban blight using street-view images." The exact model is not public. A classroom version can train or test an image classifier on street-view or campus photos to flag damaged facades, vacancy, litter, graffiti, or broken facilities, then generate a human-review checklist.',
+    studentProject:
+      'Campus facilities aging detector, community environment issue map, public-space maintenance priority list, or neighborhood observation dashboard',
+    demoGoal:
+      'Build a street-view or campus-photo classification demo that labels possible blight signals, creates a heatmap and inspection priority list, and explains model uncertainty.',
+    aiPowers: [
+      'Street-View Image Classification',
+      'Object Detection',
+      'Geospatial Visualization',
+      'Uncertainty Prompts',
+      'Human Review Workflow',
+    ],
+    outputs: [
+      'Neighborhood heatmap',
+      'Image annotation examples',
+      'Inspection priority table',
+      'Bias risk note',
+      'Community proposal',
+    ],
+    question:
+      'If training data comes mostly from certain neighborhoods, could AI wrongly treat poverty or old buildings as the problem?',
+    insight:
+      'Design this as a tool that asks humans to look closer, not as a tool that labels communities. Data, thresholds, and review steps should be transparent and resident-informed.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Official ORISE winner photo showing Shan Vance at the 2026 Presidential AI Challenge national event for the urban blight street-view AI project.',
+    coverImageSource:
+      'Official winner photo: https://orise.orau.gov/ai-challenge/winners/2026/national.html',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a grid of street-view photos, damaged-facility detection boxes, an urban heatmap, a human review checklist, and community repair priorities.',
   },
 }
 
