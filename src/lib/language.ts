@@ -3496,6 +3496,239 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a grid of street-view photos, damaged-facility detection boxes, an urban heatmap, a human review checklist, and community repair priorities.',
   },
+  'intelligent-municipal-finance': {
+    title: 'Let AI Check a City Budget Before Money Gets Wasted',
+    sourceProject: 'Intelligent Municipal Finance',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge East Central Regional Champion, High School Track 1; 4-H youth national finalist',
+    themeLabel: 'Public Finance',
+    audience:
+      'Small-city finance staff, school project managers, community oversight groups, and student public-policy clubs',
+    hook:
+      'If a duplicate payment is hidden inside thousands of invoices, can AI raise the first review flag?',
+    problem:
+      'Local governments and school programs handle large volumes of budgets, contracts, invoices, and payments. Duplicate payments, unusual transactions, or budget risks can waste public resources that should support schools, fire departments, and community programs.',
+    aiMove:
+      'The official 4-H report says Intelligent Municipal Finance uses AI tools to track spending, identify duplicate payments and unusual transactions, review contracts, and predict budget problems. The team estimates that even a small improvement in spending efficiency could save Iowa communities significant money. A classroom version should use simulated ledgers, contract summaries, and rule thresholds, with real financial data kept behind strict permission and privacy controls.',
+    studentProject:
+      'Student-club budget anomaly checker, class fundraiser ledger review, community project transparency dashboard, student-government contract summary, or nonprofit spending recap tool',
+    demoGoal:
+      'Use a simulated budget and invoice table to build a financial checkup demo that finds duplicate payments, unusual amounts, missing contract notes, and produces a one-page risk summary plus human-review checklist.',
+    aiPowers: [
+      'Table Analysis',
+      'Anomaly Detection',
+      'Contract Summarization',
+      'Rule Explanation',
+      'Budget Trend Forecasting',
+      'Human Review Workflow',
+    ],
+    outputs: [
+      'Budget risk dashboard',
+      'Anomalous spending list',
+      'Contract summary cards',
+      'Review rule explanation',
+      'Improvement proposal poster',
+    ],
+    question:
+      'If AI flags a normal payment as suspicious, who explains, reviews, and takes responsibility for the decision?',
+    insight:
+      'Use only public or simulated data in class. Frame AI as a review assistant that helps people ask better questions, not as a tool that decides whether spending is illegal.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'No locally saved cover image yet for Intelligent Municipal Finance; the official 4-H article includes a team image but the image CDN blocked this download.',
+    coverImageSource:
+      'Official 4-H article image could not be downloaded locally: https://4-h.org/about/blog/4-h-youth-advance-in-presidential-ai-challenge/',
+    coverImageStatus: 'Needs image',
+    coverImageHint:
+      'Show a city budget table, duplicate payment highlights, a contract summary sidebar, risk trend chart, and human-review button.',
+  },
+  'project-nitri-shield': {
+    title: 'Turn Drug Discovery Into an Explainable AI Screening Desk',
+    sourceProject: 'Project Nitri-Shield',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge East Central Regional Champion, High School Track 2; Johnston Community School District regional winner',
+    themeLabel: 'Life Science',
+    audience:
+      'Biology students, science-fair teams, early drug-discovery learners, school research clubs, mentors, and judges',
+    hook:
+      'Drug discovery means searching through a huge molecular space. Can AI help students rank the clues worth testing next?',
+    problem:
+      'Real drug discovery requires experiments, literature review, and candidate screening. Middle and high school students rarely see the full path from data to hypothesis, and AI science tools can be mistaken for automatic answers.',
+    aiMove:
+      'Johnston Community School District confirms Project Nitri-Shield advanced as a Track 2 technical implementation project, and the ORISE regional page lists it as the East Central High School Track 2 regional champion. Public award-material OCR identifies its direction as an AI-powered drug discovery platform, but the full model and dataset are not public. A classroom version can use open sample molecular features, target descriptions, and article abstracts so AI can rank candidates, explain evidence, and show uncertainty.',
+    studentProject:
+      'Plant compound screening, medicine side-effect evidence cards, science-paper Q&A helper, molecular property visualizer, or science-fair hypothesis ranker',
+    demoGoal:
+      'Build a candidate-screening demo: enter a disease target and sample molecule table, then generate a ranked shortlist, evidence summary, risk notes, and next experiment questions.',
+    aiPowers: [
+      'Table Feature Analysis',
+      'Candidate Ranking',
+      'Scientific Literature Summarization',
+      'Explainable Text Generation',
+      'Risk and Uncertainty Prompts',
+    ],
+    outputs: [
+      'Candidate molecule ranking',
+      'Evidence cards',
+      'Model limitation note',
+      'Science workflow diagram',
+      'Demo video',
+    ],
+    question:
+      'When AI suggests a candidate that sounds scientific, what still needs to be verified by people and experiments?',
+    insight:
+      'Do not produce diagnosis or treatment advice. Treat the demo as science exploration and literature organization, with every conclusion labeled by source, confidence, and validation step.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Johnston Community School District article image showing the Presidential AI Challenge visual for Project Nitri-Shield advancement coverage.',
+    coverImageSource:
+      'Johnston Community School District article image: https://www.johnstoncsd.org/news/2026/04/presidential-ai-challenge/',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show molecule cards, candidate ranking, evidence summaries, an experiment validation path, and a clear safety disclaimer.',
+  },
+  'gadugi-learn': {
+    title: 'Use AI to Keep an Endangered Language Practiceable',
+    sourceProject: 'Gadugi Learn',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge West Central Regional Champion, High School Track 1; Oklahoma State Winner',
+    themeLabel: 'Language Preservation',
+    audience:
+      'Cherokee language learners, cultural preservation groups, school language clubs, community educators, and bilingual families',
+    hook:
+      'When language-learning resources are scarce, can AI help turn them into lessons people can hear, practice, and pass on?',
+    problem:
+      'Many Indigenous and minority languages face limited learning materials, few practice partners, and low continuity among young learners. Saving vocabulary lists is not the same as helping people use the language.',
+    aiMove:
+      'OSSM reports that Gadugi Learn uses artificial intelligence to preserve the Cherokee language and won the Oklahoma state level. The ORISE regional page confirms it as the West Central High School Track 1 regional champion. The specific model is not public, so a classroom version can focus on vocabulary cards, pronunciation practice, scenario dialogues, cultural context notes, and community review.',
+    studentProject:
+      'Dialect vocabulary practice tool, hometown language story cards, campus multilingual greeting helper, cultural heritage glossary, or community interview organizer',
+    demoGoal:
+      'Build a language-learning demo with 30 approved words or phrases, then generate speaking, listening, reading, and writing practice, scenario quizzes, cultural notes, and human-review labels.',
+    aiPowers: [
+      'Multilingual Text Generation',
+      'Speech or Pronunciation Feedback',
+      'Retrieval-Augmented Q&A',
+      'Learning Path Recommendations',
+      'Human Review Workflow',
+    ],
+    outputs: [
+      'Interactive vocabulary cards',
+      'Dialogue practice page',
+      'Pronunciation feedback example',
+      'Cultural context cards',
+      'Content review checklist',
+    ],
+    question:
+      'If AI language content is incomplete or inaccurate, who has the authority to decide whether it should be taught?',
+    insight:
+      'Start only with community-approved public materials. Translations, pronunciation, and cultural explanations need review by fluent speakers or trusted sources.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official OSSM article image related to the Gadugi Learn team winning the Presidential AI Challenge Oklahoma state title.',
+    coverImageSource:
+      'OSSM official article image: https://www.ossm.edu/ossm-students-win-presidential-ai-challenge-state-title/',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show Cherokee vocabulary cards, pronunciation waveforms, cultural story fragments, community-review tags, and a learning path.',
+  },
+  'narco-aegis': {
+    title: 'Use AI to Spot Youth Drug Risks Hidden in Social Posts',
+    sourceProject: 'Narco-Aegis',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge West Regional Champion, High School Track 1; California champion and national finalist reported by World Journal',
+    themeLabel: 'Public Safety',
+    audience:
+      'Youth safety organizations, school counselors, community public-safety teams, parent education programs, and human law-enforcement reviewers',
+    hook:
+      'If drug promotion first appears as coded language on social platforms, can AI help adults notice risk earlier?',
+    problem:
+      'Teenagers may encounter drug promotion, coded sales language, or targeted dealing on social platforms. Manual review cannot cover everything quickly, while false positives can harm privacy and innocent users.',
+    aiMove:
+      'World Journal reports that Narco-Aegis focuses on using AI to detect drug promotion and sales on social platforms, especially attempts to sell to teenagers, so law enforcement can receive earlier reference signals. The ORISE regional page confirms Narco-Aegis as the West High School Track 1 regional champion. A classroom version should use fictional or anonymized sample posts and public safety-education material, not real minors social media data.',
+    studentProject:
+      'Campus online-safety phrase detector, scam language warning tool, dangerous challenge detector, mental-health help-signal triage, or health education content review helper',
+    demoGoal:
+      'Build a simulated social-post risk demo: enter fictional posts, have AI label possible risk terms, explain the reason, assign a human-review level, and suggest a safety-education response.',
+    aiPowers: [
+      'Text Classification',
+      'Keyword and Semantic Detection',
+      'Risk Scoring',
+      'Explanation Generation',
+      'Human Review Queue',
+      'Privacy-Aware Design',
+    ],
+    outputs: [
+      'Simulated post risk panel',
+      'False-positive analysis',
+      'Human-review workflow',
+      'Privacy protection note',
+      'Education response templates',
+    ],
+    question:
+      'When a safety tool might misread ordinary speech, how should appeal, review, and transparency rules work?',
+    insight:
+      'Do not scrape real student social media. Use fictional data to practice the model idea, and make privacy, bias, and false alarms part of the project display.',
+    difficulty: 'High',
+    coverImageAlt:
+      'World Journal news image showing Narco-Aegis team members covered in a story about the Presidential AI Challenge.',
+    coverImageSource:
+      'World Journal article image: https://www.worldjournal.com/wj/story/121359/9566603',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show anonymized social posts, highlighted risk terms, a human-review queue, privacy masks, and safety education prompts.',
+  },
+  'hotel-room-identification': {
+    title: 'Help Investigators Identify Hotel Rooms From Evidence Photos',
+    sourceProject: 'Hotel Room Identification',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge National Champion, High School Track 1; Northeast Regional Champion',
+    themeLabel: 'Public Safety',
+    audience:
+      'Investigators, missing-person response teams, hotel safety collaborators, anti-exploitation nonprofits, and digital forensics learners',
+    hook:
+      'A room photo may contain location clues. Can AI help investigators narrow the search faster?',
+    problem:
+      'Investigators sometimes need to infer a location from wallpaper, headboards, lamps, curtains, or room layouts inside an image. Manually comparing those clues against hotel image collections is slow, and important patterns can be missed.',
+    aiMove:
+      'The ORISE national page lists Khandakar Mahin as the High School Track 1 National Champion, and the ORISE regional page names the project "Utilizing Computer Vision for Hotel Room Identification in Criminal Investigations." Education Week summarizes it as a tool that helps investigators identify hotels from evidence images. A classroom version should use public or simulated hotel-room images, not real case material.',
+    studentProject:
+      'Campus lost-item location matcher, museum room guide, travel photo location clue finder, school-space photo classifier, or architecture-style image search tool',
+    demoGoal:
+      'Build a room-image retrieval demo: upload a simulated room photo, identify visible clues, match candidate locations, and explain why they look similar plus what a human still needs to confirm.',
+    aiPowers: [
+      'Image Feature Extraction',
+      'Similar Image Retrieval',
+      'Object Detection',
+      'Visual Explanation',
+      'Evidence Summary',
+      'Human Confirmation Workflow',
+    ],
+    outputs: [
+      'Candidate room match list',
+      'Image clue annotations',
+      'Similarity explanation',
+      'Misidentification risk note',
+      'Human review form',
+    ],
+    question:
+      'If AI mistakes one similar room for another, how could an investigation be misdirected?',
+    insight:
+      'Train with public samples or staged room photos. Emphasize that the tool can narrow possibilities but cannot replace investigation or legal judgment.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Official ORISE winner photo showing Khandakar Mahin at the 2026 Presidential AI Challenge national event for the hotel room identification project.',
+    coverImageSource:
+      'Official ORISE winner photo: https://orise.orau.gov/ai-challenge/winners/2026/national.html',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show hotel room photos, feature boxes around lamps and wallpaper, similar-room retrieval results, evidence notes, and human confirmation markers.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
