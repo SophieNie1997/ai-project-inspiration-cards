@@ -3313,6 +3313,241 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show child speech practice, a recording button, AI pronunciation feedback, listening mini-game, and between-session progress.',
   },
+  scenar: {
+    title: 'Turn Emergency Scenes Into Standard AI Reports',
+    sourceProject: 'SCENAR',
+    year: '2026',
+    award:
+      '2026 Global Appathon Junior Team Winner; App Inventor Foundation and MIT App Inventor global mobile-app competition',
+    themeLabel: 'Health Management',
+    audience:
+      'First responders, campus safety teachers, family caregivers, hospital triage desks, and students or parents who need emergency medical information ready quickly',
+    hook:
+      'In an emergency, information breaks down fast. Can AI turn the scene into a standard report for responders?',
+    problem:
+      'During an accident, medical history, allergies, location, and the event timeline may be unclear or transmitted too slowly, forcing responders to spend time asking follow-up questions.',
+    aiMove:
+      'The official description says SCENAR is an emergency response app that uses AI to organize incident information into a standardized report format for first responders. It also includes personal medical profiles, hospital routing, and emergency guidance. A classroom version can ask for the most important details first, then generate a structured handoff note.',
+    studentProject:
+      'Campus emergency handoff form, sports-day injury report helper, lab safety incident recorder, family emergency profile card, or school-bus incident report tool',
+    demoGoal:
+      'Build a demo that turns an incident description, location, symptoms, and allergy information into a standard emergency report, hospital-routing prompt, and human review checklist.',
+    aiPowers: [
+      'Information Extraction',
+      'Structured Report Generation',
+      'Risk Triage',
+      'Location Context',
+      'Emergency Q&A',
+      'Human Review Workflow',
+    ],
+    outputs: [
+      'Emergency report page',
+      'Medical profile card',
+      'Hospital-routing prompt',
+      'Risk confirmation checklist',
+      'False-alarm and missing-data boundary note',
+    ],
+    question:
+      'If AI misses a critical allergy in an emergency report, how should the system force review before anyone acts?',
+    insight:
+      'Use simulated scenarios only. Do not collect real medical privacy data, and label every suggestion as requiring human confirmation and not replacing emergency professionals.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; SCENAR does not have a separate project interface image on the page.',
+    coverImageSource:
+      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show an emergency report, medical profile, hospital route, event timeline, and human confirmation button; replace later with a project interface or demo-video screenshot if available.',
+  },
+  'food-flow': {
+    title: 'Build an AI Budget Coach That Reduces Student Stress',
+    sourceProject: 'Food Flow',
+    year: '2026',
+    award:
+      '2026 Global Appathon Junior Individual Winner; App Inventor Foundation and MIT App Inventor global mobile-app competition',
+    themeLabel: 'Startup Tool',
+    audience:
+      'Students learning to manage allowance, school club treasurers, family budgeting learners, and teenagers who need low-pressure financial literacy practice',
+    hook:
+      'When allowance, club budgets, or family spending feels stressful, can AI help organize the money story first?',
+    problem:
+      'Many people lack basic money-management practice, so unclear spending, weak budgeting, or debt pressure can affect daily life and mental well-being. Teenagers also need a safe, non-commercial practice space.',
+    aiMove:
+      'The official description says Food Flow provides AI-powered financial guidance, budgeting tools, and a supportive community to help users make informed financial decisions, reduce inequality, and improve well-being. A classroom version can use simulated spending data to generate budget suggestions and reflection prompts.',
+    studentProject:
+      'Allowance budget coach, school-club event budget planner, class fundraiser cost helper, family shopping comparison sheet, or teen financial-literacy game',
+    demoGoal:
+      'Build a demo where users enter income, goals, and expenses; AI categorizes the budget, flags risks, suggests savings steps, and generates a weekly budget challenge card.',
+    aiPowers: [
+      'Expense Classification',
+      'Budget Recommendation',
+      'Risk Alerts',
+      'Goal Breakdown',
+      'Supportive Coaching Language',
+      'Simulated Data Analysis',
+    ],
+    outputs: [
+      'Budget dashboard',
+      'Expense category table',
+      'Savings suggestion cards',
+      'Goal progress bar',
+      'Financial advice boundary note',
+    ],
+    question:
+      'If AI advice sounds like an order, could it make users more anxious? How can it sound like a choice instead?',
+    insight:
+      'Use fake amounts and simulated receipts only. Do not handle real bank, investment, or loan advice; focus on classification, reflection, and planning.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; Food Flow does not have a separate project interface image on the page.',
+    coverImageSource:
+      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show budget categories, spending alerts, goal progress, stress-reduction prompts, and simulated receipts; replace later with a project interface or demo-video screenshot if available.',
+  },
+  ecobin: {
+    title: 'Make Used Cooking Oil Recycling as Easy as Checking In',
+    sourceProject: 'Ecobin',
+    year: '2026',
+    award:
+      '2026 Global Appathon Youth Team Winner; App Inventor Foundation and MIT App Inventor global mobile-app competition',
+    themeLabel: 'Environmental Action',
+    audience:
+      'Households, street vendors, restaurants, school cafeterias, community environmental volunteers, and market sellers that need to recycle used cooking oil',
+    hook:
+      'Pouring a small bottle of used oil down the drain is easy. Can AI make recycling visible, trackable, and rewarding?',
+    problem:
+      'Small amounts of used cooking oil are often dumped into drainage systems because recycling points are inconvenient, logging is tedious, or the reward is unclear, creating pollution and wasting resources.',
+    aiMove:
+      'The official description says EcoBin connects users with nearby smart recycling bins, tracks environmental impact, and offers rewards. An AI-powered smart bin identifies and measures the oil before logging it into the user account. A classroom version can simulate image, weight, or survey data for recycling recognition and points.',
+    studentProject:
+      'Campus used-oil recycling map, cafeteria eco-points system, community recycling-bin status board, household kitchen resource tracker, or environmental club check-in app',
+    demoGoal:
+      'Build a demo that finds nearby recycling points, lets users upload an oil-bottle photo or weight, uses AI to judge whether it meets collection rules, and tracks eco-points plus community impact.',
+    aiPowers: [
+      'Image Recognition',
+      'IoT Data Logging',
+      'Location Recommendation',
+      'Reward Rule Generation',
+      'Environmental Impact Calculation',
+      'Anomaly Alerts',
+    ],
+    outputs: [
+      'Recycling point map',
+      'Used-oil log table',
+      'Eco-points page',
+      'Community impact dashboard',
+      'Smart-bin recognition flow',
+    ],
+    question:
+      'If users upload fake photos or weights to earn points, how can the system verify data without making recycling too hard?',
+    insight:
+      'Use simulated bottle photos and fake data in class. Students do not need to handle real oil, and any campus survey should first check cafeteria and facilities rules.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; Ecobin does not have a separate project interface image on the page.',
+    coverImageSource:
+      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a smart recycling bin, used-oil bottle recognition, nearby recycling map, eco-points, and community impact stats; replace later with a project interface or demo-video screenshot if available.',
+  },
+  oikos: {
+    title: 'Connect Pollution Risk and Symptoms in an AI Health Log',
+    sourceProject: 'Oikos',
+    year: '2026',
+    award:
+      '2026 Global Appathon Youth Individual Winner; App Inventor Foundation and MIT App Inventor global mobile-app competition',
+    themeLabel: 'Health Management',
+    audience:
+      'Communities affected by industrial pollution, school environmental clubs, public-health research groups, and families that need mostly offline health records',
+    hook:
+      'If you live near pollution, can AI help you record body signals and notice environmental risk earlier?',
+    problem:
+      'The connection between pollution exposure and health symptoms is often ignored. Residents may not know what to record, how to judge risk, or how to turn scattered symptoms into evidence they can discuss.',
+    aiMove:
+      'The official description says Oikos: EcoHealth Companion helps users log symptoms and understand the connection between environmental risks, pollution, and health. It offers a mostly offline interface, alerts, recommendations, and potential data contribution for studying pollution-related health risks.',
+    studentProject:
+      'Campus air-and-symptom diary, community noise or allergy tracker, heatwave health reminder, environmental-risk explainer, or anonymous public-health observation form',
+    demoGoal:
+      'Build a health-log demo that records symptoms, location, and environmental risks, then uses AI to generate risk reminders, help-seeking suggestions, and an anonymous trend chart.',
+    aiPowers: [
+      'Symptom Summarization',
+      'Environmental Risk Explanation',
+      'Reminder Generation',
+      'Offline Form Design',
+      'Anonymous Trend Analysis',
+      'Research Question Generation',
+    ],
+    outputs: [
+      'Health log form',
+      'Environmental risk alert card',
+      'Anonymous trend chart',
+      'Privacy note',
+      'Community action suggestions',
+    ],
+    question:
+      'When AI sees symptoms and pollution data together, when should it say “possibly related” instead of claiming a cause?',
+    insight:
+      'Use simulated symptoms and public environmental data. Avoid collecting classmates’ real health privacy, and remind users to seek help from doctors or trusted adults.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; Oikos does not have a separate project interface image on the page.',
+    coverImageSource:
+      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a symptom log, pollution risk map, offline record, health reminder, and anonymous trend chart; replace later with a project interface or demo-video screenshot if available.',
+  },
+  safeeat: {
+    title: 'Scan Ingredient Labels for Accessibility and Allergy Risk',
+    sourceProject: 'SafeEat',
+    year: '2026',
+    award:
+      '2026 Global Appathon Honorable Mention; App Inventor Foundation and MIT App Inventor global mobile-app competition',
+    themeLabel: 'Accessibility Tech',
+    audience:
+      'Older adults, visually impaired users, people with food allergies or intolerances, caregivers, and families that need to understand food labels quickly',
+    hook:
+      'Ingredient labels are tiny and dense. Can AI read them aloud and highlight allergy risks?',
+    problem:
+      'Food ingredient lists can be small, technical, and hard to read, especially for visually impaired users and older adults. Missing allergy, intolerance, or dietary restriction information can directly affect safety.',
+    aiMove:
+      'The official description says SafeEat is an AI-powered food ingredient list scanner that helps older and visually impaired users understand whether a food is safe for their allergies, intolerances, and dietary restrictions. A classroom version can use OCR to read labels, then AI to explain risks and alternatives.',
+    studentProject:
+      'School cafeteria allergy helper, family food-label reader, supermarket ingredient translator, low-sugar or vegetarian filter, or accessible shopping list',
+    demoGoal:
+      'Build a demo that scans or pastes an ingredient list, uses OCR to extract text, highlights risks against a user allergy profile, and generates a voice-friendly explanation.',
+    aiPowers: [
+      'OCR Text Recognition',
+      'Allergy Risk Matching',
+      'Accessible Voice Explanation',
+      'Personal Restriction Settings',
+      'Food Label Summarization',
+      'Alternative Suggestion Generation',
+    ],
+    outputs: [
+      'Ingredient scan page',
+      'Risk highlight card',
+      'Dietary restriction settings',
+      'Voice narration script',
+      'Misclassification risk note',
+    ],
+    question:
+      'Should a food-safety tool say “safe or unsafe,” or should it use risk levels and require human confirmation?',
+    insight:
+      'Use public sample labels or fictional ingredient lists. Do not replace medical advice, and always ask users with serious allergies to confirm with a trusted adult or professional.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; SafeEat also has an official pitch video for future screenshot replacement.',
+    coverImageSource:
+      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show food label scanning, allergy risk highlights, voice narration, personal restriction settings, and human confirmation prompts; replace later with an official pitch-video screenshot if available.',
+  },
   verdis: {
     title: 'Use Drones and AI to Map Crop Health',
     sourceProject: 'VERDIS',
