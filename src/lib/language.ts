@@ -4200,6 +4200,239 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show the current browser page, page title summary, local AI status, focus-mode toggle, no-upload data notice, and correction feedback.',
   },
+  resourcify: {
+    title: 'Use Computer Vision to Create a Resource Plan for People Newly Without Housing',
+    sourceProject: 'Resourcify',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge California State Champion; Canyon Crest Academy 11th-grade team',
+    themeLabel: 'Public Service',
+    audience:
+      'People newly experiencing homelessness, community service desks, volunteer teams, social innovation classes, and nonprofits that provide resource navigation',
+    hook:
+      'If someone arrives in a new area with only the items they are carrying, can AI help them find usable resources first?',
+    problem:
+      'People who have just lost stable housing may not know which shelters, benefits, weather risks, or recyclable materials can help them immediately. The information is scattered and hard to turn into action.',
+    aiMove:
+      'The SDCOE report says Resourcify uses computer vision to analyze a user\'s belongings, then combines location, weather, and budget to generate personalized recommendations. It also identifies recyclable materials that can be exchanged for income and connects users with public benefits and resources.',
+    studentProject:
+      'Community resource navigator, campus lost-and-found reuse map, extreme-weather emergency kit recommender, or volunteer material-matching tool',
+    demoGoal:
+      'Upload three simulated photos of belongings, identify object categories, then generate a resource list, weather warning, and next-step help route.',
+    aiPowers: [
+      'Computer Vision',
+      'Object Recognition',
+      'Location and Weather Data',
+      'Resource Recommendation',
+      'Risk Warnings',
+      'Public Service Workflow Design',
+    ],
+    outputs: [
+      'Object recognition results',
+      'Resource recommendation cards',
+      'Map route',
+      'Weather risk note',
+      'Human help checklist',
+    ],
+    question:
+      'When AI gives advice to vulnerable users, how can it avoid presenting uncertain suggestions as guaranteed answers?',
+    insight:
+      'Use simulated images and public resource lists in class, not real vulnerable-person data. Add uncertainty labels and human service contacts to every output.',
+    difficulty: 'High',
+    coverImageAlt:
+      'SDCOE official article image showing the Canyon Crest Academy Resourcify student team recognized in the Presidential AI Challenge.',
+    coverImageSource:
+      'Official article image: https://www.sdcoe.net/about-sdcoe/news/post/~board/news/post/sduhsd-students-named-state-champions-in-presidential-ai-challenge',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show carried-item recognition, a nearby resource map, weather alerts, recyclable-material income tips, and a human service help button.',
+  },
+  'smart-math-ai': {
+    title: 'Turn a Stuck Math Problem Into Step-by-Step Guidance Instead of a Direct Answer',
+    sourceProject: 'Smart Math AI',
+    year: '2026',
+    award:
+      '2026 Presidential AI Challenge DoWEA State Champion; Sigonella Middle High School senior project',
+    themeLabel: 'Education Equity',
+    audience:
+      'Students stuck on math after class, math teachers, peer tutoring clubs, engineering design students, and military-connected school communities needing accessible study support',
+    hook:
+      'Can an AI tutor ask about your thinking like a teacher instead of simply giving the answer?',
+    problem:
+      'When students are stuck on math, many platforms provide a final answer or generic steps. They may not diagnose the concept gap, and when a teacher is unavailable students can give up or copy the answer.',
+    aiMove:
+      'Army.mil and DoWEA report that Grady Guth built Smart Math AI in an engineering design course using HTML, CSS, JavaScript, and Google Gemini integration. The system provides real-time step-by-step guidance and was informed by peer surveys about limits in existing platforms.',
+    studentProject:
+      'Campus math concept coach, mistake-based hint assistant, geometry proof helper, peer tutoring bot, or homework companion that refuses to skip learning',
+    demoGoal:
+      'Enter an algebra or geometry problem, have AI identify the likely concept gap, provide three levels of hints, generate a follow-up practice question, and record whether the student can explain the idea.',
+    aiPowers: [
+      'LLM Reasoning',
+      'Step-by-Step Hints',
+      'Misconception Diagnosis',
+      'Frontend Interaction',
+      'Learning Feedback',
+      'Answer-Safety Rules',
+    ],
+    outputs: [
+      'Hint-level interface',
+      'Misconception labels',
+      'Generated practice question',
+      'Understanding record',
+      'No-direct-answer policy note',
+    ],
+    question:
+      'When should AI give the answer, and when should it only give hints? Who should decide that boundary?',
+    insight:
+      'Start with public or self-written practice problems. Make the hint levels and the student\'s explanation of understanding the main feature.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'DoWEA official article image showing students using laptops for another Presidential AI Challenge student AI project; the same article includes Smart Math AI.',
+    coverImageSource:
+      'Official article image: https://www.army.mil/article/292161/department_of_war_education_activity_recognizes_2026_presidential_ai_challenge_state_champions',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a math-problem input box, three hint levels, misconception labels, student explanation check, and a learning agreement that avoids direct answers.',
+  },
+  'wheat-disease-forecasting-ai': {
+    title: 'Use Climate Data to Warn About Wheat Disease Earlier',
+    sourceProject: 'Wheat Disease Forecasting AI',
+    year: '2026',
+    award: '2026 National High School Big Data Challenge first place; Scale AI Award',
+    themeLabel: 'Smart Agriculture',
+    audience:
+      'Farmers, agriculture researchers, food-security project teams, climate clubs, and high-school students using data science for environmental problems',
+    hook:
+      'If changing weather shifts crop disease patterns, can students use public data to warn farmers earlier?',
+    problem:
+      'Wheat disease risk depends on humidity, temperature, rainfall, and other environmental conditions. Climate change can shift high-risk times and regions, while farmers may not easily connect scattered data into early warnings.',
+    aiMove:
+      'Times of India reports that Grade 11 student Gurnoor Kaur used open datasets to analyze climate records and historical crop disease outbreaks, then applied AI models to predict where and when wheat pathogens may appear in North America.',
+    studentProject:
+      'Campus plant disease risk map, community garden pest warning tool, city tree health monitor, or climate-data crop risk dashboard',
+    demoGoal:
+      'Load sample weather and disease records, train a simple model, then output high-risk areas for the next week, key climate factors, and action suggestions.',
+    aiPowers: [
+      'Machine Learning Classification',
+      'Time-Series Data Analysis',
+      'Climate Data Processing',
+      'Risk Mapping',
+      'Feature Explanation',
+      'Prediction Uncertainty',
+    ],
+    outputs: [
+      'Risk heatmap',
+      'Data source table',
+      'Model explanation card',
+      'Early warning note',
+      'Error and uncertainty statement',
+    ],
+    question:
+      'For agricultural risk prediction, should AI worry more about missed warnings or false alarms, and why?',
+    insight:
+      'Use public weather samples and simulated disease records in class. Show data sources, limits, and uncertainty instead of giving real farming advice.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Times of India article image about Gurnoor Kaur winning a national high-school data competition for an AI wheat disease prediction project.',
+    coverImageSource:
+      'News article image: https://timesofindia.indiatimes.com/science/meet-gurnoor-kaur-indian-origin-teen-wins-canadas-national-high-school-competition-for-ai-project-predicting-wheat-diseases/articleshow/129503948.cms',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show weather curves, a wheat disease risk map, a wheat field photo, model confidence, and early monitoring advice for farmers.',
+  },
+  psychspt: {
+    title: 'Add Explainable AI Assessment to Mental Health Questionnaires',
+    sourceProject: 'PsychSPT',
+    year: '2025',
+    award:
+      'National 4-H AI Challenge ages 16-18 first place; Regeneron ISEF 2025 Behavioral and Social Sciences project',
+    themeLabel: 'Health Research',
+    audience:
+      'School mental health educators, research clubs, youth public-health projects, student groups needing anonymous trend checks, and public-health researchers',
+    hook:
+      'Can AI provide trend alerts and explanations without pretending to replace a counselor or diagnosis?',
+    problem:
+      'Mental health assessment needs accessibility and interpretability, but real diagnosis is sensitive. A black-box classifier can harm users, leak privacy, or make students think AI can replace professional support.',
+    aiMove:
+      'The ISEF project page says PsychSPT decomposes mental health assessment into representation learning, classification, and reasoning. It combines document-level pre-training, multi-task learning, narrative-reason training, a loneliness detection dataset, and a web app for trend tracking and group condition assessment.',
+    studentProject:
+      'Anonymous classroom stress thermometer, campus support-resource matcher, mood-journal trend card, mental health knowledge Q&A tool, or AI research demo that provides alerts instead of diagnosis',
+    demoGoal:
+      'Use fictional journal text and anonymous survey samples to build a trend dashboard with stress topics, confidence, explanation evidence, and resources for asking trusted adults for help.',
+    aiPowers: [
+      'NLP Classification',
+      'Representation Learning',
+      'Explainable Reasoning',
+      'Multi-Task Learning',
+      'Trend Analysis',
+      'Privacy and Safety Boundaries',
+    ],
+    outputs: [
+      'Anonymous trend dashboard',
+      'Explanation evidence cards',
+      'Resource prompt page',
+      'Model limitation note',
+      'Data ethics rules',
+    ],
+    question:
+      'Is a mental health AI output a diagnosis or an alert? How would those two words change what a user does next?',
+    insight:
+      'Use only fictional or anonymized data in class. The tool must not diagnose; every result should point to trusted adults or professional review.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Official 4-H winners page image showing Winston Fan, first-place winner for the PsychSPT AI-driven mental health assessment project.',
+    coverImageSource: '4-H official winner image: https://4-h.org/ai-challenge-winners/',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show anonymous journal text, stress-topic labels, explanation evidence, confidence level, resource buttons, and privacy boundary notes.',
+  },
+  'llms-know-when-we-are-watching': {
+    title: 'Detect Whether Large Language Models Behave Differently During Tests',
+    sourceProject: 'LLMs Know When We Are Watching',
+    year: '2026',
+    award:
+      '2026 Fairfax County Regional Science and Engineering Fair Grand Prize; Behavioral Sciences first place',
+    themeLabel: 'AI Safety',
+    audience:
+      'AI clubs, computer science teachers, model evaluation teams, students studying LLM limits, and researchers designing reliable AI tests',
+    hook:
+      'If AI knows it is being evaluated, will it answer differently than it does in ordinary use?',
+    problem:
+      'Many people test AI with fixed prompts, but a model may detect that it is in an evaluation setting and change its style or caution. If the evaluation design is too obvious, students cannot tell whether the model is reliable in normal use.',
+    aiMove:
+      'FCPS public award pages list Lang Xiong\'s project as "LLMs Know When We Are Watching: A Lightweight Framework to Quantify Evaluation Awareness." A classroom version can build a lightweight evaluation framework that compares model behavior in ordinary chat prompts versus explicit test prompts.',
+    studentProject:
+      'AI answer-consistency checker, prompt blind-test experiment, model evaluation dashboard, classroom AI literacy lab, or cross-model exam-awareness comparison',
+    demoGoal:
+      'Design an A/B test with 20 questions: one set tells AI it is being tested, the other appears like ordinary chat. Compare accuracy, caution, refusal rate, and self-explanation changes.',
+    aiPowers: [
+      'Prompt Experiment Design',
+      'LLM Evaluation',
+      'Text Similarity',
+      'Statistical Comparison',
+      'Data Visualization',
+      'Experiment Documentation',
+    ],
+    outputs: [
+      'Evaluation prompt set',
+      'A/B result table',
+      'Difference visualization',
+      'Conclusion card',
+      'Limitation statement',
+    ],
+    question:
+      'How can we test AI without teaching the model to perform only for the test?',
+    insight:
+      'The public source gives the title and awards, not the full method, so design a limited classroom experiment and describe only what the sample supports. Do not enter private data.',
+    difficulty: 'High',
+    coverImageAlt:
+      'FCPS official article image showing 2026 Regional Science and Engineering Fair Grand Prize winners; the winner list includes the LLM evaluation awareness project.',
+    coverImageSource:
+      'FCPS official article image: https://www.fcps.edu/news/nine-fcps-projects-earn-grand-prize-award-2026-regional-science-and-engineering-fair',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show A/B prompt testing, model answer-difference tables, caution metrics, refusal-rate charts, and evaluation-limit notes.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
