@@ -4433,6 +4433,238 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show A/B prompt testing, model answer-difference tables, caution metrics, refusal-rate charts, and evaluation-limit notes.',
   },
+  deckwise: {
+    title: 'Turn Scattered Research Into Editable AI Presentation Decks',
+    sourceProject: 'Deckwise',
+    year: '2026',
+    award:
+      'Product Hunt June 23, 2026 Launching Today; AI presentation agent for editable decks',
+    themeLabel: 'Learning Presentations',
+    audience:
+      'Research-learning teams, science fair teams, student club leads, students preparing project presentations, and mentors',
+    hook:
+      'When notes, files, and links are scattered, can AI first build a presentation logic students can still edit?',
+    problem:
+      'Student projects often contain many ideas and sources, but teams struggle to decide what comes first, how to layer evidence, and which details belong on slides. One-click slide generators can also create vague templates that are hard to refine.',
+    aiMove:
+      'Product Hunt and the official site describe Deckwise as turning topics, notes, files, and sources into clear editable decks. It plans the outline first, then lets users select parts of the deck and keep rewriting, reordering, redesigning, or polishing them. A classroom version can treat AI as a presentation-structure coach.',
+    studentProject:
+      'Research report deck generator, science fair defense outline assistant, club event recap slides, book report structure coach, or project pitch organizer',
+    demoGoal:
+      'Build a demo that imports project notes and three sources, then creates a six-slide outline, evidence cards for each slide, an editable speaker script, and peer feedback records.',
+    aiPowers: [
+      'Source Summarization',
+      'Outline Planning',
+      'Evidence Matching',
+      'Slide Structure Generation',
+      'Local Rewriting',
+      'Version Iteration',
+    ],
+    outputs: [
+      'Presentation outline',
+      'Six-slide draft',
+      'Evidence source table',
+      'Revision log',
+      'Peer feedback checklist',
+    ],
+    question:
+      'Is an AI slide deck helping you clarify your thinking, or letting you skip the thinking? How can you prove you understand the content?',
+    insight:
+      'If AI suggests a presentation order that differs from your research process, which version would you keep and why?',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Deckwise official OpenGraph image showing the product visual for an AI presentation agent that turns sources into editable decks.',
+    coverImageSource: 'Project website OpenGraph image: https://deckwise.io/opengraph-image',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show research files, an AI-generated outline, editable slides, local rewrite controls, evidence sources, and version history.',
+  },
+  'buddy-ai-note': {
+    title: 'Turn Daily Notes Into Confirmable Action Plans',
+    sourceProject: 'Buddy AI Note',
+    year: '2026',
+    award:
+      'Product Hunt June 23, 2026 Launching Today; daily memo that turns notes into a plan',
+    themeLabel: 'Learning Planning',
+    audience:
+      'Students with many course tasks, project group leads, student council members, club planners, teachers, and classmates organizing meeting notes',
+    hook:
+      'If all your daily ideas live in quick notes, can AI pull out only the actions that really matter?',
+    problem:
+      'Ideas, meeting notes, tasks, reminders, and email drafts often mix together during school projects. Students can miss next steps, while automation tools may act too quickly before the user has confirmed what should happen.',
+    aiMove:
+      'Product Hunt describes Buddy AI Note as a memo-first daily workspace. Users write or speak their day, and AI organizes it into a small plan. Safe steps such as reminders, focus time, and research briefs can run with one click, while anything sent to other people pauses for review. A classroom version can demonstrate plan first, confirm second.',
+    studentProject:
+      'Study journal action extractor, club meeting note assistant, competition daily project board, homework reminder generator, or confirm-before-send email draft assistant',
+    demoGoal:
+      'Build a demo where students enter one daily learning note, and AI extracts tasks, suggests schedule blocks, creates reminders and an email draft, then asks the user to confirm each item.',
+    aiPowers: [
+      'Speech-to-Text',
+      'Task Extraction',
+      'Schedule Suggestion',
+      'Priority Ranking',
+      'Email Drafting',
+      'Human Confirmation Workflow',
+    ],
+    outputs: [
+      'Daily plan card',
+      'Task list',
+      'Calendar suggestions',
+      'Email draft',
+      'Approve and reject log',
+    ],
+    question:
+      'Which actions can AI run with one click, and which actions must wait for human confirmation? Who should set that boundary?',
+    insight:
+      'Use fictional notes and meeting records first. Do not connect real email or calendars in class; focus on confirmation, undo, and correction controls.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Buddy AI Note official OpenGraph image showing the product visual for AI-assisted daily notes and meeting minutes.',
+    coverImageSource: 'Project website OpenGraph image: https://ainote.tech/og-image.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a daily note, extracted tasks, schedule suggestions, an email draft, confirmation controls, and misread feedback.',
+  },
+  hush: {
+    title: 'Help Voice AI Hear the Right Speaker in Noisy Places',
+    sourceProject: 'Hush',
+    year: '2026',
+    award:
+      'Product Hunt June 23, 2026 Launching Today; open-source noise suppression for voice AI agents',
+    themeLabel: 'Audio AI',
+    audience:
+      'Voice assistant builders, accessibility project teams, school broadcast clubs, students recording interviews, and service teams working in noisy environments',
+    hook:
+      'When a classroom, cafeteria, or outdoor space is loud, can AI clean the audio before trying to answer?',
+    problem:
+      'Voice AI can be confused by background noise, competing speakers, and audio interference, leading to missed words, false triggers, or wrong responses. This matters even more for accessibility and public-service use cases.',
+    aiMove:
+      'Product Hunt and the official site describe Hush as Weya AI\'s open-source noise suppression model for real-time calls. It removes competing voices, background noise, and audio interference so voice AI agents can hear the target speaker more clearly. A classroom version can compare audio before and after cleaning.',
+    studentProject:
+      'School interview noise reducer, noisy-classroom transcript tool, accessibility caption preprocessor, voice bot recognition test bench, or sports day announcement transcriber',
+    demoGoal:
+      'Build a demo that uploads or records three noisy audio clips, then shows before-and-after waveforms, transcript accuracy changes, noise labels, and failure-case notes.',
+    aiPowers: [
+      'Noise Suppression',
+      'Voice Activity Detection',
+      'Audio Feature Visualization',
+      'Transcript Comparison',
+      'Noise Classification',
+      'Real-Time Processing',
+    ],
+    outputs: [
+      'Before-and-after audio clips',
+      'Waveform chart',
+      'Transcript comparison table',
+      'Accuracy change summary',
+      'Failure-case cards',
+    ],
+    question:
+      'If a noise model removes a background call for help, what kind of risk has the system created?',
+    insight:
+      'Use public or self-recorded non-private audio in class. Do not record real conversations without consent, and show failure examples alongside successful demos.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Hush official OpenGraph image showing Weya AI promotional visuals for an open-source noise suppression model.',
+    coverImageSource:
+      'Project website OpenGraph image: https://framerusercontent.com/assets/tXjD0NMQ2XVyXU65l9C8DxbTKyc.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show noisy audio, cleaned waveforms, transcript accuracy comparison, noise labels, and voice AI failure cases.',
+  },
+  cotypist: {
+    title: 'Build a Local Writing Autocomplete Partner',
+    sourceProject: 'Cotypist',
+    year: '2026',
+    award:
+      'Product Hunt June 23, 2026 Launching Today; local AI autocomplete for Mac writing apps',
+    themeLabel: 'Private Writing AI',
+    audience:
+      'Students writing messages and assignments, people who need less typing effort, coding and writing clubs, privacy-conscious learners, and accessibility tool designers',
+    hook:
+      'Can AI suggest the next phrase from what you are writing without uploading the text?',
+    problem:
+      'Students may want suggestions, continuation, and formatting help while writing, but cloud writing assistants send context to servers. Strong autocomplete can also weaken the user\'s own expression if it silently takes over.',
+    aiMove:
+      'Product Hunt and the official site describe Cotypist as smart autocomplete for Mac apps such as Mail, Slack, Notes, documents, and AI prompts. Users press Tab to accept suggestions, and the tool runs locally with no cloud and no API calls. A classroom version can become a low-risk local sentence suggester.',
+    studentProject:
+      'Local essay hint tool, polite email autocomplete, English phrase suggestion assistant, accessibility input accelerator, or private study-note autocomplete',
+    demoGoal:
+      'Build an offline text-box demo where a user types half a sentence, a local model or rules generate three suggestions, and the user can accept, reject, edit, and view a no-upload data note.',
+    aiPowers: [
+      'Local Language Modeling',
+      'Context Completion',
+      'Privacy Notice Design',
+      'Keyboard Interaction',
+      'Suggestion Ranking',
+      'User Feedback Learning',
+    ],
+    outputs: [
+      'Writing input box',
+      'Autocomplete suggestions',
+      'Accept and reject log',
+      'Privacy notice',
+      'Bad suggestion feedback button',
+    ],
+    question:
+      'When is autocomplete helping you express yourself, and when does it start writing on your behalf?',
+    insight:
+      'Simulate with a small local model or rules and avoid private documents. The core comparison is between giving hints and ghostwriting.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Cotypist official OpenGraph image showing the product visual for local smart autocomplete on Mac.',
+    coverImageSource: 'Project website OpenGraph image: https://cotypist.app/img/og-image.jpg',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a writing box, Tab-to-accept suggestions, local processing notes, no-upload privacy language, and feedback on bad completions.',
+  },
+  amnesia: {
+    title: 'Ask Why You Opened a Distraction Before the Feed Takes Over',
+    sourceProject: 'Amnesia',
+    year: '2026',
+    award:
+      'Product Hunt June 23, 2026 Launching Today; local-first Mac intent tracker for distracting tabs',
+    themeLabel: 'Digital Wellbeing',
+    audience:
+      'Students who get distracted by sites and apps, study-room users, time-management clubs, parents and teachers, and students building digital wellbeing tools',
+    hook:
+      'Before you open a short-video or social site, can AI help you remember what you came to do?',
+    problem:
+      'People often open X, YouTube, Reddit, Slack, or dashboards to check one thing, then quickly forget the original intent. Blocking tools can be too blunt, while time tracking usually explains the problem only after the time is gone.',
+    aiMove:
+      'Product Hunt and the official site describe Amnesia as a local-first macOS menu bar app. It asks for intent when a user opens a distracting app, keeps a small timer on screen, checks whether the original goal was completed, and creates a private local report. A classroom version can become a browser-based study intent reminder.',
+    studentProject:
+      'Study intent reminder extension, short-video before-you-open goal card, self-study focus timer, digital wellbeing report, or local-only distraction reflection tool',
+    demoGoal:
+      'Build a browser demo that asks users to enter a goal when they open a preset distracting site, shows a floating timer, asks whether the goal was completed, and creates a local stats report.',
+    aiPowers: [
+      'Intent Capture',
+      'Timed Reminders',
+      'Local Data Storage',
+      'Behavior Summary',
+      'Data Visualization',
+      'Privacy Boundary Design',
+    ],
+    outputs: [
+      'Intent entry popup',
+      'Floating timer',
+      'Completion check',
+      'Daily distraction report',
+      'Privacy settings note',
+    ],
+    question:
+      'How can a focus tool help students without becoming a tool for monitoring them?',
+    insight:
+      'Do not record real browsing history in class. Use simulated sites and local data, and make it clear that users can turn off, delete, and choose not to share reports.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Amnesia official product demo poster showing the Mac app asking for user intent before a distracting site and keeping a reminder on screen.',
+    coverImageSource:
+      'Project website product demo image: https://www.vidursaini.com/images/amnesia/amnesia-demo-poster.jpg',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show distraction site icons, a before-opening intent field, floating timer, completion check, local daily report, and delete controls.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
