@@ -3353,12 +3353,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Use simulated scenarios only. Do not collect real medical privacy data, and label every suggestion as requiring human confirmation and not replacing emergency professionals.',
     difficulty: 'Medium-High',
     coverImageAlt:
-      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; SCENAR does not have a separate project interface image on the page.',
+      'Official MIT App Inventor SCENAR showcase video thumbnail showing two student presenters beside the SCENAR emergency-response app logo.',
     coverImageSource:
-      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+      'Official MIT App Inventor showcase video thumbnail: https://www.youtube.com/watch?v=j4ZYnqt2mTg',
     coverImageStatus: 'Needs confirmation',
     coverImageHint:
-      'Show an emergency report, medical profile, hospital route, event timeline, and human confirmation button; replace later with a project interface or demo-video screenshot if available.',
+      'Show an emergency report, medical profile, hospital route, event timeline, and human confirmation button; the cover now uses the official project showcase video thumbnail.',
   },
   'food-flow': {
     title: 'Build an AI Budget Coach That Reduces Student Stress',
@@ -3400,12 +3400,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Use fake amounts and simulated receipts only. Do not handle real bank, investment, or loan advice; focus on classification, reflection, and planning.',
     difficulty: 'Medium',
     coverImageAlt:
-      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; Food Flow does not have a separate project interface image on the page.',
+      'Official MIT App Inventor Food Flow showcase video thumbnail showing the student presenter introducing the budgeting and food-related app scenario.',
     coverImageSource:
-      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+      'Official MIT App Inventor showcase video thumbnail: https://www.youtube.com/watch?v=Ekg3atBUEsI',
     coverImageStatus: 'Needs confirmation',
     coverImageHint:
-      'Show budget categories, spending alerts, goal progress, stress-reduction prompts, and simulated receipts; replace later with a project interface or demo-video screenshot if available.',
+      'Show budget categories, spending alerts, goal progress, stress-reduction prompts, and simulated receipts; the cover now uses the official project showcase video thumbnail.',
   },
   ecobin: {
     title: 'Make Used Cooking Oil Recycling as Easy as Checking In',
@@ -3447,12 +3447,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Use simulated bottle photos and fake data in class. Students do not need to handle real oil, and any campus survey should first check cafeteria and facilities rules.',
     difficulty: 'Medium-High',
     coverImageAlt:
-      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; Ecobin does not have a separate project interface image on the page.',
+      'Official MIT App Inventor Ecobin showcase video thumbnail showing a mobile recycling app screen and smart-bin concept.',
     coverImageSource:
-      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+      'Official MIT App Inventor showcase video thumbnail: https://www.youtube.com/watch?v=cR5HPVrE1gI',
     coverImageStatus: 'Needs confirmation',
     coverImageHint:
-      'Show a smart recycling bin, used-oil bottle recognition, nearby recycling map, eco-points, and community impact stats; replace later with a project interface or demo-video screenshot if available.',
+      'Show a smart recycling bin, used-oil bottle recognition, nearby recycling map, eco-points, and community impact stats; the cover now uses the official project showcase video thumbnail.',
   },
   oikos: {
     title: 'Connect Pollution Risk and Symptoms in an AI Health Log',
@@ -3494,12 +3494,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Use simulated symptoms and public environmental data. Avoid collecting classmates’ real health privacy, and remind users to seek help from doctors or trusted adults.',
     difficulty: 'Medium-High',
     coverImageAlt:
-      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; Oikos does not have a separate project interface image on the page.',
+      'Official MIT App Inventor Oikos showcase video thumbnail showing the student presenter introducing the environmental-risk and health-log app.',
     coverImageSource:
-      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+      'Official MIT App Inventor showcase video thumbnail: https://www.youtube.com/watch?v=TjC9BKIQDuM',
     coverImageStatus: 'Needs confirmation',
     coverImageHint:
-      'Show a symptom log, pollution risk map, offline record, health reminder, and anonymous trend chart; replace later with a project interface or demo-video screenshot if available.',
+      'Show a symptom log, pollution risk map, offline record, health reminder, and anonymous trend chart; the cover now uses the official project showcase video thumbnail.',
   },
   safeeat: {
     title: 'Scan Ingredient Labels for Accessibility and Allergy Risk',
@@ -3541,12 +3541,12 @@ const cardTranslations: Record<string, CardTranslation> = {
       'Use public sample labels or fictional ingredient lists. Do not replace medical advice, and always ask users with serious allergies to confirm with a trusted adult or professional.',
     difficulty: 'Medium-High',
     coverImageAlt:
-      'Official App Inventor Foundation winner announcement image showing portraits of the 2026 Global Appathon winners; SafeEat also has an official pitch video for future screenshot replacement.',
+      'Official MIT App Inventor SafeEat showcase video thumbnail showing the high-level flow for a food-label scanning app.',
     coverImageSource:
-      'Official winner announcement image: https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/3053c85a-290d-4177-87fd-5293a2ebb7b6/GAH+Winner+Announcement+1+.png',
+      'Official MIT App Inventor showcase video thumbnail: https://www.youtube.com/watch?v=KOaSU0AoqWY',
     coverImageStatus: 'Needs confirmation',
     coverImageHint:
-      'Show food label scanning, allergy risk highlights, voice narration, personal restriction settings, and human confirmation prompts; replace later with an official pitch-video screenshot if available.',
+      'Show food label scanning, allergy risk highlights, voice narration, personal restriction settings, and human confirmation prompts; the cover now uses the official project showcase video thumbnail.',
   },
   verdis: {
     title: 'Use Drones and AI to Map Crop Health',

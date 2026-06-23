@@ -1,5 +1,10 @@
+import { readFileSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
 import { convertCsvToCards, parseCsv } from './cardCsv.mjs'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 describe('parseCsv', () => {
   it('handles quoted commas, escaped quotes, and new lines', () => {
@@ -85,5 +90,21 @@ describe('convertCsvToCards', () => {
     expect(cards[1].coverImageAlt).toBe('无图描述')
     expect(cards[1].coverImageStatus).toBe('待补图')
     expect(cards[1].coverImageHint).toBe('学校服务台、多语言文件卡片')
+  })
+
+  it('keeps the 2026 Global Appathon batch on individual cover assets', () => {
+    const cards = convertCsvToCards(
+      readFileSync(resolve(__dirname, '../imports/cards.csv'), 'utf8'),
+    )
+    const appathonIds = ['scenar', 'food-flow', 'ecobin', 'oikos', 'safeeat']
+    const appathonCards = appathonIds.map((id) => cards.find((card) => card.id === id))
+
+    expect(appathonCards.map((card) => card?.id)).toEqual(appathonIds)
+    expect(appathonCards.map((card) => card?.coverImage)).not.toContain(
+      '/images/cards/global-appathon-2026-winners.webp',
+    )
+    expect(new Set(appathonCards.map((card) => card?.coverImage)).size).toBe(
+      appathonCards.length,
+    )
   })
 })
