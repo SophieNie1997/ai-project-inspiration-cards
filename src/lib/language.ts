@@ -3964,6 +3964,242 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show hotel room photos, feature boxes around lamps and wallpaper, similar-room retrieval results, evidence notes, and human confirmation markers.',
   },
+  'alai-2-0': {
+    title: 'Let AI Keep Class Project Visuals on Brand',
+    sourceProject: 'Alai 2.0',
+    year: '2026',
+    award:
+      'Product Hunt June 22, 2026 Launching Today #3; AI design partner for presentations and social posts',
+    themeLabel: 'Design Tools',
+    audience:
+      'Student project teams, campus media clubs, competition presentation teams, and teachers or students preparing pitch materials',
+    hook:
+      'When one project needs a poster, slides, and social graphics, can AI keep everything in the same visual style?',
+    problem:
+      'Student teams often have strong content but inconsistent visuals. Slides, posters, social posts, and infographics may drift apart in color, typography, layout, and brand rules.',
+    aiMove:
+      'Product Hunt and the official site describe Alai 2.0 as a tool that captures brand details into a design system, then creates presentations, social assets, ads, infographics, and other canvas sizes with AI or manual edits. A classroom version can have AI read a small visual rule set and generate multiple matching formats.',
+    studentProject:
+      'Club brand-kit generator, campus event promotion suite, competition pitch template, nonprofit visual-guideline checker, or research-report infographic assistant',
+    demoGoal:
+      'Build a demo where students enter a project topic, colors, and logo, then generate one slide, one poster, and one social post while checking whether each output follows the brand rules.',
+    aiPowers: [
+      'Brand Rule Extraction',
+      'Layout Generation',
+      'Multi-Format Adaptation',
+      'Visual Composition',
+      'Consistency Checking',
+      'Version Comparison',
+    ],
+    outputs: [
+      'Brand rule card',
+      'Slide page',
+      'Poster preview',
+      'Social graphic',
+      'Before-and-after edit comparison',
+    ],
+    question:
+      'When AI designs visual materials, when is it helping with consistency and when is it turning creativity into a template?',
+    insight:
+      'Constrain AI with a few clear rules such as colors, fonts, spacing, and forbidden elements. Students still need to choose and refine the final visuals themselves.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Alai official OpenGraph image showing promotional visuals for an AI design partner used to create presentations and branded graphics.',
+    coverImageSource:
+      'Project website OpenGraph image: https://framerusercontent.com/images/L6gWNVRfSb2jfn4fPZ0BrvDAN3k.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show brand rules, a slide page, a poster, and a social graphic generated within one visual system, plus a human edit history.',
+  },
+  readywhen: {
+    title: 'Turn Scattered Promises Into Tasks and Follow-Up Drafts',
+    sourceProject: 'readywhen',
+    year: '2026',
+    award:
+      'Product Hunt June 22, 2026 Launching Today #4; AI Chief of Staff for commitments and follow-ups',
+    themeLabel: 'Project Management',
+    audience:
+      'Student project leads, club officers, competition teams, teaching assistants, and activity organizers coordinating work across people',
+    hook:
+      'When someone casually says "I will do it" in a meeting, can AI remember it and surface the next step?',
+    problem:
+      'Team decisions and commitments often scatter across group chats, email, meeting notes, and documents. Without a shared follow-up system, deadlines get missed, work is duplicated, and reminders become awkward.',
+    aiMove:
+      'Product Hunt describes readywhen as catching decisions and commitments across Slack, email, meetings, and docs, then drafting the next needed brief, email response, or status update for approval. A classroom version can extract commitments from simulated chats and meeting notes.',
+    studentProject:
+      'Club commitment tracker, class committee action-item assistant, competition project follow-up board, mentor feedback task generator, or event-planning reminder bot',
+    demoGoal:
+      'Build a demo that imports simulated chat and meeting notes, identifies owner, task, and due date, then creates a follow-up email draft with an approval button.',
+    aiPowers: [
+      'Action Item Extraction',
+      'Owner Detection',
+      'Due Date Inference',
+      'Status Summarization',
+      'Follow-Up Drafting',
+      'Human Approval Workflow',
+    ],
+    outputs: [
+      'Task board',
+      'Commitment evidence snippets',
+      'Follow-up email draft',
+      'Approval record',
+      'Privacy boundary note',
+    ],
+    question:
+      'How can AI avoid mistaking a joke or uncertain idea for a real commitment when it reminds people to act?',
+    insight:
+      'Use only fictional chats and meeting notes in class. Every follow-up message should require a student to confirm it before sending.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'readywhen official product image showing AI catching commitments from context and turning them into task cards.',
+    coverImageSource:
+      'Project website product image: https://readywhen.ai/public/images/section-3/catches/card.webp',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show meeting notes, chat snippets, commitment cards, a follow-up email draft, and a human approval button.',
+  },
+  'haqq-legal-ai-on-mobile': {
+    title: 'Translate Contracts and Rules Into Reviewable Risk Cards',
+    sourceProject: 'HAQQ Legal AI on Mobile',
+    year: '2026',
+    award:
+      'Product Hunt June 22, 2026 Launching Today #5; mobile legal AI with contract risk flags',
+    themeLabel: 'Public Service',
+    audience:
+      'Student club leaders, first-time part-time workers or renters, community legal-literacy activities, simulated startup teams, and people trying to understand rules',
+    hook:
+      'When contracts and rules are hard to understand, can AI first flag the parts you should ask a lawyer or teacher about?',
+    problem:
+      'Legal text is dense with specialized terms and responsibility boundaries. Non-experts may struggle to identify which clauses matter and which questions require professional review.',
+    aiMove:
+      'Product Hunt says HAQQ mobile lets users upload a contract, ask legal questions, and receive structured jurisdiction-aware legal work with risk flags and exportable outputs. A classroom version can use school rules, competition guidelines, or fictional contracts for risk summaries.',
+    studentProject:
+      'School-rule explainer, club activity waiver reader, simulated contract risk card, competition rule Q&A tool, or part-time worker rights learning tool',
+    demoGoal:
+      'Build a demo that lets users paste a fictional contract, extracts key obligations, flags risky clauses, and creates a list of questions for human review plus a disclaimer.',
+    aiPowers: [
+      'Legal Text Summarization',
+      'Risk Flagging',
+      'Clause Classification',
+      'Retrieval Q&A',
+      'Disclaimer Generation',
+      'Human Review Workflow',
+    ],
+    outputs: [
+      'Contract risk card',
+      'Key clause table',
+      'Question list',
+      'Disclaimer',
+      'Human review workflow',
+    ],
+    question:
+      'Should legal AI tell users how they can understand a situation, or directly tell them what they should do?',
+    insight:
+      'Do not provide real legal advice in class. Use public rules or fictional contracts, cite sources, and make human review visible.',
+    difficulty: 'High',
+    coverImageAlt:
+      'HAQQ official OpenGraph image showing promotional visuals for mobile legal AI and contract risk understanding.',
+    coverImageSource:
+      'Project website OpenGraph image: https://haqq.ai/og-image-v2.webp',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show mobile contract upload, highlighted risk clauses, jurisdiction notes, an exported report, and a reminder to consult a professional.',
+  },
+  airjelly: {
+    title: 'Let AI Organize Learning Promises and Next Steps',
+    sourceProject: 'AirJelly',
+    year: '2026',
+    award:
+      'Product Hunt June 22, 2026 Launching Today #8; proactive self-organizing second brain',
+    themeLabel: 'Learning Management',
+    audience:
+      'Research-learning groups, competition teams, student council project leads, students tracking long-term information and tasks, and mentors',
+    hook:
+      'Halfway through research or a meeting, can AI automatically organize what should happen next?',
+    problem:
+      'Project learning often happens across browsers, documents, calendars, and chats. Students can miss ideas, tasks, and promises, while always-on observation creates real privacy risks.',
+    aiMove:
+      'Product Hunt and the official site describe AirJelly as an always-on desktop AI agent that observes screen activity, captures intent, organizes tasks, tracks interactions, and manages follow-ups. The official site also emphasizes local processing and no data upload. A classroom version can use simulated screenshots and notes to generate a task timeline.',
+    studentProject:
+      'Research task radar, competition resource timeline, club follow-up assistant, learning-process reflection tool, or privacy-controlled task memory board',
+    demoGoal:
+      'Build a demo that imports five simulated study screenshots and one meeting note, then generates a task timeline, to-do list, follow-up reminders, and a privacy-control explanation.',
+    aiPowers: [
+      'Screen Context Summarization',
+      'Task Extraction',
+      'Timeline Organization',
+      'Relationship and Commitment Memory',
+      'Local Privacy Design',
+      'Reminder Generation',
+    ],
+    outputs: [
+      'Learning timeline',
+      'Auto-generated to-do list',
+      'Follow-up reminder cards',
+      'Privacy settings page',
+      'Misread correction log',
+    ],
+    question:
+      'How can an AI that watches your screen be designed as a helper rather than a surveillance tool?',
+    insight:
+      'Use only fictional screenshots and text in class. Focus on privacy controls that are easy to turn off, delete, and correct.',
+    difficulty: 'High',
+    coverImageAlt:
+      'AirJelly official OpenGraph image showing the product visual for a proactive context-aware AI companion.',
+    coverImageSource:
+      'Project website OpenGraph image: https://airjelly.ai/opengraph-image?7dbaf6e3dce628f',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show study screen snippets, a task timeline, automatic reminders, privacy toggles, local processing notes, and a misread correction button.',
+  },
+  clawd: {
+    title: 'Build a Local AI Study Assistant Inside the Browser',
+    sourceProject: 'Clawd',
+    year: '2026',
+    award:
+      'Product Hunt June 22, 2026 Launching Today #10; context-aware browser assistant with local offline AI',
+    themeLabel: 'Privacy Computing',
+    audience:
+      'Students who spend long sessions researching, coding clubs, self-directed learners who need focus reminders, and students learning browser extensions',
+    hook:
+      'Can AI look at only a small amount of current webpage context and give local focus or study feedback?',
+    problem:
+      'A browser mixes study materials, entertainment, and social content. Cloud assistants can understand more context but may upload private data; local models protect privacy but have limits in speed and context length.',
+    aiMove:
+      'The Product Hunt maker says Clawd uses Chrome built-in Gemini Nano and on-device machine learning to analyze pages locally and interact through voice or text. In the discussion, the maker says it extracts only the page title and meta description, truncated to 500 characters. A classroom version can classify webpage context locally for study, distraction, or safety signals.',
+    studentProject:
+      'Local webpage study assistant, focus-mode reminder, research-page summary extension, privacy-friendly browser context detector, or low-context AI extension experiment',
+    demoGoal:
+      'Build a browser-extension demo that reads the current page title and description, locally classifies the page as study, entertainment, or possible distraction, then shows a reminder, focus mode, and a no-upload data note.',
+    aiPowers: [
+      'Local Text Classification',
+      'Browser Extension Logic',
+      'Voice Interaction',
+      'Context Truncation',
+      'Privacy Notice Design',
+      'Performance Mode Design',
+    ],
+    outputs: [
+      'Extension popover',
+      'Webpage category label',
+      'Focus reminder',
+      'Privacy note',
+      'Performance settings',
+      'Misclassification feedback button',
+    ],
+    question:
+      'If AI sees only the page title and description to protect privacy, what important context might it miss?',
+    insight:
+      'Start with static pages and local rules or a small local model. Do not read real account content, and clearly state which data the extension accesses.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Clawd official static website image showing the visual identity and interaction style of a local AI browser assistant.',
+    coverImageSource:
+      'Project website static image: https://meetclawd.com/assets/clawd00-Blkg3oPi.jpg',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show the current browser page, page title summary, local AI status, focus-mode toggle, no-upload data notice, and correction feedback.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
