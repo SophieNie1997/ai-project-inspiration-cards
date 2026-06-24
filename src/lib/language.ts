@@ -4665,6 +4665,234 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show distraction site icons, a before-opening intent field, floating timer, completion check, local daily report, and delete controls.',
   },
+  'gavin-bunting-surgical-video-ai': {
+    title: 'Let AI Pull the Useful Moments Out of Long Surgery Videos',
+    sourceProject: 'Gavin Bunting Surgical Video AI',
+    year: '2026',
+    award:
+      'RTX Invention Convention U.S. Nationals 2026 Patent Application Award; New York Invention Convention gold medal; WESEF New York Invents Award',
+    themeLabel: 'Health Research',
+    audience:
+      'Surgeons, medical educators, hospital research teams, robotic surgery training programs, and students who want to process long video records with AI',
+    hook:
+      'A robotic surgery can generate a very long recording. Can AI help doctors find the moments worth reviewing first?',
+    problem:
+      'The da Vinci robotic surgery system can record operations, but doctors still spend valuable time manually reviewing, editing, and archiving videos for research and education. That creates slow workflows and room for human error.',
+    aiMove:
+      'Byram Hills reports that the student built an AI-based program that filters irrelevant content out of long robotic surgery videos and supports archiving, research, and education. The model details were not public, so a classroom version can simulate the idea with scene changes, action detection, speech or caption markers, and human review.',
+    studentProject:
+      'Science lab video highlight finder, club event auto-highlight tool, sports training review tool, microscope observation video labeler, or campus lecture segment index',
+    demoGoal:
+      'Use a public or self-recorded teaching video, define rules for important moments, then build automatic segmenting, confidence labels, a human review queue, and a searchable video index.',
+    aiPowers: [
+      'Video Understanding',
+      'Action Detection',
+      'Segment Classification',
+      'Timeline Annotation',
+      'Human Review',
+      'Medical Safety Boundaries',
+    ],
+    outputs: [
+      'Video timeline prototype',
+      'Key segment list',
+      'False positive examples',
+      'Human review flowchart',
+      'Privacy and safety note',
+    ],
+    question:
+      'In a medical or research workflow, what should humans confirm before AI removes anything as irrelevant?',
+    insight:
+      'Do not use real medical video in class. Use public teaching videos or self-recorded lab process videos to practice turning long recordings into searchable indexes.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Byram Hills official news image showing Gavin Bunting at an Invention Convention display.',
+    coverImageSource:
+      'Byram Hills official news image: https://www.byramhills.org/uploaded/Media_Center/2025-2026/Press_Releases/June_Science/Gavin.jpeg',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show robotic surgery video, AI-filtered segments, and a timeline for teaching and archiving.',
+  },
+  'fish-friendly-culvert-ai-chatbot': {
+    title: 'Help Towns Find Culverts That Block Fish Passage',
+    sourceProject: 'Fish-Friendly Culvert AI Chatbot',
+    year: '2025',
+    award: 'National 4-H AI Challenge 2025 Ages 13-15 first place; ProjectBoard public showcase',
+    themeLabel: 'Environment',
+    audience:
+      'Landowners, town road crews, river restoration groups, 4-H clubs, and students concerned about flooding and fish habitat',
+    hook:
+      'If one small culvert blocks fish migration, can AI help a community find a better replacement path?',
+    problem:
+      'Poorly designed culverts can block fish migration and make flooding or road washouts worse. Many communities do not know how to identify a problem, compare replacement options, or find funding sources.',
+    aiMove:
+      'The public project description presents the project as an AI chatbot for fish-friendly culvert replacement. It can guide users through identifying issues, understanding replacement choices, and finding next steps. The exact knowledge base and model details were not public.',
+    studentProject:
+      'Campus drainage outlet helper, community stream barrier recorder, rainy-season flooding chatbot, environmental funding lookup tool, or river restoration volunteer guide',
+    demoGoal:
+      'Build a small culvert or drainage knowledge base and a chatbot that answers risk level, possible impact, and suggested next contacts from a photo description or form.',
+    aiPowers: [
+      'Knowledge Base Q&A',
+      'Risk Ranking',
+      'Document Retrieval',
+      'Geographic Context',
+      'Form-Based Diagnosis',
+      'Source Citation',
+    ],
+    outputs: [
+      'Chatbot demo',
+      'Risk checklist',
+      'Community map markers',
+      'Source list',
+      'Human review rules',
+    ],
+    question:
+      'AI can suggest environmental actions, but which decisions still require an engineer or local agency?',
+    insight:
+      'A classroom version can start with campus drainage or public map data. Do not enter risky water areas for field measurement.',
+    difficulty: 'Medium-High',
+    coverImageAlt: 'Placeholder note for a future official 4-H or ProjectBoard project screenshot.',
+    coverImageSource:
+      'Needs image; current evidence comes from ProjectBoard project pages and public reporting.',
+    coverImageStatus: 'Needs image',
+    coverImageHint:
+      'Show a small stream, a culvert cross-section, fish passage arrows, a risk Q&A card, and funding or contact suggestions.',
+  },
+  'degls-corn-gray-leaf-spot-ai': {
+    title: 'Use Leaf Photos to Detect Corn Gray Leaf Spot',
+    sourceProject: 'DeGLS Corn Gray Leaf Spot AI',
+    year: '2025',
+    award:
+      'National 4-H AI Challenge 2025 Ages 16-18 second place; highlighted by 4-H and Microsoft as a youth AI project',
+    themeLabel: 'Environment',
+    audience:
+      'Farmers, agricultural extension workers, agriculture clubs, 4-H students, and communities that need early crop disease screening',
+    hook:
+      'When a farmer sees spots on a corn leaf, can AI help flag whether it might be a disease that threatens yield?',
+    problem:
+      'Corn gray leaf spot can harm food production, but disease identification often depends on expert field inspection. Late discovery can increase treatment costs and crop losses.',
+    aiMove:
+      'Public 4-H and Microsoft materials describe DeGLS as a deep learning system that automatically identifies and measures the severity of corn gray leaf spot on leaves. A classroom version can train a small image classifier on public plant disease images and add confidence and human review.',
+    studentProject:
+      'Campus plant disease checker, leaf health log, farm inspection photo sorter, home garden issue helper, or agriculture science outreach tool',
+    demoGoal:
+      'Use public leaf images or a small collected dataset to train a healthy versus disease prototype, then show confidence, severity labels, review steps, and data bias notes.',
+    aiPowers: [
+      'Image Classification',
+      'Disease Detection',
+      'Severity Estimation',
+      'Data Labeling',
+      'Confidence Explanation',
+      'Bias Checks',
+    ],
+    outputs: [
+      'Leaf recognition demo',
+      'Training sample table',
+      'Misclassification examples',
+      'Field-use flowchart',
+      'Farmer-facing tip card',
+    ],
+    question:
+      'If training images come from one region, can the AI still work in another region with different lighting and crops?',
+    insight:
+      'Agriculture AI should not replace an expert. It should flag which cases need faster human attention.',
+    difficulty: 'High',
+    coverImageAlt: 'Placeholder note for a future official DeGLS leaf detection screenshot.',
+    coverImageSource:
+      'Needs image; current evidence comes from ProjectBoard pages and Microsoft or 4-H public reporting.',
+    coverImageStatus: 'Needs image',
+    coverImageHint:
+      'Show a corn leaf photo, lesion boxes, severity bar, confidence score, and human review reminder.',
+  },
+  'siri-save-my-park': {
+    title: 'Predict Whether Development Will Put Local Green Space at Risk',
+    sourceProject: 'Siri Save My Park',
+    year: '2025',
+    award: 'National 4-H AI Challenge 2025 Ages 13-15 second place; Florida 4-H public feature',
+    themeLabel: 'Environment',
+    audience:
+      'City planners, residents, environmental clubs, student volunteers, and families who care about parks and wildlife habitat',
+    hook:
+      'As cities grow denser, can AI warn which parks and nature trails need protection before they disappear?',
+    problem:
+      'Rapid development can shrink parks, forests, and wildlife habitat. Residents often learn about the risk only after a green space is already gone or under pressure.',
+    aiMove:
+      'Florida 4-H describes the project as using AI to predict future development impacts and interactive apps to encourage community involvement. A classroom version can use public maps, population trends, and green space data to create risk scores and action suggestions.',
+    studentProject:
+      'Campus green-space map, neighborhood heat-island alert, park-use survey, urban development impact dashboard, or environmental action tracker',
+    demoGoal:
+      'Choose a campus or neighborhood area, organize green space, road, building change, and survey data, then create a risk map, AI explanation cards, and protection suggestions.',
+    aiPowers: [
+      'Map Data Analysis',
+      'Trend Forecasting',
+      'Risk Scoring',
+      'Survey Summarization',
+      'Visualization',
+      'Civic Engagement Design',
+    ],
+    outputs: [
+      'Green-space risk map',
+      'Prediction explanation card',
+      'Resident action checklist',
+      'Data source note',
+      'Interactive app prototype',
+    ],
+    question:
+      'How can an AI green-space prediction include resident experience instead of only looking at map data?',
+    insight:
+      'Protecting green space is not the same as opposing all development. The point is to use evidence to propose better city choices.',
+    difficulty: 'Medium-High',
+    coverImageAlt: 'Placeholder note for a future official Florida 4-H or ProjectBoard project screenshot.',
+    coverImageSource:
+      'Needs image; current evidence comes from ProjectBoard pages and a Florida 4-H public post.',
+    coverImageStatus: 'Needs image',
+    coverImageHint:
+      'Show a neighborhood green-space map, development pressure hotspots, resident action button, and protection recommendations.',
+  },
+  virapox: {
+    title: 'Use Phone Images to Explain Monkeypox Risk Without Pretending to Diagnose',
+    sourceProject: 'ViraPox',
+    year: '2025',
+    award: 'Technovation Girls 2025 Senior Regional Honoree: Africa',
+    themeLabel: 'Health Research',
+    audience:
+      'Public health educators, community clinics, student health projects, people learning about infectious disease risk, and medical imaging study groups',
+    hook:
+      'When a skin symptom is worrying, can AI give a careful risk explanation and care pathway without claiming to be a doctor?',
+    problem:
+      'Monkeypox and other skin symptoms can be misunderstood or handled too late, especially where health resources are limited. Users also need trusted explanations and clear next steps.',
+    aiMove:
+      'Technovation describes ViraPox as using ViT, YOLOv11, AR, SSL, marching cubes, and ZeoDepth for early diagnosis support, risk reduction, awareness, and 3D models. A classroom version should stay within education and risk guidance, not medical diagnosis.',
+    studentProject:
+      'Skin health education chatbot, symptom risk triage simulator, public health myth checker, campus infectious disease info card, or doctor visit preparation assistant',
+    demoGoal:
+      'Avoid real patient photos. Use licensed or simulated images to make a symptom knowledge card, risk Q&A, and seek-care guidance prototype with a clear medical disclaimer.',
+    aiPowers: [
+      'Image Classification',
+      'Object Detection',
+      'Medical Risk Explanation',
+      '3D Visualization',
+      'Document Retrieval',
+      'Safety Boundary Warnings',
+    ],
+    outputs: [
+      'Risk guidance demo',
+      'Medical disclaimer',
+      'Symptom knowledge card',
+      'Error boundary note',
+      'Public health poster',
+    ],
+    question:
+      'When can health AI give a helpful warning, and when must it stop and direct the user to a professional?',
+    insight:
+      'Health projects can have high social value, but a student demo must be strict about privacy, safety, and avoiding diagnosis claims.',
+    difficulty: 'High',
+    coverImageAlt: 'Placeholder note for a future official Technovation project screenshot or team demo image.',
+    coverImageSource:
+      'Needs image; current evidence comes from the Technovation Girls 2025 results page.',
+    coverImageStatus: 'Needs image',
+    coverImageHint:
+      'Show a phone image workflow, risk card, care guidance, medical disclaimer, and privacy protection note.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
