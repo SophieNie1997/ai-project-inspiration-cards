@@ -6383,6 +6383,57 @@
       "mapX": 90,
       "mapY": 89,
       "accent": "#d8f05f"
+    },
+    {
+      "id": "梦境边缘-未寄出的信",
+      "title": "把说不出口的情绪做成一场可以走进去的梦",
+      "sourceProject": "梦境边缘：未寄出的信",
+      "sourceUrl": "https://forum.trae.cn/t/topic/43269",
+      "sourceUrls": [
+        "https://forum.trae.cn/t/topic/43269",
+        "https://forum.trae.cn/uploads/short-url/pMhZr9mCSJiIOo5VO4GhPyt64J2.html",
+        "https://github.com/jackves/dream-experience"
+      ],
+      "coverImage": "/images/cards/dream-edge-unsent-letter.jpeg",
+      "coverImageAlt": "“梦境边缘：未寄出的信”互动体验开场截图，深色梦境背景中展示 AI 造梦叙事入口",
+      "coverImageSource": "TRAE 官方中文社区项目帖效果预览截图：https://trae-forum-cdn.trae.com.cn/prod/original/3X/8/3/83ce2827a8e04b87d9dadc97fbdf891a346a4abe.jpeg",
+      "coverImageCredit": "TRAE 论坛公开项目截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "待确认",
+      "coverImageHint": "深蓝色梦境网页、雨中站台、未寄出的信、情绪输入框和“这不是心理咨询”的安全提示并列展示",
+      "year": "2026",
+      "award": "TRAE AI 创造力大赛 / 大赛报名专区 / 生活娱乐；奖项未公开",
+      "theme": "education",
+      "themeLabel": "心理健康",
+      "audience": "有情绪但不想立刻倾诉的年轻人、学生、互动叙事创作者、心理健康教育课堂",
+      "hook": "如果不想直接说“我很难过”，能不能让 AI 把这句话翻译成一场梦？",
+      "problem": "很多人并不是缺少建议，而是缺少一个不被评判的表达空间；但普通聊天机器人容易变成说教，心理类产品又必须避免越界诊断。",
+      "aiMove": "作品用“AI 造梦”机制把输入文字转成梦境隐喻：当前版通过关键词匹配识别疲惫、焦虑、迷茫、孤独、关系困扰 5 类情绪，并映射到雨中站台、无声车厢、失物信箱等场景和物件回应；未来可接入 LLM 动态生成梦境内容。AI 只负责表达转译和叙事生成，不能替代心理咨询、诊断或危机干预。",
+      "studentProject": "情绪日记转梦境网页、校园压力表达小剧场、AI隐喻生成器、互动故事疗愈体验、匿名心情瓶子展览。",
+      "demoGoal": "做出一个“梦境转译器”Demo：输入一段匿名或虚构心情，AI 识别情绪主题，生成梦境物件、场景文案、一个可点击互动和安全的醒来反思卡。",
+      "aiPowers": [
+        "情绪分类",
+        "隐喻生成",
+        "互动叙事",
+        "文案生成",
+        "前端原型生成",
+        "安全边界提示"
+      ],
+      "outputs": [
+        "单页互动Demo",
+        "情绪-梦境映射表",
+        "场景脚本",
+        "用户体验记录",
+        "安全边界说明",
+        "演示视频"
+      ],
+      "question": "如果 AI 生成的梦境让用户更难过，它应该怎么停下来、提示求助，或者把人交还给可信任的大人？",
+      "insight": "课堂版应使用匿名、虚构或自愿分享的低风险文本；不要收集真实隐私、创伤经历或危机内容。页面要清楚写明：这不是心理咨询或医疗工具，遇到危险念头应联系可信任成年人或专业热线。",
+      "difficulty": "中高",
+      "impactScore": 4,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 4,
+      "accent": "#2ee6a6"
     }
   ]
 }

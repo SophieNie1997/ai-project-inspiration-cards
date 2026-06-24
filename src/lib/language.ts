@@ -4893,6 +4893,54 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a phone image workflow, risk card, care guidance, medical disclaimer, and privacy protection note.',
   },
+  '梦境边缘-未寄出的信': {
+    title: 'Turn Unspoken Feelings Into a Dream You Can Walk Through',
+    sourceProject: 'Dream Edge: The Unsent Letter',
+    year: '2026',
+    award:
+      'TRAE AI Creativity Contest / submission area / life and entertainment category; award status not public',
+    themeLabel: 'Mental Health',
+    audience:
+      'Young people who want a nonjudgmental space for feelings, students, interactive narrative creators, and mental health education classrooms',
+    hook:
+      'If someone does not want to say “I am sad” directly, can AI translate that sentence into a dream?',
+    problem:
+      'Many people do not need more advice first. They need a space where feelings can be expressed without judgment. But ordinary chatbots can become preachy, while mental health products must avoid diagnosis and crisis overreach.',
+    aiMove:
+      'The project uses an AI dream-making mechanism to translate user text into dream metaphors. The current demo uses keyword matching to identify five emotion types, including exhaustion, anxiety, confusion, loneliness, and relationship conflict, then maps them to scenes and object responses such as a rainy platform, silent carriage, and lost-letter box. A future version could use an LLM to dynamically generate personal dream content. AI handles expressive translation and narrative generation only; it does not replace counseling, diagnosis, or crisis intervention.',
+    studentProject:
+      'Emotion journal to dream website, campus stress-expression mini story, AI metaphor generator, interactive reflection experience, or anonymous feeling-bottle exhibition',
+    demoGoal:
+      'Build a dream translator demo: enter an anonymous or fictional feeling, have AI identify the emotional theme, then generate a dream object, scene text, one clickable interaction, and a safe waking reflection card.',
+    aiPowers: [
+      'Emotion Classification',
+      'Metaphor Generation',
+      'Interactive Narrative',
+      'Copy Generation',
+      'Frontend Prototyping',
+      'Safety Boundary Prompts',
+    ],
+    outputs: [
+      'Single-page interactive demo',
+      'Emotion-to-dream mapping table',
+      'Scene script',
+      'User experience notes',
+      'Safety boundary statement',
+      'Demo video',
+    ],
+    question:
+      'Why can “do not give advice yet; turn the feeling into an image” sometimes help people express themselves more clearly?',
+    insight:
+      'Use anonymous, fictional, or low-risk voluntary text in class. Do not collect private experiences, trauma details, or crisis content. The page should clearly state that it is not counseling or medical care, and users in danger should contact a trusted adult or professional support line.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Opening screenshot of Dream Edge: The Unsent Letter, showing a dark dreamlike interface for an AI dream narrative.',
+    coverImageSource:
+      'TRAE official forum project preview image: https://trae-forum-cdn.trae.com.cn/prod/original/3X/8/3/83ce2827a8e04b87d9dadc97fbdf891a346a4abe.jpeg',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a dark blue dream webpage, rainy platform, unsent letter, emotion input box, and a safety note saying this is not counseling.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
