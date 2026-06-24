@@ -6434,6 +6434,56 @@
       "mapX": 4,
       "mapY": 4,
       "accent": "#2ee6a6"
+    },
+    {
+      "id": "山村守望-ai",
+      "title": "让山区老人一键呼救后有人马上赶到",
+      "sourceProject": "山村守望 AI",
+      "sourceUrl": "https://forum.trae.cn/t/topic/23516",
+      "sourceUrls": [
+        "https://forum.trae.cn/t/topic/23516",
+        "https://forum.trae.cn/uploads/short-url/wtaQVK9eOaw8wTDjCHDmHkdPpBc.html"
+      ],
+      "coverImage": "/images/cards/mountain-watch-ai.png",
+      "coverImageAlt": "“山村守望 AI”参赛开发文档首屏截图，展示山区老人应急养老调度 Demo 与 AI 风险判断定位",
+      "coverImageSource": "TRAE 官方中文社区项目帖附件 HTML 自渲染截图：https://forum.trae.cn/uploads/short-url/wtaQVK9eOaw8wTDjCHDmHkdPpBc.html",
+      "coverImageCredit": "TRAE 论坛公开项目附件自渲染截图，课堂引用；需避免商用传播",
+      "coverImageStatus": "待确认",
+      "coverImageHint": "山区村委大屏、老人 SOS 按钮、AI 风险解释、互助员派单卡和家属通知界面并列展示",
+      "year": "2026",
+      "award": "TRAE AI 创造力大赛 / 大赛报名专区；奖项未公开",
+      "theme": "health",
+      "themeLabel": "健康管理",
+      "audience": "山区空巢老人、外出务工子女、村医、村干部、本屯互助员、关注乡村养老的学生团队",
+      "hook": "如果山里老人摔倒或长时间没动，AI 能不能帮村里更快发现、派人、通知家属？",
+      "problem": "山区村屯分散，老人到村委或卫生院可能有几公里山路；老人摔倒、突发不适或长时间无活动时，传统电话和人工巡访容易发现慢、通知慢、响应慢。",
+      "aiMove": "项目把老人端 SOS、村委大屏、AI 派单页和家属端串成一个 Web Demo。AI 根据年龄、病史、告警类型、心率、血氧、活动状态、互助员距离和村医值班状态做风险分级、派单推荐、通知生成和随访建议。AI 不替代村医，不做医疗诊断，只帮助把告警信息变成可解释、可执行的处置流程。",
+      "studentProject": "校园安全互助派单、独居老人关怀提醒、社区志愿者响应地图、宿舍异常未归提醒、乡村健康随访清单。",
+      "demoGoal": "做出一个“社区应急派单”Demo：模拟一次 SOS 告警，展示风险等级、判断原因、最近互助员推荐、村医/家属通知文案和大屏处置进度。",
+      "aiPowers": [
+        "风险分级",
+        "规则推理",
+        "通知生成",
+        "路线/距离匹配",
+        "数据可视化",
+        "随访建议"
+      ],
+      "outputs": [
+        "四端Demo原型",
+        "告警流程图",
+        "风险分级规则表",
+        "通知模板",
+        "隐私与医疗边界说明",
+        "演示视频"
+      ],
+      "question": "如果系统误判风险等级，谁来承担复核责任？你会怎样设计“AI 只是助手”的提醒？",
+      "insight": "涉及老人、健康和位置数据时，课堂版只能用模拟数据；不要收集真实病史、定位或联系方式。必须写清：AI 不能诊断疾病，紧急情况要联系家属、村医、急救或当地可信任负责人。",
+      "difficulty": "中高",
+      "impactScore": 5,
+      "techScore": 4,
+      "mapX": 4,
+      "mapY": 5,
+      "accent": "#ff6f91"
     }
   ]
 }

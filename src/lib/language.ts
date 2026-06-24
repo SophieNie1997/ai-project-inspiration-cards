@@ -4941,6 +4941,53 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a dark blue dream webpage, rainy platform, unsent letter, emotion input box, and a safety note saying this is not counseling.',
   },
+  '山村守望-ai': {
+    title: 'Help Mountain Village Elders Get Help Right After an SOS',
+    sourceProject: 'Mountain Watch AI',
+    year: '2026',
+    award: 'TRAE AI Creativity Contest / submission area; award status not public',
+    themeLabel: 'Health Management',
+    audience:
+      'Mountain village elders living alone, migrant-worker children, village doctors, village officials, local volunteers, and student teams interested in rural elder care',
+    hook:
+      'If an elder in the mountains falls or stops moving for a long time, can AI help the village notice faster, send help, and notify family?',
+    problem:
+      'Mountain villages can be scattered, and an elder may be several kilometers from the village office or clinic. When someone falls, feels suddenly unwell, or has no activity for a long time, phone calls and manual visits can be too slow.',
+    aiMove:
+      'The project connects an elder SOS page, village dashboard, AI dispatch page, and family page into a web demo. AI uses age, medical history, alert type, heart rate, blood oxygen, activity status, volunteer distance, and village doctor schedule to classify risk, recommend dispatch, generate notifications, and suggest follow-up visits. AI does not replace village doctors or make medical diagnoses; it turns alert data into an explainable action workflow.',
+    studentProject:
+      'Campus safety mutual-aid dispatch, elder-care check-in reminder, community volunteer response map, dorm missing-check alert, or rural health follow-up list',
+    demoGoal:
+      'Build a community emergency dispatch demo: simulate one SOS alert, then show risk level, reasoning, nearest volunteer recommendation, doctor and family notification text, and dashboard progress.',
+    aiPowers: [
+      'Risk Classification',
+      'Rule-Based Reasoning',
+      'Notification Generation',
+      'Route and Distance Matching',
+      'Data Visualization',
+      'Follow-Up Suggestions',
+    ],
+    outputs: [
+      'Four-view demo prototype',
+      'Alert flowchart',
+      'Risk classification rule table',
+      'Notification templates',
+      'Privacy and medical boundary note',
+      'Demo video',
+    ],
+    question:
+      'In an emergency workflow, when should AI dispatch automatically, and when must a human confirm first?',
+    insight:
+      'Use simulated data only for elders, health, and location workflows. Do not collect real medical history, locations, or contact details in class. State clearly that AI cannot diagnose illness, and real emergencies require family, village doctors, emergency services, or a trusted local responsible person.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Screenshot of the Mountain Watch AI competition development document showing an emergency elder-care dispatch demo and AI risk judgment positioning.',
+    coverImageSource:
+      'Rendered screenshot of the TRAE official forum project attachment: https://forum.trae.cn/uploads/short-url/wtaQVK9eOaw8wTDjCHDmHkdPpBc.html',
+    coverImageStatus: 'Needs confirmation',
+    coverImageHint:
+      'Show a mountain village dashboard, elder SOS button, AI risk explanation, volunteer dispatch card, and family notification view.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
