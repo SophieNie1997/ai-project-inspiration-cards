@@ -4988,6 +4988,237 @@ const cardTranslations: Record<string, CardTranslation> = {
     coverImageHint:
       'Show a mountain village dashboard, elder SOS button, AI risk explanation, volunteer dispatch card, and family notification view.',
   },
+  swimio: {
+    title: 'Turn Swim Practice Into a Personal AI Coaching Loop',
+    sourceProject: 'Swimio',
+    year: '2026',
+    award:
+      'Product Hunt 2026-06-24 Launching Today; AI swim workout app for iPhone and Apple Watch',
+    themeLabel: 'Health Management',
+    audience:
+      'Swim team members, PE students, coaches, competition clubs, and students who want to turn sports data into training advice',
+    hook:
+      'If a watch records every lap, can AI help plan the next swim session around your own goal and recovery?',
+    problem:
+      'Students and recreational athletes often know only distance and time, not training load, recovery rhythm, or what to practice next. Coaches also cannot always personalize every session in real time.',
+    aiMove:
+      'Swimio describes AI-personalized workouts, Smart Import, and a real-time Apple Watch pace clock. A classroom version can use training logs, goals, and fatigue ratings to generate tiered practice suggestions and update the plan after each session.',
+    studentProject:
+      'School swim-training assistant, running-club plan generator, PE fitness log, recovery-day reminder, or pre-race training-load dashboard',
+    demoGoal:
+      'Build a demo where users enter a sport goal, recent training, and fatigue rating, then receive a weekly plan, pace reminder, recovery suggestion, and post-practice reflection card.',
+    aiPowers: [
+      'Personalized Recommendation',
+      'Time-Series Analysis',
+      'Sports Data Visualization',
+      'Goal Decomposition',
+      'Natural-Language Explanation',
+      'Feedback Iteration',
+    ],
+    outputs: [
+      'Training plan',
+      'Sports data dashboard',
+      'Watch or phone interface prototype',
+      'Recovery reminder',
+      'Post-practice reflection card',
+    ],
+    question:
+      'When should a student trust an AI training suggestion, and when should a coach or doctor make the call?',
+    insight:
+      'If the system optimizes only for faster times, it may ignore injury risk, sleep, and stress. Keep the loop as suggestion plus human adjustment.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'Swimio official OpenGraph image showing an AI swim coach and Apple Watch workout tracking app.',
+    coverImageSource: 'Official website OpenGraph image: https://www.swimio.app/og-image.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show swim goals, Apple Watch timing, personalized workout plans, recovery advice, and a post-practice review.',
+  },
+  'futo-swipe': {
+    title: 'Translate Finger Swipe Paths Into Words',
+    sourceProject: 'FUTO Swipe',
+    year: '2026',
+    award: 'Product Hunt 2026-06-24 Launching Today; open model swipe typing engine',
+    themeLabel: 'Accessibility Technology',
+    audience:
+      'Phone keyboard users, multilingual typists, people who benefit from easier input, accessibility-tech clubs, and students learning how input methods work',
+    hook:
+      'When a user draws one path across a keyboard, can AI infer the word they actually meant to type?',
+    problem:
+      'Swipe typing looks simple, but keyboard layouts, languages, and personal habits make trajectory interpretation difficult. Closed input methods also hide how the model decides between candidate words.',
+    aiMove:
+      'FUTO Swipe shows a pipeline from [x, y, t] trajectory points and keyboard layout to per-key probabilities, dictionary beam search, and ContextLM decoding. A classroom version can convert swipe paths into candidate words and explain why one word was chosen.',
+    studentProject:
+      'Gesture input demo, accessibility phrase keyboard, campus slang or dialect input method, mistouch-correction experiment, or accuracy comparison across keyboard layouts',
+    demoGoal:
+      'Build a small keyboard canvas: users swipe, the system records the trajectory, outputs three candidate words, and shows probability, dictionary matching, and correction feedback.',
+    aiPowers: [
+      'Trajectory Recognition',
+      'Probabilistic Decoding',
+      'Language Modeling',
+      'Context Prediction',
+      'Dictionary Search',
+      'Interaction Visualization',
+    ],
+    outputs: [
+      'Swipe trajectory canvas',
+      'Candidate word list',
+      'Probability explanation chart',
+      'Error cases',
+      'Accessibility scenario note',
+    ],
+    question:
+      'As an input method becomes better at guessing, when does convenience turn into the system deciding for the user?',
+    insight:
+      'If the model always favors common words, names, dialects, and minority languages can become harder to type. Students can use small dictionaries to expose that bias.',
+    difficulty: 'High',
+    coverImageAlt:
+      'FUTO Swipe official technical diagram showing swipe trajectory points, keyboard layout, encoder and decoder models, dictionary beam search, and ContextLM.',
+    coverImageSource: 'Official website image: https://swipe.futo.tech/quick-rundown.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a swipe path, keyboard layout, candidate word probabilities, dictionary beam search, ContextLM, and correction feedback.',
+  },
+  'openart-director': {
+    title: 'Direct an AI Short Film Through Chat',
+    sourceProject: 'OpenArt Director',
+    year: '2026',
+    award:
+      'Product Hunt 2026-06-23 recent top launch; AI video directing through chat',
+    themeLabel: 'Culture Preservation',
+    audience:
+      'School film clubs, literature and history project teams, short-video creators, advertising design clubs, and students who want to turn stories into visuals',
+    hook:
+      'If you cannot edit video or write a shot list yet, can you first describe the story and let AI help turn it into scenes?',
+    problem:
+      'Students often have story ideas but get stuck on storyboards, camera language, character consistency, and pacing. Many video generators create isolated clips instead of a coherent narrative.',
+    aiMove:
+      'OpenArt Director says users can describe what they want through chat, shape it by vibe, and leave with a finished film. Product Hunt presents it as a way to direct AI videos through conversation. A classroom version can use AI as a storyboard and shot-planning assistant.',
+    studentProject:
+      'Campus story director, historical-event storyboard generator, public-service ad script helper, club promo storyboard, or literature scene visualizer',
+    demoGoal:
+      'Build a demo that takes a theme, characters, setting, and mood, then generates a six-shot storyboard, narration, visual prompts, revision log, and authenticity or copyright note.',
+    aiPowers: [
+      'Text Generation',
+      'Story Structure Planning',
+      'Image and Video Prompting',
+      'Character Consistency',
+      'Camera Language',
+      'Version Iteration',
+    ],
+    outputs: [
+      'Six-shot storyboard',
+      'Video prompt sheet',
+      'Narration draft',
+      'Before and after revision notes',
+      'AI-generated content label',
+    ],
+    question:
+      'When AI can generate video directly, which directing choices still belong to the student?',
+    insight:
+      'Very realistic generated scenes can be mistaken for records of real events. Keep creative intent, source notes, and revision history visible.',
+    difficulty: 'Medium-High',
+    coverImageAlt:
+      'OpenArt Director official share image showing a chat-style input for directing AI video.',
+    coverImageSource:
+      'Official website OpenGraph image: https://cdn.openart.ai/cdn-cgi/image/format=jpeg,width=1200,fit=scale-down,dpr=1,quality=85,metadata=none,sharpen=1/openart-strapi-assets/director_share_image_16243e63ba/director_share_image_16243e63ba.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a chat-based directing prompt, storyboard buttons, story mood, AI video generation, authenticity label, and revision record.',
+  },
+  thumbmagic: {
+    title: 'Design Honest AI Thumbnails for School Videos',
+    sourceProject: 'Thumbmagic',
+    year: '2026',
+    award: 'Product Hunt 2026-06-23 recent launch; AI YouTube thumbnail generator',
+    themeLabel: 'Startup Tools',
+    audience:
+      'School media teams, club operators, student creators, public-service campaign teams, and students learning media design and data experiments',
+    hook:
+      'A thumbnail can raise click-through rate, but can AI help make it attractive without becoming misleading?',
+    problem:
+      'Video thumbnails strongly shape whether people click, but students may not know visual design and can be pulled toward exaggerated or misleading images. The project needs to teach both visual communication and media ethics.',
+    aiMove:
+      'Thumbmagic describes generating viral YouTube thumbnails and improving CTR. A classroom version can generate multiple thumbnail options from a video topic, then use peer feedback and rule checks to avoid clickbait.',
+    studentProject:
+      'School channel thumbnail assistant, public-service video A/B test, book recommendation cover generator, science-fair short-video visual template, or anti-clickbait checker',
+    demoGoal:
+      'Build a demo where users enter a video topic, audience, and keywords, then receive three thumbnail concepts, a credibility check, peer vote, and click-reason analysis.',
+    aiPowers: [
+      'Image Generation',
+      'Copy Generation',
+      'Visual Style Transfer',
+      'A/B Testing',
+      'Classification Review',
+      'Media Ethics Check',
+    ],
+    outputs: [
+      'Three thumbnail concepts',
+      'Headline copy',
+      'Peer voting results',
+      'Misleading-risk checklist',
+      'Final selection rationale',
+    ],
+    question:
+      'Where is the line between earning attention and misleading people into clicking?',
+    insight:
+      'If a system optimizes only for click-through rate, public-service, science, or school-news content can become more exaggerated over time.',
+    difficulty: 'Medium',
+    coverImageAlt:
+      'Thumbmagic official OpenGraph image showing AI-generated YouTube thumbnail examples and a product message about boosting views.',
+    coverImageSource:
+      'Official website OpenGraph image: https://cdn.prod.website-files.com/67ef4b8c38cec4145273c2b2/69397fb4cff9ea6602294f32_OG.webp',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a video topic, three thumbnail options, headline copy, peer vote, click-through data, and misleading-risk warning.',
+  },
+  'mindstone-rebel': {
+    title: 'Build a Study Agent That Asks Before It Acts',
+    sourceProject: 'Mindstone Rebel',
+    year: '2026',
+    award:
+      'Product Hunt 2026-06-24 Launching Today; AI workspace for agents across team context',
+    themeLabel: 'Startup Tools',
+    audience:
+      'Project-based learning groups, student councils, club leaders, research teams, and students exploring the boundaries of AI agents',
+    hook:
+      'If AI understands your files and tasks, can it suggest the next step while waiting for your approval before acting?',
+    problem:
+      'Team project context is scattered across documents, chats, task boards, and web pages. An agent that acts automatically might send the wrong message, edit the wrong file, or expose private information, so context, suggestions, and human approval must be separated.',
+    aiMove:
+      'Mindstone Rebel describes connecting tools, context, and processes so AI can work across teams. Product Hunt frames it as an AI workspace for agents that know the work and ask first. A classroom version can model a study agent where suggestions come first and execution requires confirmation.',
+    studentProject:
+      'Club project manager, research-note organizer, event planning checker, homework collaboration workflow helper, or email and announcement draft agent that never sends without approval',
+    demoGoal:
+      'Build a demo where users import a project brief, tasks, and source links, then receive next-step suggestions, risk notes, draft content, and confirm or reject controls.',
+    aiPowers: [
+      'Retrieval-Augmented Generation',
+      'Task Planning',
+      'Simulated Tool Calling',
+      'Permission Levels',
+      'Human Approval Workflow',
+      'Audit Logs',
+    ],
+    outputs: [
+      'Project knowledge base',
+      'Task suggestion list',
+      'Confirm and reject buttons',
+      'Agent action log',
+      'Permission boundary note',
+    ],
+    question:
+      'Does an AI agent become more useful or more risky as it sees more project context? How should its actions be limited?',
+    insight:
+      'Use simulated files and tools in class. The important idea is not automation for its own sake, but permission, confirmation, and rollback.',
+    difficulty: 'High',
+    coverImageAlt:
+      'Mindstone Rebel official OpenGraph image showing a product dashboard for team context and AI workflows.',
+    coverImageSource:
+      'Official website OpenGraph image: https://framerusercontent.com/images/3jIjcVzeGt0ANlFsGvwWmC7geik.png',
+    coverImageStatus: 'Confirmed',
+    coverImageHint:
+      'Show a project knowledge base, AI agent suggestions, confirmation controls, permission boundaries, action log, and rollback record.',
+  },
 }
 
 export function isLanguage(value: unknown): value is Language {
