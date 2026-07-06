@@ -46,6 +46,9 @@ export type SiteLabels = {
   projectionKicker: string
   projectionTitle: string
   evidenceLayer: string
+  sdgRevealButton: string
+  sdgRevealIntro: string
+  sdgRevealBadgeLabel: string
   detailProblem: string
   detailAiMove: string
   detailStudentBuild: string
@@ -129,6 +132,9 @@ export const languageLabels: Record<Language, SiteLabels> = {
     projectionKicker: 'CLASSROOM PROMPT',
     projectionTitle: '一屏讲清楚：为什么这个项目值得改造？',
     evidenceLayer: '查看证据层',
+    sdgRevealButton: '这个项目属于哪个 SDG？',
+    sdgRevealIntro: '建议归类如下，可以作为课堂讨论起点。',
+    sdgRevealBadgeLabel: '建议 SDG',
     detailProblem: '痛点',
     detailAiMove: 'AI动作',
     detailStudentBuild: '学生改造',
@@ -182,6 +188,9 @@ export const languageLabels: Record<Language, SiteLabels> = {
     projectionKicker: 'CLASSROOM PROMPT',
     projectionTitle: 'Explain in one screen why this project is worth adapting',
     evidenceLayer: 'View evidence layer',
+    sdgRevealButton: 'Which SDGs does this project support?',
+    sdgRevealIntro: 'Suggested matches for classroom discussion.',
+    sdgRevealBadgeLabel: 'Suggested SDG',
     detailProblem: 'Problem',
     detailAiMove: 'AI Move',
     detailStudentBuild: 'Student Build',

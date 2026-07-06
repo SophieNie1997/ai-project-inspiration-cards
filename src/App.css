@@ -19,7 +19,10 @@ body.has-open-modal {
 .detail-panel,
 .detail-modal,
 .mission-card,
-.publish-preview {
+.publish-preview,
+.sdg-reveal,
+.sdg-answer,
+.sdg-match {
   min-width: 0;
 }
 
@@ -52,7 +55,8 @@ body.has-open-modal {
 .publish-proof span,
 .publish-ledger span,
 .publish-question span,
-.projection-card span {
+.projection-card span,
+.sdg-note {
   color: var(--muted);
   font-family: var(--mono);
   font-size: 12px;
@@ -987,6 +991,116 @@ body.has-open-modal {
   transform: translateY(-1px);
 }
 
+.sdg-reveal {
+  overflow: hidden;
+  margin: 0 28px 18px 128px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: #111722;
+}
+
+.sdg-trigger {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0 16px;
+  border: 0;
+  color: var(--text);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.sdg-trigger:hover,
+.sdg-trigger:focus-visible,
+.sdg-reveal.is-open .sdg-trigger {
+  color: var(--accent);
+  background: #151d2e;
+}
+
+.sdg-trigger span {
+  min-width: 0;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.sdg-answer {
+  padding: 16px;
+  border-top: 1px solid var(--line-strong);
+  background: #10151f;
+}
+
+.sdg-answer > p {
+  margin: 0 0 12px;
+  color: var(--soft);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.sdg-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.sdg-match {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--sdg-color);
+  border-radius: 6px;
+  background: #111722;
+}
+
+.sdg-badge {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+}
+
+.sdg-badge span {
+  flex: 0 0 auto;
+  min-width: 58px;
+  min-height: 30px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 8px;
+  border-radius: 4px;
+  color: #ffffff;
+  background: var(--sdg-color);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.sdg-badge strong {
+  min-width: 0;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.sdg-match p {
+  margin: 10px 0 0;
+  color: var(--soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.sdg-note {
+  display: block;
+  margin-top: 12px;
+}
+
 .publish-preview {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.62fr);
@@ -1353,6 +1467,7 @@ body.has-open-modal {
   }
 
   .card-visual.is-modal,
+  .sdg-reveal,
   .publish-preview,
   .detail-panel {
     margin: 0 18px 18px;

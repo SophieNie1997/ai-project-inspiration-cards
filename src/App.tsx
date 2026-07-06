@@ -25,6 +25,7 @@ import {
   type SiteLabels,
 } from './lib/language'
 import { loadMissionCards, type CardsResponse } from './lib/cardSource'
+import { getCardSdgMatches } from './lib/sdg'
 import { buildPublishCardPlan } from './lib/socialCardPlan'
 
 const themeIcons: Record<string, typeof Globe2> = {
@@ -623,6 +624,8 @@ function CardDetailModal({ card, index, onClose, language, labels }: CardDetailM
           </div>
         </div>
 
+        <SdgReveal card={card} language={language} labels={labels} />
+
         <CardVisual card={card} variant="modal" labels={labels} />
 
         <PublishCardPreview card={card} index={index} language={language} labels={labels} />
@@ -643,11 +646,60 @@ type CardDetailProps = {
   labels: SiteLabels
 }
 
+type SdgRevealProps = {
+  card: MissionCard
+  language: Language
+  labels: SiteLabels
+}
+
 type PublishCardPreviewProps = {
   card: MissionCard
   index: number
   language: Language
   labels: SiteLabels
+}
+
+function SdgReveal({ card, language, labels }: SdgRevealProps) {
+  const [isOpen, setIsOpen] = useState(false)
+  const matches = useMemo(() => getCardSdgMatches(card, language), [card, language])
+  const panelId = `sdg-answer-${card.id}`
+
+  return (
+    <section className={`sdg-reveal ${isOpen ? 'is-open' : ''}`} aria-label={labels.sdgRevealButton}>
+      <button
+        type="button"
+        className="sdg-trigger"
+        aria-expanded={isOpen}
+        aria-controls={panelId}
+        onClick={() => setIsOpen((current) => !current)}
+      >
+        <Globe2 size={18} strokeWidth={1.8} aria-hidden="true" />
+        <span>{labels.sdgRevealButton}</span>
+      </button>
+
+      {isOpen && (
+        <div className="sdg-answer" id={panelId}>
+          <p>{labels.sdgRevealIntro}</p>
+          <div className="sdg-list">
+            {matches.map((match) => (
+              <article
+                className="sdg-match"
+                key={match.id}
+                style={{ '--sdg-color': match.color } as React.CSSProperties}
+              >
+                <div className="sdg-badge">
+                  <span>{match.code}</span>
+                  <strong>{match.name}</strong>
+                </div>
+                <p>{match.reason}</p>
+              </article>
+            ))}
+          </div>
+          <span className="sdg-note">{labels.sdgRevealBadgeLabel}</span>
+        </div>
+      )}
+    </section>
+  )
 }
 
 function PublishCardPreview({ card, index, language, labels }: PublishCardPreviewProps) {
